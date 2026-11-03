@@ -1,19 +1,36 @@
 /**
  * RouterIPHub - High Performance Client Engine
- * Zero dependencies, < 9KB, optimized for instant INP, global site search, theme switching, and mobile navigation.
+ * Zero dependencies, ultra-fast, robust event delegation for global search, dark/light theme switching, and diagnostics.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initInstantSpaRouting();
+// Global state
+let siteSearchIndex = [];
+let isSearchIndexLoaded = false;
+let activeSearchFilter = 'all';
+let currentResults = [];
+let selectedResultIndex = -1;
+let routersData = [];
+
+// Initialize immediately if DOM is ready, or on DOMContentLoaded
+function initApp() {
   initThemeToggle();
   initMobileNav();
   initGlobalSiteSearch();
   initSearch();
   initCopyButtons();
   initFaqAccordion();
-});
+  initInstantPrefetch();
+}
 
-// Toast notification helper
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
+/* ==========================================================================
+   1. Toast Notification Helper
+   ========================================================================== */
 function showToast(message) {
   let toast = document.getElementById('toast');
   if (!toast) {
@@ -29,34 +46,48 @@ function showToast(message) {
   }, 2200);
 }
 
-// Theme Toggle System (Default Light, switchable to Dark)
+/* ==========================================================================
+   2. Theme Toggle System (Light Mode Default, User-Switchable Dark Mode)
+   ========================================================================== */
 function initThemeToggle() {
-  const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-  if (!toggleBtns.length) return;
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {}
+    window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: theme } }));
+  }
 
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      
-      if (isDark) {
-        document.documentElement.setAttribute('data-theme', 'light');
-        try { localStorage.setItem('theme', 'light'); } catch (err) {}
-        showToast('Switched to Light Mode');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        try { localStorage.setItem('theme', 'dark'); } catch (err) {}
-        showToast('Switched to Dark Mode');
-      }
+  // Ensure initial theme is synced
+  let savedTheme = 'light';
+  try {
+    savedTheme = localStorage.getItem('theme') || 'light';
+  } catch (e) {}
 
-      window.dispatchEvent(new CustomEvent('themeChanged', { 
-        detail: { theme: isDark ? 'light' : 'dark' } 
-      }));
-    });
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  // Event delegation: intercepts ANY .theme-toggle-btn clicked anywhere
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.theme-toggle-btn');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isCurrentDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const nextTheme = isCurrentDark ? 'light' : 'dark';
+    applyTheme(nextTheme);
+
+    showToast(nextTheme === 'dark' ? 'Switched to Dark Mode 🌙' : 'Switched to Light Mode ☀️');
   });
 }
 
-// Mobile Navigation Drawer
+/* ==========================================================================
+   3. Mobile Navigation Drawer
+   ========================================================================== */
 function initMobileNav() {
   const toggleBtn = document.getElementById('mobile-menu-toggle');
   const drawer = document.getElementById('mobile-nav-drawer');
@@ -70,14 +101,14 @@ function initMobileNav() {
     const isOpen = drawer.classList.toggle('open');
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-    
+
     if (iconMenu && iconClose) {
       iconMenu.style.display = isOpen ? 'none' : 'block';
       iconClose.style.display = isOpen ? 'block' : 'none';
     }
   });
 
-  // Close when clicking outside
+  // Close when clicking outside drawer
   document.addEventListener('click', (e) => {
     if (drawer.classList.contains('open') && !drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
       drawer.classList.remove('open');
@@ -90,7 +121,7 @@ function initMobileNav() {
     }
   });
 
-  // Close when clicking any nav link inside drawer
+  // Close when clicking any navigation link
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       drawer.classList.remove('open');
@@ -105,16 +136,10 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   Global Site Search Engine & Modal
+   4. Global Site Search Engine (CmdK / Search Bar Modal)
    ========================================================================== */
-let siteSearchIndex = [];
-let isSearchIndexLoaded = false;
-let activeSearchFilter = 'all';
-let currentResults = [];
-let selectedResultIndex = -1;
-
 async function loadSearchIndex() {
-  if (isSearchIndexLoaded) return siteSearchIndex;
+  if (isSearchIndexLoaded && siteSearchIndex.length > 0) return siteSearchIndex;
   try {
     const res = await fetch('/data/search-index.json');
     if (res.ok) {
@@ -130,11 +155,11 @@ async function loadSearchIndex() {
 }
 
 function initGlobalSiteSearch() {
-  // Preload index when browser is idle
+  // Preload search index in background
   if ('requestIdleCallback' in window) {
     window.requestIdleCallback(() => loadSearchIndex());
   } else {
-    setTimeout(loadSearchIndex, 1200);
+    setTimeout(loadSearchIndex, 500);
   }
 
   // Ensure modal DOM element exists
@@ -144,55 +169,68 @@ function initGlobalSiteSearch() {
     document.body.appendChild(modal);
   }
 
-  const modalInput = document.getElementById('modal-search-input');
-  const clearBtn = document.getElementById('modal-search-clear');
-  const closeBtn = document.getElementById('modal-close-btn');
-  const resultsContainer = document.getElementById('modal-search-results');
-  const filterTabs = document.querySelectorAll('.filter-tab');
+  function getModalElements() {
+    const m = document.getElementById('site-search-modal') || modal;
+    return {
+      modal: m,
+      input: m.querySelector('#modal-search-input'),
+      clearBtn: m.querySelector('#modal-search-clear'),
+      closeBtn: m.querySelector('#modal-close-btn'),
+      results: m.querySelector('#modal-search-results'),
+      tabs: m.querySelectorAll('.filter-tab')
+    };
+  }
 
-  // Open modal handlers
   function openSearchModal(initialQuery = '') {
     loadSearchIndex();
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
+    const els = getModalElements();
+    els.modal.classList.add('open');
+    els.modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    if (initialQuery) {
-      modalInput.value = initialQuery;
-      clearBtn.style.display = 'block';
-      performSearch(initialQuery);
-    } else {
-      modalInput.value = '';
-      clearBtn.style.display = 'none';
-      renderQuickSuggestions(resultsContainer);
-    }
+    if (els.input) {
+      if (initialQuery) {
+        els.input.value = initialQuery;
+        if (els.clearBtn) els.clearBtn.style.display = 'flex';
+        performSearch(initialQuery);
+      } else {
+        els.input.value = '';
+        if (els.clearBtn) els.clearBtn.style.display = 'none';
+        renderQuickSuggestions(els.results);
+      }
 
-    setTimeout(() => {
-      modalInput.focus();
-      if (initialQuery) modalInput.select();
-    }, 50);
+      setTimeout(() => {
+        els.input.focus();
+        if (initialQuery) els.input.select();
+      }, 60);
+    }
   }
 
   function closeSearchModal() {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
+    const els = getModalElements();
+    els.modal.classList.remove('open');
+    els.modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
-  // Bind all search trigger buttons across the page
-  document.querySelectorAll('.search-trigger-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Event delegation: Intercept ANY search trigger button clicked across the whole page
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.search-trigger-btn');
+    if (trigger) {
       e.preventDefault();
       openSearchModal();
-    });
+    }
   });
 
   // Global Keyboard Shortcuts (Ctrl+K, Cmd+K, or '/')
   document.addEventListener('keydown', (e) => {
-    // Open on Ctrl+K / Cmd+K
+    const els = getModalElements();
+    const isOpen = els.modal.classList.contains('open');
+
+    // Ctrl+K or Cmd+K
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
-      if (modal.classList.contains('open')) {
+      if (isOpen) {
         closeSearchModal();
       } else {
         openSearchModal();
@@ -200,8 +238,8 @@ function initGlobalSiteSearch() {
       return;
     }
 
-    // Open on '/' if user is not currently in an input/textarea
-    if (e.key === '/' && !modal.classList.contains('open')) {
+    // Forward slash '/' when not in input or textarea
+    if (e.key === '/' && !isOpen) {
       const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
       if (activeTag !== 'input' && activeTag !== 'textarea' && !document.activeElement.isContentEditable) {
         e.preventDefault();
@@ -210,15 +248,15 @@ function initGlobalSiteSearch() {
       }
     }
 
-    // Close on Escape if modal open
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
+    // Escape to close
+    if (e.key === 'Escape' && isOpen) {
       e.preventDefault();
       closeSearchModal();
       return;
     }
 
-    // Arrow navigation within open search modal
-    if (modal.classList.contains('open')) {
+    // Arrow navigation inside open modal
+    if (isOpen) {
       if (e.key === 'ArrowDown') {
         e.preventDefault();
         navigateResults(1);
@@ -234,40 +272,47 @@ function initGlobalSiteSearch() {
     }
   });
 
-  // Close button & backdrop click
-  if (closeBtn) closeBtn.addEventListener('click', closeSearchModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeSearchModal();
+  // Modal close handlers
+  const els = getModalElements();
+  if (els.closeBtn) els.closeBtn.addEventListener('click', closeSearchModal);
+  els.modal.addEventListener('click', (e) => {
+    if (e.target === els.modal) closeSearchModal();
   });
 
-  // Search input typing
-  modalInput.addEventListener('input', (e) => {
-    const q = e.target.value.trim();
-    clearBtn.style.display = q ? 'flex' : 'none';
-    if (!q) {
-      renderQuickSuggestions(resultsContainer);
-    } else {
-      performSearch(q);
-    }
-  });
+  // Real-time input searching
+  if (els.input) {
+    els.input.addEventListener('input', (e) => {
+      const q = e.target.value.trim();
+      if (els.clearBtn) els.clearBtn.style.display = q ? 'flex' : 'none';
+      if (!q) {
+        renderQuickSuggestions(els.results);
+      } else {
+        performSearch(q);
+      }
+    });
+  }
 
-  // Clear button click
-  clearBtn.addEventListener('click', () => {
-    modalInput.value = '';
-    clearBtn.style.display = 'none';
-    modalInput.focus();
-    renderQuickSuggestions(resultsContainer);
-  });
+  // Clear button
+  if (els.clearBtn) {
+    els.clearBtn.addEventListener('click', () => {
+      if (els.input) {
+        els.input.value = '';
+        els.input.focus();
+      }
+      els.clearBtn.style.display = 'none';
+      renderQuickSuggestions(els.results);
+    });
+  }
 
   // Filter tabs
-  filterTabs.forEach(tab => {
+  els.tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
+      els.tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       activeSearchFilter = tab.getAttribute('data-filter') || 'all';
-      const q = modalInput.value.trim();
+      const q = els.input ? els.input.value.trim() : '';
       if (!q) {
-        renderQuickSuggestions(resultsContainer);
+        renderQuickSuggestions(els.results);
       } else {
         performSearch(q);
       }
@@ -297,7 +342,7 @@ function createSearchModalDOM() {
           type="search" 
           id="modal-search-input" 
           class="modal-search-input" 
-          placeholder="Search 60+ routers, default IPs, tools, guides... (e.g. 192.168.1.1, Archer, Wi-Fi QR, hard reset)" 
+          placeholder="Search 150+ models, default IPs, tools, guides... (e.g. 192.168.1.1, Archer, Wi-Fi QR, hard reset)" 
           autocomplete="off" 
           spellcheck="false"
         >
@@ -325,7 +370,7 @@ function createSearchModalDOM() {
           <span><kbd>&crarr;</kbd> to open</span>
           <span><kbd>ESC</kbd> to close</span>
         </div>
-        <span id="search-match-count" class="search-match-count">96 topics indexed</span>
+        <span id="search-match-count" class="search-match-count">160+ topics indexed</span>
       </div>
     </div>
   `;
@@ -356,8 +401,10 @@ function performSearch(query) {
     }
 
     const titleLower = (item.title || '').toLowerCase();
-    const snippetLower = (item.snippet || '').toLowerCase();
-    const keywordsLower = (item.keywords || '').toLowerCase();
+    const snippetLower = (item.snippet || item.description || '').toLowerCase();
+    const keywordsLower = Array.isArray(item.keywords)
+      ? item.keywords.join(' ').toLowerCase()
+      : (item.keywords || '').toLowerCase();
     const badgeLower = (item.badge || '').toLowerCase();
 
     // All search tokens must appear somewhere
@@ -374,8 +421,8 @@ function performSearch(query) {
     let scoreA = 0;
     let scoreB = 0;
 
-    const titleA = a.title.toLowerCase();
-    const titleB = b.title.toLowerCase();
+    const titleA = (a.title || '').toLowerCase();
+    const titleB = (b.title || '').toLowerCase();
     const badgeA = (a.badge || '').toLowerCase();
     const badgeB = (b.badge || '').toLowerCase();
 
@@ -391,11 +438,11 @@ function performSearch(query) {
     if (titleA.includes(q)) scoreA += 40;
     if (titleB.includes(q)) scoreB += 40;
 
-    // High utility boosts for interactive tools & how-to guides
+    // Utility boosts
     if (a.category === 'Interactive Tool' || a.category === 'Setup Guide') scoreA += 20;
     if (b.category === 'Interactive Tool' || b.category === 'Setup Guide') scoreB += 20;
 
-    // Token occurrences in title
+    // Token occurrences
     tokens.forEach(t => {
       if (titleA.includes(t)) scoreA += 15;
       if (titleB.includes(t)) scoreB += 15;
@@ -404,7 +451,7 @@ function performSearch(query) {
     return scoreB - scoreA;
   });
 
-  currentResults = filtered.slice(0, 16);
+  currentResults = filtered.slice(0, 20);
   selectedResultIndex = currentResults.length > 0 ? 0 : -1;
 
   if (currentResults.length === 0) {
@@ -413,7 +460,7 @@ function performSearch(query) {
         <div class="search-empty-icon">🔍</div>
         <div class="search-empty-title">No matching results for "${escapeHtml(query)}"</div>
         <div class="search-empty-desc">
-          Try searching for a gateway IP (e.g. <code>192.168.1.1</code>), brand (e.g. <code>Netgear</code>, <code>TP-Link</code>), tool (<code>Wi-Fi QR</code>, <code>subnet</code>), or guide (<code>hard reset</code>, <code>password</code>).
+          Try searching for a gateway IP (e.g. <code>192.168.1.1</code>), router model (e.g. <code>Nighthawk</code>, <code>Archer</code>), tool (<code>Wi-Fi QR</code>, <code>subnet</code>), or guide (<code>hard reset</code>, <code>bridge mode</code>).
         </div>
       </div>
     `;
@@ -427,7 +474,7 @@ function renderResultsList(items, query, container) {
   container.innerHTML = items.map((item, idx) => {
     const isSelected = idx === selectedResultIndex ? ' selected' : '';
     const highlightedTitle = highlightSearchMatches(item.title, query);
-    const highlightedSnippet = highlightSearchMatches(item.snippet, query);
+    const highlightedSnippet = highlightSearchMatches(item.snippet || item.description || '', query);
 
     return `
       <a href="${item.url}" class="search-result-item${isSelected}" data-index="${idx}">
@@ -454,33 +501,33 @@ function renderResultsList(items, query, container) {
 }
 
 function renderQuickSuggestions(container) {
+  if (!container) return;
   currentResults = [];
   selectedResultIndex = -1;
 
   container.innerHTML = `
     <div class="search-suggestions-header">🔥 Popular Topics & Quick Tools</div>
     <div class="search-chips-wrap">
-      <a href="/tools.html#wifi-qr" class="search-chip">🛠️ Wi-Fi QR Code Generator</a>
-      <a href="/tools.html#subnet-calc" class="search-chip">🛠️ Subnet CIDR Calculator</a>
-      <a href="/howto.html#hard-reset" class="search-chip">📖 30-30-30 Hard Reset</a>
-      <a href="/howto.html#wifi-password" class="search-chip">📖 Change Wi-Fi Password</a>
-      <a href="/192-168-1-1.html" class="search-chip">⚡ 192.168.1.1 (Netgear / ASUS)</a>
-      <a href="/192-168-0-1.html" class="search-chip">⚡ 192.168.0.1 (TP-Link / D-Link)</a>
-      <a href="/10-0-0-1.html" class="search-chip">⚡ 10.0.0.1 (Xfinity Comcast)</a>
-      <a href="/192-168-1-254.html" class="search-chip">⚡ 192.168.1.254 (AT&T Fiber)</a>
-      <a href="/find-router-ip.html#windows" class="search-chip">🔍 Find IP (Windows ipconfig)</a>
-      <a href="/find-router-ip.html#mac" class="search-chip">🔍 Find IP (macOS Terminal)</a>
-      <a href="/howto.html#port-forwarding" class="search-chip">🎮 Port Forwarding (Gaming/Plex)</a>
+      <a href="/tools/wifi-qr-code/" class="search-chip">🛠️ Wi-Fi QR Code Generator</a>
+      <a href="/tools/subnet-calculator/" class="search-chip">🛠️ Subnet CIDR Calculator</a>
+      <a href="/tools/detect-gateway/" class="search-chip">⚡ Auto-Detect My Gateway IP</a>
+      <a href="/howto.html#wifi7-setup" class="search-chip">📖 Wi-Fi 7 (320 MHz) Setup</a>
+      <a href="/howto.html#hard-reset" class="search-chip">📖 30-30-30 Hard Reset Guide</a>
+      <a href="/ip/192-168-1-1/" class="search-chip">⚡ 192.168.1.1 (Netgear / ASUS)</a>
+      <a href="/ip/192-168-0-1/" class="search-chip">⚡ 192.168.0.1 (TP-Link / D-Link)</a>
+      <a href="/ip/10-0-0-1/" class="search-chip">⚡ 10.0.0.1 (Xfinity Comcast)</a>
+      <a href="/ip/192-168-1-254/" class="search-chip">⚡ 192.168.1.254 (AT&T Fiber)</a>
+      <a href="/isp/xfinity-xfi/" class="search-chip">🏢 Xfinity xFi Gateway</a>
+      <a href="/isp/att-bgw320/" class="search-chip">🏢 AT&T BGW320 Fiber</a>
     </div>
 
-    <div class="search-suggestions-header">⚡ Browse Gateway IP Pillars</div>
+    <div class="search-suggestions-header">📡 Popular Hardware Models</div>
     <div class="search-chips-wrap">
-      <a href="/192-168-2-1.html" class="search-chip">192.168.2.1 (Belkin)</a>
-      <a href="/192-168-8-1.html" class="search-chip">192.168.8.1 (Huawei / GL.iNet)</a>
-      <a href="/192-168-31-1.html" class="search-chip">192.168.31.1 (Xiaomi)</a>
-      <a href="/192-168-88-1.html" class="search-chip">192.168.88.1 (MikroTik)</a>
-      <a href="/192-168-100-1.html" class="search-chip">192.168.100.1 (Fiber ONT)</a>
-      <a href="/192-168-12-1.html" class="search-chip">192.168.12.1 (T-Mobile 5G)</a>
+      <a href="/routers/netgear-nighthawk-rax50/" class="search-chip">Netgear Nighthawk RAX50</a>
+      <a href="/routers/tp-link-archer-ax55/" class="search-chip">TP-Link Archer AX55</a>
+      <a href="/routers/asus-rt-ax88u/" class="search-chip">ASUS RT-AX88U</a>
+      <a href="/routers/ubiquiti-unifi-dream-machine-pro/" class="search-chip">UniFi Dream Machine Pro</a>
+      <a href="/routers/amazon-eero-pro-6e/" class="search-chip">Amazon Eero Pro 6E</a>
     </div>
   `;
 }
@@ -518,30 +565,36 @@ function highlightSearchMatches(text, query) {
   if (!query) return escapeHtml(text);
 
   const tokens = query.trim().split(/\s+/).filter(t => t.length > 0);
-  if (!tokens.length) return escapeHtml(text);
+  if (tokens.length === 0) return escapeHtml(text);
 
-  let escaped = escapeHtml(text);
-  tokens.forEach(tok => {
-    const safe = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const rx = new RegExp(`(${safe})`, 'gi');
-    escaped = escaped.replace(rx, '<mark class="search-highlight">$1</mark>');
-  });
-  return escaped;
+  const regex = new RegExp(`(${tokens.map(escapeRegExp).join('|')})`, 'gi');
+  const escapedText = escapeHtml(text);
+
+  return escapedText.replace(regex, '<mark class="search-highlight">$1</mark>');
 }
 
-// Copy to clipboard with visual feedback
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/* ==========================================================================
+   5. Interactive Copy Buttons (Event Delegation)
+   ========================================================================== */
 function initCopyButtons() {
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.copy-btn');
     if (!btn) return;
-    
+    e.preventDefault();
+
     const textToCopy = btn.getAttribute('data-copy');
     if (!textToCopy) return;
 
-    if (navigator.clipboard && window.isSecureContext) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(textToCopy).then(() => {
-        showToast(`Copied: ${textToCopy}`);
-      }).catch(() => fallbackCopy(textToCopy));
+        showToast(`Copied to clipboard: ${textToCopy}`);
+      }).catch(() => {
+        fallbackCopy(textToCopy);
+      });
     } else {
       fallbackCopy(textToCopy);
     }
@@ -549,25 +602,25 @@ function initCopyButtons() {
 }
 
 function fallbackCopy(text) {
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-999999px';
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
   try {
     document.execCommand('copy');
-    showToast(`Copied: ${text}`);
+    showToast(`Copied to clipboard: ${text}`);
   } catch (err) {
-    showToast('Failed to copy');
+    showToast('Failed to copy. Please select manually.');
   }
-  document.body.removeChild(textArea);
+  document.body.removeChild(textarea);
 }
 
-// Client-side search and filtering for router table (Homepage)
-let routersData = [];
-
+/* ==========================================================================
+   6. Homepage Router Table Search (#router-search)
+   ========================================================================== */
 async function initSearch() {
   const searchInput = document.getElementById('router-search');
   const tableBody = document.getElementById('router-table-body');
@@ -586,9 +639,9 @@ async function initSearch() {
 
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.trim().toLowerCase();
-    
-    if (!routersData.length) {
-      // Fallback: search existing DOM rows
+
+    if (!routersData || !routersData.length) {
+      // Fallback: filter existing static table rows
       const rows = tableBody.querySelectorAll('tr');
       let visible = 0;
       rows.forEach(row => {
@@ -604,21 +657,28 @@ async function initSearch() {
       return;
     }
 
-    // Dynamic render from JSON
+    // Dynamic filtering supporting all schema variants
     const filtered = routersData.filter(item => {
+      const brand = (item.brand || '').toLowerCase();
+      const model = (item.model_name || item.model || '').toLowerCase();
+      const ip = (item.default_ip || item.ip || '').toLowerCase();
+      const user = (item.default_username || item.username || '').toLowerCase();
+      const pass = (item.default_password || item.password || '').toLowerCase();
+      const notes = (item.notes || item.hardware_type || '').toLowerCase();
+
       return (
-        item.brand.toLowerCase().includes(query) ||
-        item.model.toLowerCase().includes(query) ||
-        item.ip.toLowerCase().includes(query) ||
-        item.username.toLowerCase().includes(query) ||
-        item.password.toLowerCase().includes(query)
+        brand.includes(query) ||
+        model.includes(query) ||
+        ip.includes(query) ||
+        user.includes(query) ||
+        pass.includes(query) ||
+        notes.includes(query)
       );
     });
 
     renderTableRows(filtered, tableBody);
     if (countEl) countEl.textContent = `Showing ${filtered.length} of ${routersData.length} models`;
 
-    // Smart suggestion banner if 0 rows matched or if query looks like a tool/guide search
     updateTableSearchHint(query, filtered.length);
   });
 }
@@ -637,15 +697,15 @@ function updateTableSearchHint(query, matchCount) {
       hintBanner = document.createElement('div');
       hintBanner.id = 'table-search-hint';
       hintBanner.className = 'table-search-hint-banner';
-      const searchBox = document.querySelector('.search-box');
-      if (searchBox && searchBox.parentNode) {
-        searchBox.parentNode.insertBefore(hintBanner, searchBox.nextSibling);
+      const searchWrap = document.querySelector('.search-toolbar');
+      if (searchWrap && searchWrap.parentNode) {
+        searchWrap.parentNode.insertBefore(hintBanner, searchWrap.nextSibling);
       }
     }
     hintBanner.innerHTML = `
-      <span>💡 Searching for guides, tools, or diagnostic commands?</span>
+      <span>💡 Looking for setup guides, diagnostic tools, or terminal commands?</span>
       <a onclick="window.openRouterIPHubSearch('${escapeHtml(query)}')">
-        Search entire website for "${escapeHtml(query)}" &rarr;
+        Search entire site for "${escapeHtml(query)}" &rarr;
       </a>
     `;
   } else if (hintBanner) {
@@ -660,7 +720,7 @@ function renderTableRows(items, container) {
         <td colspan="5" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
           No matching router models found in hardware database.
           <div style="margin-top: 0.75rem;">
-            <button class="search-trigger-btn" style="display: inline-flex; margin: 0 auto;">
+            <button class="search-trigger-btn btn btn-primary" style="display: inline-flex; margin: 0 auto; font-size: 0.85rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               <span>Search All Guides, Tools & Diagnostics</span>
             </button>
@@ -668,55 +728,58 @@ function renderTableRows(items, container) {
         </td>
       </tr>
     `;
-    const btn = container.querySelector('.search-trigger-btn');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const input = document.getElementById('router-search');
-        window.openRouterIPHubSearch(input ? input.value : '');
-      });
-    }
     return;
   }
 
-  container.innerHTML = items.map(item => `
+  container.innerHTML = items.map(item => {
+    const brand = item.brand || '';
+    const model = item.model_name || item.model || '';
+    const ip = item.default_ip || item.ip || '';
+    const web = item.web_domain || item.webAddress || '';
+    const user = item.default_username || item.username || '';
+    const pass = item.default_password || item.password || '';
+    const notes = item.notes || item.hardware_type || '';
+
+    return `
     <tr>
       <td class="cell-brand">
-        ${escapeHtml(item.brand)}
-        <div style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">${escapeHtml(item.model)}</div>
+        ${escapeHtml(brand)}
+        <div style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">${escapeHtml(model)}</div>
       </td>
       <td>
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <a href="http://${escapeHtml(item.ip)}" target="_blank" rel="noopener noreferrer" class="cell-code">
-            ${escapeHtml(item.ip)}
+          <a href="http://${escapeHtml(ip)}" target="_blank" rel="noopener noreferrer" class="cell-code">
+            ${escapeHtml(ip)}
           </a>
-          <button class="copy-btn" data-copy="${escapeHtml(item.ip)}" title="Copy IP" aria-label="Copy IP ${escapeHtml(item.ip)}">
+          <button class="copy-btn" data-copy="${escapeHtml(ip)}" title="Copy IP" aria-label="Copy IP ${escapeHtml(ip)}">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
-        ${item.webAddress ? `<div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(item.webAddress)}</div>` : ''}
+        ${web ? `<div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(web)}</div>` : ''}
       </td>
       <td>
-        <span class="cell-code">${escapeHtml(item.username)}</span>
-        <button class="copy-btn" data-copy="${escapeHtml(item.username)}" title="Copy username" aria-label="Copy username">
+        <span class="cell-code">${escapeHtml(user)}</span>
+        <button class="copy-btn" data-copy="${escapeHtml(user)}" title="Copy username" aria-label="Copy username">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
         </button>
       </td>
       <td>
-        <span class="cell-code">${escapeHtml(item.password)}</span>
-        <button class="copy-btn" data-copy="${escapeHtml(item.password)}" title="Copy password" aria-label="Copy password">
+        <span class="cell-code">${escapeHtml(pass)}</span>
+        <button class="copy-btn" data-copy="${escapeHtml(pass)}" title="Copy password" aria-label="Copy password">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
         </button>
       </td>
       <td style="font-size: 0.85rem; color: var(--text-secondary); max-width: 280px;">
-        ${escapeHtml(item.notes)}
+        ${escapeHtml(notes)}
       </td>
     </tr>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function escapeHtml(str) {
   if (!str) return '';
-  return str
+  return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -724,20 +787,35 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-// Simple FAQ Accordion with accessibility support
+/* ==========================================================================
+   7. FAQ Accordion Support
+   ========================================================================= */
 function initFaqAccordion() {
-  const faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(btn => {
+  document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const answer = btn.nextElementSibling;
+      if (!answer) return;
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      
+
       btn.setAttribute('aria-expanded', !isExpanded);
-      if (isExpanded) {
-        answer.style.display = 'none';
-      } else {
-        answer.style.display = 'block';
-      }
+      answer.style.display = isExpanded ? 'none' : 'block';
     });
+  });
+}
+
+/* ==========================================================================
+   8. Instant Speculative Link Prefetching
+   ========================================================================== */
+function initInstantPrefetch() {
+  document.querySelectorAll('a[href^="/"]').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
+        const prefetch = document.createElement('link');
+        prefetch.rel = 'prefetch';
+        prefetch.href = href;
+        document.head.appendChild(prefetch);
+      }
+    }, { passive: true });
   });
 }

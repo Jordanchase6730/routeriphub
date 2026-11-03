@@ -3,13 +3,21 @@
  * Zero dependencies, ultra-fast client-side execution.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initToolsApp() {
   initWifiQrGenerator();
   initSubnetCalculator();
   initPasswordGenerator();
   initPortSearch();
   initGatewayProbe();
-});
+  initLocalIPDetector();
+  initSubnetCheatSheet();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initToolsApp);
+} else {
+  initToolsApp();
+}
 
 /* ==========================================================================
    1. Wi-Fi QR Code Generator (Standard WIFI:T:WPA;S:ssid;P:pass;; format)
@@ -677,8 +685,4 @@ function initSubnetCheatSheet() {
   renderTable(CIDR_TABLE_DATA);
 }
 
-// Add callers to DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
-  initLocalIPDetector();
-  initSubnetCheatSheet();
-});
+
