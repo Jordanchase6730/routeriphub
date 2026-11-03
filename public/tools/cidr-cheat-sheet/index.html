@@ -8,11 +8,26 @@
   <link rel="canonical" href="https://routeriphub.com/tools/cidr-cheat-sheet/">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://routeriphub.com/tools/cidr-cheat-sheet/">
   <meta property="og:title" content="CIDR Subnet Cheat-Sheet &amp; CSV Exporter (Free Client-Side Utility)">
   <meta property="og:description" content="Complete reference table for IPv4 prefix lengths (/0 to /32) with total IPs, usable hosts, and wildcard masks with CSV download.">
   <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="CIDR Subnet Cheat-Sheet &amp; CSV Exporter (Free Client-Side Utility)">
+  <meta name="twitter:description" content="Complete reference table for IPv4 prefix lengths (/0 to /32) with total IPs, usable hosts, and wildcard masks with CSV download.">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
 
   <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
   <script>
@@ -202,6 +217,38 @@
         </div>
       </div>
             
+
+      <!-- Detailed SEO Guides and Reference Documentation -->
+      
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">IPv4 CIDR Prefix &amp; Subnetting Reference Guide</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Subnetting allows network designers to split larger IP networks into smaller, more efficient logical segments. This reduces broadcast traffic domains, improves routing efficiency, and enforces security segmentation between different user groups and VLANs.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">RFC 1918 Private IP Address Spaces</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          The Internet Engineering Task Force (IETF) reserved three dedicated IPv4 address blocks for private local networks that are never routed on the public internet:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Class A Range:</strong> <code>10.0.0.0/8</code> (10.0.0.0 to 10.255.255.255) &mdash; 16,777,216 addresses. Common in large enterprise campuses and Comcast Xfinity gateways (10.0.0.1).</li>
+          <li><strong>Class B Range:</strong> <code>172.16.0.0/12</code> (172.16.0.0 to 172.31.255.255) &mdash; 1,048,576 addresses. Frequently used in corporate corporate data centers and Docker container networks.</li>
+          <li><strong>Class C Range:</strong> <code>192.168.0.0/16</code> (192.168.0.0 to 192.168.255.255) &mdash; 65,536 addresses. The universal standard for consumer Wi-Fi routers and home lab subnets.</li>
+          <li><strong>Carrier-Grade NAT (CGNAT, RFC 6598):</strong> <code>100.64.0.0/10</code> (100.64.0.0 to 100.127.255.255) &mdash; Allocated to internet service providers to share public IPv4 addresses across multiple customers.</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Calculating Subnet Capacities</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          To calculate the number of usable hosts for any prefix length <em>P</em>:
+        </p>
+        <div style="background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-color);">
+          Usable Hosts = 2<sup>(32 &minus; P)</sup> &minus; 2
+        </div>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          For a <code>/24</code> prefix: 2<sup>(32 &minus; 24)</sup> &minus; 2 = 2<sup>8</sup> &minus; 2 = 256 &minus; 2 = <strong>254 usable hosts</strong>.
+        </p>
+      </section>
+
 
       <!-- Cross Silo Links -->
       <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">

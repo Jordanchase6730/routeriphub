@@ -83,11 +83,26 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
   <link rel="canonical" href="{escape(canonical_url)}">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="{escape(canonical_url)}">
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="{escape(title)}">
+  <meta name="twitter:description" content="{escape(description)}">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
 
   <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
   <script>
@@ -1452,6 +1467,281 @@ def generate_tool_pages():
       </div>
             """
 
+        # Rich SEO & Educational Content with <h2> headings
+        tool_editorial = ""
+        if slug == "subnet-calculator":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Use the IPv4 Subnet Calculator</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          This client-side Subnet Calculator allows network engineers, system administrators, and home lab enthusiasts to analyze any IPv4 address and CIDR prefix length without sending data to an external server. Follow these simple steps:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Enter your IP Address:</strong> Type the host IP address or gateway address (e.g., <code>192.168.1.1</code> or <code>10.0.0.1</code>) into the input field.</li>
+          <li><strong>Select your CIDR Prefix / Subnet Mask:</strong> Choose the prefix length from the dropdown menu, ranging from <code>/8</code> (Class A) to <code>/30</code> (Point-to-Point links). The standard home subnet is <code>/24</code> (255.255.255.0).</li>
+          <li><strong>Inspect Calculated Parameters:</strong> The tool dynamically calculates the Network ID, Broadcast Address, Total IP count, Usable Host Range, and Wildcard Mask in real time.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Understanding CIDR Notation &amp; Subnetting Fundamentals</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Classless Inter-Domain Routing (CIDR, defined in RFC 4632) replaced legacy classful networking (Class A, B, and C) to allocate IP address blocks with much greater granularity. In CIDR notation, an IP address is appended with a forward slash followed by a number indicating the number of contiguous leading bits assigned to the <strong>network prefix</strong>.
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          An IPv4 address consists of 32 binary bits divided into four 8-bit octets. For example, in a <code>/24</code> subnet:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Network Bits:</strong> 24 bits are dedicated to identifying the network (e.g. <code>11111111.11111111.11111111.00000000</code> = <code>255.255.255.0</code>).</li>
+          <li><strong>Host Bits:</strong> 8 bits remain for assigning to client hosts (32 &minus; 24 = 8 bits).</li>
+          <li><strong>Total Addresses:</strong> 2<sup>8</sup> = 256 addresses.</li>
+          <li><strong>Usable Hosts:</strong> 256 &minus; 2 = 254 hosts (the first address is reserved as the <em>Network ID</em> and the last address is reserved as the <em>Broadcast Address</em>).</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Common CIDR Subnet Cheat Sheet</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>CIDR Prefix</th>
+                <th>Subnet Mask</th>
+                <th>Usable Host Capacity</th>
+                <th>Typical Deployment Use Case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>/24</code></td><td>255.255.255.0</td><td>254 Hosts</td><td>Standard Home Routers, Small Offices, Wi-Fi VLANs</td></tr>
+              <tr><td><code>/25</code></td><td>255.255.255.128</td><td>126 Hosts</td><td>Department Subnets, Guest Wi-Fi Segregation</td></tr>
+              <tr><td><code>/26</code></td><td>255.255.255.192</td><td>62 Hosts</td><td>Medium Server Clusters, IoT Device Isolation</td></tr>
+              <tr><td><code>/27</code></td><td>255.255.255.224</td><td>30 Hosts</td><td>Small Branch Offices, DMZ Environments</td></tr>
+              <tr><td><code>/28</code></td><td>255.255.255.240</td><td>14 Hosts</td><td>Management Networks, Hardware Out-of-Band (iDRAC/iLO)</td></tr>
+              <tr><td><code>/29</code></td><td>255.255.255.248</td><td>6 Hosts</td><td>ISP Static IP Allocations (Commercial Broadband)</td></tr>
+              <tr><td><code>/30</code></td><td>255.255.255.252</td><td>2 Hosts</td><td>Point-to-Point Router-to-Router Uplinks</td></tr>
+              <tr><td><code>/16</code></td><td>255.255.0.0</td><td>65,534 Hosts</td><td>Large Enterprise LANs, University Campuses</td></tr>
+              <tr><td><code>/8</code></td><td>255.0.0.0</td><td>16,777,214 Hosts</td><td>Carrier Internal Routing, Global Cloud VPCs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Frequently Asked Questions About Subnetting</h2>
+        <div class="faq-list" style="margin-top: 1rem;">
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Why can't I use the first and last IP addresses in a subnet?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              In IPv4 networking, the very first address represents the entire network block itself (the Network ID), used by routers to direct traffic. The last address with all host bits set to 1 is the directed broadcast address, used to broadcast packets to every device on that specific subnet simultaneously. Consequently, assigning either address to a host device creates addressing conflicts.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">What is the default subnet mask for 192.168.1.1?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              The standard subnet mask for <code>192.168.1.1</code> is <code>255.255.255.0</code> (corresponding to a <code>/24</code> prefix). This allows your router to assign DHCP leases to devices in the range <code>192.168.1.2</code> through <code>192.168.1.254</code>.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">What is a Wildcard Mask and where is it used?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              A wildcard mask is the bitwise inverse of the subnet mask. For instance, if the subnet mask is <code>255.255.255.0</code>, its wildcard mask is <code>0.0.0.255</code>. Wildcard masks are predominantly used in Cisco IOS Access Control Lists (ACLs) and routing protocols like OSPF and EIGRP to match IP address ranges.
+            </p>
+          </div>
+        </div>
+      </section>
+"""
+        elif slug == "wifi-qr-code":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Generate a Printable Wi-Fi QR Code</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Sharing Wi-Fi passwords with guests, customers, and family members manually often leads to typos, frustration, and security risks. Using this free, client-side tool, you can generate an instant connection QR code in seconds:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Enter Network Name (SSID):</strong> Type your wireless network name exactly as it appears in your router configuration (SSIDs are case-sensitive).</li>
+          <li><strong>Input Wi-Fi Password:</strong> Provide your network password. All rendering takes place locally in your browser memory via the HTML5 Canvas API—your credentials are never transmitted over the internet.</li>
+          <li><strong>Select Encryption Standard:</strong> Most modern routers use <code>WPA/WPA2/WPA3</code>. For open hotspot networks, select <code>None</code>.</li>
+          <li><strong>Toggle Hidden Network (Optional):</strong> If your router has "SSID Broadcast" disabled, check the "Hidden Network" box so mobile devices know to query the hidden beacon.</li>
+          <li><strong>Download or Print:</strong> Click "Download PNG" for digital sharing, or "Print Sign" to print an elegant guest display card for your office, Airbnb, coffee shop, or home.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How Wi-Fi QR Codes Work (Standard Schema Protocol)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Mobile operating systems (iOS 11+ and Android 10+) feature built-in support for the standard Wi-Fi configuration string format. When encoded as a 2D matrix barcode, the standardized payload follows the syntax:
+        </p>
+        <div style="background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 1.5rem; border: 1px solid var(--border-color); overflow-x: auto;">
+          <code>WIFI:T:WPA;S:YourNetworkSSID;P:YourSecretPassword;H:false;;</code>
+        </div>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Here is a breakdown of the protocol parameters:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><code>T:</code> Authentication Type (<code>WPA</code> for WPA/WPA2/WPA3, <code>WEP</code> for legacy WEP, or <code>nopass</code> for open).</li>
+          <li><code>S:</code> Service Set Identifier (SSID / Network Name). Special characters are properly escaped.</li>
+          <li><code>P:</code> Pre-Shared Key (Wireless Password).</li>
+          <li><code>H:</code> Hidden SSID flag (<code>true</code> or <code>false</code>).</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How to Scan and Connect on iOS and Android</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">🍎 Apple iOS (iPhone &amp; iPad)</h3>
+            <ol style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Open the native <strong>Camera</strong> app from your home screen or Control Center.</li>
+              <li>Frame the Wi-Fi QR code within the camera viewfinder.</li>
+              <li>A yellow banner will appear reading: <em>"Join [Network Name] Network"</em>.</li>
+              <li>Tap the banner, then tap <strong>"Join"</strong> to authenticate immediately.</li>
+            </ol>
+          </div>
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">🤖 Google Android</h3>
+            <ol style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Open your <strong>Camera</strong> app or swipe down to Quick Settings and tap <strong>Internet</strong>.</li>
+              <li>Tap the QR scanner icon next to "Add network" or use <strong>Google Lens</strong>.</li>
+              <li>Point your camera at the QR code.</li>
+              <li>Tap the popup prompt: <strong>"Connect to Wi-Fi"</strong>.</li>
+            </ol>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Security Advantages of Sharing Wi-Fi via QR Code</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Generating a Wi-Fi QR code offers multiple critical security advantages over writing passwords on a whiteboard or sticky note:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Enables High-Entropy Passwords:</strong> Because users do not have to type characters manually on small phone keyboards, you can use a strong 24-character random password that is immune to brute-force cracking.</li>
+          <li><strong>Encourages Guest Network Isolation:</strong> Create a dedicated QR code for your router's <strong>Guest Wi-Fi SSID</strong>. Visitors can access the internet without having access to your home NAS, internal servers, smart cameras, or router administration portal.</li>
+          <li><strong>Eliminates Shoulder Surfing:</strong> Guests scan directly without you having to vocalize or display plaintext passwords across crowded rooms.</li>
+        </ul>
+      </section>
+"""
+        elif slug == "detect-gateway":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How the Local Router Gateway Auto-Detector Works</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Your default gateway is the primary local IP address of your router that acts as an access point or gateway between your local home network (LAN) and the wider Internet (WAN). When you click "Auto-Detect My Router IP", this tool executes a lightweight probe against common gateway subnets:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Local Subnet Probing:</strong> The browser tests fetch timing against standard private router IP ranges (<code>192.168.1.1</code>, <code>192.168.0.1</code>, <code>10.0.0.1</code>, <code>192.168.2.1</code>, and <code>192.168.1.254</code>).</li>
+          <li><strong>WebRTC ICE Discovery:</strong> Utilizes browser WebRTC candidates to detect your computer's local IPv4 binding.</li>
+          <li><strong>100% Client-Side Privacy:</strong> All probes are handled locally by JavaScript; no internal network details are ever logged or transmitted externally.</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Most Common Default Gateway IP Addresses by Brand</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>Gateway IP Address</th>
+                <th>Subnet Range</th>
+                <th>Standard Hardware Brands</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>192.168.1.1</code></td><td>192.168.1.1 &ndash; 192.168.1.254</td><td>Netgear, ASUS, Linksys, Cisco, Verizon Fios, Ubiquiti</td></tr>
+              <tr><td><code>192.168.0.1</code></td><td>192.168.0.1 &ndash; 192.168.0.254</td><td>TP-Link, D-Link, Arris, Motorola, Virgin Media</td></tr>
+              <tr><td><code>10.0.0.1</code></td><td>10.0.0.1 &ndash; 10.0.0.254</td><td>Comcast Xfinity xFi, Spectrum, Apple AirPort</td></tr>
+              <tr><td><code>192.168.1.254</code></td><td>192.168.1.1 &ndash; 192.168.1.254</td><td>AT&amp;T Fiber (BGW320/BGW210), BT Smart Hub (UK)</td></tr>
+              <tr><td><code>192.168.88.1</code></td><td>192.168.88.1 &ndash; 192.168.88.254</td><td>MikroTik (RouterOS)</td></tr>
+              <tr><td><code>192.168.178.1</code></td><td>192.168.178.1 &ndash; 192.168.178.254</td><td>AVM FRITZ!Box (Germany &amp; EU)</td></tr>
+              <tr><td><code>192.168.8.1</code></td><td>192.168.8.1 &ndash; 192.168.8.254</td><td>GL.iNet Travel Routers, Huawei 4G/5G Gateways</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Manual Command Line Discovery Methods</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          If browser auto-detection is blocked by browser security extensions or firewall rules, you can instantly find your gateway using your computer's built-in terminal:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Windows (CMD / PowerShell):</strong> Open terminal and run <code>ipconfig | findstr /i "Default Gateway"</code></li>
+          <li><strong>macOS (Terminal):</strong> Open terminal and run <code>netstat -nr | grep default</code> or <code>route -n get default</code></li>
+          <li><strong>Linux (Terminal):</strong> Run <code>ip route show default</code></li>
+          <li><strong>iPhone / iPad (iOS):</strong> Go to <strong>Settings</strong> &gt; <strong>Wi-Fi</strong> &gt; tap the blue <strong>(i)</strong> icon &gt; look for <strong>Router</strong>.</li>
+          <li><strong>Android:</strong> Go to <strong>Settings</strong> &gt; <strong>Network &amp; internet</strong> &gt; <strong>Internet</strong> &gt; tap your network &gt; <strong>Gateway</strong>.</li>
+        </ul>
+      </section>
+"""
+        elif slug == "router-password-generator":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">Why Router Admin and Wi-Fi Passwords Require High Entropy</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Consumer routers are among the most frequently targeted devices on home and business networks. Attackers target two distinct authentication vectors:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Router Admin Console Password:</strong> The credential protecting your web administration portal (at 192.168.1.1, etc.). If compromised, an attacker can change DNS servers (DNS hijacking), inject malicious ads, open port forwards, and snoop on network traffic.</li>
+          <li><strong>WPA2/WPA3 Wi-Fi Pre-Shared Key (PSK):</strong> The wireless encryption key. In WPA2 networks, attackers within radio range can capture the 4-way EAPOL handshake and attempt offline dictionary attacks. Strong 20+ character passwords render dictionary cracking mathematically impossible.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Cryptographically Secure Generation (CSPRNG)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Unlike basic online generators that use predictable pseudo-random seeds (like <code>Math.random()</code>), this tool uses the browser's native <strong>Web Cryptography API (<code>window.crypto.getRandomValues()</code>)</strong>. This guarantees hardware-grade entropy derived from operating system randomness pools, ensuring that generated passwords are computationally impossible to predict.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Best Practices for Hardening Your Router</h2>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Change Factory Defaults Immediately:</strong> Never leave default credentials like <code>admin/admin</code> or <code>admin/password</code> active on your network.</li>
+          <li><strong>Disable Remote Management (WAN Access):</strong> Ensure that web management is restricted to local LAN clients only and disabled from external Internet WAN interfaces.</li>
+          <li><strong>Upgrade to WPA3-Personal:</strong> Where supported by your router and client devices, enable WPA3-Personal (SAE) to protect against offline dictionary attacks.</li>
+          <li><strong>Keep Firmware Updated:</strong> Regularly install official firmware updates to patch critical Common Vulnerabilities and Exposures (CVEs).</li>
+        </ul>
+      </section>
+"""
+        elif slug == "port-checker":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">Understanding Port Forwarding in NAT Routers</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Home routers use Network Address Translation (NAT) to allow dozens of connected devices to share a single public IP address provided by your ISP. By default, your router's firewall blocks all unsolicited incoming connection requests from the public internet for security.
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          <strong>Port forwarding</strong> creates a permanent rule telling your router: <em>"When external traffic arrives on port X, forward it directly to local internal IP Y."</em> This is required for hosting gaming servers (Minecraft, Steam), media servers (Plex), remote desktop connections, and web servers.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How to Forward Ports on Any Router (Step-by-Step)</h2>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Assign a Static IP or DHCP Reservation:</strong> In your router console under <strong>LAN &gt; DHCP Server</strong>, bind your computer/console's MAC address to a permanent local IP (e.g. <code>192.168.1.150</code>).</li>
+          <li><strong>Locate Port Forwarding Settings:</strong> Look for <strong>Port Forwarding</strong>, <strong>Virtual Server</strong>, or <strong>NAT Forwarding</strong> in Advanced settings.</li>
+          <li><strong>Create a New Rule:</strong> Enter the service name, select the protocol (TCP, UDP, or Both), enter the internal and external port numbers (e.g. <code>25565</code> for Minecraft), and enter your host machine's internal IP.</li>
+          <li><strong>Save and Apply:</strong> Apply the settings. If hosting games or servers, make sure your operating system's software firewall (Windows Defender Firewall or UFW) also allows inbound traffic on that port.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Port Forwarding Security Guidelines</h2>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Never Expose Unencrypted Management Ports:</strong> Avoid forwarding Telnet (port 23) or unencrypted HTTP (port 80) directly to critical infrastructure.</li>
+          <li><strong>Use Custom High Ports:</strong> For remote administration such as SSH (port 22) or Remote Desktop (port 3389), use a non-standard external port (e.g. port <code>52222</code>) to dramatically reduce automated bot scanning.</li>
+          <li><strong>Prefer WireGuard or Tailscale VPN:</strong> Instead of opening multiple ports to the public internet, setting up a secure VPN lets you access your entire home LAN remotely with enterprise cryptography.</li>
+        </ul>
+      </section>
+"""
+        elif slug == "cidr-cheat-sheet":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">IPv4 CIDR Prefix &amp; Subnetting Reference Guide</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Subnetting allows network designers to split larger IP networks into smaller, more efficient logical segments. This reduces broadcast traffic domains, improves routing efficiency, and enforces security segmentation between different user groups and VLANs.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">RFC 1918 Private IP Address Spaces</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          The Internet Engineering Task Force (IETF) reserved three dedicated IPv4 address blocks for private local networks that are never routed on the public internet:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Class A Range:</strong> <code>10.0.0.0/8</code> (10.0.0.0 to 10.255.255.255) &mdash; 16,777,216 addresses. Common in large enterprise campuses and Comcast Xfinity gateways (10.0.0.1).</li>
+          <li><strong>Class B Range:</strong> <code>172.16.0.0/12</code> (172.16.0.0 to 172.31.255.255) &mdash; 1,048,576 addresses. Frequently used in corporate corporate data centers and Docker container networks.</li>
+          <li><strong>Class C Range:</strong> <code>192.168.0.0/16</code> (192.168.0.0 to 192.168.255.255) &mdash; 65,536 addresses. The universal standard for consumer Wi-Fi routers and home lab subnets.</li>
+          <li><strong>Carrier-Grade NAT (CGNAT, RFC 6598):</strong> <code>100.64.0.0/10</code> (100.64.0.0 to 100.127.255.255) &mdash; Allocated to internet service providers to share public IPv4 addresses across multiple customers.</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Calculating Subnet Capacities</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          To calculate the number of usable hosts for any prefix length <em>P</em>:
+        </p>
+        <div style="background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 1rem; margin-bottom: 1.5rem; border: 1px solid var(--border-color);">
+          Usable Hosts = 2<sup>(32 &minus; P)</sup> &minus; 2
+        </div>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          For a <code>/24</code> prefix: 2<sup>(32 &minus; 24)</sup> &minus; 2 = 2<sup>8</sup> &minus; 2 = 256 &minus; 2 = <strong>254 usable hosts</strong>.
+        </p>
+      </section>
+"""
+
         content = f"""
   <main class="container" style="padding-top: 1.5rem; padding-bottom: 3.5rem;">
     <div class="content-container">
@@ -1465,6 +1755,9 @@ def generate_tool_pages():
 
       <!-- Embed Tool UI -->
       {tool_ui}
+
+      <!-- Detailed SEO Guides and Reference Documentation -->
+      {tool_editorial}
 
       <!-- Cross Silo Links -->
       <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">

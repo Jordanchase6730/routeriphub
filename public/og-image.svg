@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#334155" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="4" fill="url(#brandGrad)"/>
+
+  <!-- Pill Badge -->
+  <rect x="80" y="70" width="420" height="38" rx="19" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="100" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="1">NETWORK HARDWARE &amp; GATEWAY REFERENCE</text>
+
+  <!-- Logo Icon -->
+  <g transform="translate(80, 140)">
+    <rect x="0" y="10" width="60" height="26" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="2.5"/>
+    <circle cx="12" cy="23" r="3" fill="#38bdf8"/>
+    <circle cx="26" cy="23" r="3" fill="#38bdf8"/>
+    <circle cx="40" cy="23" r="3" fill="#38bdf8"/>
+    
+    <rect x="0" y="44" width="60" height="26" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="2.5"/>
+    <circle cx="12" cy="57" r="3" fill="#38bdf8"/>
+    <circle cx="26" cy="57" r="3" fill="#38bdf8"/>
+    <circle cx="40" cy="57" r="3" fill="#22c55e"/>
+
+    <line x1="10" y1="10" x2="10" y2="-6" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="10" x2="50" y2="-6" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Name -->
+  <text x="165" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-1">RouterIPHub</text>
+  <rect x="560" y="156" width="70" height="32" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+  <text x="575" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#38bdf8">2026</text>
+
+  <!-- Headline & Subtitle -->
+  <text x="80" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="700" fill="#f1f5f9">The Definitive Default Router IP &amp; Gateway Reference</text>
+  <text x="80" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">Search default logins, factory reset guides, LED codes &amp; technical specs across 1,500+ models.</text>
+  <text x="80" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">Featuring client-side Subnet Calculators, Wi-Fi QR Code generators, and local gateway diagnostics.</text>
+
+  <!-- Cards -->
+  <g transform="translate(80, 410)">
+    <rect x="0" y="0" width="240" height="100" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="16" y1="0" x2="60" y2="0" stroke="#0284c7" stroke-width="3"/>
+    <text x="16" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#ffffff">📡 Hardware Models</text>
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">200+ Verified Specs</text>
+  </g>
+
+  <g transform="translate(340, 410)">
+    <rect x="0" y="0" width="240" height="100" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="16" y1="0" x2="60" y2="0" stroke="#10b981" stroke-width="3"/>
+    <text x="16" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#ffffff">🏢 Gateway IP Hubs</text>
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">192.168.1.1 &amp; 10.0.0.1</text>
+  </g>
+
+  <g transform="translate(600, 410)">
+    <rect x="0" y="0" width="240" height="100" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="16" y1="0" x2="60" y2="0" stroke="#a855f7" stroke-width="3"/>
+    <text x="16" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#ffffff">🛠️ Subnet Calculator</text>
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">CIDR &amp; Host Ranges</text>
+  </g>
+
+  <g transform="translate(860, 410)">
+    <rect x="0" y="0" width="240" height="100" rx="12" fill="#0f172a" fill-opacity="0.9" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="16" y1="0" x2="60" y2="0" stroke="#ea580c" stroke-width="3"/>
+    <text x="16" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#ffffff">📱 Wi-Fi QR Generator</text>
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">Encrypted WPA3 Signs</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="80" y1="560" x2="1120" y2="560" stroke="#1e293b" stroke-width="1"/>
+  <text x="80" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#64748b">routeriphub.com — Open Networking Knowledgebase &amp; Tool Suite</text>
+  <text x="960" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#38bdf8">100% Free • Zero Tracking</text>
+</svg>

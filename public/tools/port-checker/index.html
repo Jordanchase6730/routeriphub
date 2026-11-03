@@ -8,11 +8,26 @@
   <link rel="canonical" href="https://routeriphub.com/tools/port-checker/">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://routeriphub.com/tools/port-checker/">
   <meta property="og:title" content="Port Forwarding Directory &amp; Latency Probe (Free Client-Side Utility)">
   <meta property="og:description" content="Quick lookup directory for common networking and gaming ports (Plex, Minecraft, SSH, HTTP) with port forwarding instructions.">
   <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="Port Forwarding Directory &amp; Latency Probe (Free Client-Side Utility)">
+  <meta name="twitter:description" content="Quick lookup directory for common networking and gaming ports (Plex, Minecraft, SSH, HTTP) with port forwarding instructions.">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
 
   <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
   <script>
@@ -195,6 +210,34 @@
         </div>
       </div>
             
+
+      <!-- Detailed SEO Guides and Reference Documentation -->
+      
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">Understanding Port Forwarding in NAT Routers</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Home routers use Network Address Translation (NAT) to allow dozens of connected devices to share a single public IP address provided by your ISP. By default, your router's firewall blocks all unsolicited incoming connection requests from the public internet for security.
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          <strong>Port forwarding</strong> creates a permanent rule telling your router: <em>"When external traffic arrives on port X, forward it directly to local internal IP Y."</em> This is required for hosting gaming servers (Minecraft, Steam), media servers (Plex), remote desktop connections, and web servers.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How to Forward Ports on Any Router (Step-by-Step)</h2>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Assign a Static IP or DHCP Reservation:</strong> In your router console under <strong>LAN &gt; DHCP Server</strong>, bind your computer/console's MAC address to a permanent local IP (e.g. <code>192.168.1.150</code>).</li>
+          <li><strong>Locate Port Forwarding Settings:</strong> Look for <strong>Port Forwarding</strong>, <strong>Virtual Server</strong>, or <strong>NAT Forwarding</strong> in Advanced settings.</li>
+          <li><strong>Create a New Rule:</strong> Enter the service name, select the protocol (TCP, UDP, or Both), enter the internal and external port numbers (e.g. <code>25565</code> for Minecraft), and enter your host machine's internal IP.</li>
+          <li><strong>Save and Apply:</strong> Apply the settings. If hosting games or servers, make sure your operating system's software firewall (Windows Defender Firewall or UFW) also allows inbound traffic on that port.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Port Forwarding Security Guidelines</h2>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Never Expose Unencrypted Management Ports:</strong> Avoid forwarding Telnet (port 23) or unencrypted HTTP (port 80) directly to critical infrastructure.</li>
+          <li><strong>Use Custom High Ports:</strong> For remote administration such as SSH (port 22) or Remote Desktop (port 3389), use a non-standard external port (e.g. port <code>52222</code>) to dramatically reduce automated bot scanning.</li>
+          <li><strong>Prefer WireGuard or Tailscale VPN:</strong> Instead of opening multiple ports to the public internet, setting up a secure VPN lets you access your entire home LAN remotely with enterprise cryptography.</li>
+        </ul>
+      </section>
+
 
       <!-- Cross Silo Links -->
       <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">

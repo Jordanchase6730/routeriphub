@@ -1,33 +1,252 @@
 slug,brand,model_name,hardware_type,default_ip,web_domain,default_username,default_password,wifi_standard
-netgear-nighthawk-rax50,Netgear,Nighthawk AX6 (RAX50),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (802.11ax Dual-Band AX5400)
+netgear-nighthawk-rax50,Netgear,Nighthawk AX6 (RAX50),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (802.11ax AX5400)
 netgear-nighthawk-rax120,Netgear,Nighthawk AX12 (RAX120),Wi-Fi 6 Flagship Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (12-Stream AX6000)
-netgear-nighthawk-xr1000,Netgear,Nighthawk Pro Gaming XR1000,Gaming Wi-Fi 6 Router (DumaOS 3.0),192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX5400)
-netgear-orbi-rbk752,Netgear,Orbi Tri-Band Mesh AX4200 (RBK752),Tri-Band Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 Tri-Band (AX4200 with Dedicated Backhaul)
-netgear-orbi-rbk852,Netgear,Orbi Tri-Band Mesh AX6000 (RBK852),Flagship Tri-Band Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 Tri-Band (AX6000 12-Stream)
-tp-link-archer-ax55,TP-Link,Archer AX55 (AX3000),Wi-Fi 6 Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,Created on first setup (or admin on legacy v1),Wi-Fi 6 (AX3000 Dual Band)
-tp-link-archer-ax21,TP-Link,Archer AX21 (AX1800),Wi-Fi 6 Dual-Band Router,192.168.0.1,http://tplinkwifi.net,admin,Created on first boot,Wi-Fi 6 (AX1800)
-tp-link-archer-be800,TP-Link,Archer BE800 (BE19000),Wi-Fi 7 Tri-Band Flagship Router,192.168.0.1,http://tplinkwifi.net,admin,Set during setup wizard,Wi-Fi 7 (BE19000 with 320 MHz Channels & MLO)
-tp-link-deco-x55,TP-Link,Deco X55 AX3000 Mesh,Whole Home Mesh Wi-Fi 6,192.168.68.1,http://tplinkdeco.net,Deco App Account (TP-Link ID),Set in Deco Mobile App,Wi-Fi 6 Mesh (AX3000)
-tp-link-deco-be85,TP-Link,Deco BE85 (BE22000),Wi-Fi 7 Whole Home Mesh System,192.168.68.1,http://tplinkdeco.net,TP-Link Cloud ID,Set in Deco App,Wi-Fi 7 Tri-Band (BE22000 320MHz MLO)
-asus-rt-ax88u,ASUS,RT-AX88U (AX6000),Wi-Fi 6 Gaming & Power-User Router,192.168.1.1,http://router.asus.com,admin,admin (prompts to change immediately),Wi-Fi 6 (AX6000 8-Stream)
-asus-rt-ax86u,ASUS,RT-AX86U / RT-AX86U Pro (AX5700),Wi-Fi 6 Mobile Gaming Router,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5700 with 160MHz)
-asus-rog-rapture-gt-ax11000,ASUS,ROG Rapture GT-AX11000,Tri-Band Wi-Fi 6 Gaming Beast,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 Tri-Band (AX11000)
-asus-zenwifi-xt8,ASUS,ZenWiFi AX (XT8),Tri-Band Whole-Home Mesh System,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 Tri-Band (AX6600)
-asus-rt-be96u,ASUS,RT-BE96U (BE19000),Wi-Fi 7 Tri-Band Flagship Router,192.168.1.1,http://router.asus.com,admin,Set during setup,Wi-Fi 7 (BE19000 with 320MHz 6 GHz & Dual 10G ports)
-linksys-ea7500,Linksys,Max-Stream AC1900 (EA7500),Dual-Band Wi-Fi 5 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (802.11ac AC1900)
-linksys-velop-whw0303,Linksys,Velop Tri-Band Mesh (WHW0303),Tri-Band Whole Home Mesh Wi-Fi,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 Tri-Band (AC2200 per node)
-linksys-mr9600,Linksys,Max-Stream Mesh Wi-Fi 6 (MR9600),Dual-Band Wi-Fi 6 Mesh Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX6000 8-Stream)
-ubiquiti-unifi-dream-machine-pro,Ubiquiti,UniFi Dream Machine Pro (UDM-Pro),All-in-One Enterprise Gateway & Controller,192.168.1.1,https://unifi.ui.com,UI Cloud Account / root (SSH),Set during UniFi OS setup wizard,Routing & Security Gateway (Requires separate UniFi APs)
-ubiquiti-amplifi-hd,Ubiquiti,AmpliFi HD Home Mesh,Consumer Mesh Wi-Fi System,192.168.1.1,http://amplifi.lan,admin,Set in AmpliFi App,Wi-Fi 5 (802.11ac 3x3 MIMO)
-mikrotik-hap-ax3,MikroTik,hAP ax³ (C53UiG+5HPaxD2HPaxD),RouterOS v7 Wi-Fi 6 Router,192.168.88.1,http://router.lan,admin,Empty (No password) on first boot,Wi-Fi 6 (Dual-Band 802.11ax)
-mikrotik-rb4011,MikroTik,RB4011iGS+5HacQ2HnD-IN,Enterprise Quad-Core 10-Port Router,192.168.88.1,http://router.lan,admin,Empty (No password),Wi-Fi 5 (Quad-Chain AC2000)
-arris-surfboard-sb8200,Arris,SURFboard SB8200 DOCSIS 3.1,DOCSIS 3.1 Gigabit Cable Modem,192.168.100.1,http://192.168.100.1,admin,password (or last 8 digits of serial number),DOCSIS 3.1 (Up to 2 Gbps via Link Aggregation)
-arris-surfboard-g36,Arris,SURFboard G36 DOCSIS 3.1 & AX3000,DOCSIS 3.1 Gateway + Wi-Fi 6 Router,192.168.0.1,http://192.168.0.1,admin,password (or Wi-Fi preshared key on sticker),Wi-Fi 6 (AX3000) + DOCSIS 3.1
-amazon-eero-pro-6e,Amazon Eero,Eero Pro 6E (Tri-Band AXE5400),Tri-Band Wi-Fi 6E Mesh System,192.168.4.1,N/A (Managed exclusively via Eero Mobile App),Amazon / Eero App Account,App managed (No browser HTTP GUI),"Wi-Fi 6E Tri-Band (2.4 GHz, 5 GHz, 6 GHz AXE5400)"
-amazon-eero-max-7,Amazon Eero,Eero Max 7 (Tri-Band BE20800),Wi-Fi 7 Whole Home Mesh System,192.168.4.1,N/A (Eero App),Amazon / Eero Account,App managed,Wi-Fi 7 Tri-Band (BE20800 with 320 MHz channels)
-google-nest-wifi-pro,Google Nest,Nest Wifi Pro (Wi-Fi 6E AXE5400),Tri-Band Wi-Fi 6E Mesh System,192.168.86.1,http://192.168.86.1 (Shows Google Home App prompt),Google Account,Managed via Google Home App,Wi-Fi 6E Tri-Band (AXE5400)
-gl-inet-beryllium-gl-mt3000,GL.iNet,Beryl AX (GL-MT3000),Pocket Wi-Fi 6 Travel Router,192.168.8.1,http://192.168.8.1,root / admin,Set on first browser visit,Wi-Fi 6 (AX3000 Pocket Router)
-d-link-exo-ax5400,D-Link,EXO AX5400 (DIR-X5460),Wi-Fi 6 Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,password (or printed on configuration card),Wi-Fi 6 (AX5400 6-Stream)
-synology-rt6600ax,Synology,RT6600ax Tri-Band Router,Synology Router Manager (SRM) Wi-Fi 6,192.168.1.1,http://router.synology.com,admin,Set during SRM quick start wizard,Wi-Fi 6 Tri-Band (AX6600 with UNII-4 5.9 GHz)
-avm-fritzbox-7590-ax,AVM FRITZ!Box,FRITZ!Box 7590 AX (VDSL/Fiber),European Flagship DSL/Fiber Wi-Fi 6 Gateway,192.168.178.1,http://fritz.box,admin,Printed on the underside base sticker,Wi-Fi 6 (VDSL Supervectoring 35b + AX3600)
-cisco-catalyst-1000,Cisco,Catalyst 1000 Series (C1000-8T-2G-L),Enterprise Managed Switch / Gateway,192.168.1.254,http://192.168.1.254,cisco,cisco,Gigabit Ethernet Layer 2+
+netgear-nighthawk-xr1000,Netgear,Nighthawk Pro Gaming XR1000,Gaming Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX5400 DumaOS 3.0)
+netgear-nighthawk-xr500,Netgear,Nighthawk Pro Gaming XR500,Gaming Wi-Fi Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC2600 DumaOS)
+netgear-nighthawk-xr700,Netgear,Nighthawk Pro Gaming XR700,10G Flagship Gaming Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AD7200 60GHz + AC)
+netgear-nighthawk-xr300,Netgear,Nighthawk Pro Gaming XR300,Entry Gaming Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC1750 DumaOS)
+netgear-nighthawk-rax40,Netgear,Nighthawk AX4 (RAX40),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX3000 Dual-Band)
+netgear-nighthawk-rax43,Netgear,Nighthawk AX5 (RAX43),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX4200 5-Stream)
+netgear-nighthawk-rax80,Netgear,Nighthawk AX8 (RAX80),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX6000 8-Stream)
+netgear-nighthawk-rax200,Netgear,Nighthawk Tri-Band AX12 (RAX200),Tri-Band Wi-Fi 6 Flagship,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX11000 Tri-Band)
+netgear-nighthawk-rs700s,Netgear,Nighthawk RS700S,Wi-Fi 7 Multi-Gig Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 7 (BE19000 Tri-Band)
+netgear-nighthawk-rs300,Netgear,Nighthawk RS300,Wi-Fi 7 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 7 (BE9300 Tri-Band)
+netgear-nighthawk-r7000,Netgear,Nighthawk AC1900 (R7000),Smart Wi-Fi Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC1900 Dual-Band)
+netgear-nighthawk-r6700,Netgear,Nighthawk AC1750 (R6700),Smart Wi-Fi Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC1750 Dual-Band)
+netgear-nighthawk-r8000,Netgear,Nighthawk X6 AC3200 (R8000),Tri-Band Gigabit Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC3200 Tri-Band)
+netgear-nighthawk-r8500,Netgear,Nighthawk X8 AC5300 (R8500),Tri-Band Quad-Stream Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC5300 Tri-Band)
+netgear-nighthawk-r9000,Netgear,Nighthawk X10 AD7200 (R9000),Smart Wi-Fi Router with 10G,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 / 802.11ad (AD7200)
+netgear-nighthawk-r7000p,Netgear,Nighthawk AC2300 (R7000P),Smart Wi-Fi Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC2300 MU-MIMO)
+netgear-nighthawk-rax35,Netgear,Nighthawk AX3000 (RAX35),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX3000 4-Stream)
+netgear-orbi-rbk752,Netgear,Orbi Tri-Band WiFi 6 (RBK752),Whole Home Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 (AX4200 Tri-Band Mesh)
+netgear-orbi-rbk852,Netgear,Orbi WiFi 6 (RBK852),Flagship Mesh Wi-Fi 6,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 (AX6000 12-Stream)
+netgear-orbi-rbke963,Netgear,Orbi Quad-Band WiFi 6E (RBKE963),Quad-Band Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6E (AXE11000 Quad-Band)
+netgear-orbi-rbe973,Netgear,Orbi WiFi 7 (RBE973),Quad-Band Wi-Fi 7 Mesh,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 7 (BE27000 Quad-Band)
+netgear-orbi-lbr20,Netgear,Orbi 4G LTE WiFi Router (LBR20),Cellular Broadband Router,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 5 (AC2200 LTE Cat18)
+netgear-r6220,Netgear,Netgear AC1200 (R6220),Smart Wi-Fi Gigabit Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 5 (AC1200 Dual-Band)
+tp-link-archer-ax55,TP-Link,Archer AX55 (AX3000),Dual-Band Wi-Fi 6 Router,192.168.0.1,http://tplinkwifi.net,admin (created on setup),admin (created on setup),Wi-Fi 6 (AX3000)
+tp-link-archer-ax73,TP-Link,Archer AX73 (AX5400),6-Stream Wi-Fi 6 Router,192.168.0.1,http://tplinkwifi.net,admin (created on setup),admin (created on setup),Wi-Fi 6 (AX5400)
+tp-link-archer-ax21,TP-Link,Archer AX21 (AX1800),Dual-Band Wi-Fi 6 Router,192.168.0.1,http://tplinkwifi.net,admin (created on setup),admin (created on setup),Wi-Fi 6 (AX1800)
+tp-link-archer-ax10,TP-Link,Archer AX10 (AX1500),Wi-Fi 6 Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX1500)
+tp-link-archer-ax20,TP-Link,Archer AX20 (AX1800),Dual-Band Wi-Fi 6 Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX1800)
+tp-link-archer-ax50,TP-Link,Archer AX50 (AX3000),Wi-Fi 6 Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX3000)
+tp-link-archer-ax72,TP-Link,Archer AX72 (AX5400),Wi-Fi 6 Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX5400)
+tp-link-archer-ax90,TP-Link,Archer AX90 (AX6600),Tri-Band Wi-Fi 6 Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX6600 Tri-Band)
+tp-link-archer-ax11000,TP-Link,Archer AX11000,Tri-Band Gaming Wi-Fi 6,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX11000 Tri-Band)
+tp-link-archer-gx90,TP-Link,Archer GX90 (AX6600),Tri-Band Gaming Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 6 (AX6600 Gaming)
+tp-link-archer-be550,TP-Link,Archer BE550 (BE9300),Tri-Band Wi-Fi 7 Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 7 (BE9300 Tri-Band)
+tp-link-archer-be800,TP-Link,Archer BE800 (BE19000),Tri-Band Wi-Fi 7 Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 7 (BE19000)
+tp-link-archer-be900,TP-Link,Archer BE900 (BE24000),Quad-Band Wi-Fi 7 Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 7 (BE24000 Quad-Band)
+tp-link-archer-c7,TP-Link,Archer C7 (AC1750),Dual-Band Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC1750 Dual-Band)
+tp-link-archer-a7,TP-Link,Archer A7 (AC1750),Dual-Band Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC1750 Dual-Band)
+tp-link-archer-c6,TP-Link,Archer C6 (AC1200),MU-MIMO Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC1200)
+tp-link-archer-a6,TP-Link,Archer A6 (AC1200),MU-MIMO Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC1200)
+tp-link-archer-c80,TP-Link,Archer C80 (AC1900),MU-MIMO Wi-Fi Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC1900 3x3 MIMO)
+tp-link-archer-c2300,TP-Link,Archer C2300 (AC2300),MU-MIMO Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC2300)
+tp-link-archer-c5400x,TP-Link,Archer C5400X,Tri-Band Gaming Router,192.168.0.1,http://tplinkwifi.net,admin,admin,Wi-Fi 5 (AC5400 Tri-Band)
+tp-link-deco-x20,TP-Link,Deco X20 (AX1800),Mesh Wi-Fi 6 System,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6 (AX1800 Mesh)
+tp-link-deco-x50,TP-Link,Deco X50 (AX3000),Mesh Wi-Fi 6 System,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6 (AX3000 Mesh)
+tp-link-deco-x55,TP-Link,Deco X55 (AX3000),Mesh Wi-Fi 6 System,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6 (AX3000 Mesh)
+tp-link-deco-x60,TP-Link,Deco X60 (AX5400),Mesh Wi-Fi 6 System,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6 (AX5400 6-Stream)
+tp-link-deco-xe75,TP-Link,Deco XE75 (AXE5400),Tri-Band Mesh Wi-Fi 6E,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6E (AXE5400 Tri-Band)
+tp-link-deco-xe75-pro,TP-Link,Deco XE75 Pro (AXE5400),Tri-Band Mesh with 2.5G,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 6E (AXE5400 with 2.5G)
+tp-link-deco-be85,TP-Link,Deco BE85 (BE22000),Tri-Band Mesh Wi-Fi 7,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 7 (BE22000 Mesh)
+tp-link-deco-m4,TP-Link,Deco M4 (AC1200),Whole Home Mesh Wi-Fi,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 5 (AC1200)
+tp-link-deco-m5,TP-Link,Deco M5 (AC1300),Whole Home Mesh Wi-Fi,192.168.68.1,http://tplinkdeco.net,TP-Link ID,TP-Link ID,Wi-Fi 5 (AC1300)
+tp-link-omada-er605,TP-Link,Omada ER605 (TL-R605),Multi-WAN VPN Router,192.168.0.1,N/A (Web GUI),admin,admin,Gigabit Wired VPN Router
+asus-rt-ax88u,ASUS,RT-AX88U (AX6000),Dual-Band Wi-Fi 6 Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX6000 8-Port)
+asus-rt-ax86u,ASUS,RT-AX86U (AX5700),Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5700 Gaming)
+asus-rt-ax86u-pro,ASUS,RT-AX86U Pro (AX5700),Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5700 2.0GHz Quad-Core)
+asus-rt-ax88u-pro,ASUS,RT-AX88U Pro (AX6000),Dual-Band Wi-Fi 6 Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (Dual 2.5G AX6000)
+asus-rt-ax58u,ASUS,RT-AX58U (AX3000),Dual-Band Wi-Fi 6 Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX3000 AiMesh)
+asus-rt-ax55,ASUS,RT-AX55 (AX1800),Dual-Band Wi-Fi 6 Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX1800 AiMesh)
+asus-rt-ax53u,ASUS,RT-AX53U (AX1800),Wi-Fi 6 Router with USB,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX1800)
+asus-rt-ax68u,ASUS,RT-AX68U (AX2700),Dual-Band Wi-Fi 6 Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX2700 3x3)
+asus-rt-ax82u,ASUS,RT-AX82U (AX5400),Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5400 Aura RGB)
+asus-rt-ax89x,ASUS,RT-AX89X (AX6000),Dual-Band Wi-Fi 6 Dual 10G,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (Dual 10G SFP+/Base-T)
+asus-rt-ax92u,ASUS,RT-AX92U (AX6100),Tri-Band Wi-Fi 6 AiMesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX6100 Tri-Band)
+asus-rog-rapture-gt-ax11000,ASUS,ROG Rapture GT-AX11000,Tri-Band Gaming Router,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX11000 Tri-Band)
+asus-rog-rapture-gt-ax11000-pro,ASUS,ROG Rapture GT-AX11000 Pro,Tri-Band Gaming Flagship,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX11000 10G Gaming)
+asus-rog-rapture-gt-ax6000,ASUS,ROG Rapture GT-AX6000,Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (Dual 2.5G Gaming)
+asus-rog-rapture-gt-axe11000,ASUS,ROG Rapture GT-AXE11000,Tri-Band Wi-Fi 6E Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6E (AXE11000 6GHz)
+asus-rog-rapture-gt-axe16000,ASUS,ROG Rapture GT-AXE16000,Quad-Band Wi-Fi 6E Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6E (Quad-Band Dual 10G)
+asus-rog-rapture-gt-be98,ASUS,ROG Rapture GT-BE98,Quad-Band Wi-Fi 7 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 7 (BE25000 Quad-Band)
+asus-rog-rapture-gt6,ASUS,ROG Rapture GT6,Tri-Band Mesh Gaming System,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX10000 Mesh)
+asus-tuf-gaming-ax3000,ASUS,TUF Gaming AX3000,Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX3000 Gaming)
+asus-tuf-gaming-ax4200,ASUS,TUF Gaming AX4200,Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX4200 2.5G)
+asus-tuf-gaming-ax5400,ASUS,TUF Gaming AX5400,Dual-Band Wi-Fi 6 Gaming,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5400 Gaming)
+asus-zenwifi-xt8,ASUS,ZenWiFi XT8 (AX6600),Tri-Band Whole-Home Mesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX6600 Tri-Band Mesh)
+asus-zenwifi-xt9,ASUS,ZenWiFi XT9 (AX7800),Tri-Band Whole-Home Mesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX7800 160MHz)
+asus-zenwifi-pro-xt12,ASUS,ZenWiFi Pro XT12,Tri-Band Flagship Mesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX11000 Dual 2.5G)
+asus-zenwifi-pro-et12,ASUS,ZenWiFi Pro ET12,Tri-Band Wi-Fi 6E Mesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 6E (AXE11000 Dual 2.5G)
+asus-zenwifi-bq16,ASUS,ZenWiFi BQ16,Quad-Band Wi-Fi 7 Mesh,192.168.50.1,http://router.asus.com,admin,admin,Wi-Fi 7 (BE30000 Quad-Band)
+asus-rt-ac68u,ASUS,RT-AC68U (AC1900),Classic Dual-Band Router,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 5 (AC1900 AiMesh)
+asus-rt-ac86u,ASUS,RT-AC86U (AC2900),Dual-Band Gaming Router,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 5 (AC2900 WTFast)
+linksys-velop-micro-6-mesh-ln1301,Linksys,Velop Micro 6 Mesh (LN1301),Dual-Band Wi-Fi 6 Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX3000)
+linksys-velop-pro-6e-mx6200,Linksys,Velop Pro 6E (MX6200),Cognitive Mesh Wi-Fi 6E,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6E (AXE5400 Tri-Band)
+linksys-velop-pro-7-mbe7000,Linksys,Velop Pro 7 (MBE7000),Cognitive Mesh Wi-Fi 7,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 7 (BE11000 Tri-Band)
+linksys-atlas-pro-6-mx5500,Linksys,Atlas Pro 6 (MX5500),Dual-Band Wi-Fi 6 Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX5400)
+linksys-atlas-max-6e-mx8500,Linksys,Atlas Max 6E (MX8500),Tri-Band Wi-Fi 6E Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6E (AXE8400)
+linksys-velop-ax4200-mx4200,Linksys,Velop AX4200 (MX4200),Tri-Band Wi-Fi 6 Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX4200 Tri-Band)
+linksys-velop-ax5300-mx5300,Linksys,Velop AX5300 (MX5300),Tri-Band Wi-Fi 6 Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX5300 Tri-Band)
+linksys-velop-whw0303,Linksys,Velop Tri-Band (WHW0303),AC2200 Whole Home Mesh,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC2200 Tri-Band)
+linksys-hydra-pro-6e-mr7500,Linksys,Hydra Pro 6E (MR7500),Tri-Band Wi-Fi 6E Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6E (AXE6600)
+linksys-hydra-6-mr2000,Linksys,Hydra 6 (MR2000),Dual-Band Wi-Fi 6 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX3000)
+linksys-mr9600,Linksys,Max-Stream MR9600,Dual-Band Wi-Fi 6 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX6000 8-Stream)
+linksys-mr9000,Linksys,Max-Stream MR9000,Tri-Band AC3000 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC3000 Tri-Band)
+linksys-mr8300,Linksys,Max-Stream MR8300,Tri-Band AC2200 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC2200 Tri-Band)
+linksys-mr7350,Linksys,Max-Stream MR7350,Dual-Band Wi-Fi 6 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX1800)
+linksys-wrt54g,Linksys,Classic WRT54G,Wireless-G Router,192.168.1.1,http://192.168.1.1,admin,admin,802.11g (54 Mbps)
+linksys-wrt1900acs,Linksys,WRT1900ACS,Dual-Band AC1900 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC1900 OpenWrt)
+linksys-wrt3200acm,Linksys,WRT3200ACM,Dual-Band AC3200 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC3200 Tri-Stream)
+linksys-wrt32x,Linksys,WRT32X,Gaming Wi-Fi Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC3200 Killer)
+linksys-ea7500,Linksys,Max-Stream EA7500,Dual-Band AC1900 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC1900 MU-MIMO)
+linksys-ea8300,Linksys,Max-Stream EA8300,Tri-Band AC2200 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (AC2200 Tri-Band)
+ubiquiti-unifi-dream-machine-pro,Ubiquiti,UniFi Dream Machine Pro (UDM-Pro),10G Enterprise Gateway & NVR,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,10G SFP+ Enterprise Router
+ubiquiti-unifi-dream-machine-se,Ubiquiti,UniFi Dream Machine Special Edition (UDM-SE),2.5G PoE 10G Gateway,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,10G SFP+ Enterprise Router with PoE
+ubiquiti-unifi-dream-machine,Ubiquiti,UniFi Dream Machine (UDM),All-in-One Cloud Gateway,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Wi-Fi 5 (AC2200 4x4 MU-MIMO)
+ubiquiti-unifi-dream-router,Ubiquiti,UniFi Dream Router (UDR),Wi-Fi 6 PoE Gateway,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Wi-Fi 6 (4x4 MIMO UDR)
+ubiquiti-unifi-cloud-gateway-ultra,Ubiquiti,UniFi Cloud Gateway Ultra (UCG-Ultra),Compact Multi-WAN Gateway,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Multi-WAN 2.5G Gigabit Router
+ubiquiti-unifi-cloud-gateway-max,Ubiquiti,UniFi Cloud Gateway Max (UCG-Max),2.5GbE Multi-WAN Gateway,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Full 2.5GbE Gateway with NVMe Storage
+ubiquiti-unifi-express,Ubiquiti,UniFi Express (UX),Ultra-Compact Gateway & AP,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Wi-Fi 6 Cloud Gateway
+ubiquiti-unifi-security-gateway,Ubiquiti,UniFi Security Gateway (USG-3P),Enterprise Gateway Router,192.168.1.1,https://192.168.1.1,root,ubnt,Gigabit Security Gateway
+ubiquiti-unifi-security-gateway-pro,Ubiquiti,UniFi Security Gateway Pro (USG-PRO-4),Dual WAN 1U Gateway,192.168.1.1,https://192.168.1.1,root,ubnt,Gigabit Enterprise SFP Gateway
+ubiquiti-unifi-dream-wall,Ubiquiti,UniFi Dream Wall (UDW),Wall-Mount Multi-Gigabit Console,192.168.1.1,https://unifi.ui.com,UI Account / root,UI Account / root,Wi-Fi 6 Wall-Mount Enterprise
+ubiquiti-edgerouter-x,Ubiquiti,EdgeRouter X (ER-X),5-Port Gigabit Router,192.168.1.1,https://192.168.1.1,ubnt,ubnt,Gigabit EdgeOS Router
+ubiquiti-edgerouter-x-sfp,Ubiquiti,EdgeRouter X SFP (ER-X-SFP),Gigabit Router with SFP,192.168.1.1,https://192.168.1.1,ubnt,ubnt,Gigabit PoE EdgeOS Router
+ubiquiti-edgerouter-4,Ubiquiti,EdgeRouter 4 (ER-4),4-Port Gigabit Router,192.168.1.1,https://192.168.1.1,ubnt,ubnt,High-Performance EdgeOS Router
+ubiquiti-edgerouter-6p,Ubiquiti,EdgeRouter 6P (ER-6P),6-Port PoE Gigabit Router,192.168.1.1,https://192.168.1.1,ubnt,ubnt,Gigabit EdgeOS Router
+ubiquiti-edgerouter-12,Ubiquiti,EdgeRouter 12 (ER-12),10-Port Gigabit Router with SFP,192.168.1.1,https://192.168.1.1,ubnt,ubnt,10-Port Gigabit Enterprise Router
+ubiquiti-edgerouter-infinity,Ubiquiti,EdgeRouter Infinity (ER-8-XG),8-Port 10G SFP+ Router,192.168.1.1,https://192.168.1.1,ubnt,ubnt,8-Port 10G SFP+ Core Router
+ubiquiti-amplifi-alien,Ubiquiti,AmpliFi Alien (AFi-ALN),Wi-Fi 6 Gaming Mesh Router,192.168.112.1,http://amplifi.lan,admin,admin,Wi-Fi 6 (AX7600 Mesh)
+ubiquiti-amplifi-hd,Ubiquiti,AmpliFi HD (AFi-R),High-Density Home Wi-Fi,192.168.112.1,http://amplifi.lan,admin,admin,Wi-Fi 5 (AC1750 Mesh)
+mikrotik-hex-rb750gr3,MikroTik,hEX (RB750Gr3),5-Port Gigabit Router,192.168.88.1,http://router.lan,admin,[empty],Gigabit RouterOS v7 Router
+mikrotik-hex-s-rb760igs,MikroTik,hEX S (RB760iGS),Gigabit Router with SFP,192.168.88.1,http://router.lan,admin,[empty],Gigabit RouterOS with SFP
+mikrotik-hex-poe-rb960pgs,MikroTik,hEX PoE (RB960PGS),5-Port Gigabit PoE Router,192.168.88.1,http://router.lan,admin,[empty],Gigabit PoE RouterOS
+mikrotik-hap-ax2,MikroTik,hAP ax2 (C52iG-5HaxD2HaxD-TC),Dual-Band Wi-Fi 6 Router,192.168.88.1,http://router.lan,admin,Unique sticker password,Wi-Fi 6 (AX1800 Quad-Core)
+mikrotik-hap-ax3,MikroTik,hAP ax3 (C53UiG+5HPaxD2HPaxD),Wi-Fi 6 Router with 2.5G,192.168.88.1,http://router.lan,admin,Unique sticker password,Wi-Fi 6 (AX1800 with 2.5GbE)
+mikrotik-hap-ac2,MikroTik,hAP ac2 (RBD52G-5HacD2HnD-TC),Dual-Band Gigabit Router,192.168.88.1,http://router.lan,admin,[empty],Wi-Fi 5 (AC1200 Gigabit)
+mikrotik-hap-ac3,MikroTik,hAP ac3 (RBD53iG-5HacD2HnD),High-Gain Wi-Fi 5 Router,192.168.88.1,http://router.lan,admin,[empty],Wi-Fi 5 (AC1200 High-Gain)
+mikrotik-hap-lite,MikroTik,hAP lite (RB941-2nD),Compact 2.4GHz Home AP,192.168.88.1,http://router.lan,admin,[empty],802.11b/g/n (300Mbps)
+mikrotik-rb4011,MikroTik,RB4011iGS+5HacQ2HnD-IN,10x Gigabit + 10G SFP+ Router,192.168.88.1,http://router.lan,admin,[empty],Wi-Fi 5 + 10G SFP+ Core
+mikrotik-rb5009,MikroTik,RB5009UG+S+IN,Heavy-Duty Home Lab Router,192.168.88.1,http://router.lan,admin,[empty],Multi-Gig 1G/2.5G/10G RouterOS
+mikrotik-l009uigs,MikroTik,L009UiGS-2HaxD-IN,Dual-Band Wi-Fi 6 Router,192.168.88.1,http://router.lan,admin,[empty],Wi-Fi 6 (2.4GHz High Power) + SFP
+mikrotik-ccr2004,MikroTik,CCR2004-16G-2S+,16-Port Cloud Core Router,192.168.88.1,http://router.lan,admin,[empty],16-Port Gigabit + Dual 10G SFP+
+mikrotik-chateau-5g-ax,MikroTik,Chateau 5G ax,5G Home Gateway Wi-Fi 6,192.168.88.1,http://router.lan,admin,Unique sticker password,Wi-Fi 6 (AX1800 5G/LTE)
+mikrotik-chateau-lte12,MikroTik,Chateau LTE12,Cat12 LTE Home Gateway,192.168.88.1,http://router.lan,admin,Unique sticker password,Wi-Fi 5 (AC1200 Cat12 LTE)
+mikrotik-crs305,MikroTik,Cloud Router Switch (CRS305-1G-4S+IN),4-Port 10G SFP+ Switch/Router,192.168.88.1,http://router.lan,admin,[empty],4x 10Gbps SFP+ Dual Boot RouterOS
+mikrotik-rb3011,MikroTik,RouterBOARD 3011UiAS-RM,10-Port Gigabit Rackmount,192.168.88.1,http://router.lan,admin,[empty],1U Rackmount RouterOS with LCD
+d-link-eagle-pro-ai-r15,D-Link,EAGLE PRO AI AX1500 (R15),Smart Wi-Fi 6 Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty or sticker password],Wi-Fi 6 (AX1500 AI)
+d-link-eagle-pro-ai-r32,D-Link,EAGLE PRO AI AX3200 (R32),Wi-Fi 6 Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty or sticker password],Wi-Fi 6 (AX3200 4-Stream)
+d-link-exo-dir-x5460,D-Link,EXO AX5400 (DIR-X5460),6-Stream Wi-Fi 6 Router,192.168.0.1,http://dlinkrouter.local,Admin,password,Wi-Fi 6 (AX5400 6-Stream)
+d-link-exo-dir-x1860,D-Link,EXO AX1800 (DIR-X1860),Dual-Band Wi-Fi 6 Router,192.168.0.1,http://dlinkrouter.local,Admin,password,Wi-Fi 6 (AX1800)
+d-link-exo-dir-x1560,D-Link,EXO AX1500 (DIR-X1560),Dual-Band Wi-Fi 6 Router,192.168.0.1,http://dlinkrouter.local,Admin,password,Wi-Fi 6 (AX1500)
+d-link-dir-882,D-Link,DIR-882 (AC2600),MU-MIMO Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC2600 4x4)
+d-link-dir-878,D-Link,DIR-878 (AC1900),High-Power Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC1900 3x3)
+d-link-dir-867,D-Link,DIR-867 (AC1750),Dual-Band Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC1750)
+d-link-dir-842,D-Link,DIR-842 (AC1200),Wave 2 Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC1200)
+d-link-dir-825,D-Link,DIR-825 (AC1200),High-Gain Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC1200 High Gain)
+d-link-dir-615,D-Link,DIR-615,Classic Wireless-N Router,192.168.0.1,http://192.168.0.1,Admin,[empty],802.11n (300Mbps)
+d-link-dir-600,D-Link,DIR-600,Wireless 150 4-Port Router,192.168.0.1,http://192.168.0.1,Admin,[empty],802.11n (150Mbps)
+d-link-dir-850l,D-Link,DIR-850L,Cloud Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,[empty],Wi-Fi 5 (AC1200 Cylindrical)
+d-link-covr-x1870,D-Link,COVR AX1800 (COVR-X1870),Mesh Wi-Fi 6 System,192.168.0.1,http://covr.local,Admin,Sticker password,Wi-Fi 6 (AX1800 Mesh)
+d-link-covr-1100,D-Link,COVR AC1200 (COVR-1100),EasyMesh Certified System,192.168.0.1,http://covr.local,Admin,Sticker password,Wi-Fi 5 (AC1200 EasyMesh)
+d-link-dwr-960,D-Link,DWR-960,LTE Cat7 Wi-Fi AC1200 Router,192.168.0.1,http://192.168.0.1,admin,admin,Wi-Fi 5 + LTE Cat 7
+cisco-business-rv340,Cisco,Cisco Business RV340,Dual WAN Gigabit VPN Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Dual WAN Gigabit Security Gateway
+cisco-business-rv345,Cisco,Cisco Business RV345,Dual WAN 16-Port VPN Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Dual WAN 16-Port Gigabit Gateway
+cisco-business-rv260,Cisco,Cisco Business RV260,Gigabit VPN Router with SFP,192.168.1.1,https://192.168.1.1,cisco,cisco,Gigabit SFP VPN Security Router
+cisco-business-rv160,Cisco,Cisco Business RV160,Gigabit VPN Security Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Gigabit VPN Small Business Router
+cisco-business-rv130,Cisco,Cisco Business RV130,Multifunction VPN Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Gigabit Small Business VPN Router
+cisco-business-rv042,Cisco,Cisco Business RV042,Dual WAN 4-Port VPN Router,192.168.1.1,http://192.168.1.1,admin,admin,10/100 Dual WAN Business Router
+cisco-meraki-go-gx20,Cisco,Cisco Meraki Go GX20,Cloud Managed Security Gateway,192.168.128.1,https://meraki-go.com,admin (Meraki Account),admin,Cloud Managed Router Firewall
+cisco-meraki-go-gx50,Cisco,Cisco Meraki Go GX50,High-Throughput Router Firewall,192.168.128.1,https://meraki-go.com,admin (Meraki Account),admin,500Mbps Security Router Gateway
+cisco-catalyst-1000,Cisco,Cisco Catalyst 1000-8T-2G-L,Enterprise Switch Router,192.168.1.254,http://192.168.1.254,cisco,cisco,Enterprise Managed Layer 2/3 Switch
+cisco-isr-1100,Cisco,Cisco ISR 1100 (C1111-8P),Integrated Services Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Cisco IOS XE Enterprise Router
+cisco-isr-4331,Cisco,Cisco ISR 4331,Enterprise Modular Router,10.0.0.1,https://10.0.0.1,cisco,cisco,Enterprise ISR 4000 Modular Router
+cisco-c921-4p,Cisco,Cisco C921-4P,Gigabit Security Router,192.168.1.1,https://192.168.1.1,cisco,cisco,Gigabit Ethernet Security Router
+synology-rt6600ax,Synology,Synology RT6600ax,Tri-Band Wi-Fi 6 Router,192.168.1.1,http://router.synology.com,admin (created on setup),admin (created on setup),Wi-Fi 6 (Tri-Band AX6600)
+synology-rt2600ac,Synology,Synology RT2600ac,Dual-Band AC2600 Router,192.168.1.1,http://router.synology.com,admin (created on setup),admin (created on setup),Wi-Fi 5 (AC2600 4x4 MU-MIMO)
+synology-wrx560,Synology,Synology WRX560,Dual-Band Wi-Fi 6 Mesh,192.168.1.1,http://router.synology.com,admin (created on setup),admin (created on setup),Wi-Fi 6 (AX3000 with 2.5GbE)
+synology-mr2200ac,Synology,Synology MR2200ac,Tri-Band AC2200 Mesh,192.168.1.1,http://router.synology.com,admin (created on setup),admin (created on setup),Wi-Fi 5 (AC2200 Tri-Band Mesh)
+synology-rt1900ac,Synology,Synology RT1900ac,First-Gen SRM Router,192.168.1.1,http://router.synology.com,admin,admin,Wi-Fi 5 (AC1900)
+synology-ds-gateway,Synology,Synology DS-Gateway,Modular SRM Network Controller,192.168.1.1,http://router.synology.com,admin,admin,Enterprise SRM Controller
+google-nest-wifi-pro,Google Nest,Nest Wifi Pro (G6ZUC),Tri-Band Wi-Fi 6E Mesh,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 6E (AXE5400 Tri-Band)
+google-nest-wifi-router,Google Nest,Nest Wifi Router (H2D),Smart Mesh Wi-Fi Router,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 5 (AC2200 4x4 MU-MIMO)
+google-nest-wifi-point,Google Nest,Nest Wifi Point (H2E),Mesh Point with Smart Speaker,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 5 (AC1200)
+google-wifi,Google Nest,Google Wifi (NLS-1304-25),Whole-Home Mesh System,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 5 (AC1200 Dual-Band)
+google-onhub-asus,Google Nest,Google OnHub Asus (SRT-AC1900),Smart Wireless Router,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 5 (AC1900 Wave Antennas)
+google-onhub-tplink,Google Nest,Google OnHub TP-Link (TGR1900),Smart Wireless Router,192.168.86.1,N/A (Google Home App),Managed via Google Home,Managed via Google Home,Wi-Fi 5 (AC1900 Circular)
+amazon-eero-max-7,Amazon Eero,Eero Max 7,Tri-Band Wi-Fi 7 Mesh,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 7 (BE20800 Tri-Band)
+amazon-eero-pro-6e,Amazon Eero,Eero Pro 6E (S010001),Tri-Band Wi-Fi 6E Mesh,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 6E (AXE5400 Tri-Band)
+amazon-eero-pro-6,Amazon Eero,Eero Pro 6 (K010001),Tri-Band Wi-Fi 6 Mesh,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 6 (AX4200 Tri-Band)
+amazon-eero-6-plus,Amazon Eero,Eero 6+ (R010001),Dual-Band Wi-Fi 6 Gigabit,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 6 (AX3000 160MHz)
+amazon-eero-6,Amazon Eero,Eero 6 (N010001),Dual-Band Wi-Fi 6 Mesh,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 6 (AX1800 Dual-Band)
+amazon-eero-pro-2nd-gen,Amazon Eero,Eero Pro (2nd Gen - B010001),Tri-Band AC2200 Mesh,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 5 (AC2200 Tri-Band)
+amazon-eero-beacon,Amazon Eero,Eero Beacon,Plug-In Mesh Expander,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 5 (AC1300 Wall Plug)
+amazon-eero-1st-gen,Amazon Eero,Eero (1st Gen),Original TrueMesh Router,192.168.4.1,N/A (Eero App),Managed via Amazon eero App,Managed via Amazon eero App,Wi-Fi 5 (AC1200)
+avm-fritzbox-7590-ax,AVM FRITZ!Box,FRITZ!Box 7590 AX,VDSL Wi-Fi 6 Router,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 + VDSL Supervectoring 35b
+avm-fritzbox-7590,AVM FRITZ!Box,FRITZ!Box 7590,VDSL AC+N Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 5 (AC+N Dual-Band)
+avm-fritzbox-7530-ax,AVM FRITZ!Box,FRITZ!Box 7530 AX,VDSL Wi-Fi 6 Compact,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (AX1800 VDSL)
+avm-fritzbox-7530,AVM FRITZ!Box,FRITZ!Box 7530,VDSL Entry Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 5 (AC+N)
+avm-fritzbox-5590-fiber,AVM FRITZ!Box,FRITZ!Box 5590 Fiber,Fiber GPON/AON Wi-Fi 6,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (4x4 2.5GbE Fiber)
+avm-fritzbox-5530-fiber,AVM FRITZ!Box,FRITZ!Box 5530 Fiber,Compact Fiber Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (Fiber SFP)
+avm-fritzbox-6690-cable,AVM FRITZ!Box,FRITZ!Box 6690 Cable,DOCSIS 3.1 2.5G Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (4x4 DOCSIS 3.1 2.5G)
+avm-fritzbox-6660-cable,AVM FRITZ!Box,FRITZ!Box 6660 Cable,DOCSIS 3.1 Cable Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (2x2 DOCSIS 3.1 2.5G)
+avm-fritzbox-4060,AVM FRITZ!Box,FRITZ!Box 4060,Tri-Band Wi-Fi 6 Router,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 6 (Tri-Band 2.5GbE WAN)
+avm-fritzbox-4040,AVM FRITZ!Box,FRITZ!Box 4040,Gigabit Wireless Router,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 5 (AC1300 Dual-Band)
+avm-fritzbox-6850-5g,AVM FRITZ!Box,FRITZ!Box 6850 5G,5G Cellular Broadband,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 5 (5G/LTE Sub-6GHz)
+avm-fritzbox-6890-lte,AVM FRITZ!Box,FRITZ!Box 6890 LTE,VDSL + LTE Hybrid Gateway,192.168.178.1,http://fritz.box,admin,Unique sticker password,Wi-Fi 5 (VDSL 35b + LTE)
+zyxel-armor-g5,Zyxel,Armor G5 (NBG7815),Wi-Fi 6 Multi-Gig Router,192.168.1.1,http://zyxelwifi.net,admin,1234,Wi-Fi 6 (AX6000 12-Stream)
+zyxel-armor-g1,Zyxel,Armor G1 (NBG6818),Multi-Gigabit AC2600 Router,192.168.1.1,http://zyxelwifi.net,admin,1234,Wi-Fi 5 (AC2600 4x4)
+zyxel-multy-x,Zyxel,Multy X (WSQ50),Tri-Band AC3000 Mesh,192.168.212.1,http://zyxelwifi.com,admin,admin,Wi-Fi 5 (AC3000 Tri-Band Mesh)
+zyxel-multy-m1,Zyxel,Multy M1 (WSM20),Dual-Band Wi-Fi 6 Mesh,192.168.212.1,http://zyxelwifi.com,admin,admin,Wi-Fi 6 (AX1800 Mesh)
+zyxel-usg-flex-100,Zyxel,USG FLEX 100,Firewall Security Gateway,192.168.1.1,https://192.168.1.1,admin,1234,Nebula Cloud UTM Gateway
+zyxel-usg-flex-200,Zyxel,USG FLEX 200,UTM Security Gateway,192.168.1.1,https://192.168.1.1,admin,1234,High-Throughput UTM Security Gateway
+zyxel-usg20-vpn,Zyxel,USG20-VPN,Fanless VPN Gateway,192.168.1.1,https://192.168.1.1,admin,1234,Gigabit Fanless VPN Firewall
+zyxel-vmg8825-b50b,Zyxel,VMG8825-B50B,VDSL2 Bonding Gateway,192.168.1.1,http://192.168.1.1,admin,admin,Wi-Fi 5 (AC2400 VDSL2 Bonding)
+zyxel-dx3301-t0,Zyxel,DX3301-T0,VDSL2 Wi-Fi 6 Gateway,192.168.1.1,http://192.168.1.1,admin,admin,Wi-Fi 6 (AX1800 VDSL2)
+zyxel-nbg6604,Zyxel,NBG6604,AC1200 Dual-Band Router,192.168.1.1,http://zyxelwifi.net,admin,1234,Wi-Fi 5 (AC1200)
+huawei-wifi-ax3-quad-core,Huawei,WiFi AX3 (Quad-Core WS7200),Wi-Fi 6 Plus Router,192.168.3.1,http://192.168.3.1,admin,admin,Wi-Fi 6 Plus (AX3000 Quad-Core)
+huawei-wifi-ax3-dual-core,Huawei,WiFi AX3 (Dual-Core WS7100),Wi-Fi 6 Plus Router,192.168.3.1,http://192.168.3.1,admin,admin,Wi-Fi 6 Plus (AX3000 Dual-Core)
+huawei-wifi-ax2,Huawei,WiFi AX2 (WS7001),Dual-Band Wi-Fi 6 Router,192.168.3.1,http://192.168.3.1,admin,admin,Wi-Fi 6 (AX1500)
+huawei-wifi-mesh-7,Huawei,WiFi Mesh 7 (WS8800),Tri-Band Mesh Wi-Fi 6,192.168.3.1,http://192.168.3.1,admin,admin,Wi-Fi 6 (AX6600 Tri-Band Mesh)
+huawei-wifi-mesh-3,Huawei,WiFi Mesh 3 (WS5800),Dual-Band Mesh Wi-Fi 6,192.168.3.1,http://192.168.3.1,admin,admin,Wi-Fi 6 (AX3000 Mesh)
+huawei-5g-cpe-pro-2,Huawei,5G CPE Pro 2 (H122-373),5G Mobile Broadband Gateway,192.168.8.1,http://192.168.8.1,admin,Unique sticker password,Wi-Fi 6 + 5G Sub-6GHz (Balong 5000)
+huawei-4g-router-3-pro,Huawei,4G Router 3 Pro (B535-232),LTE Cat7 Wireless Router,192.168.8.1,http://192.168.8.1,admin,admin,Wi-Fi 5 + LTE Cat 7 (300Mbps)
+huawei-echolife-hg8245h,Huawei,EchoLife HG8245H,GPON Optical ONT Gateway,192.168.100.1,http://192.168.100.1,telecomadmin,admintelecom,GPON ONT + Wi-Fi 4 (300Mbps)
+huawei-echolife-hg8145v5,Huawei,EchoLife HG8145V5,Intelligent Routing GPON ONT,192.168.100.1,http://192.168.100.1,telecomadmin,admintelecom,GPON ONT + Wi-Fi 5 (AC1200)
+huawei-b311-221,Huawei,4G Router B311 (B311-221),4G LTE Wireless Gateway,192.168.8.1,http://192.168.8.1,admin,admin,802.11n + LTE Cat 4 (150Mbps)
+gl-inet-slate-ax-gl-axt1800,GL.iNet,Slate AX (GL-AXT1800),Wi-Fi 6 Travel Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 6 (AX1800 Travel)
+gl-inet-beryl-ax-gl-mt3000,GL.iNet,Beryl AX (GL-MT3000),Pocket Wi-Fi 6 2.5G Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 6 (AX3000 with 2.5G WAN)
+gl-inet-beryl-gl-mt1300,GL.iNet,Beryl (GL-MT1300),High-Performance Travel Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 5 (AC1300 Dual-Band)
+gl-inet-opal-gl-sft1200,GL.iNet,Opal (GL-SFT1200),Ultra-Portable Travel Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 5 (AC1200)
+gl-inet-slate-gl-ar750s,GL.iNet,Slate (GL-AR750S-Ext),Gigabit Dual-Band AC Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 5 (AC750)
+gl-inet-shadow-gl-ar300m,GL.iNet,Shadow (GL-AR300M16),Mini Micro-USB Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),802.11n (300Mbps Micro Router)
+gl-inet-flint-gl-ax1800,GL.iNet,Flint (GL-AX1800),Wi-Fi 6 OpenWrt Home Gateway,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 6 (AX1800 Quad-Core)
+gl-inet-flint-2-gl-mt6000,GL.iNet,Flint 2 (GL-MT6000),Dual 2.5G Wi-Fi 6 Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 6 (AX6000 Dual 2.5G)
+gl-inet-spitz-ax-gl-x3000,GL.iNet,Spitz AX (GL-X3000),Dual-SIM 5G NR Gateway,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 6 + 5G NR Dual-SIM
+gl-inet-mudi-gl-e750,GL.iNet,Mudi (GL-E750),Portable 4G LTE Privacy Router,192.168.8.1,http://192.168.8.1,root,admin (created on setup),Wi-Fi 5 + 4G LTE with 7000mAh Battery
+draytek-vigor-2927,DrayTek,Vigor 2927 Series,Dual-WAN Gigabit VPN Router,192.168.1.1,http://192.168.1.1,admin,admin,Dual-WAN Gigabit Business Router
+draytek-vigor-2962,DrayTek,Vigor 2962,Multi-WAN 2.5G & SFP Router,192.168.1.1,http://192.168.1.1,admin,admin,2.5G / SFP Multi-WAN Enterprise
+draytek-vigor-2865,DrayTek,Vigor 2865 Series,VDSL2 35b Security Router,192.168.1.1,http://192.168.1.1,admin,admin,VDSL2 35b Supervectoring + GbE WAN
+draytek-vigor-3910,DrayTek,Vigor 3910,Multi-WAN 10G Enterprise Router,192.168.1.1,http://192.168.1.1,admin,admin,Quad 10G SFP+ Core Enterprise Router
+draytek-vigor-2135,DrayTek,Vigor 2135 Series,Single-WAN Gigabit Router,192.168.1.1,http://192.168.1.1,admin,admin,Gigabit SOHO Security Router
+draytek-vigor-2765,DrayTek,Vigor 2765 Series,VDSL2/ADSL2+ SOHO Router,192.168.1.1,http://192.168.1.1,admin,admin,VDSL2/ADSL2+ Security Router
+draytek-vigor-2926,DrayTek,Vigor 2926 Series,Dual-WAN Business Router,192.168.1.1,http://192.168.1.1,admin,admin,Dual-WAN Gigabit VPN Router
+draytek-vigor-2862,DrayTek,Vigor 2862 Series,Classic VDSL2 Security Router,192.168.1.1,http://192.168.1.1,admin,admin,VDSL2/ADSL2+ Enterprise Router
+arris-surfboard-g54,Arris,SURFboard G54,Quad-Band Wi-Fi 7 Cable Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 7 (BE18000 DOCSIS 3.1)
+arris-surfboard-g36,Arris,SURFboard G36,Wi-Fi 6 AX3000 Cable Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 6 (AX3000 DOCSIS 3.1 2.5G)
+arris-surfboard-g34,Arris,SURFboard G34,Wi-Fi 6 AX3000 Cable Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 6 (AX3000 DOCSIS 3.1)
+arris-surfboard-sbg8300,Arris,SURFboard SBG8300,DOCSIS 3.1 AC2300 Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 5 (AC2300 DOCSIS 3.1)
+arris-surfboard-sbg7600ac2,Arris,SURFboard SBG7600AC2,DOCSIS 3.0 AC2300 Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 5 (AC2300 32x8)
+arris-surfboard-sbg7400ac2,Arris,SURFboard SBG7400AC2,DOCSIS 3.0 AC1750 Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 5 (AC1750 24x8)
+arris-surfboard-sbg6900-ac,Arris,SURFboard SBG6900-AC,DOCSIS 3.0 AC1900 Modem Router,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 5 (AC1900 16x4)
+arris-surfboard-sbg10,Arris,SURFboard SBG10,DOCSIS 3.0 AC1600 Gateway,192.168.0.1,http://192.168.0.1,admin,password,Wi-Fi 5 (AC1600 16x4)
+arris-nvg589,Arris,Arris NVG589,VDSL2 Gateway with Voice,192.168.1.254,http://192.168.1.254,admin,Sticker password,802.11n VDSL2 Bonded Gateway
+arris-bgw210-700,Arris,Arris BGW210-700,Broadband Fiber ONT Gateway,192.168.1.254,http://192.168.1.254,admin,Sticker Access Code,Wi-Fi 5 (AC2100 4x4 MU-MIMO)
+motorola-mg8725,Motorola,Motorola MG8725,DOCSIS 3.1 Wi-Fi 6 AX6000,192.168.0.1,http://192.168.0.1,admin,motorola,Wi-Fi 6 (AX6000 DOCSIS 3.1 2.5G)
+motorola-mg8702,Motorola,Motorola MG8702,DOCSIS 3.1 AC3200 Gateway,192.168.0.1,http://192.168.0.1,admin,motorola,Wi-Fi 5 (AC3200 4x4 DOCSIS 3.1)
+motorola-mg7700,Motorola,Motorola MG7700,DOCSIS 3.0 AC1900 Gateway,192.168.0.1,http://192.168.0.1,admin,motorola,Wi-Fi 5 (AC1900 24x8)
+motorola-mg7550,Motorola,Motorola MG7550,DOCSIS 3.0 AC1900 Gateway,192.168.0.1,http://192.168.0.1,admin,motorola,Wi-Fi 5 (AC1900 16x4)
+motorola-mt7711,Motorola,Motorola MT7711,DOCSIS 3.0 with Voice,192.168.0.1,http://192.168.0.1,admin,motorola,Wi-Fi 5 (AC1900 24x8 Telephone)
+motorola-mr2600,Motorola,Motorola MR2600,Smart Wi-Fi Gigabit Router,192.168.1.1,http://192.168.1.1,admin,motorola,Wi-Fi 5 (AC2600 4x4)

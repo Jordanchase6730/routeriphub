@@ -8,11 +8,26 @@
   <link rel="canonical" href="https://routeriphub.com/routers/netgear-nighthawk-xr1000/">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://routeriphub.com/routers/netgear-nighthawk-xr1000/">
   <meta property="og:title" content="Netgear Nighthawk Pro Gaming XR1000 Default IP, Password &amp; Setup Guide (2026)">
   <meta property="og:description" content="Access Netgear Nighthawk Pro Gaming XR1000 default login IP (192.168.1.1), admin password, factory reset procedure, and LED diagnostics cheat-sheet.">
   <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="Netgear Nighthawk Pro Gaming XR1000 Default IP, Password &amp; Setup Guide (2026)">
+  <meta name="twitter:description" content="Access Netgear Nighthawk Pro Gaming XR1000 default login IP (192.168.1.1), admin password, factory reset procedure, and LED diagnostics cheat-sheet.">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
 
   <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
   <script>
@@ -138,7 +153,7 @@
           "name": "How do I reset my Netgear Nighthawk Pro Gaming XR1000 to factory settings?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Press and hold the Reset button on the back panel for 10 seconds. DumaOS 3.0 will reset to factory defaults and initiate the setup wizard on next login."
+            "text": "With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart."
           }
         }
       ]
@@ -283,7 +298,7 @@
         </div>
         <div class="spec-item">
           <span class="spec-item-label">Hardware Type</span>
-          <span class="spec-item-val">Gaming Wi-Fi 6 Router (DumaOS 3.0)</span>
+          <span class="spec-item-val">Gaming Wi-Fi 6 Router</span>
         </div>
         <div class="spec-item">
           <span class="spec-item-label">Default Gateway IP</span>
@@ -315,7 +330,7 @@
         </div>
         <div class="spec-item">
           <span class="spec-item-label">Wi-Fi Standard</span>
-          <span class="spec-item-val">Wi-Fi 6 (AX5400)</span>
+          <span class="spec-item-val">Wi-Fi 6 (AX5400 DumaOS 3.0)</span>
         </div>
       </div>
 
@@ -325,7 +340,7 @@
       </h2>
       <div class="reset-instruction-box">
         <p style="margin-bottom: 0.75rem;"><strong>Hardware Reset Instructions:</strong></p>
-        <p>Press and hold the Reset button on the back panel for 10 seconds. DumaOS 3.0 will reset to factory defaults and initiate the setup wizard on next login.</p>
+        <p>With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.</p>
       </div>
 
       <!-- LED Indicators Cheat-Sheet -->
@@ -347,15 +362,36 @@
             <tr>
               <td><strong>Power</strong></td>
               <td><span class="led-badge-normal">Solid White</span></td>
-              <td><span class="led-badge-error">Blinking Amber</span></td>
-              <td style="color: var(--text-secondary);">Hardware power &amp; OS boot.</td>
+              <td><span class="led-badge-error">Blinking Amber (Resetting/Firmware Recovery)</span></td>
+              <td style="color: var(--text-secondary);">Hardware operational status.</td>
             </tr>
             
             <tr>
-              <td><strong>Internet</strong></td>
+              <td><strong>Internet / WAN</strong></td>
               <td><span class="led-badge-normal">Solid White</span></td>
-              <td><span class="led-badge-error">Amber (Unresolved DNS / Gateway)</span></td>
-              <td style="color: var(--text-secondary);">WAN connectivity to ISP.</td>
+              <td><span class="led-badge-error">Solid Amber (Physical link OK, no IP) / Off</span></td>
+              <td style="color: var(--text-secondary);">Ethernet link to upstream modem or ONT.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>2.4 GHz Wi-Fi</strong></td>
+              <td><span class="led-badge-normal">Solid White</span></td>
+              <td><span class="led-badge-error">Off (Radio disabled)</span></td>
+              <td style="color: var(--text-secondary);">2.4 GHz band broadcast.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>5 GHz Wi-Fi</strong></td>
+              <td><span class="led-badge-normal">Solid White</span></td>
+              <td><span class="led-badge-error">Off (Radio disabled or DFS radar scan)</span></td>
+              <td style="color: var(--text-secondary);">5 GHz high-speed band status.</td>
+            </tr>
+            
+            <tr>
+              <td><strong>LAN 1-4</strong></td>
+              <td><span class="led-badge-normal">Solid White (1G) / Amber (100M)</span></td>
+              <td><span class="led-badge-error">Off (No cable connected)</span></td>
+              <td style="color: var(--text-secondary);">Local switch Ethernet ports.</td>
             </tr>
             
           </tbody>
@@ -392,7 +428,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
           <span>Download Netgear Nighthawk App</span>
         </a>
-        <a href="https://www.downloads.netgear.com/files/GDC/XR1000/XR1000_UM_EN.pdf" target="_blank" rel="noopener noreferrer" class="btn-official-link">
+        <a href="https://www.netgear.com/support/product/XR1000.aspx" target="_blank" rel="noopener noreferrer" class="btn-official-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           <span>Download Official PDF Manual</span>
         </a>

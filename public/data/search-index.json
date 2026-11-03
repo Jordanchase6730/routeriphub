@@ -4,7 +4,7 @@
     "category": "Router Model",
     "badge": "Netgear",
     "url": "/routers/netgear-nighthawk-rax50/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (802.11ax Dual-Band AX5400).",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (802.11ax AX5400).",
     "keywords": "netgear nighthawk ax6 (rax50) 192.168.1.1 netgear-nighthawk-rax50 password reset wi-fi 6 router"
   },
   {
@@ -20,240 +20,1992 @@
     "category": "Router Model",
     "badge": "Netgear",
     "url": "/routers/netgear-nighthawk-xr1000/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX5400).",
-    "keywords": "netgear nighthawk pro gaming xr1000 192.168.1.1 netgear-nighthawk-xr1000 password reset gaming wi-fi 6 router (dumaos 3.0)"
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX5400 DumaOS 3.0).",
+    "keywords": "netgear nighthawk pro gaming xr1000 192.168.1.1 netgear-nighthawk-xr1000 password reset gaming wi-fi 6 router"
   },
   {
-    "title": "Netgear Orbi Tri-Band Mesh AX4200 (RBK752) Setup Sheet",
+    "title": "Netgear Nighthawk Pro Gaming XR500 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-xr500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC2600 DumaOS).",
+    "keywords": "netgear nighthawk pro gaming xr500 192.168.1.1 netgear-nighthawk-xr500 password reset gaming wi-fi router"
+  },
+  {
+    "title": "Netgear Nighthawk Pro Gaming XR700 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-xr700/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AD7200 60GHz + AC).",
+    "keywords": "netgear nighthawk pro gaming xr700 192.168.1.1 netgear-nighthawk-xr700 password reset 10g flagship gaming router"
+  },
+  {
+    "title": "Netgear Nighthawk Pro Gaming XR300 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-xr300/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC1750 DumaOS).",
+    "keywords": "netgear nighthawk pro gaming xr300 192.168.1.1 netgear-nighthawk-xr300 password reset entry gaming router"
+  },
+  {
+    "title": "Netgear Nighthawk AX4 (RAX40) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rax40/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX3000 Dual-Band).",
+    "keywords": "netgear nighthawk ax4 (rax40) 192.168.1.1 netgear-nighthawk-rax40 password reset wi-fi 6 router"
+  },
+  {
+    "title": "Netgear Nighthawk AX5 (RAX43) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rax43/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX4200 5-Stream).",
+    "keywords": "netgear nighthawk ax5 (rax43) 192.168.1.1 netgear-nighthawk-rax43 password reset wi-fi 6 router"
+  },
+  {
+    "title": "Netgear Nighthawk AX8 (RAX80) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rax80/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX6000 8-Stream).",
+    "keywords": "netgear nighthawk ax8 (rax80) 192.168.1.1 netgear-nighthawk-rax80 password reset wi-fi 6 router"
+  },
+  {
+    "title": "Netgear Nighthawk Tri-Band AX12 (RAX200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rax200/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX11000 Tri-Band).",
+    "keywords": "netgear nighthawk tri-band ax12 (rax200) 192.168.1.1 netgear-nighthawk-rax200 password reset tri-band wi-fi 6 flagship"
+  },
+  {
+    "title": "Netgear Nighthawk RS700S Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rs700s/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 7 (BE19000 Tri-Band).",
+    "keywords": "netgear nighthawk rs700s 192.168.1.1 netgear-nighthawk-rs700s password reset wi-fi 7 multi-gig router"
+  },
+  {
+    "title": "Netgear Nighthawk RS300 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rs300/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 7 (BE9300 Tri-Band).",
+    "keywords": "netgear nighthawk rs300 192.168.1.1 netgear-nighthawk-rs300 password reset wi-fi 7 router"
+  },
+  {
+    "title": "Netgear Nighthawk AC1900 (R7000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r7000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC1900 Dual-Band).",
+    "keywords": "netgear nighthawk ac1900 (r7000) 192.168.1.1 netgear-nighthawk-r7000 password reset smart wi-fi router"
+  },
+  {
+    "title": "Netgear Nighthawk AC1750 (R6700) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r6700/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC1750 Dual-Band).",
+    "keywords": "netgear nighthawk ac1750 (r6700) 192.168.1.1 netgear-nighthawk-r6700 password reset smart wi-fi router"
+  },
+  {
+    "title": "Netgear Nighthawk X6 AC3200 (R8000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r8000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC3200 Tri-Band).",
+    "keywords": "netgear nighthawk x6 ac3200 (r8000) 192.168.1.1 netgear-nighthawk-r8000 password reset tri-band gigabit router"
+  },
+  {
+    "title": "Netgear Nighthawk X8 AC5300 (R8500) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r8500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC5300 Tri-Band).",
+    "keywords": "netgear nighthawk x8 ac5300 (r8500) 192.168.1.1 netgear-nighthawk-r8500 password reset tri-band quad-stream router"
+  },
+  {
+    "title": "Netgear Nighthawk X10 AD7200 (R9000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r9000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 / 802.11ad (AD7200).",
+    "keywords": "netgear nighthawk x10 ad7200 (r9000) 192.168.1.1 netgear-nighthawk-r9000 password reset smart wi-fi router with 10g"
+  },
+  {
+    "title": "Netgear Nighthawk AC2300 (R7000P) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-r7000p/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC2300 MU-MIMO).",
+    "keywords": "netgear nighthawk ac2300 (r7000p) 192.168.1.1 netgear-nighthawk-r7000p password reset smart wi-fi router"
+  },
+  {
+    "title": "Netgear Nighthawk AX3000 (RAX35) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-nighthawk-rax35/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX3000 4-Stream).",
+    "keywords": "netgear nighthawk ax3000 (rax35) 192.168.1.1 netgear-nighthawk-rax35 password reset wi-fi 6 router"
+  },
+  {
+    "title": "Netgear Orbi Tri-Band WiFi 6 (RBK752) Setup Sheet",
     "category": "Router Model",
     "badge": "Netgear",
     "url": "/routers/netgear-orbi-rbk752/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 Tri-Band (AX4200 with Dedicated Backhaul).",
-    "keywords": "netgear orbi tri-band mesh ax4200 (rbk752) 192.168.1.1 netgear-orbi-rbk752 password reset tri-band mesh system"
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX4200 Tri-Band Mesh).",
+    "keywords": "netgear orbi tri-band wifi 6 (rbk752) 192.168.1.1 netgear-orbi-rbk752 password reset whole home mesh system"
   },
   {
-    "title": "Netgear Orbi Tri-Band Mesh AX6000 (RBK852) Setup Sheet",
+    "title": "Netgear Orbi WiFi 6 (RBK852) Setup Sheet",
     "category": "Router Model",
     "badge": "Netgear",
     "url": "/routers/netgear-orbi-rbk852/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 Tri-Band (AX6000 12-Stream).",
-    "keywords": "netgear orbi tri-band mesh ax6000 (rbk852) 192.168.1.1 netgear-orbi-rbk852 password reset flagship tri-band mesh system"
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6 (AX6000 12-Stream).",
+    "keywords": "netgear orbi wifi 6 (rbk852) 192.168.1.1 netgear-orbi-rbk852 password reset flagship mesh wi-fi 6"
+  },
+  {
+    "title": "Netgear Orbi Quad-Band WiFi 6E (RBKE963) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-orbi-rbke963/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 6E (AXE11000 Quad-Band).",
+    "keywords": "netgear orbi quad-band wifi 6e (rbke963) 192.168.1.1 netgear-orbi-rbke963 password reset quad-band mesh system"
+  },
+  {
+    "title": "Netgear Orbi WiFi 7 (RBE973) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-orbi-rbe973/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 7 (BE27000 Quad-Band).",
+    "keywords": "netgear orbi wifi 7 (rbe973) 192.168.1.1 netgear-orbi-rbe973 password reset quad-band wi-fi 7 mesh"
+  },
+  {
+    "title": "Netgear Orbi 4G LTE WiFi Router (LBR20) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-orbi-lbr20/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC2200 LTE Cat18).",
+    "keywords": "netgear orbi 4g lte wifi router (lbr20) 192.168.1.1 netgear-orbi-lbr20 password reset cellular broadband router"
+  },
+  {
+    "title": "Netgear Netgear AC1200 (R6220) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "url": "/routers/netgear-r6220/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'password', Wi-Fi 5 (AC1200 Dual-Band).",
+    "keywords": "netgear netgear ac1200 (r6220) 192.168.1.1 netgear-r6220 password reset smart wi-fi gigabit router"
   },
   {
     "title": "TP-Link Archer AX55 (AX3000) Setup Sheet",
     "category": "Router Model",
     "badge": "TP-Link",
     "url": "/routers/tp-link-archer-ax55/",
-    "snippet": "Default IP 192.168.0.1, username 'admin', password 'Created on first setup (or admin on legacy v1)', Wi-Fi 6 (AX3000 Dual Band).",
-    "keywords": "tp-link archer ax55 (ax3000) 192.168.0.1 tp-link-archer-ax55 password reset wi-fi 6 gigabit router"
+    "snippet": "Default IP 192.168.0.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 6 (AX3000).",
+    "keywords": "tp-link archer ax55 (ax3000) 192.168.0.1 tp-link-archer-ax55 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "TP-Link Archer AX73 (AX5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax73/",
+    "snippet": "Default IP 192.168.0.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 6 (AX5400).",
+    "keywords": "tp-link archer ax73 (ax5400) 192.168.0.1 tp-link-archer-ax73 password reset 6-stream wi-fi 6 router"
   },
   {
     "title": "TP-Link Archer AX21 (AX1800) Setup Sheet",
     "category": "Router Model",
     "badge": "TP-Link",
     "url": "/routers/tp-link-archer-ax21/",
-    "snippet": "Default IP 192.168.0.1, username 'admin', password 'Created on first boot', Wi-Fi 6 (AX1800).",
-    "keywords": "tp-link archer ax21 (ax1800) 192.168.0.1 tp-link-archer-ax21 password reset wi-fi 6 dual-band router"
+    "snippet": "Default IP 192.168.0.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 6 (AX1800).",
+    "keywords": "tp-link archer ax21 (ax1800) 192.168.0.1 tp-link-archer-ax21 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "TP-Link Archer AX10 (AX1500) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax10/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX1500).",
+    "keywords": "tp-link archer ax10 (ax1500) 192.168.0.1 tp-link-archer-ax10 password reset wi-fi 6 gigabit router"
+  },
+  {
+    "title": "TP-Link Archer AX20 (AX1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax20/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800).",
+    "keywords": "tp-link archer ax20 (ax1800) 192.168.0.1 tp-link-archer-ax20 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "TP-Link Archer AX50 (AX3000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax50/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000).",
+    "keywords": "tp-link archer ax50 (ax3000) 192.168.0.1 tp-link-archer-ax50 password reset wi-fi 6 gigabit router"
+  },
+  {
+    "title": "TP-Link Archer AX72 (AX5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax72/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX5400).",
+    "keywords": "tp-link archer ax72 (ax5400) 192.168.0.1 tp-link-archer-ax72 password reset wi-fi 6 gigabit router"
+  },
+  {
+    "title": "TP-Link Archer AX90 (AX6600) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax90/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX6600 Tri-Band).",
+    "keywords": "tp-link archer ax90 (ax6600) 192.168.0.1 tp-link-archer-ax90 password reset tri-band wi-fi 6 router"
+  },
+  {
+    "title": "TP-Link Archer AX11000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-ax11000/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX11000 Tri-Band).",
+    "keywords": "tp-link archer ax11000 192.168.0.1 tp-link-archer-ax11000 password reset tri-band gaming wi-fi 6"
+  },
+  {
+    "title": "TP-Link Archer GX90 (AX6600) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-gx90/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 6 (AX6600 Gaming).",
+    "keywords": "tp-link archer gx90 (ax6600) 192.168.0.1 tp-link-archer-gx90 password reset tri-band gaming router"
+  },
+  {
+    "title": "TP-Link Archer BE550 (BE9300) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-be550/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 7 (BE9300 Tri-Band).",
+    "keywords": "tp-link archer be550 (be9300) 192.168.0.1 tp-link-archer-be550 password reset tri-band wi-fi 7 router"
   },
   {
     "title": "TP-Link Archer BE800 (BE19000) Setup Sheet",
     "category": "Router Model",
     "badge": "TP-Link",
     "url": "/routers/tp-link-archer-be800/",
-    "snippet": "Default IP 192.168.0.1, username 'admin', password 'Set during setup wizard', Wi-Fi 7 (BE19000 with 320 MHz Channels & MLO).",
-    "keywords": "tp-link archer be800 (be19000) 192.168.0.1 tp-link-archer-be800 password reset wi-fi 7 tri-band flagship router"
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 7 (BE19000).",
+    "keywords": "tp-link archer be800 (be19000) 192.168.0.1 tp-link-archer-be800 password reset tri-band wi-fi 7 router"
   },
   {
-    "title": "TP-Link Deco X55 AX3000 Mesh Setup Sheet",
+    "title": "TP-Link Archer BE900 (BE24000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-be900/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 7 (BE24000 Quad-Band).",
+    "keywords": "tp-link archer be900 (be24000) 192.168.0.1 tp-link-archer-be900 password reset quad-band wi-fi 7 router"
+  },
+  {
+    "title": "TP-Link Archer C7 (AC1750) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-c7/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC1750 Dual-Band).",
+    "keywords": "tp-link archer c7 (ac1750) 192.168.0.1 tp-link-archer-c7 password reset dual-band gigabit router"
+  },
+  {
+    "title": "TP-Link Archer A7 (AC1750) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-a7/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC1750 Dual-Band).",
+    "keywords": "tp-link archer a7 (ac1750) 192.168.0.1 tp-link-archer-a7 password reset dual-band gigabit router"
+  },
+  {
+    "title": "TP-Link Archer C6 (AC1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-c6/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC1200).",
+    "keywords": "tp-link archer c6 (ac1200) 192.168.0.1 tp-link-archer-c6 password reset mu-mimo gigabit router"
+  },
+  {
+    "title": "TP-Link Archer A6 (AC1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-a6/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC1200).",
+    "keywords": "tp-link archer a6 (ac1200) 192.168.0.1 tp-link-archer-a6 password reset mu-mimo gigabit router"
+  },
+  {
+    "title": "TP-Link Archer C80 (AC1900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-c80/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC1900 3x3 MIMO).",
+    "keywords": "tp-link archer c80 (ac1900) 192.168.0.1 tp-link-archer-c80 password reset mu-mimo wi-fi router"
+  },
+  {
+    "title": "TP-Link Archer C2300 (AC2300) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-c2300/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC2300).",
+    "keywords": "tp-link archer c2300 (ac2300) 192.168.0.1 tp-link-archer-c2300 password reset mu-mimo gigabit router"
+  },
+  {
+    "title": "TP-Link Archer C5400X Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-archer-c5400x/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 (AC5400 Tri-Band).",
+    "keywords": "tp-link archer c5400x 192.168.0.1 tp-link-archer-c5400x password reset tri-band gaming router"
+  },
+  {
+    "title": "TP-Link Deco X20 (AX1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-x20/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6 (AX1800 Mesh).",
+    "keywords": "tp-link deco x20 (ax1800) 192.168.68.1 tp-link-deco-x20 password reset mesh wi-fi 6 system"
+  },
+  {
+    "title": "TP-Link Deco X50 (AX3000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-x50/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6 (AX3000 Mesh).",
+    "keywords": "tp-link deco x50 (ax3000) 192.168.68.1 tp-link-deco-x50 password reset mesh wi-fi 6 system"
+  },
+  {
+    "title": "TP-Link Deco X55 (AX3000) Setup Sheet",
     "category": "Router Model",
     "badge": "TP-Link",
     "url": "/routers/tp-link-deco-x55/",
-    "snippet": "Default IP 192.168.68.1, username 'Deco App Account (TP-Link ID)', password 'Set in Deco Mobile App', Wi-Fi 6 Mesh (AX3000).",
-    "keywords": "tp-link deco x55 ax3000 mesh 192.168.68.1 tp-link-deco-x55 password reset whole home mesh wi-fi 6"
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6 (AX3000 Mesh).",
+    "keywords": "tp-link deco x55 (ax3000) 192.168.68.1 tp-link-deco-x55 password reset mesh wi-fi 6 system"
+  },
+  {
+    "title": "TP-Link Deco X60 (AX5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-x60/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6 (AX5400 6-Stream).",
+    "keywords": "tp-link deco x60 (ax5400) 192.168.68.1 tp-link-deco-x60 password reset mesh wi-fi 6 system"
+  },
+  {
+    "title": "TP-Link Deco XE75 (AXE5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-xe75/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6E (AXE5400 Tri-Band).",
+    "keywords": "tp-link deco xe75 (axe5400) 192.168.68.1 tp-link-deco-xe75 password reset tri-band mesh wi-fi 6e"
+  },
+  {
+    "title": "TP-Link Deco XE75 Pro (AXE5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-xe75-pro/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 6E (AXE5400 with 2.5G).",
+    "keywords": "tp-link deco xe75 pro (axe5400) 192.168.68.1 tp-link-deco-xe75-pro password reset tri-band mesh with 2.5g"
   },
   {
     "title": "TP-Link Deco BE85 (BE22000) Setup Sheet",
     "category": "Router Model",
     "badge": "TP-Link",
     "url": "/routers/tp-link-deco-be85/",
-    "snippet": "Default IP 192.168.68.1, username 'TP-Link Cloud ID', password 'Set in Deco App', Wi-Fi 7 Tri-Band (BE22000 320MHz MLO).",
-    "keywords": "tp-link deco be85 (be22000) 192.168.68.1 tp-link-deco-be85 password reset wi-fi 7 whole home mesh system"
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 7 (BE22000 Mesh).",
+    "keywords": "tp-link deco be85 (be22000) 192.168.68.1 tp-link-deco-be85 password reset tri-band mesh wi-fi 7"
+  },
+  {
+    "title": "TP-Link Deco M4 (AC1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-m4/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 5 (AC1200).",
+    "keywords": "tp-link deco m4 (ac1200) 192.168.68.1 tp-link-deco-m4 password reset whole home mesh wi-fi"
+  },
+  {
+    "title": "TP-Link Deco M5 (AC1300) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-deco-m5/",
+    "snippet": "Default IP 192.168.68.1, username 'TP-Link ID', password 'TP-Link ID', Wi-Fi 5 (AC1300).",
+    "keywords": "tp-link deco m5 (ac1300) 192.168.68.1 tp-link-deco-m5 password reset whole home mesh wi-fi"
+  },
+  {
+    "title": "TP-Link Omada ER605 (TL-R605) Setup Sheet",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "url": "/routers/tp-link-omada-er605/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Gigabit Wired VPN Router.",
+    "keywords": "tp-link omada er605 (tl-r605) 192.168.0.1 tp-link-omada-er605 password reset multi-wan vpn router"
   },
   {
     "title": "ASUS RT-AX88U (AX6000) Setup Sheet",
     "category": "Router Model",
     "badge": "ASUS",
     "url": "/routers/asus-rt-ax88u/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin (prompts to change immediately)', Wi-Fi 6 (AX6000 8-Stream).",
-    "keywords": "asus rt-ax88u (ax6000) 192.168.1.1 asus-rt-ax88u password reset wi-fi 6 gaming & power-user router"
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX6000 8-Port).",
+    "keywords": "asus rt-ax88u (ax6000) 192.168.50.1 asus-rt-ax88u password reset dual-band wi-fi 6 router"
   },
   {
-    "title": "ASUS RT-AX86U / RT-AX86U Pro (AX5700) Setup Sheet",
+    "title": "ASUS RT-AX86U (AX5700) Setup Sheet",
     "category": "Router Model",
     "badge": "ASUS",
     "url": "/routers/asus-rt-ax86u/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX5700 with 160MHz).",
-    "keywords": "asus rt-ax86u / rt-ax86u pro (ax5700) 192.168.1.1 asus-rt-ax86u password reset wi-fi 6 mobile gaming router"
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX5700 Gaming).",
+    "keywords": "asus rt-ax86u (ax5700) 192.168.50.1 asus-rt-ax86u password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS RT-AX86U Pro (AX5700) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax86u-pro/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX5700 2.0GHz Quad-Core).",
+    "keywords": "asus rt-ax86u pro (ax5700) 192.168.50.1 asus-rt-ax86u-pro password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS RT-AX88U Pro (AX6000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax88u-pro/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (Dual 2.5G AX6000).",
+    "keywords": "asus rt-ax88u pro (ax6000) 192.168.50.1 asus-rt-ax88u-pro password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "ASUS RT-AX58U (AX3000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax58u/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000 AiMesh).",
+    "keywords": "asus rt-ax58u (ax3000) 192.168.50.1 asus-rt-ax58u password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "ASUS RT-AX55 (AX1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax55/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800 AiMesh).",
+    "keywords": "asus rt-ax55 (ax1800) 192.168.50.1 asus-rt-ax55 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "ASUS RT-AX53U (AX1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax53u/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800).",
+    "keywords": "asus rt-ax53u (ax1800) 192.168.50.1 asus-rt-ax53u password reset wi-fi 6 router with usb"
+  },
+  {
+    "title": "ASUS RT-AX68U (AX2700) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax68u/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX2700 3x3).",
+    "keywords": "asus rt-ax68u (ax2700) 192.168.50.1 asus-rt-ax68u password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "ASUS RT-AX82U (AX5400) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax82u/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX5400 Aura RGB).",
+    "keywords": "asus rt-ax82u (ax5400) 192.168.50.1 asus-rt-ax82u password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS RT-AX89X (AX6000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax89x/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (Dual 10G SFP+/Base-T).",
+    "keywords": "asus rt-ax89x (ax6000) 192.168.50.1 asus-rt-ax89x password reset dual-band wi-fi 6 dual 10g"
+  },
+  {
+    "title": "ASUS RT-AX92U (AX6100) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ax92u/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX6100 Tri-Band).",
+    "keywords": "asus rt-ax92u (ax6100) 192.168.50.1 asus-rt-ax92u password reset tri-band wi-fi 6 aimesh"
   },
   {
     "title": "ASUS ROG Rapture GT-AX11000 Setup Sheet",
     "category": "Router Model",
     "badge": "ASUS",
     "url": "/routers/asus-rog-rapture-gt-ax11000/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 Tri-Band (AX11000).",
-    "keywords": "asus rog rapture gt-ax11000 192.168.1.1 asus-rog-rapture-gt-ax11000 password reset tri-band wi-fi 6 gaming beast"
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX11000 Tri-Band).",
+    "keywords": "asus rog rapture gt-ax11000 192.168.50.1 asus-rog-rapture-gt-ax11000 password reset tri-band gaming router"
   },
   {
-    "title": "ASUS ZenWiFi AX (XT8) Setup Sheet",
+    "title": "ASUS ROG Rapture GT-AX11000 Pro Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt-ax11000-pro/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX11000 10G Gaming).",
+    "keywords": "asus rog rapture gt-ax11000 pro 192.168.50.1 asus-rog-rapture-gt-ax11000-pro password reset tri-band gaming flagship"
+  },
+  {
+    "title": "ASUS ROG Rapture GT-AX6000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt-ax6000/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (Dual 2.5G Gaming).",
+    "keywords": "asus rog rapture gt-ax6000 192.168.50.1 asus-rog-rapture-gt-ax6000 password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS ROG Rapture GT-AXE11000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt-axe11000/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6E (AXE11000 6GHz).",
+    "keywords": "asus rog rapture gt-axe11000 192.168.50.1 asus-rog-rapture-gt-axe11000 password reset tri-band wi-fi 6e gaming"
+  },
+  {
+    "title": "ASUS ROG Rapture GT-AXE16000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt-axe16000/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6E (Quad-Band Dual 10G).",
+    "keywords": "asus rog rapture gt-axe16000 192.168.50.1 asus-rog-rapture-gt-axe16000 password reset quad-band wi-fi 6e gaming"
+  },
+  {
+    "title": "ASUS ROG Rapture GT-BE98 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt-be98/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 7 (BE25000 Quad-Band).",
+    "keywords": "asus rog rapture gt-be98 192.168.50.1 asus-rog-rapture-gt-be98 password reset quad-band wi-fi 7 gaming"
+  },
+  {
+    "title": "ASUS ROG Rapture GT6 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rog-rapture-gt6/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX10000 Mesh).",
+    "keywords": "asus rog rapture gt6 192.168.50.1 asus-rog-rapture-gt6 password reset tri-band mesh gaming system"
+  },
+  {
+    "title": "ASUS TUF Gaming AX3000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-tuf-gaming-ax3000/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000 Gaming).",
+    "keywords": "asus tuf gaming ax3000 192.168.50.1 asus-tuf-gaming-ax3000 password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS TUF Gaming AX4200 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-tuf-gaming-ax4200/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX4200 2.5G).",
+    "keywords": "asus tuf gaming ax4200 192.168.50.1 asus-tuf-gaming-ax4200 password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS TUF Gaming AX5400 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-tuf-gaming-ax5400/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX5400 Gaming).",
+    "keywords": "asus tuf gaming ax5400 192.168.50.1 asus-tuf-gaming-ax5400 password reset dual-band wi-fi 6 gaming"
+  },
+  {
+    "title": "ASUS ZenWiFi XT8 (AX6600) Setup Sheet",
     "category": "Router Model",
     "badge": "ASUS",
     "url": "/routers/asus-zenwifi-xt8/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 Tri-Band (AX6600).",
-    "keywords": "asus zenwifi ax (xt8) 192.168.1.1 asus-zenwifi-xt8 password reset tri-band whole-home mesh system"
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX6600 Tri-Band Mesh).",
+    "keywords": "asus zenwifi xt8 (ax6600) 192.168.50.1 asus-zenwifi-xt8 password reset tri-band whole-home mesh"
   },
   {
-    "title": "ASUS RT-BE96U (BE19000) Setup Sheet",
+    "title": "ASUS ZenWiFi XT9 (AX7800) Setup Sheet",
     "category": "Router Model",
     "badge": "ASUS",
-    "url": "/routers/asus-rt-be96u/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'Set during setup', Wi-Fi 7 (BE19000 with 320MHz 6 GHz & Dual 10G ports).",
-    "keywords": "asus rt-be96u (be19000) 192.168.1.1 asus-rt-be96u password reset wi-fi 7 tri-band flagship router"
+    "url": "/routers/asus-zenwifi-xt9/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX7800 160MHz).",
+    "keywords": "asus zenwifi xt9 (ax7800) 192.168.50.1 asus-zenwifi-xt9 password reset tri-band whole-home mesh"
   },
   {
-    "title": "Linksys Max-Stream AC1900 (EA7500) Setup Sheet",
+    "title": "ASUS ZenWiFi Pro XT12 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-zenwifi-pro-xt12/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6 (AX11000 Dual 2.5G).",
+    "keywords": "asus zenwifi pro xt12 192.168.50.1 asus-zenwifi-pro-xt12 password reset tri-band flagship mesh"
+  },
+  {
+    "title": "ASUS ZenWiFi Pro ET12 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-zenwifi-pro-et12/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 6E (AXE11000 Dual 2.5G).",
+    "keywords": "asus zenwifi pro et12 192.168.50.1 asus-zenwifi-pro-et12 password reset tri-band wi-fi 6e mesh"
+  },
+  {
+    "title": "ASUS ZenWiFi BQ16 Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-zenwifi-bq16/",
+    "snippet": "Default IP 192.168.50.1, username 'admin', password 'admin', Wi-Fi 7 (BE30000 Quad-Band).",
+    "keywords": "asus zenwifi bq16 192.168.50.1 asus-zenwifi-bq16 password reset quad-band wi-fi 7 mesh"
+  },
+  {
+    "title": "ASUS RT-AC68U (AC1900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ac68u/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC1900 AiMesh).",
+    "keywords": "asus rt-ac68u (ac1900) 192.168.1.1 asus-rt-ac68u password reset classic dual-band router"
+  },
+  {
+    "title": "ASUS RT-AC86U (AC2900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "url": "/routers/asus-rt-ac86u/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC2900 WTFast).",
+    "keywords": "asus rt-ac86u (ac2900) 192.168.1.1 asus-rt-ac86u password reset dual-band gaming router"
+  },
+  {
+    "title": "Linksys Velop Micro 6 Mesh (LN1301) Setup Sheet",
     "category": "Router Model",
     "badge": "Linksys",
-    "url": "/routers/linksys-ea7500/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (802.11ac AC1900).",
-    "keywords": "linksys max-stream ac1900 (ea7500) 192.168.1.1 linksys-ea7500 password reset dual-band wi-fi 5 router"
+    "url": "/routers/linksys-velop-micro-6-mesh-ln1301/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000).",
+    "keywords": "linksys velop micro 6 mesh (ln1301) 192.168.1.1 linksys-velop-micro-6-mesh-ln1301 password reset dual-band wi-fi 6 mesh"
   },
   {
-    "title": "Linksys Velop Tri-Band Mesh (WHW0303) Setup Sheet",
+    "title": "Linksys Velop Pro 6E (MX6200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-velop-pro-6e-mx6200/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6E (AXE5400 Tri-Band).",
+    "keywords": "linksys velop pro 6e (mx6200) 192.168.1.1 linksys-velop-pro-6e-mx6200 password reset cognitive mesh wi-fi 6e"
+  },
+  {
+    "title": "Linksys Velop Pro 7 (MBE7000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-velop-pro-7-mbe7000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 7 (BE11000 Tri-Band).",
+    "keywords": "linksys velop pro 7 (mbe7000) 192.168.1.1 linksys-velop-pro-7-mbe7000 password reset cognitive mesh wi-fi 7"
+  },
+  {
+    "title": "Linksys Atlas Pro 6 (MX5500) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-atlas-pro-6-mx5500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX5400).",
+    "keywords": "linksys atlas pro 6 (mx5500) 192.168.1.1 linksys-atlas-pro-6-mx5500 password reset dual-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Linksys Atlas Max 6E (MX8500) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-atlas-max-6e-mx8500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6E (AXE8400).",
+    "keywords": "linksys atlas max 6e (mx8500) 192.168.1.1 linksys-atlas-max-6e-mx8500 password reset tri-band wi-fi 6e mesh"
+  },
+  {
+    "title": "Linksys Velop AX4200 (MX4200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-velop-ax4200-mx4200/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX4200 Tri-Band).",
+    "keywords": "linksys velop ax4200 (mx4200) 192.168.1.1 linksys-velop-ax4200-mx4200 password reset tri-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Linksys Velop AX5300 (MX5300) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-velop-ax5300-mx5300/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX5300 Tri-Band).",
+    "keywords": "linksys velop ax5300 (mx5300) 192.168.1.1 linksys-velop-ax5300-mx5300 password reset tri-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Linksys Velop Tri-Band (WHW0303) Setup Sheet",
     "category": "Router Model",
     "badge": "Linksys",
     "url": "/routers/linksys-velop-whw0303/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 Tri-Band (AC2200 per node).",
-    "keywords": "linksys velop tri-band mesh (whw0303) 192.168.1.1 linksys-velop-whw0303 password reset tri-band whole home mesh wi-fi"
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC2200 Tri-Band).",
+    "keywords": "linksys velop tri-band (whw0303) 192.168.1.1 linksys-velop-whw0303 password reset ac2200 whole home mesh"
   },
   {
-    "title": "Linksys Max-Stream Mesh Wi-Fi 6 (MR9600) Setup Sheet",
+    "title": "Linksys Hydra Pro 6E (MR7500) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-hydra-pro-6e-mr7500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6E (AXE6600).",
+    "keywords": "linksys hydra pro 6e (mr7500) 192.168.1.1 linksys-hydra-pro-6e-mr7500 password reset tri-band wi-fi 6e router"
+  },
+  {
+    "title": "Linksys Hydra 6 (MR2000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-hydra-6-mr2000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000).",
+    "keywords": "linksys hydra 6 (mr2000) 192.168.1.1 linksys-hydra-6-mr2000 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "Linksys Max-Stream MR9600 Setup Sheet",
     "category": "Router Model",
     "badge": "Linksys",
     "url": "/routers/linksys-mr9600/",
     "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX6000 8-Stream).",
-    "keywords": "linksys max-stream mesh wi-fi 6 (mr9600) 192.168.1.1 linksys-mr9600 password reset dual-band wi-fi 6 mesh router"
+    "keywords": "linksys max-stream mr9600 192.168.1.1 linksys-mr9600 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "Linksys Max-Stream MR9000 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-mr9000/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC3000 Tri-Band).",
+    "keywords": "linksys max-stream mr9000 192.168.1.1 linksys-mr9000 password reset tri-band ac3000 router"
+  },
+  {
+    "title": "Linksys Max-Stream MR8300 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-mr8300/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC2200 Tri-Band).",
+    "keywords": "linksys max-stream mr8300 192.168.1.1 linksys-mr8300 password reset tri-band ac2200 router"
+  },
+  {
+    "title": "Linksys Max-Stream MR7350 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-mr7350/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800).",
+    "keywords": "linksys max-stream mr7350 192.168.1.1 linksys-mr7350 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "Linksys Classic WRT54G Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-wrt54g/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', 802.11g (54 Mbps).",
+    "keywords": "linksys classic wrt54g 192.168.1.1 linksys-wrt54g password reset wireless-g router"
+  },
+  {
+    "title": "Linksys WRT1900ACS Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-wrt1900acs/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC1900 OpenWrt).",
+    "keywords": "linksys wrt1900acs 192.168.1.1 linksys-wrt1900acs password reset dual-band ac1900 router"
+  },
+  {
+    "title": "Linksys WRT3200ACM Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-wrt3200acm/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC3200 Tri-Stream).",
+    "keywords": "linksys wrt3200acm 192.168.1.1 linksys-wrt3200acm password reset dual-band ac3200 router"
+  },
+  {
+    "title": "Linksys WRT32X Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-wrt32x/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC3200 Killer).",
+    "keywords": "linksys wrt32x 192.168.1.1 linksys-wrt32x password reset gaming wi-fi router"
+  },
+  {
+    "title": "Linksys Max-Stream EA7500 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-ea7500/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC1900 MU-MIMO).",
+    "keywords": "linksys max-stream ea7500 192.168.1.1 linksys-ea7500 password reset dual-band ac1900 router"
+  },
+  {
+    "title": "Linksys Max-Stream EA8300 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "url": "/routers/linksys-ea8300/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC2200 Tri-Band).",
+    "keywords": "linksys max-stream ea8300 192.168.1.1 linksys-ea8300 password reset tri-band ac2200 router"
   },
   {
     "title": "Ubiquiti UniFi Dream Machine Pro (UDM-Pro) Setup Sheet",
     "category": "Router Model",
     "badge": "Ubiquiti",
     "url": "/routers/ubiquiti-unifi-dream-machine-pro/",
-    "snippet": "Default IP 192.168.1.1, username 'UI Cloud Account / root (SSH)', password 'Set during UniFi OS setup wizard', Routing & Security Gateway (Requires separate UniFi APs).",
-    "keywords": "ubiquiti unifi dream machine pro (udm-pro) 192.168.1.1 ubiquiti-unifi-dream-machine-pro password reset all-in-one enterprise gateway & controller"
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', 10G SFP+ Enterprise Router.",
+    "keywords": "ubiquiti unifi dream machine pro (udm-pro) 192.168.1.1 ubiquiti-unifi-dream-machine-pro password reset 10g enterprise gateway & nvr"
   },
   {
-    "title": "Ubiquiti AmpliFi HD Home Mesh Setup Sheet",
+    "title": "Ubiquiti UniFi Dream Machine Special Edition (UDM-SE) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-dream-machine-se/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', 10G SFP+ Enterprise Router with PoE.",
+    "keywords": "ubiquiti unifi dream machine special edition (udm-se) 192.168.1.1 ubiquiti-unifi-dream-machine-se password reset 2.5g poe 10g gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Dream Machine (UDM) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-dream-machine/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Wi-Fi 5 (AC2200 4x4 MU-MIMO).",
+    "keywords": "ubiquiti unifi dream machine (udm) 192.168.1.1 ubiquiti-unifi-dream-machine password reset all-in-one cloud gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Dream Router (UDR) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-dream-router/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Wi-Fi 6 (4x4 MIMO UDR).",
+    "keywords": "ubiquiti unifi dream router (udr) 192.168.1.1 ubiquiti-unifi-dream-router password reset wi-fi 6 poe gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Cloud Gateway Ultra (UCG-Ultra) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-cloud-gateway-ultra/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Multi-WAN 2.5G Gigabit Router.",
+    "keywords": "ubiquiti unifi cloud gateway ultra (ucg-ultra) 192.168.1.1 ubiquiti-unifi-cloud-gateway-ultra password reset compact multi-wan gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Cloud Gateway Max (UCG-Max) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-cloud-gateway-max/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Full 2.5GbE Gateway with NVMe Storage.",
+    "keywords": "ubiquiti unifi cloud gateway max (ucg-max) 192.168.1.1 ubiquiti-unifi-cloud-gateway-max password reset 2.5gbe multi-wan gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Express (UX) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-express/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Wi-Fi 6 Cloud Gateway.",
+    "keywords": "ubiquiti unifi express (ux) 192.168.1.1 ubiquiti-unifi-express password reset ultra-compact gateway & ap"
+  },
+  {
+    "title": "Ubiquiti UniFi Security Gateway (USG-3P) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-security-gateway/",
+    "snippet": "Default IP 192.168.1.1, username 'root', password 'ubnt', Gigabit Security Gateway.",
+    "keywords": "ubiquiti unifi security gateway (usg-3p) 192.168.1.1 ubiquiti-unifi-security-gateway password reset enterprise gateway router"
+  },
+  {
+    "title": "Ubiquiti UniFi Security Gateway Pro (USG-PRO-4) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-security-gateway-pro/",
+    "snippet": "Default IP 192.168.1.1, username 'root', password 'ubnt', Gigabit Enterprise SFP Gateway.",
+    "keywords": "ubiquiti unifi security gateway pro (usg-pro-4) 192.168.1.1 ubiquiti-unifi-security-gateway-pro password reset dual wan 1u gateway"
+  },
+  {
+    "title": "Ubiquiti UniFi Dream Wall (UDW) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-unifi-dream-wall/",
+    "snippet": "Default IP 192.168.1.1, username 'UI Account / root', password 'UI Account / root', Wi-Fi 6 Wall-Mount Enterprise.",
+    "keywords": "ubiquiti unifi dream wall (udw) 192.168.1.1 ubiquiti-unifi-dream-wall password reset wall-mount multi-gigabit console"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter X (ER-X) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-x/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', Gigabit EdgeOS Router.",
+    "keywords": "ubiquiti edgerouter x (er-x) 192.168.1.1 ubiquiti-edgerouter-x password reset 5-port gigabit router"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter X SFP (ER-X-SFP) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-x-sfp/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', Gigabit PoE EdgeOS Router.",
+    "keywords": "ubiquiti edgerouter x sfp (er-x-sfp) 192.168.1.1 ubiquiti-edgerouter-x-sfp password reset gigabit router with sfp"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter 4 (ER-4) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-4/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', High-Performance EdgeOS Router.",
+    "keywords": "ubiquiti edgerouter 4 (er-4) 192.168.1.1 ubiquiti-edgerouter-4 password reset 4-port gigabit router"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter 6P (ER-6P) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-6p/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', Gigabit EdgeOS Router.",
+    "keywords": "ubiquiti edgerouter 6p (er-6p) 192.168.1.1 ubiquiti-edgerouter-6p password reset 6-port poe gigabit router"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter 12 (ER-12) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-12/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', 10-Port Gigabit Enterprise Router.",
+    "keywords": "ubiquiti edgerouter 12 (er-12) 192.168.1.1 ubiquiti-edgerouter-12 password reset 10-port gigabit router with sfp"
+  },
+  {
+    "title": "Ubiquiti EdgeRouter Infinity (ER-8-XG) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-edgerouter-infinity/",
+    "snippet": "Default IP 192.168.1.1, username 'ubnt', password 'ubnt', 8-Port 10G SFP+ Core Router.",
+    "keywords": "ubiquiti edgerouter infinity (er-8-xg) 192.168.1.1 ubiquiti-edgerouter-infinity password reset 8-port 10g sfp+ router"
+  },
+  {
+    "title": "Ubiquiti AmpliFi Alien (AFi-ALN) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "url": "/routers/ubiquiti-amplifi-alien/",
+    "snippet": "Default IP 192.168.112.1, username 'admin', password 'admin', Wi-Fi 6 (AX7600 Mesh).",
+    "keywords": "ubiquiti amplifi alien (afi-aln) 192.168.112.1 ubiquiti-amplifi-alien password reset wi-fi 6 gaming mesh router"
+  },
+  {
+    "title": "Ubiquiti AmpliFi HD (AFi-R) Setup Sheet",
     "category": "Router Model",
     "badge": "Ubiquiti",
     "url": "/routers/ubiquiti-amplifi-hd/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'Set in AmpliFi App', Wi-Fi 5 (802.11ac 3x3 MIMO).",
-    "keywords": "ubiquiti amplifi hd home mesh 192.168.1.1 ubiquiti-amplifi-hd password reset consumer mesh wi-fi system"
+    "snippet": "Default IP 192.168.112.1, username 'admin', password 'admin', Wi-Fi 5 (AC1750 Mesh).",
+    "keywords": "ubiquiti amplifi hd (afi-r) 192.168.112.1 ubiquiti-amplifi-hd password reset high-density home wi-fi"
   },
   {
-    "title": "MikroTik hAP ax\u00b3 (C53UiG+5HPaxD2HPaxD) Setup Sheet",
+    "title": "MikroTik hEX (RB750Gr3) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hex-rb750gr3/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Gigabit RouterOS v7 Router.",
+    "keywords": "mikrotik hex (rb750gr3) 192.168.88.1 mikrotik-hex-rb750gr3 password reset 5-port gigabit router"
+  },
+  {
+    "title": "MikroTik hEX S (RB760iGS) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hex-s-rb760igs/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Gigabit RouterOS with SFP.",
+    "keywords": "mikrotik hex s (rb760igs) 192.168.88.1 mikrotik-hex-s-rb760igs password reset gigabit router with sfp"
+  },
+  {
+    "title": "MikroTik hEX PoE (RB960PGS) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hex-poe-rb960pgs/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Gigabit PoE RouterOS.",
+    "keywords": "mikrotik hex poe (rb960pgs) 192.168.88.1 mikrotik-hex-poe-rb960pgs password reset 5-port gigabit poe router"
+  },
+  {
+    "title": "MikroTik hAP ax2 (C52iG-5HaxD2HaxD-TC) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hap-ax2/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (AX1800 Quad-Core).",
+    "keywords": "mikrotik hap ax2 (c52ig-5haxd2haxd-tc) 192.168.88.1 mikrotik-hap-ax2 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "MikroTik hAP ax3 (C53UiG+5HPaxD2HPaxD) Setup Sheet",
     "category": "Router Model",
     "badge": "MikroTik",
     "url": "/routers/mikrotik-hap-ax3/",
-    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Empty (No password) on first boot', Wi-Fi 6 (Dual-Band 802.11ax).",
-    "keywords": "mikrotik hap ax\u00b3 (c53uig+5hpaxd2hpaxd) 192.168.88.1 mikrotik-hap-ax3 password reset routeros v7 wi-fi 6 router"
+    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (AX1800 with 2.5GbE).",
+    "keywords": "mikrotik hap ax3 (c53uig+5hpaxd2hpaxd) 192.168.88.1 mikrotik-hap-ax3 password reset wi-fi 6 router with 2.5g"
+  },
+  {
+    "title": "MikroTik hAP ac2 (RBD52G-5HacD2HnD-TC) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hap-ac2/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Wi-Fi 5 (AC1200 Gigabit).",
+    "keywords": "mikrotik hap ac2 (rbd52g-5hacd2hnd-tc) 192.168.88.1 mikrotik-hap-ac2 password reset dual-band gigabit router"
+  },
+  {
+    "title": "MikroTik hAP ac3 (RBD53iG-5HacD2HnD) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hap-ac3/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Wi-Fi 5 (AC1200 High-Gain).",
+    "keywords": "mikrotik hap ac3 (rbd53ig-5hacd2hnd) 192.168.88.1 mikrotik-hap-ac3 password reset high-gain wi-fi 5 router"
+  },
+  {
+    "title": "MikroTik hAP lite (RB941-2nD) Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-hap-lite/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', 802.11b/g/n (300Mbps).",
+    "keywords": "mikrotik hap lite (rb941-2nd) 192.168.88.1 mikrotik-hap-lite password reset compact 2.4ghz home ap"
   },
   {
     "title": "MikroTik RB4011iGS+5HacQ2HnD-IN Setup Sheet",
     "category": "Router Model",
     "badge": "MikroTik",
     "url": "/routers/mikrotik-rb4011/",
-    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Empty (No password)', Wi-Fi 5 (Quad-Chain AC2000).",
-    "keywords": "mikrotik rb4011igs+5hacq2hnd-in 192.168.88.1 mikrotik-rb4011 password reset enterprise quad-core 10-port router"
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Wi-Fi 5 + 10G SFP+ Core.",
+    "keywords": "mikrotik rb4011igs+5hacq2hnd-in 192.168.88.1 mikrotik-rb4011 password reset 10x gigabit + 10g sfp+ router"
   },
   {
-    "title": "Arris SURFboard SB8200 DOCSIS 3.1 Setup Sheet",
+    "title": "MikroTik RB5009UG+S+IN Setup Sheet",
     "category": "Router Model",
-    "badge": "Arris",
-    "url": "/routers/arris-surfboard-sb8200/",
-    "snippet": "Default IP 192.168.100.1, username 'admin', password 'password (or last 8 digits of serial number)', DOCSIS 3.1 (Up to 2 Gbps via Link Aggregation).",
-    "keywords": "arris surfboard sb8200 docsis 3.1 192.168.100.1 arris-surfboard-sb8200 password reset docsis 3.1 gigabit cable modem"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-rb5009/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Multi-Gig 1G/2.5G/10G RouterOS.",
+    "keywords": "mikrotik rb5009ug+s+in 192.168.88.1 mikrotik-rb5009 password reset heavy-duty home lab router"
   },
   {
-    "title": "Arris SURFboard G36 DOCSIS 3.1 & AX3000 Setup Sheet",
+    "title": "MikroTik L009UiGS-2HaxD-IN Setup Sheet",
     "category": "Router Model",
-    "badge": "Arris",
-    "url": "/routers/arris-surfboard-g36/",
-    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password (or Wi-Fi preshared key on sticker)', Wi-Fi 6 (AX3000) + DOCSIS 3.1.",
-    "keywords": "arris surfboard g36 docsis 3.1 & ax3000 192.168.0.1 arris-surfboard-g36 password reset docsis 3.1 gateway + wi-fi 6 router"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-l009uigs/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', Wi-Fi 6 (2.4GHz High Power) + SFP.",
+    "keywords": "mikrotik l009uigs-2haxd-in 192.168.88.1 mikrotik-l009uigs password reset dual-band wi-fi 6 router"
   },
   {
-    "title": "Amazon Eero Eero Pro 6E (Tri-Band AXE5400) Setup Sheet",
+    "title": "MikroTik CCR2004-16G-2S+ Setup Sheet",
     "category": "Router Model",
-    "badge": "Amazon Eero",
-    "url": "/routers/amazon-eero-pro-6e/",
-    "snippet": "Default IP 192.168.4.1, username 'Amazon / Eero App Account', password 'App managed (No browser HTTP GUI)', Wi-Fi 6E Tri-Band (2.4 GHz, 5 GHz, 6 GHz AXE5400).",
-    "keywords": "amazon eero eero pro 6e (tri-band axe5400) 192.168.4.1 amazon-eero-pro-6e password reset tri-band wi-fi 6e mesh system"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-ccr2004/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', 16-Port Gigabit + Dual 10G SFP+.",
+    "keywords": "mikrotik ccr2004-16g-2s+ 192.168.88.1 mikrotik-ccr2004 password reset 16-port cloud core router"
   },
   {
-    "title": "Amazon Eero Eero Max 7 (Tri-Band BE20800) Setup Sheet",
+    "title": "MikroTik Chateau 5G ax Setup Sheet",
     "category": "Router Model",
-    "badge": "Amazon Eero",
-    "url": "/routers/amazon-eero-max-7/",
-    "snippet": "Default IP 192.168.4.1, username 'Amazon / Eero Account', password 'App managed', Wi-Fi 7 Tri-Band (BE20800 with 320 MHz channels).",
-    "keywords": "amazon eero eero max 7 (tri-band be20800) 192.168.4.1 amazon-eero-max-7 password reset wi-fi 7 whole home mesh system"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-chateau-5g-ax/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (AX1800 5G/LTE).",
+    "keywords": "mikrotik chateau 5g ax 192.168.88.1 mikrotik-chateau-5g-ax password reset 5g home gateway wi-fi 6"
   },
   {
-    "title": "Google Nest Nest Wifi Pro (Wi-Fi 6E AXE5400) Setup Sheet",
+    "title": "MikroTik Chateau LTE12 Setup Sheet",
     "category": "Router Model",
-    "badge": "Google Nest",
-    "url": "/routers/google-nest-wifi-pro/",
-    "snippet": "Default IP 192.168.86.1, username 'Google Account', password 'Managed via Google Home App', Wi-Fi 6E Tri-Band (AXE5400).",
-    "keywords": "google nest nest wifi pro (wi-fi 6e axe5400) 192.168.86.1 google-nest-wifi-pro password reset tri-band wi-fi 6e mesh system"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-chateau-lte12/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (AC1200 Cat12 LTE).",
+    "keywords": "mikrotik chateau lte12 192.168.88.1 mikrotik-chateau-lte12 password reset cat12 lte home gateway"
   },
   {
-    "title": "GL.iNet Beryl AX (GL-MT3000) Setup Sheet",
+    "title": "MikroTik Cloud Router Switch (CRS305-1G-4S+IN) Setup Sheet",
     "category": "Router Model",
-    "badge": "GL.iNet",
-    "url": "/routers/gl-inet-beryllium-gl-mt3000/",
-    "snippet": "Default IP 192.168.8.1, username 'root / admin', password 'Set on first browser visit', Wi-Fi 6 (AX3000 Pocket Router).",
-    "keywords": "gl.inet beryl ax (gl-mt3000) 192.168.8.1 gl-inet-beryllium-gl-mt3000 password reset pocket wi-fi 6 travel router"
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-crs305/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', 4x 10Gbps SFP+ Dual Boot RouterOS.",
+    "keywords": "mikrotik cloud router switch (crs305-1g-4s+in) 192.168.88.1 mikrotik-crs305 password reset 4-port 10g sfp+ switch/router"
+  },
+  {
+    "title": "MikroTik RouterBOARD 3011UiAS-RM Setup Sheet",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "url": "/routers/mikrotik-rb3011/",
+    "snippet": "Default IP 192.168.88.1, username 'admin', password '[empty]', 1U Rackmount RouterOS with LCD.",
+    "keywords": "mikrotik routerboard 3011uias-rm 192.168.88.1 mikrotik-rb3011 password reset 10-port gigabit rackmount"
+  },
+  {
+    "title": "D-Link EAGLE PRO AI AX1500 (R15) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-eagle-pro-ai-r15/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty or sticker password]', Wi-Fi 6 (AX1500 AI).",
+    "keywords": "d-link eagle pro ai ax1500 (r15) 192.168.0.1 d-link-eagle-pro-ai-r15 password reset smart wi-fi 6 router"
+  },
+  {
+    "title": "D-Link EAGLE PRO AI AX3200 (R32) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-eagle-pro-ai-r32/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty or sticker password]', Wi-Fi 6 (AX3200 4-Stream).",
+    "keywords": "d-link eagle pro ai ax3200 (r32) 192.168.0.1 d-link-eagle-pro-ai-r32 password reset wi-fi 6 gigabit router"
   },
   {
     "title": "D-Link EXO AX5400 (DIR-X5460) Setup Sheet",
     "category": "Router Model",
     "badge": "D-Link",
-    "url": "/routers/d-link-exo-ax5400/",
-    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'password (or printed on configuration card)', Wi-Fi 6 (AX5400 6-Stream).",
-    "keywords": "d-link exo ax5400 (dir-x5460) 192.168.0.1 d-link-exo-ax5400 password reset wi-fi 6 gigabit router"
+    "url": "/routers/d-link-exo-dir-x5460/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'password', Wi-Fi 6 (AX5400 6-Stream).",
+    "keywords": "d-link exo ax5400 (dir-x5460) 192.168.0.1 d-link-exo-dir-x5460 password reset 6-stream wi-fi 6 router"
   },
   {
-    "title": "Synology RT6600ax Tri-Band Router Setup Sheet",
+    "title": "D-Link EXO AX1800 (DIR-X1860) Setup Sheet",
     "category": "Router Model",
-    "badge": "Synology",
-    "url": "/routers/synology-rt6600ax/",
-    "snippet": "Default IP 192.168.1.1, username 'admin', password 'Set during SRM quick start wizard', Wi-Fi 6 Tri-Band (AX6600 with UNII-4 5.9 GHz).",
-    "keywords": "synology rt6600ax tri-band router 192.168.1.1 synology-rt6600ax password reset synology router manager (srm) wi-fi 6"
+    "badge": "D-Link",
+    "url": "/routers/d-link-exo-dir-x1860/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'password', Wi-Fi 6 (AX1800).",
+    "keywords": "d-link exo ax1800 (dir-x1860) 192.168.0.1 d-link-exo-dir-x1860 password reset dual-band wi-fi 6 router"
   },
   {
-    "title": "AVM FRITZ!Box FRITZ!Box 7590 AX (VDSL/Fiber) Setup Sheet",
+    "title": "D-Link EXO AX1500 (DIR-X1560) Setup Sheet",
     "category": "Router Model",
-    "badge": "AVM FRITZ!Box",
-    "url": "/routers/avm-fritzbox-7590-ax/",
-    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Printed on the underside base sticker', Wi-Fi 6 (VDSL Supervectoring 35b + AX3600).",
-    "keywords": "avm fritz!box fritz!box 7590 ax (vdsl/fiber) 192.168.178.1 avm-fritzbox-7590-ax password reset european flagship dsl/fiber wi-fi 6 gateway"
+    "badge": "D-Link",
+    "url": "/routers/d-link-exo-dir-x1560/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'password', Wi-Fi 6 (AX1500).",
+    "keywords": "d-link exo ax1500 (dir-x1560) 192.168.0.1 d-link-exo-dir-x1560 password reset dual-band wi-fi 6 router"
   },
   {
-    "title": "Cisco Catalyst 1000 Series (C1000-8T-2G-L) Setup Sheet",
+    "title": "D-Link DIR-882 (AC2600) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-882/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC2600 4x4).",
+    "keywords": "d-link dir-882 (ac2600) 192.168.0.1 d-link-dir-882 password reset mu-mimo gigabit router"
+  },
+  {
+    "title": "D-Link DIR-878 (AC1900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-878/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC1900 3x3).",
+    "keywords": "d-link dir-878 (ac1900) 192.168.0.1 d-link-dir-878 password reset high-power gigabit router"
+  },
+  {
+    "title": "D-Link DIR-867 (AC1750) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-867/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC1750).",
+    "keywords": "d-link dir-867 (ac1750) 192.168.0.1 d-link-dir-867 password reset dual-band gigabit router"
+  },
+  {
+    "title": "D-Link DIR-842 (AC1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-842/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC1200).",
+    "keywords": "d-link dir-842 (ac1200) 192.168.0.1 d-link-dir-842 password reset wave 2 gigabit router"
+  },
+  {
+    "title": "D-Link DIR-825 (AC1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-825/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC1200 High Gain).",
+    "keywords": "d-link dir-825 (ac1200) 192.168.0.1 d-link-dir-825 password reset high-gain gigabit router"
+  },
+  {
+    "title": "D-Link DIR-615 Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-615/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', 802.11n (300Mbps).",
+    "keywords": "d-link dir-615 192.168.0.1 d-link-dir-615 password reset classic wireless-n router"
+  },
+  {
+    "title": "D-Link DIR-600 Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-600/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', 802.11n (150Mbps).",
+    "keywords": "d-link dir-600 192.168.0.1 d-link-dir-600 password reset wireless 150 4-port router"
+  },
+  {
+    "title": "D-Link DIR-850L Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dir-850l/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password '[empty]', Wi-Fi 5 (AC1200 Cylindrical).",
+    "keywords": "d-link dir-850l 192.168.0.1 d-link-dir-850l password reset cloud gigabit router"
+  },
+  {
+    "title": "D-Link COVR AX1800 (COVR-X1870) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-covr-x1870/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'Sticker password', Wi-Fi 6 (AX1800 Mesh).",
+    "keywords": "d-link covr ax1800 (covr-x1870) 192.168.0.1 d-link-covr-x1870 password reset mesh wi-fi 6 system"
+  },
+  {
+    "title": "D-Link COVR AC1200 (COVR-1100) Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-covr-1100/",
+    "snippet": "Default IP 192.168.0.1, username 'Admin', password 'Sticker password', Wi-Fi 5 (AC1200 EasyMesh).",
+    "keywords": "d-link covr ac1200 (covr-1100) 192.168.0.1 d-link-covr-1100 password reset easymesh certified system"
+  },
+  {
+    "title": "D-Link DWR-960 Setup Sheet",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "url": "/routers/d-link-dwr-960/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'admin', Wi-Fi 5 + LTE Cat 7.",
+    "keywords": "d-link dwr-960 192.168.0.1 d-link-dwr-960 password reset lte cat7 wi-fi ac1200 router"
+  },
+  {
+    "title": "Cisco Cisco Business RV340 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv340/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Dual WAN Gigabit Security Gateway.",
+    "keywords": "cisco cisco business rv340 192.168.1.1 cisco-business-rv340 password reset dual wan gigabit vpn router"
+  },
+  {
+    "title": "Cisco Cisco Business RV345 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv345/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Dual WAN 16-Port Gigabit Gateway.",
+    "keywords": "cisco cisco business rv345 192.168.1.1 cisco-business-rv345 password reset dual wan 16-port vpn router"
+  },
+  {
+    "title": "Cisco Cisco Business RV260 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv260/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Gigabit SFP VPN Security Router.",
+    "keywords": "cisco cisco business rv260 192.168.1.1 cisco-business-rv260 password reset gigabit vpn router with sfp"
+  },
+  {
+    "title": "Cisco Cisco Business RV160 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv160/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Gigabit VPN Small Business Router.",
+    "keywords": "cisco cisco business rv160 192.168.1.1 cisco-business-rv160 password reset gigabit vpn security router"
+  },
+  {
+    "title": "Cisco Cisco Business RV130 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv130/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Gigabit Small Business VPN Router.",
+    "keywords": "cisco cisco business rv130 192.168.1.1 cisco-business-rv130 password reset multifunction vpn router"
+  },
+  {
+    "title": "Cisco Cisco Business RV042 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-business-rv042/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', 10/100 Dual WAN Business Router.",
+    "keywords": "cisco cisco business rv042 192.168.1.1 cisco-business-rv042 password reset dual wan 4-port vpn router"
+  },
+  {
+    "title": "Cisco Cisco Meraki Go GX20 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-meraki-go-gx20/",
+    "snippet": "Default IP 192.168.128.1, username 'admin (Meraki Account)', password 'admin', Cloud Managed Router Firewall.",
+    "keywords": "cisco cisco meraki go gx20 192.168.128.1 cisco-meraki-go-gx20 password reset cloud managed security gateway"
+  },
+  {
+    "title": "Cisco Cisco Meraki Go GX50 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-meraki-go-gx50/",
+    "snippet": "Default IP 192.168.128.1, username 'admin (Meraki Account)', password 'admin', 500Mbps Security Router Gateway.",
+    "keywords": "cisco cisco meraki go gx50 192.168.128.1 cisco-meraki-go-gx50 password reset high-throughput router firewall"
+  },
+  {
+    "title": "Cisco Cisco Catalyst 1000-8T-2G-L Setup Sheet",
     "category": "Router Model",
     "badge": "Cisco",
     "url": "/routers/cisco-catalyst-1000/",
-    "snippet": "Default IP 192.168.1.254, username 'cisco', password 'cisco', Gigabit Ethernet Layer 2+.",
-    "keywords": "cisco catalyst 1000 series (c1000-8t-2g-l) 192.168.1.254 cisco-catalyst-1000 password reset enterprise managed switch / gateway"
+    "snippet": "Default IP 192.168.1.254, username 'cisco', password 'cisco', Enterprise Managed Layer 2/3 Switch.",
+    "keywords": "cisco cisco catalyst 1000-8t-2g-l 192.168.1.254 cisco-catalyst-1000 password reset enterprise switch router"
+  },
+  {
+    "title": "Cisco Cisco ISR 1100 (C1111-8P) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-isr-1100/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Cisco IOS XE Enterprise Router.",
+    "keywords": "cisco cisco isr 1100 (c1111-8p) 192.168.1.1 cisco-isr-1100 password reset integrated services router"
+  },
+  {
+    "title": "Cisco Cisco ISR 4331 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-isr-4331/",
+    "snippet": "Default IP 10.0.0.1, username 'cisco', password 'cisco', Enterprise ISR 4000 Modular Router.",
+    "keywords": "cisco cisco isr 4331 10.0.0.1 cisco-isr-4331 password reset enterprise modular router"
+  },
+  {
+    "title": "Cisco Cisco C921-4P Setup Sheet",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "url": "/routers/cisco-c921-4p/",
+    "snippet": "Default IP 192.168.1.1, username 'cisco', password 'cisco', Gigabit Ethernet Security Router.",
+    "keywords": "cisco cisco c921-4p 192.168.1.1 cisco-c921-4p password reset gigabit security router"
+  },
+  {
+    "title": "Synology Synology RT6600ax Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-rt6600ax/",
+    "snippet": "Default IP 192.168.1.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 6 (Tri-Band AX6600).",
+    "keywords": "synology synology rt6600ax 192.168.1.1 synology-rt6600ax password reset tri-band wi-fi 6 router"
+  },
+  {
+    "title": "Synology Synology RT2600ac Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-rt2600ac/",
+    "snippet": "Default IP 192.168.1.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 5 (AC2600 4x4 MU-MIMO).",
+    "keywords": "synology synology rt2600ac 192.168.1.1 synology-rt2600ac password reset dual-band ac2600 router"
+  },
+  {
+    "title": "Synology Synology WRX560 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-wrx560/",
+    "snippet": "Default IP 192.168.1.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 6 (AX3000 with 2.5GbE).",
+    "keywords": "synology synology wrx560 192.168.1.1 synology-wrx560 password reset dual-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Synology Synology MR2200ac Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-mr2200ac/",
+    "snippet": "Default IP 192.168.1.1, username 'admin (created on setup)', password 'admin (created on setup)', Wi-Fi 5 (AC2200 Tri-Band Mesh).",
+    "keywords": "synology synology mr2200ac 192.168.1.1 synology-mr2200ac password reset tri-band ac2200 mesh"
+  },
+  {
+    "title": "Synology Synology RT1900ac Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-rt1900ac/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC1900).",
+    "keywords": "synology synology rt1900ac 192.168.1.1 synology-rt1900ac password reset first-gen srm router"
+  },
+  {
+    "title": "Synology Synology DS-Gateway Setup Sheet",
+    "category": "Router Model",
+    "badge": "Synology",
+    "url": "/routers/synology-ds-gateway/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Enterprise SRM Controller.",
+    "keywords": "synology synology ds-gateway 192.168.1.1 synology-ds-gateway password reset modular srm network controller"
+  },
+  {
+    "title": "Google Nest Nest Wifi Pro (G6ZUC) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-nest-wifi-pro/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 6E (AXE5400 Tri-Band).",
+    "keywords": "google nest nest wifi pro (g6zuc) 192.168.86.1 google-nest-wifi-pro password reset tri-band wi-fi 6e mesh"
+  },
+  {
+    "title": "Google Nest Nest Wifi Router (H2D) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-nest-wifi-router/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 5 (AC2200 4x4 MU-MIMO).",
+    "keywords": "google nest nest wifi router (h2d) 192.168.86.1 google-nest-wifi-router password reset smart mesh wi-fi router"
+  },
+  {
+    "title": "Google Nest Nest Wifi Point (H2E) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-nest-wifi-point/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 5 (AC1200).",
+    "keywords": "google nest nest wifi point (h2e) 192.168.86.1 google-nest-wifi-point password reset mesh point with smart speaker"
+  },
+  {
+    "title": "Google Nest Google Wifi (NLS-1304-25) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-wifi/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 5 (AC1200 Dual-Band).",
+    "keywords": "google nest google wifi (nls-1304-25) 192.168.86.1 google-wifi password reset whole-home mesh system"
+  },
+  {
+    "title": "Google Nest Google OnHub Asus (SRT-AC1900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-onhub-asus/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 5 (AC1900 Wave Antennas).",
+    "keywords": "google nest google onhub asus (srt-ac1900) 192.168.86.1 google-onhub-asus password reset smart wireless router"
+  },
+  {
+    "title": "Google Nest Google OnHub TP-Link (TGR1900) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "url": "/routers/google-onhub-tplink/",
+    "snippet": "Default IP 192.168.86.1, username 'Managed via Google Home', password 'Managed via Google Home', Wi-Fi 5 (AC1900 Circular).",
+    "keywords": "google nest google onhub tp-link (tgr1900) 192.168.86.1 google-onhub-tplink password reset smart wireless router"
+  },
+  {
+    "title": "Amazon Eero Eero Max 7 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-max-7/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 7 (BE20800 Tri-Band).",
+    "keywords": "amazon eero eero max 7 192.168.4.1 amazon-eero-max-7 password reset tri-band wi-fi 7 mesh"
+  },
+  {
+    "title": "Amazon Eero Eero Pro 6E (S010001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-pro-6e/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 6E (AXE5400 Tri-Band).",
+    "keywords": "amazon eero eero pro 6e (s010001) 192.168.4.1 amazon-eero-pro-6e password reset tri-band wi-fi 6e mesh"
+  },
+  {
+    "title": "Amazon Eero Eero Pro 6 (K010001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-pro-6/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 6 (AX4200 Tri-Band).",
+    "keywords": "amazon eero eero pro 6 (k010001) 192.168.4.1 amazon-eero-pro-6 password reset tri-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Amazon Eero Eero 6+ (R010001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-6-plus/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 6 (AX3000 160MHz).",
+    "keywords": "amazon eero eero 6+ (r010001) 192.168.4.1 amazon-eero-6-plus password reset dual-band wi-fi 6 gigabit"
+  },
+  {
+    "title": "Amazon Eero Eero 6 (N010001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-6/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 6 (AX1800 Dual-Band).",
+    "keywords": "amazon eero eero 6 (n010001) 192.168.4.1 amazon-eero-6 password reset dual-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Amazon Eero Eero Pro (2nd Gen - B010001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-pro-2nd-gen/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 5 (AC2200 Tri-Band).",
+    "keywords": "amazon eero eero pro (2nd gen - b010001) 192.168.4.1 amazon-eero-pro-2nd-gen password reset tri-band ac2200 mesh"
+  },
+  {
+    "title": "Amazon Eero Eero Beacon Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-beacon/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 5 (AC1300 Wall Plug).",
+    "keywords": "amazon eero eero beacon 192.168.4.1 amazon-eero-beacon password reset plug-in mesh expander"
+  },
+  {
+    "title": "Amazon Eero Eero (1st Gen) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Amazon Eero",
+    "url": "/routers/amazon-eero-1st-gen/",
+    "snippet": "Default IP 192.168.4.1, username 'Managed via Amazon eero App', password 'Managed via Amazon eero App', Wi-Fi 5 (AC1200).",
+    "keywords": "amazon eero eero (1st gen) 192.168.4.1 amazon-eero-1st-gen password reset original truemesh router"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 7590 AX Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-7590-ax/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 + VDSL Supervectoring 35b.",
+    "keywords": "avm fritz!box fritz!box 7590 ax 192.168.178.1 avm-fritzbox-7590-ax password reset vdsl wi-fi 6 router"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 7590 Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-7590/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (AC+N Dual-Band).",
+    "keywords": "avm fritz!box fritz!box 7590 192.168.178.1 avm-fritzbox-7590 password reset vdsl ac+n gateway"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 7530 AX Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-7530-ax/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (AX1800 VDSL).",
+    "keywords": "avm fritz!box fritz!box 7530 ax 192.168.178.1 avm-fritzbox-7530-ax password reset vdsl wi-fi 6 compact"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 7530 Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-7530/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (AC+N).",
+    "keywords": "avm fritz!box fritz!box 7530 192.168.178.1 avm-fritzbox-7530 password reset vdsl entry gateway"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 5590 Fiber Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-5590-fiber/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (4x4 2.5GbE Fiber).",
+    "keywords": "avm fritz!box fritz!box 5590 fiber 192.168.178.1 avm-fritzbox-5590-fiber password reset fiber gpon/aon wi-fi 6"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 5530 Fiber Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-5530-fiber/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (Fiber SFP).",
+    "keywords": "avm fritz!box fritz!box 5530 fiber 192.168.178.1 avm-fritzbox-5530-fiber password reset compact fiber gateway"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 6690 Cable Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-6690-cable/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (4x4 DOCSIS 3.1 2.5G).",
+    "keywords": "avm fritz!box fritz!box 6690 cable 192.168.178.1 avm-fritzbox-6690-cable password reset docsis 3.1 2.5g gateway"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 6660 Cable Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-6660-cable/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (2x2 DOCSIS 3.1 2.5G).",
+    "keywords": "avm fritz!box fritz!box 6660 cable 192.168.178.1 avm-fritzbox-6660-cable password reset docsis 3.1 cable gateway"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 4060 Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-4060/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 (Tri-Band 2.5GbE WAN).",
+    "keywords": "avm fritz!box fritz!box 4060 192.168.178.1 avm-fritzbox-4060 password reset tri-band wi-fi 6 router"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 4040 Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-4040/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (AC1300 Dual-Band).",
+    "keywords": "avm fritz!box fritz!box 4040 192.168.178.1 avm-fritzbox-4040 password reset gigabit wireless router"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 6850 5G Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-6850-5g/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (5G/LTE Sub-6GHz).",
+    "keywords": "avm fritz!box fritz!box 6850 5g 192.168.178.1 avm-fritzbox-6850-5g password reset 5g cellular broadband"
+  },
+  {
+    "title": "AVM FRITZ!Box FRITZ!Box 6890 LTE Setup Sheet",
+    "category": "Router Model",
+    "badge": "AVM FRITZ!Box",
+    "url": "/routers/avm-fritzbox-6890-lte/",
+    "snippet": "Default IP 192.168.178.1, username 'admin', password 'Unique sticker password', Wi-Fi 5 (VDSL 35b + LTE).",
+    "keywords": "avm fritz!box fritz!box 6890 lte 192.168.178.1 avm-fritzbox-6890-lte password reset vdsl + lte hybrid gateway"
+  },
+  {
+    "title": "Zyxel Armor G5 (NBG7815) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-armor-g5/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', Wi-Fi 6 (AX6000 12-Stream).",
+    "keywords": "zyxel armor g5 (nbg7815) 192.168.1.1 zyxel-armor-g5 password reset wi-fi 6 multi-gig router"
+  },
+  {
+    "title": "Zyxel Armor G1 (NBG6818) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-armor-g1/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', Wi-Fi 5 (AC2600 4x4).",
+    "keywords": "zyxel armor g1 (nbg6818) 192.168.1.1 zyxel-armor-g1 password reset multi-gigabit ac2600 router"
+  },
+  {
+    "title": "Zyxel Multy X (WSQ50) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-multy-x/",
+    "snippet": "Default IP 192.168.212.1, username 'admin', password 'admin', Wi-Fi 5 (AC3000 Tri-Band Mesh).",
+    "keywords": "zyxel multy x (wsq50) 192.168.212.1 zyxel-multy-x password reset tri-band ac3000 mesh"
+  },
+  {
+    "title": "Zyxel Multy M1 (WSM20) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-multy-m1/",
+    "snippet": "Default IP 192.168.212.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800 Mesh).",
+    "keywords": "zyxel multy m1 (wsm20) 192.168.212.1 zyxel-multy-m1 password reset dual-band wi-fi 6 mesh"
+  },
+  {
+    "title": "Zyxel USG FLEX 100 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-usg-flex-100/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', Nebula Cloud UTM Gateway.",
+    "keywords": "zyxel usg flex 100 192.168.1.1 zyxel-usg-flex-100 password reset firewall security gateway"
+  },
+  {
+    "title": "Zyxel USG FLEX 200 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-usg-flex-200/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', High-Throughput UTM Security Gateway.",
+    "keywords": "zyxel usg flex 200 192.168.1.1 zyxel-usg-flex-200 password reset utm security gateway"
+  },
+  {
+    "title": "Zyxel USG20-VPN Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-usg20-vpn/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', Gigabit Fanless VPN Firewall.",
+    "keywords": "zyxel usg20-vpn 192.168.1.1 zyxel-usg20-vpn password reset fanless vpn gateway"
+  },
+  {
+    "title": "Zyxel VMG8825-B50B Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-vmg8825-b50b/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 5 (AC2400 VDSL2 Bonding).",
+    "keywords": "zyxel vmg8825-b50b 192.168.1.1 zyxel-vmg8825-b50b password reset vdsl2 bonding gateway"
+  },
+  {
+    "title": "Zyxel DX3301-T0 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-dx3301-t0/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Wi-Fi 6 (AX1800 VDSL2).",
+    "keywords": "zyxel dx3301-t0 192.168.1.1 zyxel-dx3301-t0 password reset vdsl2 wi-fi 6 gateway"
+  },
+  {
+    "title": "Zyxel NBG6604 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "url": "/routers/zyxel-nbg6604/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password '1234', Wi-Fi 5 (AC1200).",
+    "keywords": "zyxel nbg6604 192.168.1.1 zyxel-nbg6604 password reset ac1200 dual-band router"
+  },
+  {
+    "title": "Huawei WiFi AX3 (Quad-Core WS7200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-wifi-ax3-quad-core/",
+    "snippet": "Default IP 192.168.3.1, username 'admin', password 'admin', Wi-Fi 6 Plus (AX3000 Quad-Core).",
+    "keywords": "huawei wifi ax3 (quad-core ws7200) 192.168.3.1 huawei-wifi-ax3-quad-core password reset wi-fi 6 plus router"
+  },
+  {
+    "title": "Huawei WiFi AX3 (Dual-Core WS7100) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-wifi-ax3-dual-core/",
+    "snippet": "Default IP 192.168.3.1, username 'admin', password 'admin', Wi-Fi 6 Plus (AX3000 Dual-Core).",
+    "keywords": "huawei wifi ax3 (dual-core ws7100) 192.168.3.1 huawei-wifi-ax3-dual-core password reset wi-fi 6 plus router"
+  },
+  {
+    "title": "Huawei WiFi AX2 (WS7001) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-wifi-ax2/",
+    "snippet": "Default IP 192.168.3.1, username 'admin', password 'admin', Wi-Fi 6 (AX1500).",
+    "keywords": "huawei wifi ax2 (ws7001) 192.168.3.1 huawei-wifi-ax2 password reset dual-band wi-fi 6 router"
+  },
+  {
+    "title": "Huawei WiFi Mesh 7 (WS8800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-wifi-mesh-7/",
+    "snippet": "Default IP 192.168.3.1, username 'admin', password 'admin', Wi-Fi 6 (AX6600 Tri-Band Mesh).",
+    "keywords": "huawei wifi mesh 7 (ws8800) 192.168.3.1 huawei-wifi-mesh-7 password reset tri-band mesh wi-fi 6"
+  },
+  {
+    "title": "Huawei WiFi Mesh 3 (WS5800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-wifi-mesh-3/",
+    "snippet": "Default IP 192.168.3.1, username 'admin', password 'admin', Wi-Fi 6 (AX3000 Mesh).",
+    "keywords": "huawei wifi mesh 3 (ws5800) 192.168.3.1 huawei-wifi-mesh-3 password reset dual-band mesh wi-fi 6"
+  },
+  {
+    "title": "Huawei 5G CPE Pro 2 (H122-373) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-5g-cpe-pro-2/",
+    "snippet": "Default IP 192.168.8.1, username 'admin', password 'Unique sticker password', Wi-Fi 6 + 5G Sub-6GHz (Balong 5000).",
+    "keywords": "huawei 5g cpe pro 2 (h122-373) 192.168.8.1 huawei-5g-cpe-pro-2 password reset 5g mobile broadband gateway"
+  },
+  {
+    "title": "Huawei 4G Router 3 Pro (B535-232) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-4g-router-3-pro/",
+    "snippet": "Default IP 192.168.8.1, username 'admin', password 'admin', Wi-Fi 5 + LTE Cat 7 (300Mbps).",
+    "keywords": "huawei 4g router 3 pro (b535-232) 192.168.8.1 huawei-4g-router-3-pro password reset lte cat7 wireless router"
+  },
+  {
+    "title": "Huawei EchoLife HG8245H Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-echolife-hg8245h/",
+    "snippet": "Default IP 192.168.100.1, username 'telecomadmin', password 'admintelecom', GPON ONT + Wi-Fi 4 (300Mbps).",
+    "keywords": "huawei echolife hg8245h 192.168.100.1 huawei-echolife-hg8245h password reset gpon optical ont gateway"
+  },
+  {
+    "title": "Huawei EchoLife HG8145V5 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-echolife-hg8145v5/",
+    "snippet": "Default IP 192.168.100.1, username 'telecomadmin', password 'admintelecom', GPON ONT + Wi-Fi 5 (AC1200).",
+    "keywords": "huawei echolife hg8145v5 192.168.100.1 huawei-echolife-hg8145v5 password reset intelligent routing gpon ont"
+  },
+  {
+    "title": "Huawei 4G Router B311 (B311-221) Setup Sheet",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "url": "/routers/huawei-b311-221/",
+    "snippet": "Default IP 192.168.8.1, username 'admin', password 'admin', 802.11n + LTE Cat 4 (150Mbps).",
+    "keywords": "huawei 4g router b311 (b311-221) 192.168.8.1 huawei-b311-221 password reset 4g lte wireless gateway"
+  },
+  {
+    "title": "GL.iNet Slate AX (GL-AXT1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-slate-ax-gl-axt1800/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 6 (AX1800 Travel).",
+    "keywords": "gl.inet slate ax (gl-axt1800) 192.168.8.1 gl-inet-slate-ax-gl-axt1800 password reset wi-fi 6 travel router"
+  },
+  {
+    "title": "GL.iNet Beryl AX (GL-MT3000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-beryl-ax-gl-mt3000/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 6 (AX3000 with 2.5G WAN).",
+    "keywords": "gl.inet beryl ax (gl-mt3000) 192.168.8.1 gl-inet-beryl-ax-gl-mt3000 password reset pocket wi-fi 6 2.5g router"
+  },
+  {
+    "title": "GL.iNet Beryl (GL-MT1300) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-beryl-gl-mt1300/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 5 (AC1300 Dual-Band).",
+    "keywords": "gl.inet beryl (gl-mt1300) 192.168.8.1 gl-inet-beryl-gl-mt1300 password reset high-performance travel router"
+  },
+  {
+    "title": "GL.iNet Opal (GL-SFT1200) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-opal-gl-sft1200/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 5 (AC1200).",
+    "keywords": "gl.inet opal (gl-sft1200) 192.168.8.1 gl-inet-opal-gl-sft1200 password reset ultra-portable travel router"
+  },
+  {
+    "title": "GL.iNet Slate (GL-AR750S-Ext) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-slate-gl-ar750s/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 5 (AC750).",
+    "keywords": "gl.inet slate (gl-ar750s-ext) 192.168.8.1 gl-inet-slate-gl-ar750s password reset gigabit dual-band ac router"
+  },
+  {
+    "title": "GL.iNet Shadow (GL-AR300M16) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-shadow-gl-ar300m/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', 802.11n (300Mbps Micro Router).",
+    "keywords": "gl.inet shadow (gl-ar300m16) 192.168.8.1 gl-inet-shadow-gl-ar300m password reset mini micro-usb router"
+  },
+  {
+    "title": "GL.iNet Flint (GL-AX1800) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-flint-gl-ax1800/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 6 (AX1800 Quad-Core).",
+    "keywords": "gl.inet flint (gl-ax1800) 192.168.8.1 gl-inet-flint-gl-ax1800 password reset wi-fi 6 openwrt home gateway"
+  },
+  {
+    "title": "GL.iNet Flint 2 (GL-MT6000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-flint-2-gl-mt6000/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 6 (AX6000 Dual 2.5G).",
+    "keywords": "gl.inet flint 2 (gl-mt6000) 192.168.8.1 gl-inet-flint-2-gl-mt6000 password reset dual 2.5g wi-fi 6 router"
+  },
+  {
+    "title": "GL.iNet Spitz AX (GL-X3000) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-spitz-ax-gl-x3000/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 6 + 5G NR Dual-SIM.",
+    "keywords": "gl.inet spitz ax (gl-x3000) 192.168.8.1 gl-inet-spitz-ax-gl-x3000 password reset dual-sim 5g nr gateway"
+  },
+  {
+    "title": "GL.iNet Mudi (GL-E750) Setup Sheet",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "url": "/routers/gl-inet-mudi-gl-e750/",
+    "snippet": "Default IP 192.168.8.1, username 'root', password 'admin (created on setup)', Wi-Fi 5 + 4G LTE with 7000mAh Battery.",
+    "keywords": "gl.inet mudi (gl-e750) 192.168.8.1 gl-inet-mudi-gl-e750 password reset portable 4g lte privacy router"
+  },
+  {
+    "title": "DrayTek Vigor 2927 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2927/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Dual-WAN Gigabit Business Router.",
+    "keywords": "draytek vigor 2927 series 192.168.1.1 draytek-vigor-2927 password reset dual-wan gigabit vpn router"
+  },
+  {
+    "title": "DrayTek Vigor 2962 Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2962/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', 2.5G / SFP Multi-WAN Enterprise.",
+    "keywords": "draytek vigor 2962 192.168.1.1 draytek-vigor-2962 password reset multi-wan 2.5g & sfp router"
+  },
+  {
+    "title": "DrayTek Vigor 2865 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2865/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', VDSL2 35b Supervectoring + GbE WAN.",
+    "keywords": "draytek vigor 2865 series 192.168.1.1 draytek-vigor-2865 password reset vdsl2 35b security router"
+  },
+  {
+    "title": "DrayTek Vigor 3910 Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-3910/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Quad 10G SFP+ Core Enterprise Router.",
+    "keywords": "draytek vigor 3910 192.168.1.1 draytek-vigor-3910 password reset multi-wan 10g enterprise router"
+  },
+  {
+    "title": "DrayTek Vigor 2135 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2135/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Gigabit SOHO Security Router.",
+    "keywords": "draytek vigor 2135 series 192.168.1.1 draytek-vigor-2135 password reset single-wan gigabit router"
+  },
+  {
+    "title": "DrayTek Vigor 2765 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2765/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', VDSL2/ADSL2+ Security Router.",
+    "keywords": "draytek vigor 2765 series 192.168.1.1 draytek-vigor-2765 password reset vdsl2/adsl2+ soho router"
+  },
+  {
+    "title": "DrayTek Vigor 2926 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2926/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', Dual-WAN Gigabit VPN Router.",
+    "keywords": "draytek vigor 2926 series 192.168.1.1 draytek-vigor-2926 password reset dual-wan business router"
+  },
+  {
+    "title": "DrayTek Vigor 2862 Series Setup Sheet",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "url": "/routers/draytek-vigor-2862/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'admin', VDSL2/ADSL2+ Enterprise Router.",
+    "keywords": "draytek vigor 2862 series 192.168.1.1 draytek-vigor-2862 password reset classic vdsl2 security router"
+  },
+  {
+    "title": "Arris SURFboard G54 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-g54/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 7 (BE18000 DOCSIS 3.1).",
+    "keywords": "arris surfboard g54 192.168.0.1 arris-surfboard-g54 password reset quad-band wi-fi 7 cable gateway"
+  },
+  {
+    "title": "Arris SURFboard G36 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-g36/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 6 (AX3000 DOCSIS 3.1 2.5G).",
+    "keywords": "arris surfboard g36 192.168.0.1 arris-surfboard-g36 password reset wi-fi 6 ax3000 cable gateway"
+  },
+  {
+    "title": "Arris SURFboard G34 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-g34/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 6 (AX3000 DOCSIS 3.1).",
+    "keywords": "arris surfboard g34 192.168.0.1 arris-surfboard-g34 password reset wi-fi 6 ax3000 cable gateway"
+  },
+  {
+    "title": "Arris SURFboard SBG8300 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-sbg8300/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 5 (AC2300 DOCSIS 3.1).",
+    "keywords": "arris surfboard sbg8300 192.168.0.1 arris-surfboard-sbg8300 password reset docsis 3.1 ac2300 gateway"
+  },
+  {
+    "title": "Arris SURFboard SBG7600AC2 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-sbg7600ac2/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 5 (AC2300 32x8).",
+    "keywords": "arris surfboard sbg7600ac2 192.168.0.1 arris-surfboard-sbg7600ac2 password reset docsis 3.0 ac2300 gateway"
+  },
+  {
+    "title": "Arris SURFboard SBG7400AC2 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-sbg7400ac2/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 5 (AC1750 24x8).",
+    "keywords": "arris surfboard sbg7400ac2 192.168.0.1 arris-surfboard-sbg7400ac2 password reset docsis 3.0 ac1750 gateway"
+  },
+  {
+    "title": "Arris SURFboard SBG6900-AC Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-sbg6900-ac/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 5 (AC1900 16x4).",
+    "keywords": "arris surfboard sbg6900-ac 192.168.0.1 arris-surfboard-sbg6900-ac password reset docsis 3.0 ac1900 modem router"
+  },
+  {
+    "title": "Arris SURFboard SBG10 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-surfboard-sbg10/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'password', Wi-Fi 5 (AC1600 16x4).",
+    "keywords": "arris surfboard sbg10 192.168.0.1 arris-surfboard-sbg10 password reset docsis 3.0 ac1600 gateway"
+  },
+  {
+    "title": "Arris Arris NVG589 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-nvg589/",
+    "snippet": "Default IP 192.168.1.254, username 'admin', password 'Sticker password', 802.11n VDSL2 Bonded Gateway.",
+    "keywords": "arris arris nvg589 192.168.1.254 arris-nvg589 password reset vdsl2 gateway with voice"
+  },
+  {
+    "title": "Arris Arris BGW210-700 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Arris",
+    "url": "/routers/arris-bgw210-700/",
+    "snippet": "Default IP 192.168.1.254, username 'admin', password 'Sticker Access Code', Wi-Fi 5 (AC2100 4x4 MU-MIMO).",
+    "keywords": "arris arris bgw210-700 192.168.1.254 arris-bgw210-700 password reset broadband fiber ont gateway"
+  },
+  {
+    "title": "Motorola Motorola MG8725 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mg8725/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'motorola', Wi-Fi 6 (AX6000 DOCSIS 3.1 2.5G).",
+    "keywords": "motorola motorola mg8725 192.168.0.1 motorola-mg8725 password reset docsis 3.1 wi-fi 6 ax6000"
+  },
+  {
+    "title": "Motorola Motorola MG8702 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mg8702/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'motorola', Wi-Fi 5 (AC3200 4x4 DOCSIS 3.1).",
+    "keywords": "motorola motorola mg8702 192.168.0.1 motorola-mg8702 password reset docsis 3.1 ac3200 gateway"
+  },
+  {
+    "title": "Motorola Motorola MG7700 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mg7700/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'motorola', Wi-Fi 5 (AC1900 24x8).",
+    "keywords": "motorola motorola mg7700 192.168.0.1 motorola-mg7700 password reset docsis 3.0 ac1900 gateway"
+  },
+  {
+    "title": "Motorola Motorola MG7550 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mg7550/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'motorola', Wi-Fi 5 (AC1900 16x4).",
+    "keywords": "motorola motorola mg7550 192.168.0.1 motorola-mg7550 password reset docsis 3.0 ac1900 gateway"
+  },
+  {
+    "title": "Motorola Motorola MT7711 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mt7711/",
+    "snippet": "Default IP 192.168.0.1, username 'admin', password 'motorola', Wi-Fi 5 (AC1900 24x8 Telephone).",
+    "keywords": "motorola motorola mt7711 192.168.0.1 motorola-mt7711 password reset docsis 3.0 with voice"
+  },
+  {
+    "title": "Motorola Motorola MR2600 Setup Sheet",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "url": "/routers/motorola-mr2600/",
+    "snippet": "Default IP 192.168.1.1, username 'admin', password 'motorola', Wi-Fi 5 (AC2600 4x4).",
+    "keywords": "motorola motorola mr2600 192.168.1.1 motorola-mr2600 password reset smart wi-fi gigabit router"
   },
   {
     "title": "Xfinity (Comcast) Gateway Portal (10.0.0.1)",
@@ -334,6 +2086,22 @@
     "url": "/isp/telstra-smart-modem/",
     "snippet": "Telstra Smart Modem Gen 2 / Gen 3 (Technicolor/Arcadyan) login, printed access code, and bridge mode guide.",
     "keywords": "telstra (australia) telstra-smart-modem 192.168.0.1 bridge mode passthrough xfi bgw320 fiber"
+  },
+  {
+    "title": "DrayTek Brand Directory & Model Matrix",
+    "category": "Brand Directory",
+    "badge": "Brand",
+    "url": "/brands/draytek/",
+    "snippet": "Standard gateways: 192.168.1.1, credentials: admin / admin.",
+    "keywords": "draytek draytek brand passwords 192.168.1.1"
+  },
+  {
+    "title": "Motorola Brand Directory & Model Matrix",
+    "category": "Brand Directory",
+    "badge": "Brand",
+    "url": "/brands/motorola/",
+    "snippet": "Standard gateways: 192.168.0.1, 192.168.1.1, credentials: admin / motorola.",
+    "keywords": "motorola motorola brand passwords 192.168.0.1 192.168.1.1"
   },
   {
     "title": "Netgear Brand Directory & Model Matrix",
