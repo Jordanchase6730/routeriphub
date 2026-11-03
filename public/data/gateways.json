@@ -1,0 +1,152 @@
+[
+  {
+    "gateway_ip": "192.168.1.1",
+    "subnet_cidr": "192.168.1.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "192.168.1.0",
+    "broadcast_ip": "192.168.1.255",
+    "usable_hosts": 254,
+    "usable_range": "192.168.1.2 - 192.168.1.254",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80,
+      443,
+      53
+    ],
+    "top_brands": [
+      "Netgear",
+      "ASUS",
+      "Linksys",
+      "Cisco",
+      "Ubiquiti",
+      "Verizon Fios"
+    ],
+    "default_web_domains": [
+      "routerlogin.net",
+      "router.asus.com",
+      "linksyssmartwifi.com"
+    ]
+  },
+  {
+    "gateway_ip": "192.168.0.1",
+    "subnet_cidr": "192.168.0.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "192.168.0.0",
+    "broadcast_ip": "192.168.0.255",
+    "usable_hosts": 254,
+    "usable_range": "192.168.0.2 - 192.168.0.254",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80,
+      443
+    ],
+    "top_brands": [
+      "TP-Link",
+      "D-Link",
+      "Arris Surfboard",
+      "Motorola",
+      "CenturyLink"
+    ],
+    "default_web_domains": [
+      "tplinkwifi.net",
+      "dlinkrouter.local"
+    ]
+  },
+  {
+    "gateway_ip": "10.0.0.1",
+    "subnet_cidr": "10.0.0.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "10.0.0.0",
+    "broadcast_ip": "10.0.0.255",
+    "usable_hosts": 254,
+    "usable_range": "10.0.0.2 - 10.0.0.254",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80,
+      443
+    ],
+    "top_brands": [
+      "Xfinity / Comcast xFi",
+      "Apple AirPort",
+      "Cisco Enterprise"
+    ],
+    "default_web_domains": [
+      "http://10.0.0.1"
+    ]
+  },
+  {
+    "gateway_ip": "192.168.1.254",
+    "subnet_cidr": "192.168.1.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "192.168.1.0",
+    "broadcast_ip": "192.168.1.255",
+    "usable_hosts": 254,
+    "usable_range": "192.168.1.1 - 192.168.1.253",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80,
+      443
+    ],
+    "top_brands": [
+      "AT&T Fiber (BGW320)",
+      "British Telecom (BT Smart Hub)",
+      "2Wire"
+    ],
+    "default_web_domains": [
+      "http://192.168.1.254"
+    ]
+  },
+  {
+    "gateway_ip": "192.168.88.1",
+    "subnet_cidr": "192.168.88.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "192.168.88.0",
+    "broadcast_ip": "192.168.88.255",
+    "usable_hosts": 254,
+    "usable_range": "192.168.88.2 - 192.168.88.254",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80,
+      443,
+      8291,
+      22,
+      23
+    ],
+    "top_brands": [
+      "MikroTik RouterBOARD",
+      "RouterOS"
+    ],
+    "default_web_domains": [
+      "webfig",
+      "winbox"
+    ]
+  },
+  {
+    "gateway_ip": "192.168.100.1",
+    "subnet_cidr": "192.168.100.0/24",
+    "subnet_mask": "255.255.255.0",
+    "wildcard_mask": "0.0.0.255",
+    "network_id": "192.168.100.0",
+    "broadcast_ip": "192.168.100.255",
+    "usable_hosts": 254,
+    "usable_range": "192.168.100.2 - 192.168.100.254",
+    "rfc_standard": "RFC 1918 (24-bit block)",
+    "default_ports": [
+      80
+    ],
+    "top_brands": [
+      "Huawei GPON ONT",
+      "ZTE",
+      "Arris SB8200",
+      "Motorola MB8611"
+    ],
+    "default_web_domains": [
+      "http://192.168.100.1"
+    ]
+  }
+]

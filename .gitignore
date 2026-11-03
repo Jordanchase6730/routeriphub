@@ -1,0 +1,17 @@
+# Archives & Temporary files
+*.zip
+*.tar.gz
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE directories
+.idea/
+.vscode/
+*.sw?
+
+# Build & Deployment caches
+.vercel/
+.netlify/

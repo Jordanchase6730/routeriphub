@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Networking Datasets & Router Credentials API | RouterIPHub</title>
+  <meta name="description" content="Open-access network engineering datasets. Download verified default router IP addresses, hardware credentials, and subnet CIDR mappings in JSON, CSV, and SQL formats under MIT/CC-BY-4.0 license.">
+  <link rel="canonical" href="https://routeriphub.com/developers.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://routeriphub.com/developers.html">
+  <meta property="og:title" content="Open Networking Datasets & Router Credentials API">
+  <meta property="og:description" content="Open-source router hardware database. Free JSON, CSV, and SQL exports of verified default IPs, passwords, and subnet specifications.">
+  <meta property="og:site_name" content="RouterIPHub">
+
+  <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DataCatalog",
+        "name": "RouterIPHub Open Networking Data Repository",
+        "url": "https://routeriphub.com/developers.html",
+        "description": "Publicly accessible machine-readable datasets of verified default router gateway IP addresses, hardware credentials, and subnet specifications.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "RouterIPHub",
+          "url": "https://routeriphub.com"
+        },
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://routeriphub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Developer & Open Data",
+            "item": "https://routeriphub.com/developers.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    .dataset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .dataset-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+    .dataset-card:hover {
+      border-color: var(--text-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .dataset-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .dataset-format-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      color: var(--text-accent);
+      font-family: var(--font-mono);
+    }
+    .code-preview-box {
+      background: var(--bg-code);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">Open Data</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/brands.html">Brands</a></li>
+          <li><a href="/tools.html">Tools</a></li>
+          <li><a href="/howto.html">How-To Guides</a></li>
+          <li><a href="/developers.html" class="active">Open Datasets</a></li>
+          <li><a href="/find-router-ip.html">Find My IP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <div class="header-actions">
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <ul class="mobile-nav-list">
+          <li><a href="/brands.html"><span>🏢 Brand Hubs (Netgear, TP-Link, ASUS)</span><span>&rarr;</span></a></li>
+          <li><a href="/tools.html"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li><a href="/developers.html" class="active"><span>💻 Open Datasets & API Reference</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-1.html"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
+          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
+          <li><a href="/find-router-ip.html"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <!-- Breadcrumbs -->
+    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+      <a href="/">Home</a> &rsaquo; <strong>Developer & Open Datasets</strong>
+    </div>
+
+    <section class="hero" style="text-align: left; padding: 1.5rem 0 2rem;">
+      <div class="hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Open Data Initiative • CC BY 4.0 & MIT License
+      </div>
+      <h1 style="text-align: left;">Open Networking Datasets & Machine-Readable APIs</h1>
+      <p class="hero-subtitle" style="text-align: left; margin: 0 0 1.5rem;">
+        Direct open-access database downloads for network administrators, developers, IT support engineers, and automated diagnostic tools. Verified router gateway IPs, default credentials, and CIDR subnet mappings.
+      </p>
+
+      <div class="answer-box">
+        <div class="answer-box-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Developer Quick Access
+        </div>
+        <p>
+          All RouterIPHub datasets are maintained under open licenses with zero paywalls. You can query endpoints directly over HTTP or download raw database dumps in JSON, CSV, or ANSI SQL format for local offline integration in network scanners, inventory software, and diagnostic scripts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Dataset Downloads Grid -->
+    <div class="dataset-grid">
+      <!-- JSON Dataset -->
+      <div class="dataset-card">
+        <div class="dataset-card-top">
+          <h3 style="margin: 0; font-size: 1.2rem;">Complete JSON Dataset</h3>
+          <span class="dataset-format-badge">.JSON</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); flex: 1; margin-bottom: 1rem;">
+          Standard JSON array containing 62+ router models, manufacturer names, default gateway IPs, local web portals, default usernames, passwords, and technical notes.
+        </p>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="/data/routers.json" download class="btn-primary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.65rem;">
+            Download JSON
+          </a>
+          <a href="/data/routers.json" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.65rem;">
+            Inspect API
+          </a>
+        </div>
+      </div>
+
+      <!-- CSV Dataset -->
+      <div class="dataset-card">
+        <div class="dataset-card-top">
+          <h3 style="margin: 0; font-size: 1.2rem;">Tabular CSV Dataset</h3>
+          <span class="dataset-format-badge">.CSV</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); flex: 1; margin-bottom: 1rem;">
+          RFC 4180 compliant comma-separated values file formatted for direct import into Microsoft Excel, Google Sheets, LibreOffice Calc, or pandas dataframes.
+        </p>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="/data/routers.csv" download class="btn-primary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.65rem;">
+            Download CSV
+          </a>
+          <a href="/data/routers.csv" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.65rem;">
+            View Raw
+          </a>
+        </div>
+      </div>
+
+      <!-- SQL Database Export -->
+      <div class="dataset-card">
+        <div class="dataset-card-top">
+          <h3 style="margin: 0; font-size: 1.2rem;">SQL Schema & Dump</h3>
+          <span class="dataset-format-badge">.SQL</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); flex: 1; margin-bottom: 1rem;">
+          Full database table creation schema (`CREATE TABLE router_credentials`) with batched INSERT statements compatible with PostgreSQL, MySQL, SQLite, and MariaDB.
+        </p>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="/data/routers.sql" download class="btn-primary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.65rem;">
+            Download SQL
+          </a>
+          <a href="/data/routers.sql" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.65rem;">
+            View SQL
+          </a>
+        </div>
+      </div>
+
+      <!-- Subnet & Gateways JSON -->
+      <div class="dataset-card">
+        <div class="dataset-card-top">
+          <h3 style="margin: 0; font-size: 1.2rem;">Gateway Subnets JSON</h3>
+          <span class="dataset-format-badge">.JSON</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); flex: 1; margin-bottom: 1rem;">
+          Complete CIDR subnet specifications for major gateways (192.168.1.1, 192.168.0.1, 10.0.0.1) including network ID, broadcast IP, wildcard masks, and usable host counts.
+        </p>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="/data/gateways.json" download class="btn-primary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.65rem;">
+            Download Subnets
+          </a>
+          <a href="/data/gateways.json" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.65rem;">
+            View JSON
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integration Code Examples -->
+    <h2>Quick Integration Snippets</h2>
+    <p>
+      Incorporate RouterIPHub's live datasets directly into your network engineering scripts:
+    </p>
+
+    <!-- Python Example -->
+    <div style="margin: 1.5rem 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+        <span style="font-weight: 600; font-size: 0.9rem;">Python 3 (Fetch & Filter by Brand)</span>
+        <button class="btn-secondary copy-btn" data-copy="import urllib.request&#10;import json&#10;&#10;url = 'https://routeriphub.com/data/routers.json'&#10;with urllib.request.urlopen(url) as res:&#10;    routers = json.loads(res.read().decode())&#10;&#10;asus_routers = [r for r in routers if 'asus' in r['brand'].lower()]&#10;for r in asus_routers:&#10;    print(f&quot;{r['model']} -> IP: {r['ip']} | Default Pass: {r['password']}&quot;)" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;">Copy Code</button>
+      </div>
+      <pre class="code-preview-box"><code>import urllib.request
+import json
+
+url = 'https://routeriphub.com/data/routers.json'
+with urllib.request.urlopen(url) as res:
+    routers = json.loads(res.read().decode())
+
+# Filter for ASUS models
+asus_routers = [r for r in routers if 'asus' in r['brand'].lower()]
+for r in asus_routers:
+    print(f"{r['model']} -> IP: {r['ip']} | Default Pass: {r['password']}")</code></pre>
+    </div>
+
+    <!-- cURL / Bash Example -->
+    <div style="margin: 1.5rem 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+        <span style="font-weight: 600; font-size: 0.9rem;">cURL / JQ Terminal Pipe</span>
+        <button class="btn-secondary copy-btn" data-copy="curl -s https://routeriphub.com/data/routers.json | jq '.[] | select(.brand == &quot;Netgear&quot;) | {model, ip, password}'" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;">Copy Code</button>
+      </div>
+      <pre class="code-preview-box"><code># Fetch all Netgear credentials via terminal:
+curl -s https://routeriphub.com/data/routers.json | jq '.[] | select(.brand == "Netgear") | {model, ip, password}'</code></pre>
+    </div>
+
+    <!-- AI / LLM Integration -->
+    <h2>Machine-Readable AI Context Files (llms.txt)</h2>
+    <p>
+      RouterIPHub implements the standardized <code>/llms.txt</code> and <code>/llms-full.txt</code> specifications, providing plain-text markdown datasets optimized for retrieval-augmented generation (RAG), LLM embeddings, and autonomous agent queries:
+    </p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+      <a href="/llms.txt" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem;">
+        <span>📄 View llms.txt (Standard)</span>
+        <span>&rarr;</span>
+      </a>
+      <a href="/llms-full.txt" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem;">
+        <span>📑 View llms-full.txt (Full Dataset)</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Popular Gateway IPs</h4>
+          <ul>
+            <li><a href="/192-168-1-1.html">192.168.1.1 Admin</a></li>
+            <li><a href="/192-168-0-1.html">192.168.0.1 Admin</a></li>
+            <li><a href="/10-0-0-1.html">10.0.0.1 Admin</a></li>
+            <li><a href="/192-168-1-254.html">192.168.1.254 Admin</a></li>
+            <li><a href="/192-168-88-1.html">192.168.88.1 MikroTik</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hardware Brand Hubs</h4>
+          <ul>
+            <li><a href="/brand/tp-link.html">TP-Link Archer & Deco</a></li>
+            <li><a href="/brand/netgear.html">Netgear Nighthawk & Orbi</a></li>
+            <li><a href="/brand/asus.html">ASUS RT-AX & ROG</a></li>
+            <li><a href="/brand/linksys.html">Linksys WRT & Velop</a></li>
+            <li><a href="/brand/xfinity.html">Xfinity xFi Gateways</a></li>
+            <li><a href="/brands.html">View All 35+ Brands &rarr;</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Developer & Datasets</h4>
+          <ul>
+            <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+            <li><a href="/data/routers.csv" download>routers.csv (Table Export)</a></li>
+            <li><a href="/data/routers.sql" download>routers.sql (Database Dump)</a></li>
+            <li><a href="/data/gateways.json" download>gateways.json (Subnet Metadata)</a></li>
+            <li><a href="/llms-full.txt">Full LLM RAG Dataset</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Interactive Utilities</h4>
+          <ul>
+            <li><a href="/tools.html#wifi-qr">Wi-Fi QR Code Generator</a></li>
+            <li><a href="/tools.html#subnet-calc">Subnet CIDR Calculator</a></li>
+            <li><a href="/tools.html#password-gen">WPA3 Password Generator</a></li>
+            <li><a href="/tools.html#gateway-probe">Gateway Reachability Probe</a></li>
+            <li><a href="/find-router-ip.html">Find Router IP on Any OS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 RouterIPHub. Open Networking Data Initiative. CC BY 4.0 / MIT.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/llms.txt">llms.txt</a>
+          <a href="/llms-full.txt">LLM Dataset</a>
+          <a href="/robots.txt">Robots</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

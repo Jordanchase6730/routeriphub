@@ -1,0 +1,83 @@
+# Complete Factual Router IP and Default Credentials Dataset (2026/2027)
+
+*Published by RouterIPHub (https://routeriphub.com)*
+*Last Verified: 2026-11-03*
+
+---
+
+## 1. Master Gateway IP Directory
+
+| IP Address | Typical Manufacturers / ISPs | Primary Use Case | Default Web Domain / Port |
+| :--- | :--- | :--- | :--- |
+| `192.168.1.1` | Netgear, ASUS, Linksys, Cisco, Ubiquiti, Verizon | Home / Office Retail Routers | routerlogin.net, router.asus.com |
+| `192.168.0.1` | TP-Link, D-Link, Arris, Motorola, CenturyLink | Home / Retail Routers & Cable Gateways | tplinkwifi.net, dlinkrouter.local |
+| `10.0.0.1` | Xfinity / Comcast xFi, Apple, Cisco enterprise | ISP Cable Gateways | Port 80 (HTTP) |
+| `192.168.1.254` | AT&T Fiber (BGW320), BT Smart Hub, 2Wire | ISP Fiber & DSL Gateways | Port 80 (HTTP) |
+| `192.168.2.1` | Belkin, SMC Networks, Edimax, Siemens | Home Retail Routers | router |
+| `192.168.8.1` | Huawei 4G/5G, GL.iNet OpenWrt, Teltonika | Cellular, Mobile MiFi & Travel Routers | Port 80 / 443 |
+| `192.168.10.1` | Trendnet, WAVLINK, Zyxel | Retail Routers & Standalone Range Extenders | wifi.wavlink.com |
+| `192.168.11.1` | Buffalo AirStation, DD-WRT Pre-loaded | Retail Routers & Open-Source Firmware | Port 80 (HTTP) |
+| `192.168.12.1` | T-Mobile 5G Home Internet (Arcadyan, Sagemcom) | Fixed Wireless 5G Gateways | T-Life App / HTTP |
+| `192.168.31.1` | Xiaomi Mi WiFi, Redmi Routers | Home Routers & Mesh Units | miwifi.com |
+| `192.168.88.1` | MikroTik RouterBOARD | SMB / Enterprise Routing & Wireless | WebFig (80), WinBox (8291) |
+| `192.168.100.1` | Huawei GPON ONT, ZTE, Arris/Motorola Modems | Optical Fiber Terminals & Standalone Modems | Port 80 (HTTP) |
+| `10.0.1.1` | Apple AirPort Extreme, Time Capsule | Wireless Base Stations | Apple AirPort Utility App |
+| `192.168.1.2` | Secondary Routers, Access Point Mode Fallback | Network Extenders & AP Subnets | Port 80 (HTTP) |
+| `192.168.50.1` | ASUS ZenWiFi Mesh Systems | Mesh Wi-Fi Systems | router.asus.com |
+| `192.168.68.1` | TP-Link Deco Mesh Systems | Mesh Wi-Fi Systems | TP-Link Deco App |
+| `192.168.86.1` | Google Wifi, Nest Wifi, Nest Wifi Pro | Smart Home Mesh Systems | Google Home App |
+| `192.168.4.1` | Amazon eero, eero Pro 6, eero Max 7 | Smart Home Mesh Systems | eero Mobile App |
+| `192.168.254.254` | Actiontec, CenturyLink DSL Modems | DSL / Fiber Gateways | Port 80 (HTTP) |
+
+---
+
+## 2. Complete Manufacturer Default Credentials Table
+
+| Brand | Models | Default IP | Default Username | Default Password | Setup Mode |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **TP-Link** | Archer AX50, AX55, AX73, C7, AX10 | `192.168.0.1` | `admin` | `admin` (or user sets) | Web Browser |
+| **TP-Link** | Deco M4, X20, X50, XE75, BE85 | `192.168.68.1` | TP-Link ID | Cloud Password | Deco Mobile App |
+| **Netgear** | Nighthawk RAX50, R7000, RAX120, XR500 | `192.168.1.1` | `admin` | `password` | Web Browser |
+| **Netgear** | Orbi RBK50, RBK752, RBK852, 960 | `192.168.1.1` | `admin` | `password` | Orbi App / Web |
+| **Netgear** | Range Extenders EX6120, EAX20 | `192.168.1.250`| `admin` | `password` | mywifiext.net |
+| **ASUS** | RT-AX88U, RT-AX86U, GT-AX11000 | `192.168.1.1` | `admin` | `admin` | Web Browser |
+| **ASUS** | ZenWiFi XT8, XT9, XD6 | `192.168.50.1` | `admin` | `admin` | Web / ASUS App |
+| **Linksys** | EA7500, EA9500, MR7350, WRT3200ACM | `192.168.1.1` | `admin` | `admin` | Web Browser |
+| **Linksys** | Velop Intelligent Mesh MX4200, MX5300 | `192.168.1.1` | Linksys Cloud | Cloud Password | Linksys App |
+| **D-Link** | DIR-842, DIR-882, DIR-X1560 | `192.168.0.1` | `Admin` | *(Blank)* | Web Browser |
+| **Arris / Surfboard** | SBG6580, SBG8300, G34, G36 | `192.168.0.1` | `admin` | `password` | Web Browser |
+| **Motorola** | MG7550, MG7700, MG8702 | `192.168.0.1` | `admin` | `motorola` | Web Browser |
+| **Xfinity / Comcast** | xFi Gateway XB3, XB6, XB7, XB8 | `10.0.0.1` | `admin` | `password` | Web / xFi App |
+| **AT&T** | BGW210, BGW320-500, BGW320-505 | `192.168.1.254`| `admin` | Device Access Code | Web Browser |
+| **British Telecom (BT)**| BT Smart Hub, Smart Hub 2, Home Hub 5 | `192.168.1.254`| `admin` | On Hub Pull-out Card | Web Browser |
+| **Verizon** | Fios G3100, CR1000A, CR1000B | `192.168.1.1` | `admin` | Printed on Label | Web Browser |
+| **Belkin** | N150, N300, N600, AC1200 | `192.168.2.1` | *(Blank)* | *(Blank)* | Web Browser |
+| **Huawei** | 4G/5G Cellular Routers (B310, B535, 5G CPE) | `192.168.8.1` | `admin` | `admin` (or label) | Web Browser |
+| **Huawei** | GPON ONT (HG8245, HG8245H, HG8247) | `192.168.100.1`| `telecomadmin` | `admintelecom` | Web Browser |
+| **GL.iNet** | Beryl AX (GL-MT3000), Slate AX, Opal | `192.168.8.1` | `root` | User Sets on Boot | Web Browser |
+| **Trendnet** | TEW-828DRU, TEW-831DRU | `192.168.10.1` | `admin` | `admin` | Web Browser |
+| **WAVLINK** | Halo Base, Quantum D4G, Aerial HD4 | `192.168.10.1` | `admin` | `admin` | Web Browser |
+| **Buffalo** | AirStation AC1900, WZR-HP-G300NH | `192.168.11.1` | `admin` | `password` | Web Browser |
+| **Xiaomi** | Mi AIoT AX3000, AX6000, AX9000 | `192.168.31.1` | `admin` | Set During Wizard | Web / Mi Home |
+| **Redmi** | Redmi AX6, Redmi AX5400 | `192.168.31.1` | `admin` | Set During Wizard | Web / Mi Home |
+| **MikroTik** | RouterBOARD, hAP ax3, RB4011, RB5009 | `192.168.88.1` | `admin` | *(Blank)* | WebFig / WinBox |
+| **T-Mobile** | 5G Home Internet Arcadyan KVD21 | `192.168.12.1` | `admin` | Printed on Label | T-Life App |
+| **Apple** | AirPort Extreme, Express, Time Capsule | `10.0.1.1` | *(Blank)* | `public` | AirPort Utility |
+| **Ubiquiti** | EdgeRouter X, EdgeRouter 4 | `192.168.1.1` | `ubnt` | `ubnt` | Web Browser |
+| **Ubiquiti** | UniFi Dream Machine (UDM), UDR | `192.168.1.1` | UI Account | UI Cloud Password | UniFi App / Web |
+| **ZTE** | ZXHN F660, F670, F680 GPON ONT | `192.168.100.1`| `admin` | `admin` | Web Browser |
+| **Synology** | RT2600ac, RT6600ax, WRX560 | `192.168.1.1` | `admin` | Setup Wizard | Web Browser |
+| **Google Nest** | Google Wifi, Nest Wifi, Nest Wifi Pro | `192.168.86.1` | Google ID | Cloud Password | Google Home App |
+| **Amazon eero** | eero 6, eero Pro 6E, eero Max 7 | `192.168.4.1` | Amazon ID | Cloud Password | eero Mobile App |
+| **CenturyLink** | C3000Z, C4000BZ, C4000XG | `192.168.0.1` | `admin` | Admin Password on Label| Web Browser |
+| **Actiontec** | MI424WR, GT784WN, T3200 | `192.168.254.254`| `admin` | Printed on Label | Web Browser |
+
+---
+
+## 3. How to Discover Your Router IP on Any Operating System
+
+- **Windows 11/10**: `cmd` > `ipconfig` (check `Default Gateway`)
+- **macOS (Terminal)**: `route -n get default | grep gateway`
+- **iPhone / iPad**: `Settings` > `Wi-Fi` > tap `(i)` icon > read `Router`
+- **Android**: `Settings` > `Network & Internet` > `Wi-Fi` > gear icon > `Gateway`
+- **Linux**: `ip route show default | awk '{print $3}'`

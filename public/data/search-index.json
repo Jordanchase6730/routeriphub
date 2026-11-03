@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "page-home",
+    "title": "Universal Router IP & Default Admin Directory",
+    "url": "/",
+    "category": "Directory Hub",
+    "badge": "HUB",
+    "snippet": "Instant searchable directory of default gateway IPs, admin usernames, and passwords for 62+ router models across 35+ brands.",
+    "keywords": "router ip directory default password admin login gateway lookup netgear tplink asus cisco linksys xfinity at&t"
+  },
+  {
+    "id": "page-tools",
+    "title": "Interactive Networking Tools Suite",
+    "url": "/tools.html",
+    "category": "Interactive Tool",
+    "badge": "TOOLS",
+    "snippet": "All-in-one browser-based toolkit: Wi-Fi QR Code Generator, Subnet CIDR Calculator, WPA3 Password Generator, and Gateway Reachability Probe.",
+    "keywords": "tools utilities networking wifi qr code subnet calculator cidr password generator probe ports reference"
+  },
+  {
+    "id": "page-howto",
+    "title": "Router Setup & Troubleshooting How-To Library",
+    "url": "/howto.html",
+    "category": "Setup Guide",
+    "badge": "GUIDES",
+    "snippet": "Complete step-by-step guides for changing Wi-Fi passwords, 30-30-30 factory resets, fixing double NAT, opening ports, and securing DNS.",
+    "keywords": "howto guides setup troubleshooting wifi password reset 30-30-30 double nat access point port forwarding dns guest network"
+  },
+  {
+    "id": "page-find-ip",
+    "title": "How to Find Your Router IP on Any Operating System",
+    "url": "/find-router-ip.html",
+    "category": "OS Guide",
+    "badge": "DIAGNOSTIC",
+    "snippet": "Commands and step-by-step instructions for finding your default gateway IP address on Windows 11/10, macOS, iOS, Android, and Linux.",
+    "keywords": "find my router ip default gateway ipconfig route get default ifconfig get-netroute nmcli windows mac iphone android linux"
+  },
+  {
+    "id": "tool-wifi-qr",
+    "title": "Wi-Fi QR Code Generator & Printable Guest Sign",
+    "url": "/tools.html#wifi-qr",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Generate a camera scan-to-connect Wi-Fi QR code with instant PNG download and printable guest network signs. 100% private and client-side.",
+    "keywords": "wifi qr code generator scanner camera phone scan connect password ssid wpa wpa2 wpa3 print sign card guest wifi"
+  },
+  {
+    "id": "tool-subnet-calc",
+    "title": "IPv4 Subnet & CIDR Calculator",
+    "url": "/tools.html#subnet-calc",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Calculate network ID, broadcast IP, CIDR prefix (/24, /16, /8), subnet mask, wildcard mask, and total usable host IP range in real time.",
+    "keywords": "subnet calculator cidr netmask wildcard mask usable ip range broadcast address slash 24 slash 16 /24 /16 /8 ip math"
+  },
+  {
+    "id": "tool-password-gen",
+    "title": "WPA3 & Wi-Fi Secure Password Generator",
+    "url": "/tools.html#password-gen",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Create cryptographically strong, high-entropy WPA3 and Wi-Fi passphrases with custom length and symbol presets to prevent brute-force attacks.",
+    "keywords": "password generator strong password wpa3 password wifi password crypto secure passphrase random password uncrackable key"
+  },
+  {
+    "id": "tool-gateway-probe",
+    "title": "Gateway Reachability & Latency Probe",
+    "url": "/tools.html#gateway-probe",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Probe candidate router gateway IP addresses (192.168.1.1, 192.168.0.1, 10.0.0.1) directly from your browser to identify your active gateway.",
+    "keywords": "gateway probe ping router test router ip reachability detect router latency probe 192.168.1.1 find gateway"
+  },
+  {
+    "id": "tool-port-dir",
+    "title": "Port Forwarding Directory & Service Reference",
+    "url": "/tools.html#port-dir",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Comprehensive reference of common TCP and UDP ports for Minecraft (25565), Plex (32400), Xbox (3074), PlayStation (3478), HTTP, HTTPS, and SSH.",
+    "keywords": "port forwarding ports directory minecraft port 25565 plex port 32400 http 80 https 443 ssh 22 xbox 3074 playstation 3478"
+  },
+  {
+    "id": "guide-wifi-password",
+    "title": "How to Change Your Wi-Fi Name (SSID) & Password",
+    "url": "/howto.html#wifi-password",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Learn how to access your wireless security settings, configure WPA3/WPA2-PSK encryption, and update your network name and passphrase.",
+    "keywords": "change wifi password change ssid rename wifi update network key wpa2 wpa3 wireless settings router login"
+  },
+  {
+    "id": "guide-hard-reset",
+    "title": "The 30-30-30 Factory Hard Reset Procedure",
+    "url": "/howto.html#hard-reset",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Universal 30-second power-cycle hard reset method to restore any router to factory defaults when forgotten admin passwords lock you out.",
+    "keywords": "factory reset 30-30-30 reset hard reset reset button forgot router password restore defaults clear nvram locked out"
+  },
+  {
+    "id": "guide-connect-two-routers",
+    "title": "How to Connect Two Routers Together (Access Point Mode & Double NAT Fix)",
+    "url": "/howto.html#connect-two-routers",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Fix double NAT gaming lag and extend wireless coverage by connecting a second router via LAN-to-LAN in Access Point (AP) mode.",
+    "keywords": "connect two routers double nat access point mode second router bridge mode lan to lan lan to wan fix nat gaming lag"
+  },
+  {
+    "id": "guide-port-forwarding",
+    "title": "How to Port Forward for Gaming, Servers & Plex",
+    "url": "/howto.html#port-forwarding",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Step-by-step instructions to reserve a DHCP static IP and configure NAT port forwarding rules for consoles, Plex servers, and Minecraft.",
+    "keywords": "how to port forward open ports nat forwarding virtual server gaming port plex remote access static ip dhcp reservation"
+  },
+  {
+    "id": "guide-change-dns",
+    "title": "How to Change Router DNS for Speed & Privacy",
+    "url": "/howto.html#change-dns",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Replace slow, tracked ISP DNS servers with high-speed, privacy-first providers like Cloudflare (1.1.1.1), Google (8.8.8.8), or Quad9 (9.9.9.9).",
+    "keywords": "change dns fast dns cloudflare 1.1.1.1 google dns 8.8.8.8 quad9 9.9.9.9 isp dns bypass dns leak secure dns"
+  },
+  {
+    "id": "guide-guest-network",
+    "title": "How to Set Up an Isolated Guest Wi-Fi Network",
+    "url": "/howto.html#guest-network",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Isolate smart home IoT gadgets and visitor devices from your private LAN computers, files, and NAS storage using guest network isolation.",
+    "keywords": "guest wifi guest network isolate iot vlan smart home isolation guest password wifi security separate subnet"
+  },
+  {
+    "id": "os-windows",
+    "title": "Find Router Gateway IP on Windows 11 & Windows 10",
+    "url": "/find-router-ip.html#windows",
+    "category": "OS Guide",
+    "badge": "WINDOWS",
+    "snippet": "Open Command Prompt and run 'ipconfig', or PowerShell and run 'Get-NetRoute -DestinationPrefix 0.0.0.0/0', to read Default Gateway.",
+    "keywords": "find ip windows cmd ipconfig default gateway windows powershell get-netroute windows 11 ip windows 10 ip ethernet wifi"
+  },
+  {
+    "id": "os-mac",
+    "title": "Find Router Gateway IP on macOS (MacBook, iMac)",
+    "url": "/find-router-ip.html#mac",
+    "category": "OS Guide",
+    "badge": "MACOS",
+    "snippet": "Run 'route -n get default' in Terminal or open System Settings > Wi-Fi > Details > TCP/IP to find the Router IP on macOS Sonoma and Ventura.",
+    "keywords": "find router ip mac macos terminal route get default mac system settings wifi tcp ip sonoma ventura apple macbook"
+  },
+  {
+    "id": "os-ios",
+    "title": "Find Router Gateway IP on iPhone & iPad (iOS)",
+    "url": "/find-router-ip.html#ios",
+    "category": "OS Guide",
+    "badge": "IOS",
+    "snippet": "Navigate to Settings > Wi-Fi, tap the blue (i) info icon next to your active network, and scroll down to the 'Router' IP address field.",
+    "keywords": "find router ip iphone ios router ip ipad wifi settings iphone gateway blue info icon wifi ios 17 ios 18"
+  },
+  {
+    "id": "os-android",
+    "title": "Find Router Gateway IP on Android (Samsung, Pixel, Xiaomi)",
+    "url": "/find-router-ip.html#android",
+    "category": "OS Guide",
+    "badge": "ANDROID",
+    "snippet": "Open Settings > Network & internet > Internet, tap the gear icon by your connected Wi-Fi, tap Advanced, and view the 'Gateway' IP.",
+    "keywords": "find router ip android samsung gateway pixel wifi settings android network details gateway ip phone android 14 android 13"
+  },
+  {
+    "id": "os-linux",
+    "title": "Find Router Gateway IP on Linux (Ubuntu, Debian, Fedora, Arch)",
+    "url": "/find-router-ip.html#linux",
+    "category": "OS Guide",
+    "badge": "LINUX",
+    "snippet": "Run 'ip route show default' or 'nmcli dev show' in any Linux terminal shell to display the current default gateway IP address.",
+    "keywords": "find router ip linux ip route show default nmcli ubuntu gateway arch linux router ip debian default gateway terminal shell"
+  },
+  {
+    "id": "ip-192-168-1-1",
+    "title": "192.168.1.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-1-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.1.1",
+    "snippet": "Default admin gateway login for Netgear (routerlogin.net), ASUS (router.asus.com), Linksys, Cisco, and Verizon Fios routers.",
+    "keywords": "192.168.1.1 192 168 1 1 gateway admin login default password Netgear, ASUS, Linksys, Cisco, Ubiquiti, Verizon Fios router setup"
+  },
+  {
+    "id": "ip-192-168-0-1",
+    "title": "192.168.0.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-0-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.0.1",
+    "snippet": "Default admin gateway login for TP-Link (tplinkwifi.net), D-Link (dlinkrouter.local), Arris Surfboard modems, and Motorola gateways.",
+    "keywords": "192.168.0.1 192 168 0 1 gateway admin login default password TP-Link, D-Link, Arris Surfboard, Motorola, CenturyLink router setup"
+  },
+  {
+    "id": "ip-10-0-0-1",
+    "title": "10.0.0.1 Default Gateway Admin Login Guide",
+    "url": "/10-0-0-1.html",
+    "category": "Gateway IP",
+    "badge": "10.0.0.1",
+    "snippet": "Default gateway login address for Comcast Xfinity xFi Advanced Gateways. Access local admin settings with username 'admin' and password 'password'.",
+    "keywords": "10.0.0.1 10 0 0 1 gateway admin login default password Xfinity / Comcast xFi Gateways (XB3, XB6, XB7, XB8) router setup"
+  },
+  {
+    "id": "ip-192-168-1-254",
+    "title": "192.168.1.254 Default Gateway Admin Login Guide",
+    "url": "/192-168-1-254.html",
+    "category": "Gateway IP",
+    "badge": "192.168.1.254",
+    "snippet": "Default gateway configuration portal for AT&T Fiber broadband gateways and BT Home Hub / Smart Hub models in the UK.",
+    "keywords": "192.168.1.254 192 168 1 254 gateway admin login default password AT&T Fiber (BGW320, BGW210) & British Telecom (BT Smart Hub) router setup"
+  },
+  {
+    "id": "ip-192-168-2-1",
+    "title": "192.168.2.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-2-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.2.1",
+    "snippet": "Default gateway IP for Belkin wireless routers and SMC home networking devices. Often features blank username and password.",
+    "keywords": "192.168.2.1 192 168 2 1 gateway admin login default password Belkin, SMC Networks, Edimax, Siemens router setup"
+  },
+  {
+    "id": "ip-192-168-8-1",
+    "title": "192.168.8.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-8-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.8.1",
+    "snippet": "Default gateway for Huawei cellular MiFi hotspots, GL.iNet travel routers (Admin Web Panel), and Teltonika industrial gateways.",
+    "keywords": "192.168.8.1 192 168 8 1 gateway admin login default password Huawei 4G/5G Mobile Wi-Fi, GL.iNet OpenWrt, Teltonika router setup"
+  },
+  {
+    "id": "ip-192-168-10-1",
+    "title": "192.168.10.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-10-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.10.1",
+    "snippet": "Default management IP for Trendnet routers and WAVLINK wireless range extenders (wifi.wavlink.com).",
+    "keywords": "192.168.10.1 192 168 10 1 gateway admin login default password Trendnet, WAVLINK repeaters, Zyxel router setup"
+  },
+  {
+    "id": "ip-192-168-11-1",
+    "title": "192.168.11.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-11-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.11.1",
+    "snippet": "Default gateway IP for Buffalo AirStation wireless routers and routers pre-installed with DD-WRT open-source firmware.",
+    "keywords": "192.168.11.1 192 168 11 1 gateway admin login default password Buffalo AirStation & factory DD-WRT builds router setup"
+  },
+  {
+    "id": "ip-192-168-31-1",
+    "title": "192.168.31.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-31-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.31.1",
+    "snippet": "Default management IP for Xiaomi Mi WiFi routers and Redmi networking hardware. Can also be accessed via miwifi.com.",
+    "keywords": "192.168.31.1 192 168 31 1 gateway admin login default password Xiaomi Mi WiFi (AX3000, AX6000, AX9000) & Redmi routers router setup"
+  },
+  {
+    "id": "ip-192-168-88-1",
+    "title": "192.168.88.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-88-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.88.1",
+    "snippet": "Default gateway IP for MikroTik RouterBOARD devices. Configurable through WebFig HTTP portal or native WinBox utility on port 8291.",
+    "keywords": "192.168.88.1 192 168 88 1 gateway admin login default password MikroTik RouterBOARD & RouterOS router setup"
+  },
+  {
+    "id": "ip-192-168-100-1",
+    "title": "192.168.100.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-100-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.100.1",
+    "snippet": "Diagnostic status IP for optical fiber ONTs (Huawei, ZTE) and standalone DOCSIS 3.0/3.1 cable modems (Arris SB8200, Motorola MB8611).",
+    "keywords": "192.168.100.1 192 168 100 1 gateway admin login default password Huawei GPON Fiber ONTs & Arris/Motorola DOCSIS Modems router setup"
+  },
+  {
+    "id": "ip-192-168-12-1",
+    "title": "192.168.12.1 Default Gateway Admin Login Guide",
+    "url": "/192-168-12-1.html",
+    "category": "Gateway IP",
+    "badge": "192.168.12.1",
+    "snippet": "Web diagnostic portal address for T-Mobile 5G Home Internet Wi-Fi 6 gateways. Check cellular signal metrics and RSRP values.",
+    "keywords": "192.168.12.1 192 168 12 1 gateway admin login default password T-Mobile 5G Home Internet (Arcadyan KVD21, Sagemcom, Sercomm) router setup"
+  },
+  {
+    "id": "ip-10-0-1-1",
+    "title": "10.0.1.1 Default Gateway Admin Login Guide",
+    "url": "/10-0-1-1.html",
+    "category": "Gateway IP",
+    "badge": "10.0.1.1",
+    "snippet": "Default gateway IP for legacy Apple AirPort wireless base stations. Manageable via Apple AirPort Utility on macOS and iOS.",
+    "keywords": "10.0.1.1 10 0 1 1 gateway admin login default password Apple AirPort Extreme, Express & Time Capsule router setup"
+  },
+  {
+    "id": "ip-192-168-1-2",
+    "title": "192.168.1.2 Default Gateway Admin Login Guide",
+    "url": "/192-168-1-2.html",
+    "category": "Gateway IP",
+    "badge": "192.168.1.2",
+    "snippet": "Conventional fallback static IP address assigned to secondary routers and access points to prevent IP collisions with the primary gateway.",
+    "keywords": "192.168.1.2 192 168 1 2 gateway admin login default password Secondary Routers, Access Point Mode & Range Extenders router setup"
+  },
+  {
+    "id": "model-0",
+    "title": "Netgear Nighthawk RAX50, RAX120, R7000, RAX200",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: password. Alternative local domain: http://routerlogin.com",
+    "keywords": "Netgear Nighthawk RAX50, RAX120, R7000, RAX200 192.168.1.1 192 168 1 1 admin password http://routerlogin.net router credentials login default password"
+  },
+  {
+    "id": "model-1",
+    "title": "Netgear Orbi Mesh WiFi RBK50, RBK752, RBK852, 960",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: password. Managed via browser or Netgear Orbi mobile app.",
+    "keywords": "Netgear Orbi Mesh WiFi RBK50, RBK752, RBK852, 960 192.168.1.1 192 168 1 1 admin password http://orbilogin.com router credentials login default password"
+  },
+  {
+    "id": "model-2",
+    "title": "Netgear Nighthawk Pro Gaming XR500, XR1000",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: password. Powered by DumaOS; prompts for password update on first boot.",
+    "keywords": "Netgear Nighthawk Pro Gaming XR500, XR1000 192.168.1.1 192 168 1 1 admin password http://routerlogin.net router credentials login default password"
+  },
+  {
+    "id": "model-3",
+    "title": "ASUS RT-AX88U, RT-AX86U, RT-AX58U, GT-AX11000",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: admin. Can also be accessed via http://asusrouter.com",
+    "keywords": "ASUS RT-AX88U, RT-AX86U, RT-AX58U, GT-AX11000 192.168.1.1 192 168 1 1 admin admin http://router.asus.com router credentials login default password"
+  },
+  {
+    "id": "model-4",
+    "title": "ASUS RT-AC68U, RT-AC86U, RT-AC1900P",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: admin. Classic ASUSWRT interface; wizard guides initial security setup.",
+    "keywords": "ASUS RT-AC68U, RT-AC86U, RT-AC1900P 192.168.1.1 192 168 1 1 admin admin http://router.asus.com router credentials login default password"
+  },
+  {
+    "id": "model-5",
+    "title": "Linksys EA7500, EA8300, EA9500, MR7350, MR9600",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: admin. Click 'To access your router, click here' to bypass cloud sign-in.",
+    "keywords": "Linksys EA7500, EA8300, EA9500, MR7350, MR9600 192.168.1.1 192 168 1 1 admin admin http://myrouter.local router credentials login default password"
+  },
+  {
+    "id": "model-6",
+    "title": "Linksys WRT54G, WRT1900ACS, WRT3200ACM",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: admin. Classic Linksys firmware. On WRT54G, username is sometimes left blank.",
+    "keywords": "Linksys WRT54G, WRT1900ACS, WRT3200ACM 192.168.1.1 192 168 1 1 admin admin http://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-7",
+    "title": "Linksys Velop Intelligent Mesh WHW03, MX4200, MX5300",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Linksys",
+    "snippet": "Default IP: 192.168.1.1 | Username: Linksys Cloud | Password: User Cloud Password. Web GUI hidden by default; accessible via bottom banner on myrouter.local.",
+    "keywords": "Linksys Velop Intelligent Mesh WHW03, MX4200, MX5300 192.168.1.1 192 168 1 1 Linksys Cloud User Cloud Password Linksys Mobile App router credentials login default password"
+  },
+  {
+    "id": "model-8",
+    "title": "Cisco Small Business RV340, RV260, RV160",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Cisco",
+    "snippet": "Default IP: 192.168.1.1 | Username: cisco | Password: cisco. Enforces HTTPS; password must be changed immediately upon initial login.",
+    "keywords": "Cisco Small Business RV340, RV260, RV160 192.168.1.1 192 168 1 1 cisco cisco https://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-9",
+    "title": "Ubiquiti EdgeRouter X, EdgeRouter 4, EdgeRouter Lite",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "snippet": "Default IP: 192.168.1.1 | Username: ubnt | Password: ubnt. Connect Ethernet cable directly to eth0 port for initial configuration.",
+    "keywords": "Ubiquiti EdgeRouter X, EdgeRouter 4, EdgeRouter Lite 192.168.1.1 192 168 1 1 ubnt ubnt https://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-10",
+    "title": "Ubiquiti UniFi Dream Machine (UDM), UDM-Pro, UDR",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Ubiquiti",
+    "snippet": "Default IP: 192.168.1.1 | Username: root / UI SSO | Password: UI.com Cloud Password. Managed via local UniFi OS console or UniFi Network app.",
+    "keywords": "Ubiquiti UniFi Dream Machine (UDM), UDM-Pro, UDR 192.168.1.1 192 168 1 1 root / UI SSO UI.com Cloud Password https://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-11",
+    "title": "Verizon Fios Quantum Gateway G1100",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Verizon",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: Printed on router label. Admin password is on the serial barcode label on the side/rear.",
+    "keywords": "Verizon Fios Quantum Gateway G1100 192.168.1.1 192 168 1 1 admin Printed on router label http://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-12",
+    "title": "Verizon Fios Home Router G3100, CR1000A, CR1000B",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Verizon",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: Printed on router label. Unique WPA key and admin password printed on pull-out plastic card or label.",
+    "keywords": "Verizon Fios Home Router G3100, CR1000A, CR1000B 192.168.1.1 192 168 1 1 admin Printed on router label http://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-13",
+    "title": "Spectrum / Charter Wave 2 & WiFi 6 Advanced (SAC2V1K, SAX1V1K)",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Spectrum / Charter",
+    "snippet": "Default IP: 192.168.1.1 | Username: Spectrum ID | Password: User Cloud Password. Web GUI disabled on most modern units; managed via My Spectrum app.",
+    "keywords": "Spectrum / Charter Wave 2 & WiFi 6 Advanced (SAC2V1K, SAX1V1K) 192.168.1.1 192 168 1 1 Spectrum ID User Cloud Password My Spectrum App router credentials login default password"
+  },
+  {
+    "id": "model-14",
+    "title": "DrayTek Vigor 2865, 2927, 2765 Series",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "DrayTek",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: admin. Default HTTPS port 443; prompts to change admin password immediately.",
+    "keywords": "DrayTek Vigor 2865, 2927, 2765 Series 192.168.1.1 192 168 1 1 admin admin https://192.168.1.1 router credentials login default password"
+  },
+  {
+    "id": "model-15",
+    "title": "Synology RT2600ac, RT6600ax, WRX560",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Synology",
+    "snippet": "Default IP: 192.168.1.1 | Username: admin | Password: synology (or setup wizard). Synology Router Manager (SRM) guides initial setup on port 8000.",
+    "keywords": "Synology RT2600ac, RT6600ax, WRX560 192.168.1.1 192 168 1 1 admin synology (or setup wizard) http://router.synology.com router credentials login default password"
+  },
+  {
+    "id": "model-16",
+    "title": "Netis WF2419, WF2780, N3",
+    "url": "/192-168-1-1.html",
+    "category": "Router Model",
+    "badge": "Netis",
+    "snippet": "Default IP: 192.168.1.1 | Username: guest | Password: guest (or blank). Quick setup page provides one-click wireless and admin configuration.",
+    "keywords": "Netis WF2419, WF2780, N3 192.168.1.1 192 168 1 1 guest guest (or blank) http://netis.cc router credentials login default password"
+  },
+  {
+    "id": "model-17",
+    "title": "TP-Link Archer AX50, AX55, AX73, C7, AX10, C6",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: admin (or user-created). Modern firmware prompts to set a new password on first boot.",
+    "keywords": "TP-Link Archer AX50, AX55, AX73, C7, AX10, C6 192.168.0.1 192 168 0 1 admin admin (or user-created) http://tplinkwifi.net router credentials login default password"
+  },
+  {
+    "id": "model-18",
+    "title": "TP-Link TL-WR841N, TL-WR940N, TL-WR840N",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: admin. Classic budget TP-Link routers. Default user and pass are both admin.",
+    "keywords": "TP-Link TL-WR841N, TL-WR940N, TL-WR840N 192.168.0.1 192 168 0 1 admin admin http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-19",
+    "title": "D-Link DIR-842, DIR-882, DIR-X1560, DIR-X5460",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "snippet": "Default IP: 192.168.0.1 | Username: Admin | Password: (Leave blank). Username is case-sensitive on older models. Default password is often empty.",
+    "keywords": "D-Link DIR-842, DIR-882, DIR-X1560, DIR-X5460 192.168.0.1 192 168 0 1 Admin (Leave blank) http://dlinkrouter.local router credentials login default password"
+  },
+  {
+    "id": "model-20",
+    "title": "D-Link DIR-600, DIR-605L, DIR-615",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "D-Link",
+    "snippet": "Default IP: 192.168.0.1 | Username: Admin | Password: (Leave blank). Classic D-Link models; type 'Admin' with capital A and leave password blank.",
+    "keywords": "D-Link DIR-600, DIR-605L, DIR-615 192.168.0.1 192 168 0 1 Admin (Leave blank) http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-21",
+    "title": "Arris / Surfboard SBG6580, SBG8300, G34, G36, SBG10",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "Arris / Surfboard",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: password. Newer units have unique Wi-Fi pre-shared keys printed on bottom sticker.",
+    "keywords": "Arris / Surfboard SBG6580, SBG8300, G34, G36, SBG10 192.168.0.1 192 168 0 1 admin password http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-22",
+    "title": "Motorola MG7550, MG7700, MG8702",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "Motorola",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: motorola. Default password is 'motorola' in all lowercase.",
+    "keywords": "Motorola MG7550, MG7700, MG8702 192.168.0.1 192 168 0 1 admin motorola http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-23",
+    "title": "CenturyLink / Quantum C3000Z, C4000BZ, C4000XG",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "CenturyLink / Quantum",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: Admin/GUI Password on label. Distinct from Wi-Fi security key. Look for 'Admin/GUI Password' on sticker.",
+    "keywords": "CenturyLink / Quantum C3000Z, C4000BZ, C4000XG 192.168.0.1 192 168 0 1 admin Admin/GUI Password on label http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-24",
+    "title": "Tenda AC6, AC10, TX9 Pro, AC1200",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "Tenda",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: admin (or blank). Initial wizard prompts creation of login password.",
+    "keywords": "Tenda AC6, AC10, TX9 Pro, AC1200 192.168.0.1 192 168 0 1 admin admin (or blank) http://tendawifi.com router credentials login default password"
+  },
+  {
+    "id": "model-25",
+    "title": "Actiontec GT784WN, C1000A, PK5000",
+    "url": "/192-168-0-1.html",
+    "category": "Router Model",
+    "badge": "Actiontec",
+    "snippet": "Default IP: 192.168.0.1 | Username: admin | Password: admin (or on label). DSL combo gateway; check label for model-specific credentials.",
+    "keywords": "Actiontec GT784WN, C1000A, PK5000 192.168.0.1 192 168 0 1 admin admin (or on label) http://192.168.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-26",
+    "title": "Xfinity / Comcast xFi Gateway XB3, XB6, XB7, XB8",
+    "url": "/10-0-0-1.html",
+    "category": "Router Model",
+    "badge": "Xfinity / Comcast",
+    "snippet": "Default IP: 10.0.0.1 | Username: admin | Password: password. Prompts to create a custom password immediately upon first login.",
+    "keywords": "Xfinity / Comcast xFi Gateway XB3, XB6, XB7, XB8 10.0.0.1 10 0 0 1 admin password http://10.0.0.1 router credentials login default password"
+  },
+  {
+    "id": "model-27",
+    "title": "Apple AirPort Extreme, Time Capsule",
+    "url": "/10-0-1-1.html",
+    "category": "Router Model",
+    "badge": "Apple",
+    "snippet": "Default IP: 10.0.1.1 | Username: (Leave blank) | Password: public (or setup password). Managed via native AirPort Utility on macOS or iOS rather than web browser.",
+    "keywords": "Apple AirPort Extreme, Time Capsule 10.0.1.1 10 0 1 1 (Leave blank) public (or setup password) AirPort Utility App router credentials login default password"
+  },
+  {
+    "id": "model-28",
+    "title": "Apple AirPort Express",
+    "url": "/10-0-1-1.html",
+    "category": "Router Model",
+    "badge": "Apple",
+    "snippet": "Default IP: 10.0.1.1 | Username: (Leave blank) | Password: public. Use Apple AirPort Utility to discover and configure IP settings.",
+    "keywords": "Apple AirPort Express 10.0.1.1 10 0 1 1 (Leave blank) public AirPort Utility App router credentials login default password"
+  },
+  {
+    "id": "model-29",
+    "title": "AT&T Fiber Gateway BGW210, BGW320-500, BGW320-505",
+    "url": "/192-168-1-254.html",
+    "category": "Router Model",
+    "badge": "AT&T",
+    "snippet": "Default IP: 192.168.1.254 | Username: admin | Password: Printed Device Access Code. Requires the physical 'Access Code' printed on router yellow/white sticker.",
+    "keywords": "AT&T Fiber Gateway BGW210, BGW320-500, BGW320-505 192.168.1.254 192 168 1 254 admin Printed Device Access Code http://192.168.1.254 router credentials login default password"
+  },
+  {
+    "id": "model-30",
+    "title": "AT&T NVG589, NVG599, Pace 5268AC",
+    "url": "/192-168-1-254.html",
+    "category": "Router Model",
+    "badge": "AT&T",
+    "snippet": "Default IP: 192.168.1.254 | Username: admin | Password: Printed Device Access Code. Enter the 10-12 character alphanumeric Access Code on label.",
+    "keywords": "AT&T NVG589, NVG599, Pace 5268AC 192.168.1.254 192 168 1 254 admin Printed Device Access Code http://192.168.1.254 router credentials login default password"
+  },
+  {
+    "id": "model-31",
+    "title": "British Telecom (BT) BT Smart Hub, Smart Hub 2, Home Hub 4/5",
+    "url": "/192-168-1-254.html",
+    "category": "Router Model",
+    "badge": "British Telecom (BT)",
+    "snippet": "Default IP: 192.168.1.254 | Username: admin | Password: Admin Password on Hub Card. Password is printed on the pull-out plastic card on the back of the Hub.",
+    "keywords": "British Telecom (BT) BT Smart Hub, Smart Hub 2, Home Hub 4/5 192.168.1.254 192 168 1 254 admin Admin Password on Hub Card http://bthomehub.home router credentials login default password"
+  },
+  {
+    "id": "model-32",
+    "title": "2Wire 2701HG-B, 3801HGV, 5012NV",
+    "url": "/192-168-1-254.html",
+    "category": "Router Model",
+    "badge": "2Wire",
+    "snippet": "Default IP: 192.168.1.254 | Username: admin | Password: admin (or on sticker). Legacy telecom gateway; prompt asks for system password printed on label.",
+    "keywords": "2Wire 2701HG-B, 3801HGV, 5012NV 192.168.1.254 192 168 1 254 admin admin (or on sticker) http://192.168.1.254 router credentials login default password"
+  },
+  {
+    "id": "model-33",
+    "title": "Billion BiPAC 7800NL, 8800NL, 8900AX",
+    "url": "/192-168-1-254.html",
+    "category": "Router Model",
+    "badge": "Billion",
+    "snippet": "Default IP: 192.168.1.254 | Username: admin | Password: admin. Standard default credentials for Billion broadband routers.",
+    "keywords": "Billion BiPAC 7800NL, 8800NL, 8900AX 192.168.1.254 192 168 1 254 admin admin http://192.168.1.254 router credentials login default password"
+  },
+  {
+    "id": "model-34",
+    "title": "Belkin N150, N300, N600, AC1200, F9K Series",
+    "url": "/192-168-2-1.html",
+    "category": "Router Model",
+    "badge": "Belkin",
+    "snippet": "Default IP: 192.168.2.1 | Username: (Leave blank) | Password: (Leave blank). Most classic Belkin routers have NO default username and NO default password.",
+    "keywords": "Belkin N150, N300, N600, AC1200, F9K Series 192.168.2.1 192 168 2 1 (Leave blank) (Leave blank) http://router router credentials login default password"
+  },
+  {
+    "id": "model-35",
+    "title": "SMC Networks Barricade SMC7004VBR, SMCWBR14-G",
+    "url": "/192-168-2-1.html",
+    "category": "Router Model",
+    "badge": "SMC Networks",
+    "snippet": "Default IP: 192.168.2.1 | Username: smc | Password: smcadmin (or admin). Classic SMC default credentials.",
+    "keywords": "SMC Networks Barricade SMC7004VBR, SMCWBR14-G 192.168.2.1 192 168 2 1 smc smcadmin (or admin) http://192.168.2.1 router credentials login default password"
+  },
+  {
+    "id": "model-36",
+    "title": "Edimax BR-6428nS, BR-6478AC, EW-7438RPn",
+    "url": "/192-168-2-1.html",
+    "category": "Router Model",
+    "badge": "Edimax",
+    "snippet": "Default IP: 192.168.2.1 | Username: admin | Password: 1234. Default login is admin / 1234 on factory firmware.",
+    "keywords": "Edimax BR-6428nS, BR-6478AC, EW-7438RPn 192.168.2.1 192 168 2 1 admin 1234 http://edimax.setup router credentials login default password"
+  },
+  {
+    "id": "model-37",
+    "title": "Siemens Gigaset SE505, SX541",
+    "url": "/192-168-2-1.html",
+    "category": "Router Model",
+    "badge": "Siemens",
+    "snippet": "Default IP: 192.168.2.1 | Username: admin | Password: admin. European Siemens DSL routers.",
+    "keywords": "Siemens Gigaset SE505, SX541 192.168.2.1 192 168 2 1 admin admin http://192.168.2.1 router credentials login default password"
+  },
+  {
+    "id": "model-38",
+    "title": "Huawei 4G/5G Mobile Wi-Fi (B310, B315, B525, B535, 5G CPE)",
+    "url": "/192-168-8-1.html",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "snippet": "Default IP: 192.168.8.1 | Username: admin | Password: admin (or printed on label). Standard gateway for Huawei cellular routers and mobile MiFi pucks.",
+    "keywords": "Huawei 4G/5G Mobile Wi-Fi (B310, B315, B525, B535, 5G CPE) 192.168.8.1 192 168 8 1 admin admin (or printed on label) http://192.168.8.1 router credentials login default password"
+  },
+  {
+    "id": "model-39",
+    "title": "GL.iNet Beryl AX (GL-MT3000), Slate AX, Opal, Flint 2",
+    "url": "/192-168-8-1.html",
+    "category": "Router Model",
+    "badge": "GL.iNet",
+    "snippet": "Default IP: 192.168.8.1 | Username: root | Password: User sets on 1st boot. Powered by OpenWrt; initial setup prompts you to choose admin password.",
+    "keywords": "GL.iNet Beryl AX (GL-MT3000), Slate AX, Opal, Flint 2 192.168.8.1 192 168 8 1 root User sets on 1st boot http://192.168.8.1 router credentials login default password"
+  },
+  {
+    "id": "model-40",
+    "title": "Teltonika RUT240, RUT950, RUTX50, RUTX11",
+    "url": "/192-168-8-1.html",
+    "category": "Router Model",
+    "badge": "Teltonika",
+    "snippet": "Default IP: 192.168.8.1 | Username: admin | Password: admin01. Requires password change on initial HTTPS login.",
+    "keywords": "Teltonika RUT240, RUT950, RUTX50, RUTX11 192.168.8.1 192 168 8 1 admin admin01 https://192.168.8.1 router credentials login default password"
+  },
+  {
+    "id": "model-41",
+    "title": "Trendnet TEW-828DRU, TEW-831DRU, TEW-731BR",
+    "url": "/192-168-10-1.html",
+    "category": "Router Model",
+    "badge": "Trendnet",
+    "snippet": "Default IP: 192.168.10.1 | Username: admin | Password: admin. Standard IP for Trendnet routers; older models used 'admin' / empty.",
+    "keywords": "Trendnet TEW-828DRU, TEW-831DRU, TEW-731BR 192.168.10.1 192 168 10 1 admin admin http://192.168.10.1 router credentials login default password"
+  },
+  {
+    "id": "model-42",
+    "title": "WAVLINK Halo Base, Quantum D4G, Aerial HD4",
+    "url": "/192-168-10-1.html",
+    "category": "Router Model",
+    "badge": "WAVLINK",
+    "snippet": "Default IP: 192.168.10.1 | Username: admin | Password: admin. Can also be accessed via http://192.168.10.1 or http://wifi.wavlink.com",
+    "keywords": "WAVLINK Halo Base, Quantum D4G, Aerial HD4 192.168.10.1 192 168 10 1 admin admin http://wifi.wavlink.com router credentials login default password"
+  },
+  {
+    "id": "model-43",
+    "title": "Zyxel P-660HN, NBG4615, USG 20",
+    "url": "/192-168-10-1.html",
+    "category": "Router Model",
+    "badge": "Zyxel",
+    "snippet": "Default IP: 192.168.10.1 | Username: admin | Password: 1234. Older Zyxel firmware used 192.168.10.1 with 1234 password.",
+    "keywords": "Zyxel P-660HN, NBG4615, USG 20 192.168.10.1 192 168 10 1 admin 1234 http://192.168.10.1 router credentials login default password"
+  },
+  {
+    "id": "model-44",
+    "title": "Buffalo AirStation Extreme AC1900, WZR-HP-G300NH",
+    "url": "/192-168-11-1.html",
+    "category": "Router Model",
+    "badge": "Buffalo",
+    "snippet": "Default IP: 192.168.11.1 | Username: admin | Password: password. Some models with AirStation switch set to AP mode change to 192.168.11.100.",
+    "keywords": "Buffalo AirStation Extreme AC1900, WZR-HP-G300NH 192.168.11.1 192 168 11 1 admin password http://192.168.11.1 router credentials login default password"
+  },
+  {
+    "id": "model-45",
+    "title": "DD-WRT Third-Party Custom Router Firmware (Buffalo Edition)",
+    "url": "/192-168-11-1.html",
+    "category": "Router Model",
+    "badge": "DD-WRT",
+    "snippet": "Default IP: 192.168.11.1 | Username: root | Password: admin. Pre-installed DD-WRT builds on Buffalo routers default to 192.168.11.1.",
+    "keywords": "DD-WRT Third-Party Custom Router Firmware (Buffalo Edition) 192.168.11.1 192 168 11 1 root admin http://192.168.11.1 router credentials login default password"
+  },
+  {
+    "id": "model-46",
+    "title": "Xiaomi Mi AIoT Router AX3600, AX6000, AX9000, AX3000",
+    "url": "/192-168-31-1.html",
+    "category": "Router Model",
+    "badge": "Xiaomi",
+    "snippet": "Default IP: 192.168.31.1 | Username: admin | Password: User-created on 1st setup. Xiaomi/Redmi routers use 192.168.31.1. Managed via Mi Home / MiWiFi app.",
+    "keywords": "Xiaomi Mi AIoT Router AX3600, AX6000, AX9000, AX3000 192.168.31.1 192 168 31 1 admin User-created on 1st setup http://miwifi.com router credentials login default password"
+  },
+  {
+    "id": "model-47",
+    "title": "Redmi Redmi AX6, Redmi AX5400, Redmi AC2100",
+    "url": "/192-168-31-1.html",
+    "category": "Router Model",
+    "badge": "Redmi",
+    "snippet": "Default IP: 192.168.31.1 | Username: admin | Password: User-created on 1st setup. Default subnet for all Redmi wireless routers.",
+    "keywords": "Redmi Redmi AX6, Redmi AX5400, Redmi AC2100 192.168.31.1 192 168 31 1 admin User-created on 1st setup http://miwifi.com router credentials login default password"
+  },
+  {
+    "id": "model-48",
+    "title": "MikroTik RouterBOARD hAP ac2, hAP ax3, RB4011, RB5009",
+    "url": "/192-168-88-1.html",
+    "category": "Router Model",
+    "badge": "MikroTik",
+    "snippet": "Default IP: 192.168.88.1 | Username: admin | Password: (Leave blank). Accessible via browser (WebFig) or native WinBox utility on TCP port 8291.",
+    "keywords": "MikroTik RouterBOARD hAP ac2, hAP ax3, RB4011, RB5009 192.168.88.1 192 168 88 1 admin (Leave blank) http://192.168.88.1 router credentials login default password"
+  },
+  {
+    "id": "model-49",
+    "title": "Huawei EchoLife GPON ONT HG8245, HG8245H, HG8247",
+    "url": "/192-168-100-1.html",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "snippet": "Default IP: 192.168.100.1 | Username: telecomadmin | Password: admintelecom. ISP super-admin credentials; user login is often root / admin.",
+    "keywords": "Huawei EchoLife GPON ONT HG8245, HG8245H, HG8247 192.168.100.1 192 168 100 1 telecomadmin admintelecom http://192.168.100.1 router credentials login default password"
+  },
+  {
+    "id": "model-50",
+    "title": "ZTE ZXHN F660, F670, F680 GPON ONT",
+    "url": "/192-168-100-1.html",
+    "category": "Router Model",
+    "badge": "ZTE",
+    "snippet": "Default IP: 192.168.100.1 | Username: admin | Password: admin. Standard gateway IP for ZTE optical fiber terminals.",
+    "keywords": "ZTE ZXHN F660, F670, F680 GPON ONT 192.168.100.1 192 168 100 1 admin admin http://192.168.100.1 router credentials login default password"
+  },
+  {
+    "id": "model-51",
+    "title": "Motorola / Arris SB6141, SB6183, SB6190, SB8200, MB8600",
+    "url": "/192-168-100-1.html",
+    "category": "Router Model",
+    "badge": "Motorola / Arris",
+    "snippet": "Default IP: 192.168.100.1 | Username: admin | Password: password (or on label). Standard diagnostic IP for standalone DOCSIS 3.0 and 3.1 cable modems.",
+    "keywords": "Motorola / Arris SB6141, SB6183, SB6190, SB8200, MB8600 192.168.100.1 192 168 100 1 admin password (or on label) http://192.168.100.1 router credentials login default password"
+  },
+  {
+    "id": "model-52",
+    "title": "T-Mobile 5G Home Internet Gateway Arcadyan KVD21, Sagemcom FAST5688W",
+    "url": "/192-168-12-1.html",
+    "category": "Router Model",
+    "badge": "T-Mobile",
+    "snippet": "Default IP: 192.168.12.1 | Username: admin | Password: Printed on gateway bottom. Advanced settings are managed through the T-Mobile Internet / T-Life mobile app.",
+    "keywords": "T-Mobile 5G Home Internet Gateway Arcadyan KVD21, Sagemcom FAST5688W 192.168.12.1 192 168 12 1 admin Printed on gateway bottom http://192.168.12.1 router credentials login default password"
+  },
+  {
+    "id": "model-53",
+    "title": "Huawei WiFi WS5200, WiFi AX3, AX3 Pro",
+    "url": "/?q=Huawei+WiFi WS5200#router-table",
+    "category": "Router Model",
+    "badge": "Huawei",
+    "snippet": "Default IP: 192.168.3.1 | Username: admin | Password: User-created on 1st setup. Huawei consumer standalone Wi-Fi routers default to 192.168.3.1.",
+    "keywords": "Huawei WiFi WS5200, WiFi AX3, AX3 Pro 192.168.3.1 192 168 3 1 admin User-created on 1st setup http://192.168.3.1 router credentials login default password"
+  },
+  {
+    "id": "model-54",
+    "title": "Amped Wireless TITAN, ATHENA, REC Series",
+    "url": "/?q=Amped Wireless+TITAN#router-table",
+    "category": "Router Model",
+    "badge": "Amped Wireless",
+    "snippet": "Default IP: 192.168.3.1 | Username: admin | Password: admin. Default gateway for Amped Wireless long-range routers and repeaters.",
+    "keywords": "Amped Wireless TITAN, ATHENA, REC Series 192.168.3.1 192 168 3 1 admin admin http://setup.ampedwireless.com router credentials login default password"
+  },
+  {
+    "id": "model-55",
+    "title": "Netgear Range Extenders EX6120, EX7000, EX8000, EAX20",
+    "url": "/?q=Netgear+Range Extenders EX6120#router-table",
+    "category": "Router Model",
+    "badge": "Netgear",
+    "snippet": "Default IP: 192.168.1.250 | Username: admin | Password: password. Netgear extenders use mywifiext.net or fallback IP 192.168.1.250.",
+    "keywords": "Netgear Range Extenders EX6120, EX7000, EX8000, EAX20 192.168.1.250 192 168 1 250 admin password http://mywifiext.net router credentials login default password"
+  },
+  {
+    "id": "model-56",
+    "title": "Generic AP / Extender Access Point / Repeater Mode Fallback",
+    "url": "/192-168-1-2.html",
+    "category": "Router Model",
+    "badge": "Generic AP / Extender",
+    "snippet": "Default IP: 192.168.1.2 | Username: admin | Password: admin. Standard fallback IP assigned to secondary routers or Wi-Fi extenders on a 192.168.1.x network.",
+    "keywords": "Generic AP / Extender Access Point / Repeater Mode Fallback 192.168.1.2 192 168 1 2 admin admin http://192.168.1.2 router credentials login default password"
+  },
+  {
+    "id": "model-57",
+    "title": "ASUS ZenWiFi Mesh XT8, XT9, XD6, ET12",
+    "url": "/?q=ASUS+ZenWiFi Mesh XT8#router-table",
+    "category": "Router Model",
+    "badge": "ASUS",
+    "snippet": "Default IP: 192.168.50.1 | Username: admin | Password: admin. Modern ASUS ZenWiFi mesh systems use 192.168.50.1 to avoid ISP modem conflicts.",
+    "keywords": "ASUS ZenWiFi Mesh XT8, XT9, XD6, ET12 192.168.50.1 192 168 50 1 admin admin http://router.asus.com router credentials login default password"
+  },
+  {
+    "id": "model-58",
+    "title": "TP-Link Deco Mesh M4, M5, X20, X50, X60, XE75, BE85",
+    "url": "/?q=TP-Link+Deco Mesh M4#router-table",
+    "category": "Router Model",
+    "badge": "TP-Link",
+    "snippet": "Default IP: 192.168.68.1 | Username: TP-Link ID Email | Password: User Cloud Password. TP-Link Deco uses 192.168.68.1 subnet. Setup and control via Deco mobile app.",
+    "keywords": "TP-Link Deco Mesh M4, M5, X20, X50, X60, XE75, BE85 192.168.68.1 192 168 68 1 TP-Link ID Email User Cloud Password TP-Link Deco App router credentials login default password"
+  },
+  {
+    "id": "model-59",
+    "title": "Google Nest Google Wifi (AC-1304), Nest Wifi (H2D), Nest Wifi Pro",
+    "url": "/?q=Google Nest+Google Wifi (AC-1304)#router-table",
+    "category": "Router Model",
+    "badge": "Google Nest",
+    "snippet": "Default IP: 192.168.86.1 | Username: Google Account | Password: User Cloud Password. Browser interface shows minimal diagnostic dashboard; setup is app-only.",
+    "keywords": "Google Nest Google Wifi (AC-1304), Nest Wifi (H2D), Nest Wifi Pro 192.168.86.1 192 168 86 1 Google Account User Cloud Password Google Home App router credentials login default password"
+  },
+  {
+    "id": "model-60",
+    "title": "Amazon eero eero Pro 6, eero Pro 6E, eero 6+, eero Max 7",
+    "url": "/?q=Amazon eero+eero Pro 6#router-table",
+    "category": "Router Model",
+    "badge": "Amazon eero",
+    "snippet": "Default IP: 192.168.4.1 | Username: Amazon / eero Account | Password: User Cloud Password. Configuration requires the eero iOS/Android app. Browser displays diagnostic page.",
+    "keywords": "Amazon eero eero Pro 6, eero Pro 6E, eero 6+, eero Max 7 192.168.4.1 192 168 4 1 Amazon / eero Account User Cloud Password eero Mobile App router credentials login default password"
+  },
+  {
+    "id": "model-61",
+    "title": "Actiontec MI424WR (Verizon Fios Legacy), T3200",
+    "url": "/?q=Actiontec+MI424WR (Verizon Fios Legacy)#router-table",
+    "category": "Router Model",
+    "badge": "Actiontec",
+    "snippet": "Default IP: 192.168.254.254 | Username: admin | Password: Printed on sticker. Actiontec DSL modems and legacy broadband gateways frequently use 192.168.254.254.",
+    "keywords": "Actiontec MI424WR (Verizon Fios Legacy), T3200 192.168.254.254 192 168 254 254 admin Printed on sticker http://192.168.254.254 router credentials login default password"
+  },
+  {
+    "id": "page-brands",
+    "title": "Router Hardware Brands Master Directory",
+    "url": "/brands.html",
+    "category": "Brand Hub",
+    "badge": "BRANDS",
+    "snippet": "Comprehensive directory of 35+ router manufacturers: official gateway IPs, fallback web domains, and admin login guides.",
+    "keywords": "brands router manufacturers tp-link netgear asus linksys xfinity mikrotik cisco arris hardware directory"
+  },
+  {
+    "id": "page-developers",
+    "title": "Open Networking Datasets & Router Credentials API",
+    "url": "/developers.html",
+    "category": "Developer & Open Data",
+    "badge": "DATASETS",
+    "snippet": "Open-access JSON, CSV, and SQL database exports of verified router gateway IPs, default credentials, and CIDR subnet specifications.",
+    "keywords": "developer api open data json csv sql download datasets routers database rest api open source"
+  },
+  {
+    "id": "brand-tp-link",
+    "title": "TP-Link Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/tp-link.html",
+    "category": "Brand Hub",
+    "badge": "TP-Link",
+    "snippet": "Official TP-Link gateway login at 192.168.0.1 or tplinkwifi.net. Factory default credentials, Archer AX55, AX73, C7, Deco X50, XE75, BE85, and Tether / Deco App guide.",
+    "keywords": "TP-Link tp-link 192.168.0.1 tplinkwifi.net Archer AX55, AX73, C7, Deco X50, XE75, BE85 default password admin login router reset Tether / Deco App"
+  },
+  {
+    "id": "brand-netgear",
+    "title": "Netgear Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/netgear.html",
+    "category": "Brand Hub",
+    "badge": "Netgear",
+    "snippet": "Official Netgear gateway login at 192.168.1.1 or routerlogin.net. Factory default credentials, Nighthawk RAX50, RAX120, R7000, Orbi RBK852, Pro Gaming XR500, and Nighthawk / Orbi App guide.",
+    "keywords": "Netgear netgear 192.168.1.1 routerlogin.net Nighthawk RAX50, RAX120, R7000, Orbi RBK852, Pro Gaming XR500 default password admin login router reset Nighthawk / Orbi App"
+  },
+  {
+    "id": "brand-asus",
+    "title": "ASUS Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/asus.html",
+    "category": "Brand Hub",
+    "badge": "ASUS",
+    "snippet": "Official ASUS gateway login at 192.168.1.1 or router.asus.com. Factory default credentials, RT-AX88U, RT-AX86U, ROG Rapture GT-AX11000, ZenWiFi XT8, and ASUS Router App guide.",
+    "keywords": "ASUS asus 192.168.1.1 router.asus.com RT-AX88U, RT-AX86U, ROG Rapture GT-AX11000, ZenWiFi XT8 default password admin login router reset ASUS Router App"
+  },
+  {
+    "id": "brand-linksys",
+    "title": "Linksys Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/linksys.html",
+    "category": "Brand Hub",
+    "badge": "Linksys",
+    "snippet": "Official Linksys gateway login at 192.168.1.1 or linksyssmartwifi.com. Factory default credentials, EA7500, EA9500, WRT3200ACM, Velop Intelligent Mesh MX4200, and Linksys App guide.",
+    "keywords": "Linksys linksys 192.168.1.1 linksyssmartwifi.com EA7500, EA9500, WRT3200ACM, Velop Intelligent Mesh MX4200 default password admin login router reset Linksys App"
+  },
+  {
+    "id": "brand-xfinity",
+    "title": "Xfinity / Comcast Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/xfinity.html",
+    "category": "Brand Hub",
+    "badge": "Xfinity / Comcast",
+    "snippet": "Official Xfinity / Comcast gateway login at 10.0.0.1 or 10.0.0.1. Factory default credentials, xFi Wireless Gateway XB3, XB6, XB7, XB8, xFi Pods, and Xfinity App guide.",
+    "keywords": "Xfinity / Comcast xfinity 10.0.0.1 10.0.0.1 xFi Wireless Gateway XB3, XB6, XB7, XB8, xFi Pods default password admin login router reset Xfinity App"
+  },
+  {
+    "id": "brand-mikrotik",
+    "title": "MikroTik Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/mikrotik.html",
+    "category": "Brand Hub",
+    "badge": "MikroTik",
+    "snippet": "Official MikroTik gateway login at 192.168.88.1 or webfig / winbox. Factory default credentials, hEX, hAP ax², hAP ax³, CCR2004, RB4011, RouterBOARD, and WinBox (Port 8291) guide.",
+    "keywords": "MikroTik mikrotik 192.168.88.1 webfig / winbox hEX, hAP ax², hAP ax³, CCR2004, RB4011, RouterBOARD default password admin login router reset WinBox (Port 8291)"
+  },
+  {
+    "id": "brand-cisco",
+    "title": "Cisco Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/cisco.html",
+    "category": "Brand Hub",
+    "badge": "Cisco",
+    "snippet": "Official Cisco gateway login at 192.168.1.1 or ciscobusiness.cisco. Factory default credentials, RV340, RV260, Catalyst 1000, Meraki Go, CBS350, and Cisco Business Dashboard guide.",
+    "keywords": "Cisco cisco 192.168.1.1 ciscobusiness.cisco RV340, RV260, Catalyst 1000, Meraki Go, CBS350 default password admin login router reset Cisco Business Dashboard"
+  },
+  {
+    "id": "brand-arris",
+    "title": "Arris / Surfboard Router Admin Login, Passwords & Setup Portal",
+    "url": "/brand/arris.html",
+    "category": "Brand Hub",
+    "badge": "Arris / Surfboard",
+    "snippet": "Official Arris / Surfboard gateway login at 192.168.0.1 or 192.168.0.1 / 192.168.100.1. Factory default credentials, Surfboard SBG8300, G34, G36, SB8200, S33 DOCSIS 3.1, and SURFboard Central guide.",
+    "keywords": "Arris / Surfboard arris 192.168.0.1 192.168.0.1 / 192.168.100.1 Surfboard SBG8300, G34, G36, SB8200, S33 DOCSIS 3.1 default password admin login router reset SURFboard Central"
+  },
+  {
+    "id": "tool-local-detector",
+    "title": "WebRTC Local IP & Gateway Auto-Detector",
+    "url": "/tools.html#local-ip-detector",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "In-browser WebRTC local network interface scanner. Detect your private device IP and infer your active default gateway address automatically.",
+    "keywords": "detect local ip webrtc local gateway auto detect find gateway subnet probe local interface"
+  },
+  {
+    "id": "tool-subnet-cheatsheet",
+    "title": "CIDR Subnet Cheat-Sheet & CSV Exporter",
+    "url": "/tools.html#subnet-cheat-sheet",
+    "category": "Interactive Tool",
+    "badge": "TOOL",
+    "snippet": "Interactive reference table of IPv4 CIDR prefix lengths from /8 to /32 with 1-click CSV cheat-sheet export.",
+    "keywords": "subnet cheat sheet cidr table /24 /16 /8 mask wildcard export csv download"
+  },
+  {
+    "id": "guide-wifi7",
+    "title": "Wi-Fi 7 (802.11be) & Wi-Fi 6E 6 GHz Configuration Guide",
+    "url": "/howto.html#wifi7-setup",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Optimize next-gen Wi-Fi 7 routers with 320 MHz channels, Multi-Link Operation (MLO), and interference-free 6 GHz spectrum.",
+    "keywords": "wifi 7 wifi 6e 6 ghz 320 mhz mlo 802.11be dfs radar channel setup wpa3"
+  },
+  {
+    "id": "guide-mesh",
+    "title": "Mesh Wi-Fi Network Backhaul & Node Placement Optimization",
+    "url": "/howto.html#mesh-optimization",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Eliminate dead zones with Ethernet wired backhaul, dedicated tri-band wireless links, and 802.11k/v/r fast roaming protocols.",
+    "keywords": "mesh wifi deco eero orbi velop backhaul wired ethernet tri band fast roaming dead zones"
+  },
+  {
+    "id": "guide-ont",
+    "title": "Fiber ONT (Optical Network Terminal) Setup & ISP Bridging Guide",
+    "url": "/howto.html#ont-setup",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "How to bypass or bridge AT&T Fiber (BGW320 IP Passthrough), Verizon Fios, and CenturyLink ONTs to eliminate double NAT.",
+    "keywords": "fiber ont optical network terminal bgw320 ip passthrough verizon fios ont bridge mode vlan 201 double nat"
+  },
+  {
+    "id": "guide-ipv6",
+    "title": "IPv6 Default Gateway Discovery & Link-Local (fe80::1) Guide",
+    "url": "/howto.html#ipv6-gateway",
+    "category": "Setup Guide",
+    "badge": "GUIDE",
+    "snippet": "Understanding IPv6 Link-Local default gateways (fe80::1), ICMPv6 Neighbor Discovery, and SLAAC router advertisements.",
+    "keywords": "ipv6 default gateway fe80 link local neighbor discovery slaac ra no nat"
+  }
+]

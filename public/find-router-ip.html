@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Find Your Router IP Address on Windows, Mac, iOS & Android (2026)</title>
+  <meta name="description" content="Find your router's default gateway IP address on Windows 11/10, macOS Sonoma/Sequoia, iPhone (iOS), Android, and Linux. Step-by-step terminal commands & settings.">
+  <link rel="canonical" href="https://routeriphub.com/find-router-ip.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://routeriphub.com/find-router-ip.html">
+  <meta property="og:title" content="How to Find Your Router IP Address on Any Device">
+  <meta property="og:description" content="Quick terminal commands and GUI instructions to discover your router's default gateway IP address.">
+  <meta property="og:site_name" content="RouterIPHub">
+
+    <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": "How to Find Your Router IP Address (Default Gateway)",
+        "description": "Step-by-step instructions to determine your router's local gateway IP address on all desktop and mobile operating systems.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Windows (CMD)",
+            "text": "Open Command Prompt, run 'ipconfig', and locate the Default Gateway IPv4 address."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "macOS (Terminal)",
+            "text": "Open Terminal and execute 'route -n get default | grep gateway' to reveal the gateway IP."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "iPhone / iPad (iOS)",
+            "text": "Open Settings > Wi-Fi, tap the (i) icon next to your network, and look for 'Router'."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Android",
+            "text": "Open Settings > Network > Wi-Fi, tap the gear icon next to your network, and view 'Gateway'."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+    <!-- Site Navigation Header -->
+    <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/tools.html">Tools</a></li>
+          <li><a href="/howto.html">How-To Guides</a></li>
+          <li><a href="/192-168-1-1.html">192.168.1.1</a></li>
+          <li><a href="/192-168-0-1.html">192.168.0.1</a></li>
+          <li><a href="/find-router-ip.html" class="active">Find My IP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <!-- Quick Search Bar in Mobile Drawer -->
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (60+ routers, tools, guides)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/tools.html"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-1.html"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
+          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-254.html"><span>⚡ 192.168.1.254 (AT&T Fiber, BT Hub)</span><span>&rarr;</span></a></li>
+          <li><a href="/find-router-ip.html" class="active"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <article class="prose content-container">
+      
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+        <a href="/">Home</a> &rsaquo; <span>Diagnostics</span> &rsaquo; <strong>Find Router IP</strong>
+      </div>
+
+      <h1>How to Find Your Router IP Address on Any Device</h1>
+
+      <!-- AI Overview / GEO Extractable Answer Block -->
+      <div class="answer-box">
+        <div class="answer-box-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Quick Command Summary
+        </div>
+        <p>
+          To find your router IP: on <strong>Windows</strong>, run <code>ipconfig</code> in CMD and check <em>Default Gateway</em>. On <strong>macOS</strong>, run <code>route -n get default | grep gateway</code> in Terminal. On <strong>iOS</strong>, tap Settings &gt; Wi-Fi &gt; (i) icon &gt; <em>Router</em>. On <strong>Android</strong>, view Network Details &gt; <em>Gateway</em>.
+        </p>
+      </div>
+
+      <!-- Windows Section -->
+      <section id="windows">
+        <h2>1. Find Router IP on Windows 11 & Windows 10</h2>
+        <p>Windows refers to your router's IP as the <strong>Default Gateway</strong>.</p>
+        
+        <h3>Method A: Via Command Prompt (Fastest)</h3>
+        <ol>
+          <li>Press <kbd>Win + R</kbd>, type <code>cmd</code>, and press <kbd>Enter</kbd>.</li>
+          <li>Type the following command and hit Enter:
+            <pre><code>ipconfig</code></pre>
+            <button class="btn-secondary copy-btn" data-copy="ipconfig" style="margin-bottom: 1rem;">Copy Command</button>
+          </li>
+          <li>Scroll to your active connection (e.g. <em>Wireless LAN adapter Wi-Fi</em> or <em>Ethernet adapter</em>).</li>
+          <li>Look for the line that reads <strong>Default Gateway</strong> (e.g., <code>192.168.1.1</code> or <code>192.168.0.1</code>).</li>
+        </ol>
+
+        <h3>Method B: Via PowerShell 1-Liner</h3>
+        <pre><code>Get-NetRoute -DestinationPrefix '0.0.0.0/0' | Select-Object -ExpandProperty NextHop</code></pre>
+        <button class="btn-secondary copy-btn" data-copy="Get-NetRoute -DestinationPrefix '0.0.0.0/0' | Select-Object -ExpandProperty NextHop" style="margin-bottom: 1rem;">Copy PowerShell Command</button>
+      </section>
+
+      <!-- macOS Section -->
+      <section id="mac">
+        <h2>2. Find Router IP on macOS (Sonoma, Sequoia, Ventura)</h2>
+        
+        <h3>Method A: Via Terminal</h3>
+        <ol>
+          <li>Open Terminal by pressing <kbd>Cmd + Space</kbd>, typing <code>Terminal</code>, and hitting <kbd>Enter</kbd>.</li>
+          <li>Execute this command:
+            <pre><code>route -n get default | grep gateway</code></pre>
+            <button class="btn-secondary copy-btn" data-copy="route -n get default | grep gateway" style="margin-bottom: 1rem;">Copy Command</button>
+          </li>
+          <li>Your terminal will output: <code>gateway: 192.168.1.1</code> (or your local subnet gateway).</li>
+        </ol>
+
+        <h3>Method B: Via System Settings</h3>
+        <ol>
+          <li>Click the <strong>Apple Logo</strong> in the top-left corner &gt; <strong>System Settings</strong>.</li>
+          <li>Select <strong>Wi-Fi</strong> in the sidebar.</li>
+          <li>Click the <strong>Details...</strong> button next to your connected network.</li>
+          <li>Select the <strong>TCP/IP</strong> tab. Read the IP next to <strong>Router</strong>.</li>
+        </ol>
+      </section>
+
+      <!-- iOS Section -->
+      <section id="ios">
+        <h2>3. Find Router IP on iPhone and iPad (iOS)</h2>
+        <ol>
+          <li>Open the <strong>Settings</strong> app on your iPhone or iPad.</li>
+          <li>Tap <strong>Wi-Fi</strong>.</li>
+          <li>Ensure you are connected to the network, then tap the blue <strong>(i)</strong> info icon to the right of the network name.</li>
+          <li>Scroll down to the <strong>IPv4 Address</strong> section.</li>
+          <li>The address shown next to <strong>Router</strong> is your gateway IP.</li>
+        </ol>
+      </section>
+
+      <!-- Android Section -->
+      <section id="android">
+        <h2>4. Find Router IP on Android</h2>
+        <ol>
+          <li>Open <strong>Settings</strong> &gt; <strong>Network & Internet</strong> (or <strong>Connections</strong>).</li>
+          <li>Tap <strong>Wi-Fi</strong> or <strong>Internet</strong>.</li>
+          <li>Tap the <strong>gear icon</strong> next to your active network name.</li>
+          <li>Scroll down or expand <strong>Advanced</strong>. Locate the <strong>Gateway</strong> entry.</li>
+          <li><em>Tip:</em> If the gateway field is not displayed, tap the pencil edit icon, switch IP Settings from <strong>DHCP</strong> to <strong>Static</strong>, and note the pre-filled Gateway address.</li>
+        </ol>
+      </section>
+
+      <!-- Linux Section -->
+      <section id="linux">
+        <h2>5. Find Router IP on Linux</h2>
+        <p>Open a terminal window and run either of the following commands:</p>
+        <pre><code>ip route show default | awk '{print $3}'</code></pre>
+        <button class="btn-secondary copy-btn" data-copy="ip route show default | awk '{print $3}'" style="margin-bottom: 1rem;">Copy Command</button>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Popular Gateway IPs</h4>
+          <ul>
+            <li><a href="/192-168-1-1.html">192.168.1.1 Admin Login</a></li>
+            <li><a href="/192-168-0-1.html">192.168.0.1 Admin Login</a></li>
+            <li><a href="/10-0-0-1.html">10.0.0.1 Admin Login</a></li>
+            <li><a href="/192-168-1-254.html">192.168.1.254 Admin Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Network Diagnostics</h4>
+          <ul>
+            <li><a href="/find-router-ip.html">Find Router IP on Windows</a></li>
+            <li><a href="/find-router-ip.html#mac">Find Router IP on macOS</a></li>
+            <li><a href="/find-router-ip.html#ios">Find Router IP on iPhone / iPad</a></li>
+            <li><a href="/find-router-ip.html#android">Find Router IP on Android</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Machine & LLM Manifests</h4>
+          <ul>
+            <li><a href="/llms.txt">llms.txt (AI Specification)</a></li>
+            <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
+            <li><a href="/data/routers.json">routers.json (Raw API)</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About RouterIPHub</h4>
+          <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted);">
+            The independent, advertisement-free reference guide for network hardware configurations, default router logins, and gateway troubleshooting.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 RouterIPHub. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

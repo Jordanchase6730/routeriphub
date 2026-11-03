@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+Disallow: /api/private/
+
+# AI Crawlers & LLM Engines (Explicitly Welcomed for Citation & GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Canonical Sitemaps & Machine-Readable LLM Manifests
+Sitemap: https://routeriphub.com/sitemap.xml
+llms-txt: https://routeriphub.com/llms.txt
+llms-full-txt: https://routeriphub.com/llms-full.txt

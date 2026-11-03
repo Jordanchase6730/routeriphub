@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Network & Router Tools: Wi-Fi QR Generator, Subnet Calculator & More (2026)</title>
+  <meta name="description" content="Free, ad-free networking utilities: Wi-Fi QR Code Generator, Subnet & CIDR Calculator, WPA3 Password Generator, Port Forwarding Directory, and Gateway Detector.">
+  <link rel="canonical" href="https://routeriphub.com/tools.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://routeriphub.com/tools.html">
+  <meta property="og:title" content="Free Network & Router Tools: Wi-Fi QR, Subnet Calculator & Port Directory">
+  <meta property="og:description" content="Instant, privacy-friendly networking tools running 100% in your browser. Generate Wi-Fi QR codes, calculate subnets, and configure port forwarding.">
+  <meta property="og:site_name" content="RouterIPHub">
+    <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/tools.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "RouterIPHub Networking Toolkit",
+        "url": "https://routeriphub.com/tools.html",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "description": "Suite of privacy-first, browser-based networking utilities including Wi-Fi QR code generator, CIDR subnet calculator, and port forwarding reference.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://routeriphub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Networking Tools",
+            "item": "https://routeriphub.com/tools.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the Wi-Fi QR code generator work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tool encodes your Wi-Fi SSID, password, and security protocol into a standardized URI string (WIFI:T:WPA;S:MySSID;P:MyPassword;;). When scanned with an iPhone or Android camera, the operating system prompts you to join the network without typing the password."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my Wi-Fi password sent to any remote server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All tools on RouterIPHub execute 100% locally in your client web browser using vanilla JavaScript. No passwords, IPs, or network names are ever transmitted across the internet."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .tool-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow);
+    }
+    .tool-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .tool-grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--text-primary);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--text-accent);
+    }
+    .qr-preview-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-secondary);
+      border: 1px dashed var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      min-height: 280px;
+    }
+    .calc-results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .calc-results-table td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .calc-results-table tr:last-child td {
+      border-bottom: none;
+    }
+    .calc-results-table td:first-child {
+      font-weight: 600;
+      color: var(--text-muted);
+      width: 40%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+    <!-- Site Navigation Header -->
+    <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">Tools</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/tools.html" class="active">Tools</a></li>
+          <li><a href="/howto.html">How-To Guides</a></li>
+          <li><a href="/192-168-1-1.html">192.168.1.1</a></li>
+          <li><a href="/192-168-0-1.html">192.168.0.1</a></li>
+          <li><a href="/find-router-ip.html">Find My IP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <!-- Quick Search Bar in Mobile Drawer -->
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (60+ routers, tools, guides)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/tools.html" class="active"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-1.html"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
+          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-254.html"><span>⚡ 192.168.1.254 (AT&T Fiber, BT Hub)</span><span>&rarr;</span></a></li>
+          <li><a href="/find-router-ip.html"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+        <a href="/">Home</a> &rsaquo; <strong>Networking Tools</strong>
+      </div>
+
+      <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.025em;">
+        Free Real-Life Networking Tools
+      </h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+        Instant, client-side networking utilities engineered for real-life utility. 100% private: no data or passwords ever leave your browser.
+      </p>
+
+      <!-- Quick Anchor Pills -->
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+        <a href="#wifi-qr" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Wi-Fi QR Generator</a>
+        <a href="#subnet-calc" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Subnet Calculator</a>
+        <a href="#pass-gen" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">WPA3 Password Generator</a>
+        <a href="#port-dir" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Port Forwarding Directory</a>
+        <a href="#gw-probe" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Gateway Probe</a>
+      </div>
+
+      <!-- ==========================================================================
+           TOOL 1: Wi-Fi QR Code Generator
+           ========================================================================== -->
+      <section id="wifi-qr" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">1. Instant Wi-Fi QR Code Generator & Sign Maker</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Generate a scannable QR code for your guests or customers. Pointing an iPhone or Android camera at the QR code automatically connects them without typing your password.
+        </p>
+
+        <div class="tool-grid-2">
+          <div>
+            <div class="form-group">
+              <label for="wifi-ssid">Network Name (SSID) *</label>
+              <input type="text" id="wifi-ssid" class="form-control" placeholder="e.g. MyHomeNetwork_5G" value="Home_WiFi">
+            </div>
+
+            <div class="form-group">
+              <label for="wifi-pass">Wi-Fi Password *</label>
+              <input type="text" id="wifi-pass" class="form-control" placeholder="Enter network password" value="SecretPass123">
+            </div>
+
+            <div class="form-group">
+              <label for="wifi-enc">Security Protocol</label>
+              <select id="wifi-enc" class="form-control">
+                <option value="WPA" selected>WPA2 / WPA3 Personal (Most Common)</option>
+                <option value="WEP">WEP (Legacy)</option>
+                <option value="nopass">None (Open Network)</option>
+              </select>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <label style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+                <input type="checkbox" id="wifi-hidden">
+                Hidden SSID Network
+              </label>
+            </div>
+          </div>
+
+          <div class="qr-preview-box">
+            <canvas id="wifi-qr-canvas" style="border-radius: 8px; box-shadow: var(--shadow);"></canvas>
+            <div style="display: flex; gap: 0.5rem; margin-top: 1rem; width: 100%; max-width: 240px;">
+              <button id="download-qr-btn" class="btn-primary" style="flex: 1; font-size: 0.85rem; padding: 0.5rem;">
+                Download PNG
+              </button>
+              <button id="print-qr-btn" class="btn-secondary" style="flex: 1; font-size: 0.85rem; padding: 0.5rem;">
+                Print Sign
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 2: Interactive Subnet & CIDR Calculator
+           ========================================================================== -->
+      <section id="subnet-calc" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">2. IPv4 Subnet & CIDR Calculator</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Calculate network boundaries, broadcast addresses, usable host ranges, and subnet masks for home and enterprise network planning.
+        </p>
+
+        <div class="tool-calc-inputs" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          <div style="flex: 2; min-width: 200px;">
+            <label for="calc-ip" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.35rem;">IP Address</label>
+            <input type="text" id="calc-ip" class="form-control" value="192.168.1.1">
+          </div>
+          <div style="flex: 1; min-width: 150px;">
+            <label for="calc-cidr" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.35rem;">Subnet Mask (CIDR)</label>
+            <select id="calc-cidr" class="form-control">
+              <option value="24" selected>/24 - 255.255.255.0 (254 hosts)</option>
+              <option value="25">/25 - 255.255.255.128 (126 hosts)</option>
+              <option value="26">/26 - 255.255.255.192 (62 hosts)</option>
+              <option value="27">/27 - 255.255.255.224 (30 hosts)</option>
+              <option value="28">/28 - 255.255.255.240 (14 hosts)</option>
+              <option value="29">/29 - 255.255.255.248 (6 hosts)</option>
+              <option value="30">/30 - 255.255.255.252 (2 hosts, Point-to-Point)</option>
+              <option value="23">/23 - 255.255.254.0 (510 hosts)</option>
+              <option value="22">/22 - 255.255.252.0 (1,022 hosts)</option>
+              <option value="16">/16 - 255.255.0.0 (65,534 hosts)</option>
+              <option value="8">/8 - 255.0.0.0 (16.7M hosts)</option>
+            </select>
+          </div>
+          <div style="display: flex; align-items: flex-end; flex: 1;">
+            <button id="calc-submit" class="btn-primary" style="padding: 0.65rem 1.25rem;">Calculate</button>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
+          <table class="calc-results-table">
+            <tbody>
+              <tr>
+                <td>Network Address</td>
+                <td><code id="res-network" class="cell-code">192.168.1.0</code></td>
+              </tr>
+              <tr>
+                <td>Broadcast Address</td>
+                <td><code id="res-broadcast" class="cell-code">192.168.1.255</code></td>
+              </tr>
+              <tr>
+                <td>Usable Host Range</td>
+                <td><span id="res-first">192.168.1.1</span> &mdash; <span id="res-last">192.168.1.254</span></td>
+              </tr>
+              <tr>
+                <td>Total Usable Hosts</td>
+                <td><strong id="res-hosts" style="color: var(--text-accent);">254</strong></td>
+              </tr>
+              <tr>
+                <td>Subnet Mask</td>
+                <td><span id="res-mask">255.255.255.0</span></td>
+              </tr>
+              <tr>
+                <td>Wildcard Mask</td>
+                <td><span id="res-wildcard">0.0.0.255</span></td>
+              </tr>
+              <tr>
+                <td>IP Classification</td>
+                <td><span id="res-class">Class C (RFC 1918 Private)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 3: WPA3 & Router Admin Password Generator
+           ========================================================================== -->
+      <section id="pass-gen" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">3. High-Entropy WPA3 & Admin Password Generator</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Generate cryptographically random passwords to safeguard your router admin portal and wireless networks against dictionary & rainbow table attacks.
+        </p>
+
+        <div class="pass-gen-toolbar" style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <input type="text" id="pass-output" class="form-control" style="font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--text-accent); flex: 1;" readonly>
+          <div class="pass-gen-buttons" style="display: flex; gap: 0.5rem;">
+            <button class="btn-primary copy-btn" data-copy="" id="copy-pass-btn" onclick="document.querySelector('.copy-btn[data-copy]').setAttribute('data-copy', document.getElementById('pass-output').value)">
+              Copy
+            </button>
+            <button id="gen-pass-btn" class="btn-secondary" title="Regenerate">
+              &#x21bb; New
+            </button>
+          </div>
+        </div>
+
+        <div id="pass-meter" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; color: var(--success-text);">
+          Strength: Strong (Recommended for WPA3 / Admin)
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.25rem;">
+            <span>Password Length:</span>
+            <strong id="pass-len-val">16</strong> characters
+          </label>
+          <input type="range" id="pass-len" min="8" max="32" value="16" style="width: 100%;">
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.875rem;">
+          <label><input type="checkbox" id="pass-upper" checked> A-Z Uppercase</label>
+          <label><input type="checkbox" id="pass-lower" checked> a-z Lowercase</label>
+          <label><input type="checkbox" id="pass-nums" checked> 0-9 Numbers</label>
+          <label><input type="checkbox" id="pass-syms" checked> !@#$% Symbols</label>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 4: Local Gateway Probe
+           ========================================================================== -->
+      <section id="gw-probe" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">4. Gateway Quick Probe & Reachability Tester</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+          Not sure which IP your router uses? Click below to generate direct local authentication test links for your network:
+        </p>
+
+        <button id="probe-btn" class="btn-primary" style="margin-bottom: 1rem;">
+          Probe Top Gateways
+        </button>
+
+        <div id="probe-status" style="font-size: 0.95rem; color: var(--text-secondary);"></div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 5: Port Forwarding Directory
+           ========================================================================== -->
+      <section id="port-dir" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">5. Common Port Forwarding Database</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Need to open a port for gaming, Plex, or a home VPN? Instant lookup for standard ports and transport protocols:
+        </p>
+
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="port-search" class="form-control" placeholder="Search by service or port number (e.g., Minecraft, Plex, 25565, 80)...">
+        </div>
+
+        <div class="table-scroll-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          <span>Swipe horizontally for port details</span>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Port Number</th>
+                <th>Protocol</th>
+                <th>Application / Service</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody id="port-table-body">
+              <!-- Populated by tools.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 6: WebRTC Local IP & Subnet Auto-Detector
+           ========================================================================== -->
+      <section id="local-ip-detector" class="tool-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">6. WebRTC Local IP & Gateway Auto-Detector</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          Connect your device to your local Wi-Fi or LAN cable and click below. This utility scans your local network interface using client-side WebRTC ICE candidates to detect your private device IP and infer your active default gateway address.
+        </p>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+          <button id="detect-local-ip-btn" class="btn-primary" style="padding: 0.75rem 1.25rem; font-size: 0.95rem;">
+            🔍 Detect My Local IP & Gateway
+          </button>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">100% private & client-side (no data leaves your device)</span>
+        </div>
+
+        <div id="local-ip-results" style="display: none; margin-top: 1rem;"></div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 7: CIDR Subnet Cheat-Sheet & Exporter
+           ========================================================================== -->
+      <section id="subnet-cheat-sheet" class="tool-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <h2 style="font-size: 1.5rem; margin: 0;">7. CIDR Subnet Cheat-Sheet & Exporter</h2>
+          <button id="download-cheat-sheet-btn" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+            📥 Export CSV Cheat-Sheet
+          </button>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          Quick reference table of IPv4 CIDR prefix lengths from /8 to /32. Filter by prefix, subnet mask, or typical network use.
+        </p>
+
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="cheat-sheet-filter" class="form-control" placeholder="Filter cheat sheet (e.g. /24, 255.255, Small Office)...">
+        </div>
+
+        <div class="table-container">
+          <table class="router-table">
+            <thead>
+              <tr>
+                <th>CIDR Prefix</th>
+                <th>Subnet Mask</th>
+                <th>Wildcard Mask</th>
+                <th>Usable Host Capacity</th>
+                <th>Typical Industry Use Case</th>
+              </tr>
+            </thead>
+            <tbody id="cheat-sheet-body">
+              <!-- Populated by tools.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Networking Tools</h4>
+          <ul>
+            <li><a href="/tools.html#wifi-qr">Wi-Fi QR Code Generator</a></li>
+            <li><a href="/tools.html#subnet-calc">Subnet & CIDR Calculator</a></li>
+            <li><a href="/tools.html#pass-gen">WPA3 Password Generator</a></li>
+            <li><a href="/tools.html#port-dir">Port Forwarding Database</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>How-To Guides</h4>
+          <ul>
+            <li><a href="/howto.html#change-wifi">Change Wi-Fi Password</a></li>
+            <li><a href="/howto.html#factory-reset">Router Factory Reset Guide</a></li>
+            <li><a href="/howto.html#access-point">Two Routers (AP Mode)</a></li>
+            <li><a href="/howto.html#change-dns">Change DNS (1.1.1.1)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Gateway IPs</h4>
+          <ul>
+            <li><a href="/192-168-1-1.html">192.168.1.1 (Netgear/ASUS)</a></li>
+            <li><a href="/192-168-0-1.html">192.168.0.1 (TP-Link/D-Link)</a></li>
+            <li><a href="/10-0-0-1.html">10.0.0.1 (Xfinity)</a></li>
+            <li><a href="/192-168-1-254.html">192.168.1.254 (AT&T/BT)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Machine & LLM Manifests</h4>
+          <ul>
+            <li><a href="/llms.txt">llms.txt (AI Specification)</a></li>
+            <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
+            <li><a href="/data/routers.json">routers.json (Raw API)</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 RouterIPHub. All rights reserved.</div>
+        <div style="font-size: 0.8rem;">Independent technical resource. All trademarks belong to their respective owners.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

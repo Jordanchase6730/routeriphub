@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>192.168.1.1 Admin Login, Password & Troubleshooting (2026 Guide)</title>
+  <meta name="description" content="Access 192.168.1.1 router admin login. Default usernames, passwords, setup guide, and troubleshooting for Netgear, ASUS, Linksys, Cisco, and Verizon routers.">
+  <link rel="canonical" href="https://routeriphub.com/192-168-1-1.html">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://routeriphub.com/192-168-1-1.html">
+  <meta property="og:title" content="192.168.1.1 Admin Login & Default Password Directory">
+  <meta property="og:description" content="Step-by-step instructions to log into 192.168.1.1, find default credentials, and troubleshoot connectivity errors.">
+  <meta property="og:site_name" content="RouterIPHub">
+
+  <!-- Core Web Vitals Optimization -->
+    <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+
+  <!-- Structured Data / JSON-LD for Search Engines & LLM Citations -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "192.168.1.1 Admin Login, Default Credentials, and Network Configuration",
+        "description": "Complete reference and troubleshooting guide for logging into the 192.168.1.1 default gateway IP address on Netgear, ASUS, Linksys, and Cisco routers.",
+        "inLanguage": "en",
+        "mainEntityOfPage": "https://routeriphub.com/192-168-1-1.html",
+        "datePublished": "2026-01-15T08:00:00+00:00",
+        "dateModified": "2026-11-03T02:00:00+00:00",
+        "author": {
+          "@type": "Organization",
+          "name": "RouterIPHub Editorial Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "RouterIPHub",
+          "url": "https://routeriphub.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://routeriphub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "192.168.1.1",
+            "item": "https://routeriphub.com/192-168-1-1.html"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Log Into 192.168.1.1 Admin Console",
+        "description": "Step-by-step guide to accessing router management settings at 192.168.1.1.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Verify Local Connection",
+            "text": "Connect to your router network via Wi-Fi or plug an Ethernet cable directly from your computer into LAN port 1-4."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Navigate to 192.168.1.1",
+            "text": "Open Chrome, Safari, Firefox, or Edge and enter http://192.168.1.1 in the URL bar."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Submit Username & Password",
+            "text": "Type 'admin' for the username and 'admin' or 'password' for the password. Consult your router's bottom sticker for custom credentials."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Manage Network Settings",
+            "text": "Configure Wi-Fi SSID, WPA2/WPA3 password, port forwarding, or guest networks from the administration panel."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is 192.168.1.1?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "192.168.1.1 is a private IPv4 address defined by RFC 1918 that serves as the default gateway IP for routers made by Netgear, ASUS, Linksys, Cisco, Ubiquiti, and Verizon Fios. Entering this address in a web browser accesses the device's web administration panel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the default login credentials for 192.168.1.1?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most common default credentials are username 'admin' and password 'admin' (ASUS, Linksys) or username 'admin' and password 'password' (Netgear). Newer routers from Verizon and ISPs feature a unique randomized admin password printed on the device label."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is 192.168.1.1 not loading or timing out?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common causes include: typing '192.168.l.l' with lowercase L instead of numbers, having an active VPN connected, using https instead of http, or your router actually using 192.168.0.1 or 10.0.0.1 instead."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+    <!-- Site Navigation Header -->
+    <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/tools.html">Tools</a></li>
+          <li><a href="/howto.html">How-To Guides</a></li>
+          <li><a href="/192-168-1-1.html" class="active">192.168.1.1</a></li>
+          <li><a href="/192-168-0-1.html">192.168.0.1</a></li>
+          <li><a href="/find-router-ip.html">Find My IP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <!-- Quick Search Bar in Mobile Drawer -->
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (60+ routers, tools, guides)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/tools.html"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-1.html" class="active"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
+          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
+          <li><a href="/192-168-1-254.html"><span>⚡ 192.168.1.254 (AT&T Fiber, BT Hub)</span><span>&rarr;</span></a></li>
+          <li><a href="/find-router-ip.html"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <article class="prose content-container">
+      
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+        <a href="/">Home</a> &rsaquo; <span>Gateways</span> &rsaquo; <strong>192.168.1.1</strong>
+      </div>
+
+      <h1>192.168.1.1 Admin Login, Password & Gateway Guide</h1>
+
+      <!-- AI Overview / GEO Extractable Answer Block -->
+      <div class="answer-box">
+        <div class="answer-box-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Direct Answer: How to Access 192.168.1.1
+        </div>
+        <p>
+          <strong>192.168.1.1</strong> is the private default gateway IP for Netgear, ASUS, Linksys, Cisco, and Verizon routers. To log in: connect to your router's network, open a browser, navigate to <a href="http://192.168.1.1" target="_blank" rel="noopener noreferrer"><strong>http://192.168.1.1</strong></a>, and log in with username <code>admin</code> and password <code>admin</code> (ASUS/Linksys) or <code>password</code> (Netgear).
+        </p>
+      </div>
+
+      <div style="margin: 1.5rem 0; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="http://192.168.1.1" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Open 192.168.1.1 in Browser
+        </a>
+        <button class="btn-secondary copy-btn" data-copy="192.168.1.1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy IP Address
+        </button>
+      </div>
+      <!-- Interactive Gateway Diagnostic Console -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; margin: 2rem 0; box-shadow: var(--shadow);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Interactive 192.168.1.1 Gateway Diagnostic Console
+          </div>
+          <div class="probe-status-pill" id="ip-probe-pill" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.6rem; border-radius: 9999px; background: var(--bg-primary); border: 1px solid var(--border-color); font-size: 0.8rem; font-weight: 600;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted);" id="ip-probe-dot"></span>
+            <span id="ip-probe-text">Diagnostic Idle</span>
+          </div>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          Test whether your computer or smartphone can reach the <code>192.168.1.1</code> administration portal over your current Wi-Fi or Ethernet network:
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="testGatewayPing('192.168.1.1')" style="padding: 0.65rem 1.15rem; font-size: 0.9rem;">
+            🚀 Probe 192.168.1.1 Reachability
+          </button>
+          <a href="http://192.168.1.1" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.65rem 1rem; font-size: 0.9rem;">
+            Launch HTTP (Port 80) &rarr;
+          </a>
+          <a href="https://192.168.1.1" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.65rem 1rem; font-size: 0.9rem;">
+            Launch HTTPS (Port 443) &rarr;
+          </a>
+        </div>
+        <div id="ip-probe-results" style="margin-top: 1rem; font-size: 0.85rem; display: none;"></div>
+
+        <!-- Quick Subnet Inspector -->
+        <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color); display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; font-size: 0.8rem;">
+          <div><span style="color: var(--text-muted);">CIDR Subnet:</span> <strong style="display: block; color: var(--text-primary); font-family: var(--font-mono);">192.168.1.0/24</strong></div>
+          <div><span style="color: var(--text-muted);">Subnet Mask:</span> <strong style="display: block; color: var(--text-primary); font-family: var(--font-mono);">255.255.255.0</strong></div>
+          <div><span style="color: var(--text-muted);">Usable Hosts:</span> <strong style="display: block; color: var(--text-accent); font-family: var(--font-mono);">192.168.1.2 - .254 (254)</strong></div>
+          <div><span style="color: var(--text-muted);">Broadcast:</span> <strong style="display: block; color: var(--text-primary); font-family: var(--font-mono);">192.168.1.255</strong></div>
+        </div>
+
+        <!-- Dedicated Brand Hub Shortcuts -->
+        <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--border-color);">
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.5rem;">Dedicated Brand Guides for 192.168.1.1:</div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="/brand/netgear.html" class="brand-pill-btn" style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;"><span>🏢 Netgear</span> &rarr;</a> <a href="/brand/asus.html" class="brand-pill-btn" style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;"><span>🏢 ASUS</span> &rarr;</a> <a href="/brand/linksys.html" class="brand-pill-btn" style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;"><span>🏢 Linksys</span> &rarr;</a> <a href="/brand/cisco.html" class="brand-pill-btn" style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;"><span>🏢 Cisco</span> &rarr;</a> 
+          </div>
+        </div>
+      </div>
+
+
+      <h2>Top Router Brands That Use 192.168.1.1</h2>
+      <p>
+        The table below lists the major networking hardware brands that assign <code>192.168.1.1</code> as their factory default gateway, along with their default login combinations:
+      </p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Manufacturer</th>
+              <th>Default Username</th>
+              <th>Default Password</th>
+              <th>Fallback Local Web URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell-brand">Netgear</td>
+              <td><code>admin</code></td>
+              <td><code>password</code></td>
+              <td>http://routerlogin.net</td>
+            </tr>
+            <tr>
+              <td class="cell-brand">ASUS</td>
+              <td><code>admin</code></td>
+              <td><code>admin</code></td>
+              <td>http://router.asus.com</td>
+            </tr>
+            <tr>
+              <td class="cell-brand">Linksys</td>
+              <td><code>admin</code></td>
+              <td><code>admin</code></td>
+              <td>http://myrouter.local</td>
+            </tr>
+            <tr>
+              <td class="cell-brand">Verizon Fios</td>
+              <td><code>admin</code></td>
+              <td>Printed on device label</td>
+              <td>http://192.168.1.1</td>
+            </tr>
+            <tr>
+              <td class="cell-brand">Ubiquiti EdgeRouter</td>
+              <td><code>ubnt</code></td>
+              <td><code>ubnt</code></td>
+              <td>https://192.168.1.1</td>
+            </tr>
+            <tr>
+              <td class="cell-brand">Cisco Small Business</td>
+              <td><code>cisco</code></td>
+              <td><code>cisco</code></td>
+              <td>https://192.168.1.1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Step-by-Step: How to Log Into 192.168.1.1</h2>
+      <ol>
+        <li>
+          <strong>Connect to your local network:</strong> Connect your device via Wi-Fi or with a direct RJ45 Ethernet cable into one of the router's LAN ports (numbered 1 through 4).
+        </li>
+        <li>
+          <strong>Open your web browser:</strong> Launch Google Chrome, Apple Safari, Mozilla Firefox, or Microsoft Edge.
+        </li>
+        <li>
+          <strong>Type http://192.168.1.1:</strong> Type <a href="http://192.168.1.1" target="_blank" rel="noopener noreferrer"><code>http://192.168.1.1</code></a> directly into the browser URL address bar (not the Google search bar) and press Enter.
+        </li>
+        <li>
+          <strong>Enter default username and password:</strong> When the authentication prompt appears, enter the manufacturer default credentials (e.g., <code>admin</code> / <code>password</code> for Netgear).
+        </li>
+        <li>
+          <strong>Save new credentials:</strong> For cybersecurity best practices, immediately change the default admin password to a unique, complex passphrase.
+        </li>
+      </ol>
+
+      <h2>Troubleshooting: Why 192.168.1.1 Won't Open</h2>
+      <p>
+        If visiting 192.168.1.1 returns a "This site can't be reached", "Connection timed out", or "ERR_CONNECTION_REFUSED" error, follow these diagnostic fixes:
+      </p>
+
+      <h3>1. Check for Common Typos</h3>
+      <p>
+        Typing IP addresses manually frequently leads to character errors. Ensure you are not entering:
+      </p>
+      <ul>
+        <li><code>192.168.l.l</code> &mdash; Typing lowercase letter <strong>l</strong> instead of number <strong>1</strong>.</li>
+        <li><code>192.168.1.l</code> &mdash; Mixing letters and numbers.</li>
+        <li><code>192.168.1.1.com</code> or <code>www.192.168.1.1</code> &mdash; IP addresses do not use web suffixes or 'www'.</li>
+        <li><code>http://192.168.11</code> &mdash; Missing dot separators.</li>
+      </ul>
+
+      <h3>2. Disable VPN and Proxy Services</h3>
+      <p>
+        If you run NordVPN, ExpressVPN, Surfshark, or a corporate corporate VPN client, all outgoing traffic is encrypted and tunneled through external servers. This breaks local LAN subnet routing. <strong>Disconnect your VPN</strong> and reload the page.
+      </p>
+
+      <h3>3. Confirm Your Actual Gateway IP</h3>
+      <p>
+        Your router may not be using 192.168.1.1. Many ISPs and brands default to <code>192.168.0.1</code> (TP-Link) or <code>10.0.0.1</code> (Xfinity).
+      </p>
+      <ul>
+        <li><strong>On Windows:</strong> Open Command Prompt and run <code>ipconfig</code>. Look for the <em>Default Gateway</em> line.</li>
+        <li><strong>On Mac:</strong> Open Terminal and execute <code>route -n get default | grep gateway</code>.</li>
+      </ul>
+      <p>
+        For complete instructions across all operating systems, see our <a href="/find-router-ip.html">Find Router IP Guide</a>.
+      </p>
+
+      <h3>4. Perform a 30-Second Factory Reset</h3>
+      <p>
+        If previous owners customized the admin login password and you cannot sign in:
+      </p>
+      <ul>
+        <li>Ensure the router is plugged in and powered on.</li>
+        <li>Locate the small recessed <strong>Reset</strong> pinhole on the rear or underside of the unit.</li>
+        <li>Insert an unfolded paperclip or SIM ejector tool and hold the button for <strong>15 to 30 seconds</strong> until the LED indicators blink simultaneously.</li>
+        <li>Allow 2 minutes for the router to reboot into factory default settings. The default credentials from our table will now work.</li>
+      </ul>
+
+      <!-- FAQs -->
+      <section class="faq-section">
+        <h2>192.168.1.1 Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is 192.168.1.1 a public or private IP address?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" style="display: none;">
+            192.168.1.1 is a private IPv4 address in the 192.168.0.0/16 block designated by RFC 1918. It is never routable across the public internet and can only be accessed by devices directly connected to your local network.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I change my router's IP from 192.168.1.1 to something else?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" style="display: none;">
+            Yes. Once logged into the admin dashboard, navigate to <strong>Network > LAN Setup</strong>. You can change the router's IP to any valid private subnet address (such as <code>192.168.2.1</code> or <code>10.0.0.1</code>). The router's DHCP server will automatically reassign IP addresses to connected devices.
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Popular Gateway IPs</h4>
+          <ul>
+            <li><a href="/192-168-1-1.html">192.168.1.1 Admin Login</a></li>
+            <li><a href="/192-168-0-1.html">192.168.0.1 Admin Login</a></li>
+            <li><a href="/10-0-0-1.html">10.0.0.1 Admin Login</a></li>
+            <li><a href="/192-168-1-254.html">192.168.1.254 Admin Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Network Diagnostics</h4>
+          <ul>
+            <li><a href="/find-router-ip.html">Find Router IP on Windows</a></li>
+            <li><a href="/find-router-ip.html#mac">Find Router IP on macOS</a></li>
+            <li><a href="/find-router-ip.html#ios">Find Router IP on iPhone / iPad</a></li>
+            <li><a href="/find-router-ip.html#android">Find Router IP on Android</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Machine & LLM Manifests</h4>
+          <ul>
+            <li><a href="/llms.txt">llms.txt (AI Specification)</a></li>
+            <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
+            <li><a href="/data/routers.json">routers.json (Raw API)</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About RouterIPHub</h4>
+          <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted);">
+            The independent, advertisement-free reference guide for network hardware configurations, default router logins, and gateway troubleshooting.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 RouterIPHub. All rights reserved.</div>
+        <div style="font-size: 0.8rem;">Independent technical resource. All trademarks belong to their respective owners.</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    function testGatewayPing(targetIp) {
+      var pill = document.getElementById('ip-probe-pill');
+      var dot = document.getElementById('ip-probe-dot');
+      var text = document.getElementById('ip-probe-text');
+      var res = document.getElementById('ip-probe-results');
+
+      if (!pill || !dot || !text || !res) return;
+
+      dot.style.background = '#f59e0b';
+      text.textContent = 'Probing ' + targetIp + '...';
+      res.style.display = 'block';
+      res.innerHTML = '<span style="color: var(--text-muted);">Sending client-side reachability packet to http://' + targetIp + '/ ...</span>';
+
+      var startTime = performance.now();
+      var img = new Image();
+      var timeout = setTimeout(function() {
+        img.src = '';
+        dot.style.background = '#ef4444';
+        text.textContent = 'Unreachable';
+        res.innerHTML = '<span style="color: #ef4444; font-weight: 600;">✕ Connection timed out.</span> <span style="color: var(--text-secondary);">Your device is not connected to a ' + targetIp + ' gateway. Check your connected Wi-Fi or try finding your IP using <a href="/find-router-ip.html">ipconfig</a>.</span>';
+      }, 2500);
+
+      img.onload = img.onerror = function() {
+        clearTimeout(timeout);
+        var latency = Math.round(performance.now() - startTime);
+        dot.style.background = '#10b981';
+        text.textContent = 'Online (' + latency + 'ms)';
+        res.innerHTML = '<span style="color: #10b981; font-weight: 600;">✓ Active ' + targetIp + ' Gateway Detected!</span> <span style="color: var(--text-secondary);">HTTP port 80 is responding (Latency: ' + latency + 'ms). Click Launch to open your admin console.</span>';
+      };
+      img.src = 'http://' + targetIp + '/favicon.ico?' + Date.now();
+    }
+  </script>
+
+</body>
+</html>
