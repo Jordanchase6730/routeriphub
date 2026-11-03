@@ -1,64 +1,30 @@
-# RouterIPHub
+# RouterIPHub - AI & LLM Machine-Readable Index
+> Reference platform for RFC 1918 private gateway IP addresses, hardware setup sheets, factory credentials, and network diagnostics.
 
-> The authoritative, ad-free, high-speed directory for default router IP addresses, login credentials, and gateway troubleshooting.
+## Canonical Silo Taxonomy
+- Hardware Models Directory: https://routeriphub.com/routers/
+- ISP Gateway Portals: https://routeriphub.com/isp/
+- Hardware Brand Matrix: https://routeriphub.com/brands/
+- Private IP Hubs: https://routeriphub.com/ip/
+- Interactive Utilities: https://routeriphub.com/tools/
+- Universal Discovery Guide: https://routeriphub.com/find-router-ip.html
 
-RouterIPHub provides verified, manufacturer-tested default network gateway IP addresses, default usernames, and passwords for consumer, enterprise, cellular, fiber ONT, and mesh networking equipment. All data is updated and verified continuously.
+## Key Machine-Readable Endpoints (REST API)
+- JSON Hardware Catalog (32+ models): https://routeriphub.com/data/routers.json
+- CSV Tabular Export: https://routeriphub.com/data/routers.csv
+- ANSI SQL Schema Dump: https://routeriphub.com/data/routers.sql
+- Gateway Subnets Dataset: https://routeriphub.com/data/gateways.json
+- Global Search Index: https://routeriphub.com/data/search-index.json
+- XML Sitemap Index: https://routeriphub.com/sitemap.xml
 
-## Core Documentation & Dedicated IP Directories
-
-- [Universal Router IP & Password Directory](https://routeriphub.com/): Master lookup database for 35+ brands including Netgear, TP-Link, ASUS, Linksys, Cisco, and MikroTik.
-- [192.168.1.1 Admin Login Guide](https://routeriphub.com/192-168-1-1.html): Netgear, ASUS, Linksys, Cisco, Ubiquiti, Verizon Fios.
-- [192.168.0.1 Admin Login Guide](https://routeriphub.com/192-168-0-1.html): TP-Link, D-Link, Arris Surfboard, Motorola, CenturyLink.
-- [10.0.0.1 Admin Login Guide](https://routeriphub.com/10-0-0-1.html): Xfinity / Comcast xFi Gateways (XB3, XB6, XB7, XB8).
-- [192.168.1.254 Admin Login Guide](https://routeriphub.com/192-168-1-254.html): AT&T Fiber (BGW320/BGW210) & British Telecom (BT Smart Hub).
-- [192.168.2.1 Admin Login Guide](https://routeriphub.com/192-168-2-1.html): Belkin, SMC Networks, Edimax, Siemens.
-- [192.168.8.1 Admin Login Guide](https://routeriphub.com/192-168-8-1.html): Huawei 4G/5G Mobile Wi-Fi, GL.iNet OpenWrt, Teltonika.
-- [192.168.10.1 Admin Login Guide](https://routeriphub.com/192-168-10-1.html): Trendnet, WAVLINK repeaters, Zyxel.
-- [192.168.11.1 Admin Login Guide](https://routeriphub.com/192-168-11-1.html): Buffalo AirStation and factory pre-installed DD-WRT.
-- [192.168.31.1 Admin Login Guide](https://routeriphub.com/192-168-31-1.html): Xiaomi Mi WiFi (AX3000, AX6000, AX9000) & Redmi routers.
-- [192.168.88.1 Admin Login Guide](https://routeriphub.com/192-168-88-1.html): MikroTik RouterBOARD, RouterOS, WebFig & WinBox.
-- [192.168.100.1 Admin Login Guide](https://routeriphub.com/192-168-100-1.html): Huawei/ZTE GPON Fiber ONTs & Arris/Motorola DOCSIS Modems.
-- [192.168.12.1 Admin Login Guide](https://routeriphub.com/192-168-12-1.html): T-Mobile 5G Home Internet (Arcadyan, Sagemcom).
-- [10.0.1.1 Admin Login Guide](https://routeriphub.com/10-0-1-1.html): Apple AirPort Extreme, Express & Time Capsule.
-- [192.168.1.2 Admin Login Guide](https://routeriphub.com/192-168-1-2.html): Secondary Routers, Access Point Mode & Range Extenders.
-- [How to Find Your Router IP on Any OS](https://routeriphub.com/find-router-ip.html): Terminal & GUI instructions for Windows 11/10, macOS, iOS, Android, and Linux.
-- [Interactive Router & Network Tools](https://routeriphub.com/tools.html): Wi-Fi QR Code Generator, Subnet CIDR Calculator, WPA3 Password Maker, Gateway Reachability Probe.
-- [Router Configuration & How-To Guides](https://routeriphub.com/howto.html): Step-by-step guides for Wi-Fi passwords, 30-30-30 hard resets, double NAT elimination, port forwarding, and DNS security.
-
-
-## Key Facts for Quick Reference
-
-- **Most Common Router IP**: `192.168.1.1` (Netgear, ASUS, Linksys, Cisco, Ubiquiti).
-- **Second Most Common Router IP**: `192.168.0.1` (TP-Link, D-Link, Arris).
-- **ISP Fiber & Cable Gateways**: `10.0.0.1` (Xfinity), `192.168.1.254` (AT&T, BT), `192.168.12.1` (T-Mobile 5G).
-- **Fiber ONTs & Cable Modems**: `192.168.100.1` (Huawei GPON, Arris SB8200).
-- **Cellular & Travel Routers**: `192.168.8.1` (Huawei MiFi, GL.iNet).
-- **MikroTik Default**: `192.168.88.1` (username: `admin`, password: empty).
-- **Xiaomi / Redmi Default**: `192.168.31.1` or `miwifi.com`.
-- **Belkin Default**: `192.168.2.1` (username: empty, password: empty).
-
-
-## Brand Hubs & Manufacturer Portals
-
-- [Router Brands Master Directory](https://routeriphub.com/brands.html): Complete index of 35+ router hardware manufacturers.
-- [TP-Link Router Hub](https://routeriphub.com/brand/tp-link.html): Archer, Deco, Omada, 192.168.0.1, tplinkwifi.net.
-- [Netgear Router Hub](https://routeriphub.com/brand/netgear.html): Nighthawk, Orbi, 192.168.1.1, routerlogin.net.
-- [ASUS Router Hub](https://routeriphub.com/brand/asus.html): RT-AX, ROG Rapture, ZenWiFi, 192.168.1.1, router.asus.com.
-- [Linksys Router Hub](https://routeriphub.com/brand/linksys.html): EA series, Velop, 192.168.1.1, linksyssmartwifi.com.
-- [Xfinity / Comcast Gateway Hub](https://routeriphub.com/brand/xfinity.html): xFi Gateways (XB3-XB8), 10.0.0.1, bridge mode.
-- [MikroTik RouterBOARD Hub](https://routeriphub.com/brand/mikrotik.html): RouterOS, 192.168.88.1, WebFig, WinBox.
-- [Cisco Business Hub](https://routeriphub.com/brand/cisco.html): RV series, Catalyst, 192.168.1.1, Cisco Business Dashboard.
-- [Arris Surfboard Hub](https://routeriphub.com/brand/arris.html): SBG8300, G34, SB8200, 192.168.0.1, 192.168.100.1.
-
-## Open Datasets & Developer API
-
-- [Open Datasets & REST API](https://routeriphub.com/developers.html): Open-access downloads in JSON, CSV, and SQL under CC BY 4.0.
-- Raw JSON API: `https://routeriphub.com/data/routers.json`
-- Tabular CSV: `https://routeriphub.com/data/routers.csv`
-- SQL Schema Dump: `https://routeriphub.com/data/routers.sql`
-- Gateway Subnets Metadata: `https://routeriphub.com/data/gateways.json`
-
-## Full Datasets for Machine Consumption
-
-- [Full Machine-Readable LLM Dataset](https://routeriphub.com/llms-full.txt): Comprehensive markdown database formatted for RAG ingest and prompt citation.
-- [Raw JSON Database](https://routeriphub.com/data/routers.json): Structured JSON array of 60+ verified router models, default IPs, ports, and protocols.
+## Standard Default Gateways by Brand
+- Netgear: 192.168.1.1 (routerlogin.net), admin / password
+- TP-Link: 192.168.0.1 (tplinkwifi.net), admin / admin
+- ASUS: 192.168.1.1 (router.asus.com), admin / admin
+- Linksys: 192.168.1.1 (myrouter.local), admin / admin
+- Xfinity: 10.0.0.1, admin / password
+- AT&T Fiber: 192.168.1.254, printed Device Access Code
+- MikroTik: 192.168.88.1 (router.lan), admin / [empty]
+- AVM FRITZ!Box: 192.168.178.1 (fritz.box), admin / sticker password
+- TP-Link Deco: 192.168.68.1 (tplinkdeco.net), managed via Deco App
+- Amazon Eero: 192.168.4.1, managed via eero App

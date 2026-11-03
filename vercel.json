@@ -1,8 +1,95 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "outputDirectory": "public",
+  "redirects": [
+    {
+      "source": "/192-168-1-1.html",
+      "destination": "/ip/192-168-1-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-0-1.html",
+      "destination": "/ip/192-168-0-1/",
+      "permanent": true
+    },
+    {
+      "source": "/10-0-0-1.html",
+      "destination": "/ip/10-0-0-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-1-254.html",
+      "destination": "/ip/192-168-1-254/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-2-1.html",
+      "destination": "/ip/192-168-2-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-8-1.html",
+      "destination": "/ip/192-168-8-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-10-1.html",
+      "destination": "/ip/192-168-10-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-11-1.html",
+      "destination": "/ip/192-168-11-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-12-1.html",
+      "destination": "/ip/192-168-12-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-31-1.html",
+      "destination": "/ip/192-168-31-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-88-1.html",
+      "destination": "/ip/192-168-88-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-100-1.html",
+      "destination": "/ip/192-168-100-1/",
+      "permanent": true
+    },
+    {
+      "source": "/10-0-1-1.html",
+      "destination": "/ip/10-0-1-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-1-2.html",
+      "destination": "/ip/192-168-1-2/",
+      "permanent": true
+    },
+    {
+      "source": "/brands.html",
+      "destination": "/brands/",
+      "permanent": true
+    },
+    {
+      "source": "/tools.html",
+      "destination": "/tools/",
+      "permanent": true
+    },
+    {
+      "source": "/brand/:brand",
+      "destination": "/brands/:brand/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

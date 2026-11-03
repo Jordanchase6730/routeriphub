@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISP Router Gateway Login Directory (Xfinity, AT&amp;T, Verizon, Spectrum)</title>
+  <meta name="description" content="Complete directory of ISP default gateway IPs, admin passwords, bridge mode instructions, and factory reset guides for major service providers.">
+  <link rel="canonical" href="https://routeriphub.com/isp/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://routeriphub.com/isp/">
+  <meta property="og:title" content="ISP Router Gateway Login Directory (Xfinity, AT&amp;T, Verizon, Spectrum)">
+  <meta property="og:description" content="Complete directory of ISP default gateway IPs, admin passwords, bridge mode instructions, and factory reset guides for major service providers.">
+  <meta property="og:site_name" content="RouterIPHub">
+
+  <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/tools.js" defer></script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://routeriphub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ISP Gateways",
+          "item": "https://routeriphub.com/isp/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/routers/" class="">Routers</a></li>
+          <li><a href="/isp/" class="active">ISP Gateways</a></li>
+          <li><a href="/brands/" class="">Brands</a></li>
+          <li><a href="/ip/" class="">IP Directory</a></li>
+          <li><a href="/tools/" class="">Tools</a></li>
+          <li><a href="/howto.html" class="">Guides</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a> <span class="sep">&rsaquo;</span> <span aria-current="page">ISP Gateways</span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
+      <div class="silo-badge silo-badge-isp">🏢 Service Provider Silo</div>
+      <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem;">
+        ISP Router Gateway Login Directory
+      </h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary);">
+        Direct administration login guides, sticker access codes, and IP passthrough instructions for broadband service providers.
+      </p>
+    </div>
+
+    <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem;">
+      
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Xfinity (Comcast)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">10.0.0.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/xfinity-xfi/">xFi Advanced Gateway (XB6, XB7, XB8)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>password</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">Xfinity App</span>
+            <a href="/isp/xfinity-xfi/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">AT&amp;T Fiber</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.1.254</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/att-bgw320/">AT&amp;T Fiber BGW320 / BGW210 Gateway</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Printed Device Access Code (DAC)</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">myAT&amp;T / Smart Home Manager</span>
+            <a href="/isp/att-bgw320/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Verizon Fios</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.1.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/verizon-cr1000a/">Fios Router CR1000A / Fios Home Router G3100</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Printed on router base label</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">My Fios / My Verizon</span>
+            <a href="/isp/verizon-cr1000a/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Spectrum (Charter)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.1.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/spectrum-sac2v1k/">Spectrum Wi-Fi 6 Router (SAC2V1K, SAX1V1K)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>admin (or managed via My Spectrum App)</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">My Spectrum App</span>
+            <a href="/isp/spectrum-sac2v1k/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">T-Mobile Home Internet</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.12.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/t-mobile-kvd21/">T-Mobile 5G Gateway (KVD21, Arcadyan, G4SE)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Admin password printed on bottom sticker</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">T-Life (formerly T-Mobile Internet)</span>
+            <a href="/isp/t-mobile-kvd21/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">CenturyLink / Quantum Fiber</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.0.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/centurylink-c4000/">CenturyLink C4000LG / C4000XG Wi-Fi 6 Router</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Admin / Configuration password on sticker</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">CenturyLink App / Quantum Fiber App</span>
+            <a href="/isp/centurylink-c4000/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">BT (British Telecom)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.1.254</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/bt-smart-hub/">BT Smart Hub 2 (Home Hub 6)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Admin password on removable plastic card</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">My BT App</span>
+            <a href="/isp/bt-smart-hub/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Virgin Media (UK)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.0.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/virgin-media-hub/">Virgin Media Hub 3, Hub 4, Hub 5</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>Settings password on bottom sticker</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">Virgin Media Connect App</span>
+            <a href="/isp/virgin-media-hub/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Sky Broadband (UK)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.0.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/sky-broadband/">Sky Broadband Hub (SR203)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>sky (or Wi-Fi password in lowercase)</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">My Sky App</span>
+            <a href="/isp/sky-broadband/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">Telstra (Australia)</span>
+              <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">192.168.0.1</span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+              <a href="/isp/telstra-smart-modem/">Telstra Smart Modem Gen 2 / Gen 3 (Technicolor/Arcadyan)</a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Default Password: <code>admin (or Telstra printed password)</code>
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--text-muted);">My Telstra App</span>
+            <a href="/isp/telstra-smart-modem/" style="font-size: 0.85rem; font-weight: 600;">View Gateway &rarr;</a>
+          </div>
+        </div>
+        
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Programmatic Silos</h4>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Models</a></li>
+          <li><a href="/isp/">ISP Gateways</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/ip/">Gateway IP Hubs</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Open Data & Developers</h4>
+        <ul class="footer-links">
+          <li><a href="/developers.html">Developer API & Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/data/routers.csv" download>routers.csv (Tabular)</a></li>
+          <li><a href="/data/routers.sql" download>routers.sql (ANSI Schema)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Compliance & Sitemaps</h4>
+        <ul class="footer-links">
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+          <li><a href="/robots.txt">robots.txt</a></li>
+          <li><a href="/find-router-ip.html">Find My Gateway IP</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0. Hardware trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

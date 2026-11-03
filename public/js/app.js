@@ -309,11 +309,12 @@ function createSearchModalDOM() {
 
       <div class="search-filter-tabs">
         <button class="filter-tab active" data-filter="all">All Topics</button>
+        <button class="filter-tab" data-filter="Router Model">📡 Routers</button>
+        <button class="filter-tab" data-filter="ISP Gateway">🏢 ISP</button>
+        <button class="filter-tab" data-filter="Gateway IP">⚡ Gateway IPs</button>
+        <button class="filter-tab" data-filter="Brand Directory">🏷️ Brands</button>
         <button class="filter-tab" data-filter="Interactive Tool">🛠️ Tools</button>
         <button class="filter-tab" data-filter="Setup Guide">📖 Guides</button>
-        <button class="filter-tab" data-filter="Gateway IP">⚡ Gateway IPs</button>
-        <button class="filter-tab" data-filter="Router Model">💻 Hardware</button>
-        <button class="filter-tab" data-filter="OS Guide">🔍 OS Guides</button>
       </div>
 
       <div id="modal-search-results" class="search-results-list" role="listbox"></div>

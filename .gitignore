@@ -15,3 +15,11 @@ desktop.ini
 # Build & Deployment caches
 .vercel/
 .netlify/
+
+# Python cache & temporary build artifacts
+__pycache__/
+*.pyc
+*.pyo
+append_styles.py
+update_homepage.py
+

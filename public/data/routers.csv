@@ -1,63 +1,33 @@
-Brand,Model,Default_IP,Web_Domain,Username,Password,Protocol,Category,Notes
-Netgear,"Nighthawk RAX50, RAX120, R7000, RAX200",192.168.1.1,http://routerlogin.net,admin,password,HTTP/HTTPS,Retail Router,Alternative local domain: http://routerlogin.com
-Netgear,"Orbi Mesh WiFi RBK50, RBK752, RBK852, 960",192.168.1.1,http://orbilogin.com,admin,password,HTTP/HTTPS,Mesh System,Managed via browser or Netgear Orbi mobile app.
-Netgear,"Nighthawk Pro Gaming XR500, XR1000",192.168.1.1,http://routerlogin.net,admin,password,HTTP/HTTPS,Retail Router,Powered by DumaOS; prompts for password update on first boot.
-ASUS,"RT-AX88U, RT-AX86U, RT-AX58U, GT-AX11000",192.168.1.1,http://router.asus.com,admin,admin,HTTP/HTTPS,Retail Router,Can also be accessed via http://asusrouter.com
-ASUS,"RT-AC68U, RT-AC86U, RT-AC1900P",192.168.1.1,http://router.asus.com,admin,admin,HTTP/HTTPS,Retail Router,Classic ASUSWRT interface; wizard guides initial security setup.
-Linksys,"EA7500, EA8300, EA9500, MR7350, MR9600",192.168.1.1,http://myrouter.local,admin,admin,HTTP,Retail Router,"Click 'To access your router, click here' to bypass cloud sign-in."
-Linksys,"WRT54G, WRT1900ACS, WRT3200ACM",192.168.1.1,http://192.168.1.1,admin,admin,HTTP,Retail Router,"Classic Linksys firmware. On WRT54G, username is sometimes left blank."
-Linksys,"Velop Intelligent Mesh WHW03, MX4200, MX5300",192.168.1.1,Linksys Mobile App,Linksys Cloud,User Cloud Password,Mobile App / HTTP,,Web GUI hidden by default; accessible via bottom banner on myrouter.local.
-Cisco,"Small Business RV340, RV260, RV160",192.168.1.1,https://192.168.1.1,cisco,cisco,HTTPS,Enterprise/SMB,Enforces HTTPS; password must be changed immediately upon initial login.
-Ubiquiti,"EdgeRouter X, EdgeRouter 4, EdgeRouter Lite",192.168.1.1,https://192.168.1.1,ubnt,ubnt,HTTPS,Enterprise/SMB,Connect Ethernet cable directly to eth0 port for initial configuration.
-Ubiquiti,"UniFi Dream Machine (UDM), UDM-Pro, UDR",192.168.1.1,https://192.168.1.1,root / UI SSO,UI.com Cloud Password,HTTPS,Enterprise/SMB,Managed via local UniFi OS console or UniFi Network app.
-Verizon,Fios Quantum Gateway G1100,192.168.1.1,http://192.168.1.1,admin,Printed on router label,HTTPS,ISP Gateway,Admin password is on the serial barcode label on the side/rear.
-Verizon,"Fios Home Router G3100, CR1000A, CR1000B",192.168.1.1,http://192.168.1.1,admin,Printed on router label,HTTPS,ISP Gateway,Unique WPA key and admin password printed on pull-out plastic card or label.
-Spectrum / Charter,"Wave 2 & WiFi 6 Advanced (SAC2V1K, SAX1V1K)",192.168.1.1,My Spectrum App,Spectrum ID,User Cloud Password,Mobile App,,Web GUI disabled on most modern units; managed via My Spectrum app.
-DrayTek,"Vigor 2865, 2927, 2765 Series",192.168.1.1,https://192.168.1.1,admin,admin,HTTPS,Enterprise/SMB,Default HTTPS port 443; prompts to change admin password immediately.
-Synology,"RT2600ac, RT6600ax, WRX560",192.168.1.1,http://router.synology.com,admin,synology (or setup wizard),HTTP/HTTPS,Retail Router,Synology Router Manager (SRM) guides initial setup on port 8000.
-Netis,"WF2419, WF2780, N3",192.168.1.1,http://netis.cc,guest,guest (or blank),HTTP,Retail Router,Quick setup page provides one-click wireless and admin configuration.
-TP-Link,"Archer AX50, AX55, AX73, C7, AX10, C6",192.168.0.1,http://tplinkwifi.net,admin,admin (or user-created),HTTP/HTTPS,Retail Router,Modern firmware prompts to set a new password on first boot.
-TP-Link,"TL-WR841N, TL-WR940N, TL-WR840N",192.168.0.1,http://192.168.0.1,admin,admin,HTTP,Retail Router,Classic budget TP-Link routers. Default user and pass are both admin.
-D-Link,"DIR-842, DIR-882, DIR-X1560, DIR-X5460",192.168.0.1,http://dlinkrouter.local,Admin,(Leave blank),HTTP,Retail Router,Username is case-sensitive on older models. Default password is often empty.
-D-Link,"DIR-600, DIR-605L, DIR-615",192.168.0.1,http://192.168.0.1,Admin,(Leave blank),HTTP,Retail Router,Classic D-Link models; type 'Admin' with capital A and leave password blank.
-Arris / Surfboard,"SBG6580, SBG8300, G34, G36, SBG10",192.168.0.1,http://192.168.0.1,admin,password,HTTP,Cable Modem Gateway,Newer units have unique Wi-Fi pre-shared keys printed on bottom sticker.
-Motorola,"MG7550, MG7700, MG8702",192.168.0.1,http://192.168.0.1,admin,motorola,HTTP,Cable Modem Gateway,Default password is 'motorola' in all lowercase.
-CenturyLink / Quantum,"C3000Z, C4000BZ, C4000XG",192.168.0.1,http://192.168.0.1,admin,Admin/GUI Password on label,HTTP,ISP Gateway,Distinct from Wi-Fi security key. Look for 'Admin/GUI Password' on sticker.
-Tenda,"AC6, AC10, TX9 Pro, AC1200",192.168.0.1,http://tendawifi.com,admin,admin (or blank),HTTP,Retail Router,Initial wizard prompts creation of login password.
-Actiontec,"GT784WN, C1000A, PK5000",192.168.0.1,http://192.168.0.1,admin,admin (or on label),HTTP,DSL Modem,DSL combo gateway; check label for model-specific credentials.
-Xfinity / Comcast,"xFi Gateway XB3, XB6, XB7, XB8",10.0.0.1,http://10.0.0.1,admin,password,HTTP,ISP Gateway,Prompts to create a custom password immediately upon first login.
-Apple,"AirPort Extreme, Time Capsule",10.0.1.1,AirPort Utility App,(Leave blank),public (or setup password),AirPort Utility,Retail Router,Managed via native AirPort Utility on macOS or iOS rather than web browser.
-Apple,AirPort Express,10.0.1.1,AirPort Utility App,(Leave blank),public,AirPort Utility,Retail Router,Use Apple AirPort Utility to discover and configure IP settings.
-AT&T,"Fiber Gateway BGW210, BGW320-500, BGW320-505",192.168.1.254,http://192.168.1.254,admin,Printed Device Access Code,HTTP,ISP Gateway,Requires the physical 'Access Code' printed on router yellow/white sticker.
-AT&T,"NVG589, NVG599, Pace 5268AC",192.168.1.254,http://192.168.1.254,admin,Printed Device Access Code,HTTP,ISP Gateway,Enter the 10-12 character alphanumeric Access Code on label.
-British Telecom (BT),"BT Smart Hub, Smart Hub 2, Home Hub 4/5",192.168.1.254,http://bthomehub.home,admin,Admin Password on Hub Card,HTTP,ISP Gateway,Password is printed on the pull-out plastic card on the back of the Hub.
-2Wire,"2701HG-B, 3801HGV, 5012NV",192.168.1.254,http://192.168.1.254,admin,admin (or on sticker),HTTP,DSL Modem,Legacy telecom gateway; prompt asks for system password printed on label.
-Billion,"BiPAC 7800NL, 8800NL, 8900AX",192.168.1.254,http://192.168.1.254,admin,admin,HTTP,Retail Router,Standard default credentials for Billion broadband routers.
-Belkin,"N150, N300, N600, AC1200, F9K Series",192.168.2.1,http://router,(Leave blank),(Leave blank),HTTP,Retail Router,Most classic Belkin routers have NO default username and NO default password.
-SMC Networks,"Barricade SMC7004VBR, SMCWBR14-G",192.168.2.1,http://192.168.2.1,smc,smcadmin (or admin),HTTP,Retail Router,Classic SMC default credentials.
-Edimax,"BR-6428nS, BR-6478AC, EW-7438RPn",192.168.2.1,http://edimax.setup,admin,1234,HTTP,Retail Router,Default login is admin / 1234 on factory firmware.
-Siemens,"Gigaset SE505, SX541",192.168.2.1,http://192.168.2.1,admin,admin,HTTP,Retail Router,European Siemens DSL routers.
-Huawei,"4G/5G Mobile Wi-Fi (B310, B315, B525, B535, 5G CPE)",192.168.8.1,http://192.168.8.1,admin,admin (or printed on label),HTTP,Cellular Gateway,Standard gateway for Huawei cellular routers and mobile MiFi pucks.
-GL.iNet,"Beryl AX (GL-MT3000), Slate AX, Opal, Flint 2",192.168.8.1,http://192.168.8.1,root,User sets on 1st boot,HTTP/HTTPS,Travel/OpenWrt,Powered by OpenWrt; initial setup prompts you to choose admin password.
-Teltonika,"RUT240, RUT950, RUTX50, RUTX11",192.168.8.1,https://192.168.8.1,admin,admin01,HTTPS,Industrial Cellular,Requires password change on initial HTTPS login.
-Trendnet,"TEW-828DRU, TEW-831DRU, TEW-731BR",192.168.10.1,http://192.168.10.1,admin,admin,HTTP,Retail Router,Standard IP for Trendnet routers; older models used 'admin' / empty.
-WAVLINK,"Halo Base, Quantum D4G, Aerial HD4",192.168.10.1,http://wifi.wavlink.com,admin,admin,HTTP,Range Extender / AP,Can also be accessed via http://192.168.10.1 or http://wifi.wavlink.com
-Zyxel,"P-660HN, NBG4615, USG 20",192.168.10.1,http://192.168.10.1,admin,1234,HTTP,SMB Router,Older Zyxel firmware used 192.168.10.1 with 1234 password.
-Buffalo,"AirStation Extreme AC1900, WZR-HP-G300NH",192.168.11.1,http://192.168.11.1,admin,password,HTTP,Retail Router,Some models with AirStation switch set to AP mode change to 192.168.11.100.
-DD-WRT,Third-Party Custom Router Firmware (Buffalo Edition),192.168.11.1,http://192.168.11.1,root,admin,HTTP,Custom Firmware,Pre-installed DD-WRT builds on Buffalo routers default to 192.168.11.1.
-Xiaomi,"Mi AIoT Router AX3600, AX6000, AX9000, AX3000",192.168.31.1,http://miwifi.com,admin,User-created on 1st setup,HTTP,Retail Router,Xiaomi/Redmi routers use 192.168.31.1. Managed via Mi Home / MiWiFi app.
-Redmi,"Redmi AX6, Redmi AX5400, Redmi AC2100",192.168.31.1,http://miwifi.com,admin,User-created on 1st setup,HTTP,Retail Router,Default subnet for all Redmi wireless routers.
-MikroTik,"RouterBOARD hAP ac2, hAP ax3, RB4011, RB5009",192.168.88.1,http://192.168.88.1,admin,(Leave blank),WebFig / WinBox,Enterprise/SMB,Accessible via browser (WebFig) or native WinBox utility on TCP port 8291.
-Huawei,"EchoLife GPON ONT HG8245, HG8245H, HG8247",192.168.100.1,http://192.168.100.1,telecomadmin,admintelecom,HTTP,Fiber ONT,ISP super-admin credentials; user login is often root / admin.
-ZTE,"ZXHN F660, F670, F680 GPON ONT",192.168.100.1,http://192.168.100.1,admin,admin,HTTP,Fiber ONT,Standard gateway IP for ZTE optical fiber terminals.
-Motorola / Arris,"SB6141, SB6183, SB6190, SB8200, MB8600",192.168.100.1,http://192.168.100.1,admin,password (or on label),HTTP,Cable Modem,Standard diagnostic IP for standalone DOCSIS 3.0 and 3.1 cable modems.
-T-Mobile,"5G Home Internet Gateway Arcadyan KVD21, Sagemcom FAST5688W",192.168.12.1,http://192.168.12.1,admin,Printed on gateway bottom,HTTP / T-Life App,5G Gateway,Advanced settings are managed through the T-Mobile Internet / T-Life mobile app.
-Huawei,"WiFi WS5200, WiFi AX3, AX3 Pro",192.168.3.1,http://192.168.3.1,admin,User-created on 1st setup,HTTP,Retail Router,Huawei consumer standalone Wi-Fi routers default to 192.168.3.1.
-Amped Wireless,"TITAN, ATHENA, REC Series",192.168.3.1,http://setup.ampedwireless.com,admin,admin,HTTP,Retail Router,Default gateway for Amped Wireless long-range routers and repeaters.
-Netgear,"Range Extenders EX6120, EX7000, EX8000, EAX20",192.168.1.250,http://mywifiext.net,admin,password,HTTP,Range Extender,Netgear extenders use mywifiext.net or fallback IP 192.168.1.250.
-Generic AP / Extender,Access Point / Repeater Mode Fallback,192.168.1.2,http://192.168.1.2,admin,admin,HTTP,Range Extender,Standard fallback IP assigned to secondary routers or Wi-Fi extenders on a 192.168.1.x network.
-ASUS,"ZenWiFi Mesh XT8, XT9, XD6, ET12",192.168.50.1,http://router.asus.com,admin,admin,HTTP/HTTPS,Mesh System,Modern ASUS ZenWiFi mesh systems use 192.168.50.1 to avoid ISP modem conflicts.
-TP-Link,"Deco Mesh M4, M5, X20, X50, X60, XE75, BE85",192.168.68.1,TP-Link Deco App,TP-Link ID Email,User Cloud Password,Mobile App / HTTP,,TP-Link Deco uses 192.168.68.1 subnet. Setup and control via Deco mobile app.
-Google Nest,"Google Wifi (AC-1304), Nest Wifi (H2D), Nest Wifi Pro",192.168.86.1,Google Home App,Google Account,User Cloud Password,Mobile App,Mesh System,Browser interface shows minimal diagnostic dashboard; setup is app-only.
-Amazon eero,"eero Pro 6, eero Pro 6E, eero 6+, eero Max 7",192.168.4.1,eero Mobile App,Amazon / eero Account,User Cloud Password,Mobile App,Mesh System,Configuration requires the eero iOS/Android app. Browser displays diagnostic page.
-Actiontec,"MI424WR (Verizon Fios Legacy), T3200",192.168.254.254,http://192.168.254.254,admin,Printed on sticker,HTTP,DSL / Fiber,Actiontec DSL modems and legacy broadband gateways frequently use 192.168.254.254.
+slug,brand,model_name,hardware_type,default_ip,web_domain,default_username,default_password,wifi_standard
+netgear-nighthawk-rax50,Netgear,Nighthawk AX6 (RAX50),Wi-Fi 6 Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (802.11ax Dual-Band AX5400)
+netgear-nighthawk-rax120,Netgear,Nighthawk AX12 (RAX120),Wi-Fi 6 Flagship Router,192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (12-Stream AX6000)
+netgear-nighthawk-xr1000,Netgear,Nighthawk Pro Gaming XR1000,Gaming Wi-Fi 6 Router (DumaOS 3.0),192.168.1.1,http://routerlogin.net,admin,password,Wi-Fi 6 (AX5400)
+netgear-orbi-rbk752,Netgear,Orbi Tri-Band Mesh AX4200 (RBK752),Tri-Band Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 Tri-Band (AX4200 with Dedicated Backhaul)
+netgear-orbi-rbk852,Netgear,Orbi Tri-Band Mesh AX6000 (RBK852),Flagship Tri-Band Mesh System,192.168.1.1,http://orbilogin.com,admin,password,Wi-Fi 6 Tri-Band (AX6000 12-Stream)
+tp-link-archer-ax55,TP-Link,Archer AX55 (AX3000),Wi-Fi 6 Gigabit Router,192.168.0.1,http://tplinkwifi.net,admin,Created on first setup (or admin on legacy v1),Wi-Fi 6 (AX3000 Dual Band)
+tp-link-archer-ax21,TP-Link,Archer AX21 (AX1800),Wi-Fi 6 Dual-Band Router,192.168.0.1,http://tplinkwifi.net,admin,Created on first boot,Wi-Fi 6 (AX1800)
+tp-link-archer-be800,TP-Link,Archer BE800 (BE19000),Wi-Fi 7 Tri-Band Flagship Router,192.168.0.1,http://tplinkwifi.net,admin,Set during setup wizard,Wi-Fi 7 (BE19000 with 320 MHz Channels & MLO)
+tp-link-deco-x55,TP-Link,Deco X55 AX3000 Mesh,Whole Home Mesh Wi-Fi 6,192.168.68.1,http://tplinkdeco.net,Deco App Account (TP-Link ID),Set in Deco Mobile App,Wi-Fi 6 Mesh (AX3000)
+tp-link-deco-be85,TP-Link,Deco BE85 (BE22000),Wi-Fi 7 Whole Home Mesh System,192.168.68.1,http://tplinkdeco.net,TP-Link Cloud ID,Set in Deco App,Wi-Fi 7 Tri-Band (BE22000 320MHz MLO)
+asus-rt-ax88u,ASUS,RT-AX88U (AX6000),Wi-Fi 6 Gaming & Power-User Router,192.168.1.1,http://router.asus.com,admin,admin (prompts to change immediately),Wi-Fi 6 (AX6000 8-Stream)
+asus-rt-ax86u,ASUS,RT-AX86U / RT-AX86U Pro (AX5700),Wi-Fi 6 Mobile Gaming Router,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 (AX5700 with 160MHz)
+asus-rog-rapture-gt-ax11000,ASUS,ROG Rapture GT-AX11000,Tri-Band Wi-Fi 6 Gaming Beast,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 Tri-Band (AX11000)
+asus-zenwifi-xt8,ASUS,ZenWiFi AX (XT8),Tri-Band Whole-Home Mesh System,192.168.1.1,http://router.asus.com,admin,admin,Wi-Fi 6 Tri-Band (AX6600)
+asus-rt-be96u,ASUS,RT-BE96U (BE19000),Wi-Fi 7 Tri-Band Flagship Router,192.168.1.1,http://router.asus.com,admin,Set during setup,Wi-Fi 7 (BE19000 with 320MHz 6 GHz & Dual 10G ports)
+linksys-ea7500,Linksys,Max-Stream AC1900 (EA7500),Dual-Band Wi-Fi 5 Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 (802.11ac AC1900)
+linksys-velop-whw0303,Linksys,Velop Tri-Band Mesh (WHW0303),Tri-Band Whole Home Mesh Wi-Fi,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 5 Tri-Band (AC2200 per node)
+linksys-mr9600,Linksys,Max-Stream Mesh Wi-Fi 6 (MR9600),Dual-Band Wi-Fi 6 Mesh Router,192.168.1.1,http://myrouter.local,admin,admin,Wi-Fi 6 (AX6000 8-Stream)
+ubiquiti-unifi-dream-machine-pro,Ubiquiti,UniFi Dream Machine Pro (UDM-Pro),All-in-One Enterprise Gateway & Controller,192.168.1.1,https://unifi.ui.com,UI Cloud Account / root (SSH),Set during UniFi OS setup wizard,Routing & Security Gateway (Requires separate UniFi APs)
+ubiquiti-amplifi-hd,Ubiquiti,AmpliFi HD Home Mesh,Consumer Mesh Wi-Fi System,192.168.1.1,http://amplifi.lan,admin,Set in AmpliFi App,Wi-Fi 5 (802.11ac 3x3 MIMO)
+mikrotik-hap-ax3,MikroTik,hAP ax³ (C53UiG+5HPaxD2HPaxD),RouterOS v7 Wi-Fi 6 Router,192.168.88.1,http://router.lan,admin,Empty (No password) on first boot,Wi-Fi 6 (Dual-Band 802.11ax)
+mikrotik-rb4011,MikroTik,RB4011iGS+5HacQ2HnD-IN,Enterprise Quad-Core 10-Port Router,192.168.88.1,http://router.lan,admin,Empty (No password),Wi-Fi 5 (Quad-Chain AC2000)
+arris-surfboard-sb8200,Arris,SURFboard SB8200 DOCSIS 3.1,DOCSIS 3.1 Gigabit Cable Modem,192.168.100.1,http://192.168.100.1,admin,password (or last 8 digits of serial number),DOCSIS 3.1 (Up to 2 Gbps via Link Aggregation)
+arris-surfboard-g36,Arris,SURFboard G36 DOCSIS 3.1 & AX3000,DOCSIS 3.1 Gateway + Wi-Fi 6 Router,192.168.0.1,http://192.168.0.1,admin,password (or Wi-Fi preshared key on sticker),Wi-Fi 6 (AX3000) + DOCSIS 3.1
+amazon-eero-pro-6e,Amazon Eero,Eero Pro 6E (Tri-Band AXE5400),Tri-Band Wi-Fi 6E Mesh System,192.168.4.1,N/A (Managed exclusively via Eero Mobile App),Amazon / Eero App Account,App managed (No browser HTTP GUI),"Wi-Fi 6E Tri-Band (2.4 GHz, 5 GHz, 6 GHz AXE5400)"
+amazon-eero-max-7,Amazon Eero,Eero Max 7 (Tri-Band BE20800),Wi-Fi 7 Whole Home Mesh System,192.168.4.1,N/A (Eero App),Amazon / Eero Account,App managed,Wi-Fi 7 Tri-Band (BE20800 with 320 MHz channels)
+google-nest-wifi-pro,Google Nest,Nest Wifi Pro (Wi-Fi 6E AXE5400),Tri-Band Wi-Fi 6E Mesh System,192.168.86.1,http://192.168.86.1 (Shows Google Home App prompt),Google Account,Managed via Google Home App,Wi-Fi 6E Tri-Band (AXE5400)
+gl-inet-beryllium-gl-mt3000,GL.iNet,Beryl AX (GL-MT3000),Pocket Wi-Fi 6 Travel Router,192.168.8.1,http://192.168.8.1,root / admin,Set on first browser visit,Wi-Fi 6 (AX3000 Pocket Router)
+d-link-exo-ax5400,D-Link,EXO AX5400 (DIR-X5460),Wi-Fi 6 Gigabit Router,192.168.0.1,http://dlinkrouter.local,Admin,password (or printed on configuration card),Wi-Fi 6 (AX5400 6-Stream)
+synology-rt6600ax,Synology,RT6600ax Tri-Band Router,Synology Router Manager (SRM) Wi-Fi 6,192.168.1.1,http://router.synology.com,admin,Set during SRM quick start wizard,Wi-Fi 6 Tri-Band (AX6600 with UNII-4 5.9 GHz)
+avm-fritzbox-7590-ax,AVM FRITZ!Box,FRITZ!Box 7590 AX (VDSL/Fiber),European Flagship DSL/Fiber Wi-Fi 6 Gateway,192.168.178.1,http://fritz.box,admin,Printed on the underside base sticker,Wi-Fi 6 (VDSL Supervectoring 35b + AX3600)
+cisco-catalyst-1000,Cisco,Catalyst 1000 Series (C1000-8T-2G-L),Enterprise Managed Switch / Gateway,192.168.1.254,http://192.168.1.254,cisco,cisco,Gigabit Ethernet Layer 2+

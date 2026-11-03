@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AT&amp;T Fiber Gateway Login, Default Password &amp; Bridge Mode (192.168.1.254)</title>
+  <meta name="description" content="Access AT&amp;T Fiber router admin portal at 192.168.1.254. Default username, printed access code instructions, factory reset, and bridge mode guide.">
+  <link rel="canonical" href="https://routeriphub.com/isp/att-bgw320/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://routeriphub.com/isp/att-bgw320/">
+  <meta property="og:title" content="AT&amp;T Fiber Gateway Login, Default Password &amp; Bridge Mode (192.168.1.254)">
+  <meta property="og:description" content="Access AT&amp;T Fiber router admin portal at 192.168.1.254. Default username, printed access code instructions, factory reset, and bridge mode guide.">
+  <meta property="og:site_name" content="RouterIPHub">
+
+  <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/tools.js" defer></script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://routeriphub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ISP Gateways",
+          "item": "https://routeriphub.com/isp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AT&T Fiber",
+          "item": "https://routeriphub.com/isp/att-bgw320/"
+        }
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "headline": "AT&T Fiber Gateway Login and Configuration Guide",
+      "description": "Access AT&T Fiber router admin portal at 192.168.1.254. Default username, printed access code instructions, factory reset, and bridge mode guide.",
+      "mainEntityOfPage": "https://routeriphub.com/isp/att-bgw320/",
+      "datePublished": "2026-01-15T08:00:00+00:00",
+      "dateModified": "2026-11-03T02:00:00+00:00",
+      "author": {
+        "@type": "Organization",
+        "name": "RouterIPHub Editorial Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "RouterIPHub",
+        "url": "https://routeriphub.com/"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Log Into AT&T Fiber Gateway",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Connect to ISP Gateway",
+          "text": "Connect to your home Wi-Fi network or plug an Ethernet cable directly into LAN Port 1."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Open Gateway URL",
+          "text": "Open your browser and enter http://192.168.1.254."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Enter Credentials",
+          "text": "Submit username 'admin' and password 'Printed Device Access Code (DAC)'."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/routers/" class="">Routers</a></li>
+          <li><a href="/isp/" class="active">ISP Gateways</a></li>
+          <li><a href="/brands/" class="">Brands</a></li>
+          <li><a href="/ip/" class="">IP Directory</a></li>
+          <li><a href="/tools/" class="">Tools</a></li>
+          <li><a href="/howto.html" class="">Guides</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a> <span class="sep">&rsaquo;</span> <a href="/isp/">ISP Gateways</a> <span class="sep">&rsaquo;</span> <span aria-current="page">AT&amp;T Fiber</span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3.5rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-isp">🏢 Service Provider Gateway Hub</div>
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        AT&amp;T Fiber Gateway Login (192.168.1.254)
+      </h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Default login credentials, IP passthrough, bridge mode instructions, and factory reset procedure for AT&amp;T Fiber BGW320 / BGW210 Gateway.
+      </p>
+
+      <!-- Answer Box -->
+      <div class="answer-box">
+        <div class="answer-box-label">Verified ISP Configuration</div>
+        <div class="answer-box-main">
+          Gateway IP: <strong>192.168.1.254</strong> &bull; User: <strong>admin</strong> &bull; Pass: <strong>Printed Device Access Code (DAC)</strong>
+        </div>
+        <div class="answer-box-sub">
+          AT&amp;T does not use a generic password. You MUST locate the 10-digit &#x27;Device Access Code&#x27; printed in bold on the yellow/white sticker on the back or base of the BGW320.
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-btn-group">
+        <a href="http://192.168.1.254" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Open AT&amp;T Fiber Portal (192.168.1.254) &rarr;
+        </a>
+        <button class="btn btn-secondary copy-btn" data-copy="192.168.1.254">
+          Copy IP (192.168.1.254)
+        </button>
+      </div>
+
+      <!-- Specifications Grid -->
+      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem;">
+        Gateway Parameters & Access Details
+      </h2>
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="spec-item-label">Internet Service Provider</span>
+          <span class="spec-item-val">AT&amp;T Fiber</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-item-label">Hardware Models</span>
+          <span class="spec-item-val">AT&amp;T Fiber BGW320 / BGW210 Gateway</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-item-label">Default Gateway IP</span>
+          <span class="spec-item-val"><a href="/ip/192-168-1-254/">192.168.1.254</a></span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-item-label">Default Username</span>
+          <span class="spec-item-val">admin</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-item-label">Default Password</span>
+          <span class="spec-item-val">Printed Device Access Code (DAC)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-item-label">Official Companion App</span>
+          <span class="spec-item-val"><a href="https://apps.apple.com/app/att-smart-home-manager/id1200720448" target="_blank" rel="noopener">myAT&amp;T / Smart Home Manager</a></span>
+        </div>
+      </div>
+
+      <!-- Bridge Mode / IP Passthrough Guide -->
+      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.5rem;">
+        How to Enable Bridge Mode or IP Passthrough
+      </h2>
+      <div class="card" style="padding: 1.25rem; margin-bottom: 1.5rem;">
+        <p style="line-height: 1.7; color: var(--text-primary);">AT&amp;T modems do not offer true bridge mode; use &#x27;IP Passthrough&#x27;: Navigate to http://192.168.1.254 &gt; Firewall &gt; IP Passthrough. Set Allocation Mode to &#x27;Passthrough&#x27;, Passthrough Mode to &#x27;DHCPS-fixed&#x27;, and select your router&#x27;s MAC address from the Device List.</p>
+      </div>
+
+      <!-- Reset Procedure -->
+      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem;">
+        Physical Factory Reset Procedure
+      </h2>
+      <div class="reset-instruction-box">
+        <p>Press and hold the red Reset button on the rear for 20 seconds. The front status light will flash fast green, signaling a factory reset.</p>
+      </div>
+
+      <!-- Probe Console -->
+      <div class="card" style="margin: 2.5rem 0; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: var(--radius-lg); padding: 1.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 700;">⚡ Test Connection to AT&amp;T Fiber Gateway</h3>
+          <span style="font-size: 0.8rem; background: var(--info-bg); color: var(--text-accent); padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600;">
+            Target: 192.168.1.254
+          </span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Verify if your device can reach the gateway administration server on 192.168.1.254:
+        </p>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button id="probe-btn" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.875rem;">
+            Probe 192.168.1.254
+          </button>
+          <div id="probe-status" style="font-size: 0.875rem; font-weight: 600;"></div>
+        </div>
+      </div>
+
+      <!-- Cross Silo Links -->
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateways & Resources</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/isp/" class="btn btn-secondary" style="font-size: 0.85rem;">All ISP Gateways &rarr;</a>
+          <a href="/ip/192-168-1-254/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.254 Gateway Hub &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">Auto-Detect Local Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Programmatic Silos</h4>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Models</a></li>
+          <li><a href="/isp/">ISP Gateways</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/ip/">Gateway IP Hubs</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Open Data & Developers</h4>
+        <ul class="footer-links">
+          <li><a href="/developers.html">Developer API & Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/data/routers.csv" download>routers.csv (Tabular)</a></li>
+          <li><a href="/data/routers.sql" download>routers.sql (ANSI Schema)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Compliance & Sitemaps</h4>
+        <ul class="footer-links">
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+          <li><a href="/robots.txt">robots.txt</a></li>
+          <li><a href="/find-router-ip.html">Find My Gateway IP</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0. Hardware trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

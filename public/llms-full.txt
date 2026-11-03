@@ -1,83 +1,332 @@
-# Complete Factual Router IP and Default Credentials Dataset (2026/2027)
+# RouterIPHub - Complete Programmatic Technical Knowledgebase
+Date: 2026-11-03
+Website: https://routeriphub.com
 
-*Published by RouterIPHub (https://routeriphub.com)*
-*Last Verified: 2026-11-03*
+## 1. Gateway IP Directory
+- IP: 192.168.1.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Netgear, ASUS, Linksys, Cisco, Verizon Fios, Ubiquiti
+  Default Credentials: admin / admin or admin / password
+  URL: https://routeriphub.com/ip/192-168-1-1/
 
----
+- IP: 192.168.0.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: TP-Link, D-Link, Arris, Sky Broadband, Virgin Media
+  Default Credentials: admin / admin (or created on first boot)
+  URL: https://routeriphub.com/ip/192-168-0-1/
 
-## 1. Master Gateway IP Directory
+- IP: 10.0.0.1
+  Subnet: 255.255.255.0 (/24 standard local allocation)
+  Brands: Xfinity (Comcast), Apple AirPort, Cisco, Spectrum
+  Default Credentials: admin / password
+  URL: https://routeriphub.com/ip/10-0-0-1/
 
-| IP Address | Typical Manufacturers / ISPs | Primary Use Case | Default Web Domain / Port |
-| :--- | :--- | :--- | :--- |
-| `192.168.1.1` | Netgear, ASUS, Linksys, Cisco, Ubiquiti, Verizon | Home / Office Retail Routers | routerlogin.net, router.asus.com |
-| `192.168.0.1` | TP-Link, D-Link, Arris, Motorola, CenturyLink | Home / Retail Routers & Cable Gateways | tplinkwifi.net, dlinkrouter.local |
-| `10.0.0.1` | Xfinity / Comcast xFi, Apple, Cisco enterprise | ISP Cable Gateways | Port 80 (HTTP) |
-| `192.168.1.254` | AT&T Fiber (BGW320), BT Smart Hub, 2Wire | ISP Fiber & DSL Gateways | Port 80 (HTTP) |
-| `192.168.2.1` | Belkin, SMC Networks, Edimax, Siemens | Home Retail Routers | router |
-| `192.168.8.1` | Huawei 4G/5G, GL.iNet OpenWrt, Teltonika | Cellular, Mobile MiFi & Travel Routers | Port 80 / 443 |
-| `192.168.10.1` | Trendnet, WAVLINK, Zyxel | Retail Routers & Standalone Range Extenders | wifi.wavlink.com |
-| `192.168.11.1` | Buffalo AirStation, DD-WRT Pre-loaded | Retail Routers & Open-Source Firmware | Port 80 (HTTP) |
-| `192.168.12.1` | T-Mobile 5G Home Internet (Arcadyan, Sagemcom) | Fixed Wireless 5G Gateways | T-Life App / HTTP |
-| `192.168.31.1` | Xiaomi Mi WiFi, Redmi Routers | Home Routers & Mesh Units | miwifi.com |
-| `192.168.88.1` | MikroTik RouterBOARD | SMB / Enterprise Routing & Wireless | WebFig (80), WinBox (8291) |
-| `192.168.100.1` | Huawei GPON ONT, ZTE, Arris/Motorola Modems | Optical Fiber Terminals & Standalone Modems | Port 80 (HTTP) |
-| `10.0.1.1` | Apple AirPort Extreme, Time Capsule | Wireless Base Stations | Apple AirPort Utility App |
-| `192.168.1.2` | Secondary Routers, Access Point Mode Fallback | Network Extenders & AP Subnets | Port 80 (HTTP) |
-| `192.168.50.1` | ASUS ZenWiFi Mesh Systems | Mesh Wi-Fi Systems | router.asus.com |
-| `192.168.68.1` | TP-Link Deco Mesh Systems | Mesh Wi-Fi Systems | TP-Link Deco App |
-| `192.168.86.1` | Google Wifi, Nest Wifi, Nest Wifi Pro | Smart Home Mesh Systems | Google Home App |
-| `192.168.4.1` | Amazon eero, eero Pro 6, eero Max 7 | Smart Home Mesh Systems | eero Mobile App |
-| `192.168.254.254` | Actiontec, CenturyLink DSL Modems | DSL / Fiber Gateways | Port 80 (HTTP) |
+- IP: 192.168.1.254
+  Subnet: 255.255.255.0 (/24)
+  Brands: AT&T Fiber (BGW320), BT Smart Hub (UK), Plusnet, 2Wire
+  Default Credentials: admin / Printed Access Code
+  URL: https://routeriphub.com/ip/192-168-1-254/
 
----
+- IP: 192.168.2.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Belkin, SMC, Bell Home Hub (Canada), Philips Hue Bridge
+  Default Credentials: admin / [empty] or admin / admin
+  URL: https://routeriphub.com/ip/192-168-2-1/
 
-## 2. Complete Manufacturer Default Credentials Table
+- IP: 192.168.8.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Huawei, GL.iNet Travel Routers, 4G/5G Mobile Hotspots
+  Default Credentials: admin / admin
+  URL: https://routeriphub.com/ip/192-168-8-1/
 
-| Brand | Models | Default IP | Default Username | Default Password | Setup Mode |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **TP-Link** | Archer AX50, AX55, AX73, C7, AX10 | `192.168.0.1` | `admin` | `admin` (or user sets) | Web Browser |
-| **TP-Link** | Deco M4, X20, X50, XE75, BE85 | `192.168.68.1` | TP-Link ID | Cloud Password | Deco Mobile App |
-| **Netgear** | Nighthawk RAX50, R7000, RAX120, XR500 | `192.168.1.1` | `admin` | `password` | Web Browser |
-| **Netgear** | Orbi RBK50, RBK752, RBK852, 960 | `192.168.1.1` | `admin` | `password` | Orbi App / Web |
-| **Netgear** | Range Extenders EX6120, EAX20 | `192.168.1.250`| `admin` | `password` | mywifiext.net |
-| **ASUS** | RT-AX88U, RT-AX86U, GT-AX11000 | `192.168.1.1` | `admin` | `admin` | Web Browser |
-| **ASUS** | ZenWiFi XT8, XT9, XD6 | `192.168.50.1` | `admin` | `admin` | Web / ASUS App |
-| **Linksys** | EA7500, EA9500, MR7350, WRT3200ACM | `192.168.1.1` | `admin` | `admin` | Web Browser |
-| **Linksys** | Velop Intelligent Mesh MX4200, MX5300 | `192.168.1.1` | Linksys Cloud | Cloud Password | Linksys App |
-| **D-Link** | DIR-842, DIR-882, DIR-X1560 | `192.168.0.1` | `Admin` | *(Blank)* | Web Browser |
-| **Arris / Surfboard** | SBG6580, SBG8300, G34, G36 | `192.168.0.1` | `admin` | `password` | Web Browser |
-| **Motorola** | MG7550, MG7700, MG8702 | `192.168.0.1` | `admin` | `motorola` | Web Browser |
-| **Xfinity / Comcast** | xFi Gateway XB3, XB6, XB7, XB8 | `10.0.0.1` | `admin` | `password` | Web / xFi App |
-| **AT&T** | BGW210, BGW320-500, BGW320-505 | `192.168.1.254`| `admin` | Device Access Code | Web Browser |
-| **British Telecom (BT)**| BT Smart Hub, Smart Hub 2, Home Hub 5 | `192.168.1.254`| `admin` | On Hub Pull-out Card | Web Browser |
-| **Verizon** | Fios G3100, CR1000A, CR1000B | `192.168.1.1` | `admin` | Printed on Label | Web Browser |
-| **Belkin** | N150, N300, N600, AC1200 | `192.168.2.1` | *(Blank)* | *(Blank)* | Web Browser |
-| **Huawei** | 4G/5G Cellular Routers (B310, B535, 5G CPE) | `192.168.8.1` | `admin` | `admin` (or label) | Web Browser |
-| **Huawei** | GPON ONT (HG8245, HG8245H, HG8247) | `192.168.100.1`| `telecomadmin` | `admintelecom` | Web Browser |
-| **GL.iNet** | Beryl AX (GL-MT3000), Slate AX, Opal | `192.168.8.1` | `root` | User Sets on Boot | Web Browser |
-| **Trendnet** | TEW-828DRU, TEW-831DRU | `192.168.10.1` | `admin` | `admin` | Web Browser |
-| **WAVLINK** | Halo Base, Quantum D4G, Aerial HD4 | `192.168.10.1` | `admin` | `admin` | Web Browser |
-| **Buffalo** | AirStation AC1900, WZR-HP-G300NH | `192.168.11.1` | `admin` | `password` | Web Browser |
-| **Xiaomi** | Mi AIoT AX3000, AX6000, AX9000 | `192.168.31.1` | `admin` | Set During Wizard | Web / Mi Home |
-| **Redmi** | Redmi AX6, Redmi AX5400 | `192.168.31.1` | `admin` | Set During Wizard | Web / Mi Home |
-| **MikroTik** | RouterBOARD, hAP ax3, RB4011, RB5009 | `192.168.88.1` | `admin` | *(Blank)* | WebFig / WinBox |
-| **T-Mobile** | 5G Home Internet Arcadyan KVD21 | `192.168.12.1` | `admin` | Printed on Label | T-Life App |
-| **Apple** | AirPort Extreme, Express, Time Capsule | `10.0.1.1` | *(Blank)* | `public` | AirPort Utility |
-| **Ubiquiti** | EdgeRouter X, EdgeRouter 4 | `192.168.1.1` | `ubnt` | `ubnt` | Web Browser |
-| **Ubiquiti** | UniFi Dream Machine (UDM), UDR | `192.168.1.1` | UI Account | UI Cloud Password | UniFi App / Web |
-| **ZTE** | ZXHN F660, F670, F680 GPON ONT | `192.168.100.1`| `admin` | `admin` | Web Browser |
-| **Synology** | RT2600ac, RT6600ax, WRX560 | `192.168.1.1` | `admin` | Setup Wizard | Web Browser |
-| **Google Nest** | Google Wifi, Nest Wifi, Nest Wifi Pro | `192.168.86.1` | Google ID | Cloud Password | Google Home App |
-| **Amazon eero** | eero 6, eero Pro 6E, eero Max 7 | `192.168.4.1` | Amazon ID | Cloud Password | eero Mobile App |
-| **CenturyLink** | C3000Z, C4000BZ, C4000XG | `192.168.0.1` | `admin` | Admin Password on Label| Web Browser |
-| **Actiontec** | MI424WR, GT784WN, T3200 | `192.168.254.254`| `admin` | Printed on Label | Web Browser |
+- IP: 192.168.10.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Trendnet, ZyXEL, Motorola Gateway combos
+  Default Credentials: admin / admin
+  URL: https://routeriphub.com/ip/192-168-10-1/
 
----
+- IP: 192.168.11.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Buffalo AirStation, DD-WRT Japanese releases
+  Default Credentials: root / [empty] or admin / password
+  URL: https://routeriphub.com/ip/192-168-11-1/
 
-## 3. How to Discover Your Router IP on Any Operating System
+- IP: 192.168.12.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: T-Mobile 5G Home Internet (KVD21, Arcadyan, Sagemcom)
+  Default Credentials: admin / sticker password
+  URL: https://routeriphub.com/ip/192-168-12-1/
 
-- **Windows 11/10**: `cmd` > `ipconfig` (check `Default Gateway`)
-- **macOS (Terminal)**: `route -n get default | grep gateway`
-- **iPhone / iPad**: `Settings` > `Wi-Fi` > tap `(i)` icon > read `Router`
-- **Android**: `Settings` > `Network & Internet` > `Wi-Fi` > gear icon > `Gateway`
-- **Linux**: `ip route show default | awk '{print $3}'`
+- IP: 192.168.31.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Xiaomi Mi WiFi, Redmi Routers
+  Default Credentials: admin / set on first boot via miwifi.com
+  URL: https://routeriphub.com/ip/192-168-31-1/
+
+- IP: 192.168.68.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: TP-Link Deco Whole Home Mesh Series (X55, XE75, BE85)
+  Default Credentials: Managed via TP-Link Deco App
+  URL: https://routeriphub.com/ip/192-168-68-1/
+
+- IP: 192.168.88.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: MikroTik RouterBOARD & RouterOS (hAP, RB series)
+  Default Credentials: admin / [empty]
+  URL: https://routeriphub.com/ip/192-168-88-1/
+
+- IP: 192.168.100.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Huawei ONT, Motorola & Arris Cable Modems, Virgin Media Modem Mode
+  Default Credentials: admin / admin (or TelecomAdmin)
+  URL: https://routeriphub.com/ip/192-168-100-1/
+
+- IP: 192.168.178.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber)
+  Default Credentials: admin / sticker password
+  URL: https://routeriphub.com/ip/192-168-178-1/
+
+- IP: 10.0.1.1
+  Subnet: 255.255.255.0 (/24)
+  Brands: Apple AirPort Extreme, AirPort Time Capsule, Cisco
+  Default Credentials: admin / admin (or configured via AirPort Utility)
+  URL: https://routeriphub.com/ip/10-0-1-1/
+
+- IP: 10.0.0.138
+  Subnet: 255.255.255.0 (/24)
+  Brands: Telstra (Australia), Thomson / SpeedTouch, Technicolor
+  Default Credentials: admin / admin
+  URL: https://routeriphub.com/ip/10-0-0-138/
+
+- IP: 192.168.1.2
+  Subnet: 255.255.255.0 (/24)
+  Brands: Wi-Fi Range Extenders, Secondary Access Points, Repeater Hubs
+  Default Credentials: admin / admin
+  URL: https://routeriphub.com/ip/192-168-1-2/
+
+## 2. Hardware Models Database
+- Model: Netgear Nighthawk AX6 (RAX50)
+  IP: 192.168.1.1
+  Domain: http://routerlogin.net
+  Credentials: admin / password
+  Reset: With the router powered ON, press and hold the recessed Reset button on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release the button and wait 2 minutes for full reboot.
+  URL: https://routeriphub.com/routers/netgear-nighthawk-rax50/
+
+- Model: Netgear Nighthawk AX12 (RAX120)
+  IP: 192.168.1.1
+  Domain: http://routerlogin.net
+  Credentials: admin / password
+  Reset: Hold the rear pinhole Reset button for 10 seconds using an unfolded paperclip while powered on. The power LED will flash amber, signaling the factory wipe.
+  URL: https://routeriphub.com/routers/netgear-nighthawk-rax120/
+
+- Model: Netgear Nighthawk Pro Gaming XR1000
+  IP: 192.168.1.1
+  Domain: http://routerlogin.net
+  Credentials: admin / password
+  Reset: Press and hold the Reset button on the back panel for 10 seconds. DumaOS 3.0 will reset to factory defaults and initiate the setup wizard on next login.
+  URL: https://routeriphub.com/routers/netgear-nighthawk-xr1000/
+
+- Model: Netgear Orbi Tri-Band Mesh AX4200 (RBK752)
+  IP: 192.168.1.1
+  Domain: http://orbilogin.com
+  Credentials: admin / password
+  Reset: Press the pinhole Reset button on both the router (RBR750) and satellite (RBS750) for 10 seconds until the ring LED pulses amber.
+  URL: https://routeriphub.com/routers/netgear-orbi-rbk752/
+
+- Model: Netgear Orbi Tri-Band Mesh AX6000 (RBK852)
+  IP: 192.168.1.1
+  Domain: http://orbilogin.com
+  Credentials: admin / password
+  Reset: Hold the reset button on the bottom-rear panel for 10 seconds. The front light ring will flash amber during factory restore.
+  URL: https://routeriphub.com/routers/netgear-orbi-rbk852/
+
+- Model: TP-Link Archer AX55 (AX3000)
+  IP: 192.168.0.1
+  Domain: http://tplinkwifi.net
+  Credentials: admin / Created on first setup (or admin on legacy v1)
+  Reset: While powered on, press and hold the physical Reset button on the back panel for at least 6 seconds until all front panel LEDs turn off and on.
+  URL: https://routeriphub.com/routers/tp-link-archer-ax55/
+
+- Model: TP-Link Archer AX21 (AX1800)
+  IP: 192.168.0.1
+  Domain: http://tplinkwifi.net
+  Credentials: admin / Created on first boot
+  Reset: Hold the WPS/Reset button on the rear panel for 5 seconds until the status LEDs blink. The device reboots with factory settings.
+  URL: https://routeriphub.com/routers/tp-link-archer-ax21/
+
+- Model: TP-Link Archer BE800 (BE19000)
+  IP: 192.168.0.1
+  Domain: http://tplinkwifi.net
+  Credentials: admin / Set during setup wizard
+  Reset: Press the pinhole Reset button for 5 seconds. The front LED matrix screen will display a reset animation.
+  URL: https://routeriphub.com/routers/tp-link-archer-be800/
+
+- Model: TP-Link Deco X55 AX3000 Mesh
+  IP: 192.168.68.1
+  Domain: http://tplinkdeco.net
+  Credentials: Deco App Account (TP-Link ID) / Set in Deco Mobile App
+  Reset: Press the pinhole Reset button on the bottom of the Deco unit for 1 second. The single LED indicator will change to pulsing yellow.
+  URL: https://routeriphub.com/routers/tp-link-deco-x55/
+
+- Model: TP-Link Deco BE85 (BE22000)
+  IP: 192.168.68.1
+  Domain: http://tplinkdeco.net
+  Credentials: TP-Link Cloud ID / Set in Deco App
+  Reset: Press the Reset button on the base of the unit for 1 second until the LED pulses yellow.
+  URL: https://routeriphub.com/routers/tp-link-deco-be85/
+
+- Model: ASUS RT-AX88U (AX6000)
+  IP: 192.168.1.1
+  Domain: http://router.asus.com
+  Credentials: admin / admin (prompts to change immediately)
+  Reset: Power ON the router. Press and hold the Reset button on the rear panel for 5-10 seconds until the Power LED starts flashing slowly. Release and wait 3 minutes for AsusWRT to reboot.
+  URL: https://routeriphub.com/routers/asus-rt-ax88u/
+
+- Model: ASUS RT-AX86U / RT-AX86U Pro (AX5700)
+  IP: 192.168.1.1
+  Domain: http://router.asus.com
+  Credentials: admin / admin
+  Reset: Hold the Reset button for 5 seconds until the power light flashes. Alternatively, hold the WPS button while powering on for a Hard Factory 30-30-30 NVRAM wipe.
+  URL: https://routeriphub.com/routers/asus-rt-ax86u/
+
+- Model: ASUS ROG Rapture GT-AX11000
+  IP: 192.168.1.1
+  Domain: http://router.asus.com
+  Credentials: admin / admin
+  Reset: Press and hold the recessed Reset button for 5 seconds until the Aura RGB ROG eye logo flashes red and power LED blinks.
+  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-ax11000/
+
+- Model: ASUS ZenWiFi AX (XT8)
+  IP: 192.168.1.1
+  Domain: http://router.asus.com
+  Credentials: admin / admin
+  Reset: Press the pinhole Reset button on the bottom of the unit for 5 seconds until the front LED glows yellow.
+  URL: https://routeriphub.com/routers/asus-zenwifi-xt8/
+
+- Model: ASUS RT-BE96U (BE19000)
+  IP: 192.168.1.1
+  Domain: http://router.asus.com
+  Credentials: admin / Set during setup
+  Reset: Hold the Reset button for 5 seconds until power LED flashes. Wait 3 minutes for the quad-core 2.6 GHz CPU to initialize.
+  URL: https://routeriphub.com/routers/asus-rt-be96u/
+
+- Model: Linksys Max-Stream AC1900 (EA7500)
+  IP: 192.168.1.1
+  Domain: http://myrouter.local
+  Credentials: admin / admin
+  Reset: Press and hold the red Reset button on the back panel for about 10 seconds until the illuminated Linksys logo starts flashing.
+  URL: https://routeriphub.com/routers/linksys-ea7500/
+
+- Model: Linksys Velop Tri-Band Mesh (WHW0303)
+  IP: 192.168.1.1
+  Domain: http://myrouter.local
+  Credentials: admin / admin
+  Reset: Press and hold the red Reset button on the bottom of the node. The top LED will turn red, fade, and then flash bright red. Release immediately.
+  URL: https://routeriphub.com/routers/linksys-velop-whw0303/
+
+- Model: Linksys Max-Stream Mesh Wi-Fi 6 (MR9600)
+  IP: 192.168.1.1
+  Domain: http://myrouter.local
+  Credentials: admin / admin
+  Reset: Hold the red Reset button on the back for 10 seconds until the top light flashes red.
+  URL: https://routeriphub.com/routers/linksys-mr9600/
+
+- Model: Ubiquiti UniFi Dream Machine Pro (UDM-Pro)
+  IP: 192.168.1.1
+  Domain: https://unifi.ui.com
+  Credentials: UI Cloud Account / root (SSH) / Set during UniFi OS setup wizard
+  Reset: Locate the recessed Reset button on the front panel. Press and hold for 10 seconds until the front LCM touchscreen displays 'Restoring to Factory Defaults'.
+  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-machine-pro/
+
+- Model: Ubiquiti AmpliFi HD Home Mesh
+  IP: 192.168.1.1
+  Domain: http://amplifi.lan
+  Credentials: admin / Set in AmpliFi App
+  Reset: Press the pinhole Reset button on the bottom of the cube router for 10 seconds until the circular touchscreen shows the reset icon.
+  URL: https://routeriphub.com/routers/ubiquiti-amplifi-hd/
+
+- Model: MikroTik hAP ax³ (C53UiG+5HPaxD2HPaxD)
+  IP: 192.168.88.1
+  Domain: http://router.lan
+  Credentials: admin / Empty (No password) on first boot
+  Reset: Unplug power. Hold the front Reset button. Plug in power. Keep holding until the USR LED starts flashing (5 seconds) for RouterOS default reset, or hold 10 seconds for CAPsMAN mode, or 15 seconds for Netinstall.
+  URL: https://routeriphub.com/routers/mikrotik-hap-ax3/
+
+- Model: MikroTik RB4011iGS+5HacQ2HnD-IN
+  IP: 192.168.88.1
+  Domain: http://router.lan
+  Credentials: admin / Empty (No password)
+  Reset: Hold the reset button while powering on for 5 seconds until the LED starts flashing to clear configuration.
+  URL: https://routeriphub.com/routers/mikrotik-rb4011/
+
+- Model: Arris SURFboard SB8200 DOCSIS 3.1
+  IP: 192.168.100.1
+  Domain: http://192.168.100.1
+  Credentials: admin / password (or last 8 digits of serial number)
+  Reset: Insert the end of a paperclip into the Reset button on the rear panel. Hold for 10-15 seconds until all front panel LEDs turn off and then flash.
+  URL: https://routeriphub.com/routers/arris-surfboard-sb8200/
+
+- Model: Arris SURFboard G36 DOCSIS 3.1 & AX3000
+  IP: 192.168.0.1
+  Domain: http://192.168.0.1
+  Credentials: admin / password (or Wi-Fi preshared key on sticker)
+  Reset: Press and hold the Reset button on the rear panel for 15 seconds until all LEDs flash simultaneously.
+  URL: https://routeriphub.com/routers/arris-surfboard-g36/
+
+- Model: Amazon Eero Eero Pro 6E (Tri-Band AXE5400)
+  IP: 192.168.4.1
+  Domain: N/A (Managed exclusively via Eero Mobile App)
+  Credentials: Amazon / Eero App Account / App managed (No browser HTTP GUI)
+  Reset: To Soft Reset (clears network config without deleting settings): Hold the Reset button for 7 seconds until the LED flashes yellow. To Hard Factory Reset: Hold the Reset button for 15 seconds until the LED flashes red.
+  URL: https://routeriphub.com/routers/amazon-eero-pro-6e/
+
+- Model: Amazon Eero Eero Max 7 (Tri-Band BE20800)
+  IP: 192.168.4.1
+  Domain: N/A (Eero App)
+  Credentials: Amazon / Eero Account / App managed
+  Reset: Hold the reset button on the back for 15 seconds until the LED turns solid red to trigger a complete factory wipe.
+  URL: https://routeriphub.com/routers/amazon-eero-max-7/
+
+- Model: Google Nest Nest Wifi Pro (Wi-Fi 6E AXE5400)
+  IP: 192.168.86.1
+  Domain: http://192.168.86.1 (Shows Google Home App prompt)
+  Credentials: Google Account / Managed via Google Home App
+  Reset: To factory reset using the hardware button: Unplug the power cord. Press and hold the reset button on the bottom of the device. While holding the button, plug the power cord back in. Continue holding for about 10 seconds until the light pulses solid white, then release.
+  URL: https://routeriphub.com/routers/google-nest-wifi-pro/
+
+- Model: GL.iNet Beryl AX (GL-MT3000)
+  IP: 192.168.8.1
+  Domain: http://192.168.8.1
+  Credentials: root / admin / Set on first browser visit
+  Reset: Power on the router. Press and hold the Reset button on the side panel for 10 seconds until the blue LED flashes rapidly. Release the button.
+  URL: https://routeriphub.com/routers/gl-inet-beryllium-gl-mt3000/
+
+- Model: D-Link EXO AX5400 (DIR-X5460)
+  IP: 192.168.0.1
+  Domain: http://dlinkrouter.local
+  Credentials: Admin / password (or printed on configuration card)
+  Reset: With the unit powered on, insert a paperclip into the Reset hole on the rear panel. Hold for 10 seconds until the power LED flashes orange.
+  URL: https://routeriphub.com/routers/d-link-exo-ax5400/
+
+- Model: Synology RT6600ax Tri-Band Router
+  IP: 192.168.1.1
+  Domain: http://router.synology.com
+  Credentials: admin / Set during SRM quick start wizard
+  Reset: Regular Reset (admin password & network settings reset): Hold the RESET button for 4 seconds until the router beeps once. Hard Reset (restore factory defaults & wipe SRM): Hold the RESET button for 10 seconds until the router beeps twice.
+  URL: https://routeriphub.com/routers/synology-rt6600ax/
+
+- Model: AVM FRITZ!Box FRITZ!Box 7590 AX (VDSL/Fiber)
+  IP: 192.168.178.1
+  Domain: http://fritz.box
+  Credentials: admin / Printed on the underside base sticker
+  Reset: AVM routers do not have a physical pinhole button. Reset by navigating to System > Backup > Factory Settings in the web GUI (http://fritz.box). If locked out, connect an analog phone and dial #991*15901590* to trigger factory restore.
+  URL: https://routeriphub.com/routers/avm-fritzbox-7590-ax/
+
+- Model: Cisco Catalyst 1000 Series (C1000-8T-2G-L)
+  IP: 192.168.1.254
+  Domain: http://192.168.1.254
+  Credentials: cisco / cisco
+  Reset: Press and hold the front Mode button for 10 seconds. Release when all LED lights illuminate solid amber.
+  URL: https://routeriphub.com/routers/cisco-catalyst-1000/
+
