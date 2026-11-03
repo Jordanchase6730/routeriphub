@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#141f33"/>
+    </linearGradient>
+    <linearGradient id="favBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#favBg)" stroke="#0284c7" stroke-width="1.8"/>
+
+  <!-- Wi-Fi Waves -->
+  <path d="M 22 24 A 14 14 0 0 1 42 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 26 28 A 8 8 0 0 1 38 28" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="32" cy="30" r="1.5" fill="#38bdf8"/>
+
+  <!-- Top Router Chassis -->
+  <rect x="10" y="34" width="44" height="10" rx="2.5" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+  <circle cx="16" cy="39" r="1.5" fill="#38bdf8"/>
+  <circle cx="21" cy="39" r="1.5" fill="#38bdf8"/>
+  <circle cx="26" cy="39" r="1.5" fill="#22c55e"/>
+  <line x1="42" y1="39" x2="50" y2="39" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Bottom Router Chassis -->
+  <rect x="10" y="47" width="44" height="10" rx="2.5" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+  <circle cx="16" cy="52" r="1.5" fill="#38bdf8"/>
+  <circle cx="21" cy="52" r="1.5" fill="#22c55e"/>
+  <circle cx="26" cy="52" r="1.5" fill="#22c55e"/>
+  <line x1="42" y1="52" x2="50" y2="52" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
