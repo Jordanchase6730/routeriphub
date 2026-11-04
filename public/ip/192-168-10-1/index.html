@@ -131,6 +131,43 @@
           "text": "Submit username 'admin' and password 'admin' or check the physical router sticker."
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does 192.168.10.1 send me to a Google search page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type http://192.168.10.1 explicitly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I access 192.168.10.1 from outside my home network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. 192.168.10.1 is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure VPN tunnel into your home LAN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between admin credentials and the Wi-Fi password?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often admin / admin or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I fix 192.168.10.1 connection timed out errors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using ipconfig or netstat -nr, and enter http://192.168.10.1 over plain HTTP."
+          }
+        }
+      ]
     }
   ]
 }
@@ -422,11 +459,53 @@
           <tbody>
             
             <tr>
-              <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">
-                Standard gateway across Trendnet, ZyXEL, Motorola Gateway combos hardware with credentials <code>admin / admin</code>.
-              </td>
+              <td><strong>Trendnet TEW-827DRU AC2600 StreamBoost Router</strong></td>
+              <td><code>admin</code></td>
+              <td><code>admin</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 5 (802.11ac)</span></td>
+              <td><a href="/ip/192-168-10-1/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Guide &rarr;</a></td>
             </tr>
-            
+                
+            <tr>
+              <td><strong>Trendnet TEW-829DRU AC3000 Tri-Band Commercial Router</strong></td>
+              <td><code>admin</code></td>
+              <td><code>admin</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 5 (802.11ac)</span></td>
+              <td><a href="/ip/192-168-10-1/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Guide &rarr;</a></td>
+            </tr>
+                
+            <tr>
+              <td><strong>ZyXEL USG FLEX 100 Unified Security Gateway</strong></td>
+              <td><code>admin</code></td>
+              <td><code>1234</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Gigabit Ethernet / VPN</span></td>
+              <td><a href="/brands/zyxel/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">ZyXEL Hub &rarr;</a></td>
+            </tr>
+                
+            <tr>
+              <td><strong>ZyXEL Armor G5 Multi-Gigabit Wi-Fi 6 Router</strong></td>
+              <td><code>admin</code></td>
+              <td><code>Printed Password</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 6 (802.11ax)</span></td>
+              <td><a href="/brands/zyxel/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">ZyXEL Hub &rarr;</a></td>
+            </tr>
+                
+            <tr>
+              <td><strong>Motorola MG7700 AC1900 Cable Gateway Combo</strong></td>
+              <td><code>admin</code></td>
+              <td><code>motorola</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 5 (802.11ac)</span></td>
+              <td><a href="/ip/192-168-10-1/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Guide &rarr;</a></td>
+            </tr>
+                
+            <tr>
+              <td><strong>Trendnet TW100-S4W1CA 4-Port Broadband Router</strong></td>
+              <td><code>admin</code></td>
+              <td><code>admin</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Fast Ethernet</span></td>
+              <td><a href="/ip/192-168-10-1/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Guide &rarr;</a></td>
+            </tr>
+                
           </tbody>
         </table>
       </div>
@@ -531,6 +610,12 @@
           <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">What is the difference between admin credentials and the Wi-Fi password?</h3>
           <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
             Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often <code>admin / admin</code> or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings.
+          </p>
+        </div>
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">How do I fix 192.168.10.1 connection timed out errors?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using <code>ipconfig</code> or <code>netstat -nr</code>, and enter <code>http://192.168.10.1</code> over plain HTTP.
           </p>
         </div>
       </div>

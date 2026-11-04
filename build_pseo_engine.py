@@ -1489,6 +1489,118 @@ IP_INTENT_METADATA = {
     }
 }
 
+
+IP_HARDWARE_CATALOG = {
+    "192.168.2.1": [
+        {"model": "Belkin N300 Wireless Router (F9K1002)", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 4 (802.11n)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
+        {"model": "Belkin N600 Dual-Band Router (F9K1102)", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 4 (802.11n)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
+        {"model": "Belkin RT3200 Wi-Fi 6 Router (E8450)", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
+        {"model": "Belkin AC1200 Dual-Band Wi-Fi 5 Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
+        {"model": "Bell Canada Home Hub 3000 (Sagemcom FAST 5566)", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/isp/", "link_text": "ISP Hub &rarr;"},
+        {"model": "Bell Canada Giga Hub (Wi-Fi 6E Optical Gateway)", "user": "admin", "pass": "Printed on Label", "wifi": "Wi-Fi 6E (802.11axe)", "link": "/isp/", "link_text": "ISP Hub &rarr;"},
+        {"model": "SMC Barricade Broadband Router (SMC7004VBR)", "user": "admin", "pass": "smcadmin", "wifi": "Fast Ethernet / 802.11g", "link": "/ip/192-168-2-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Edimax BR-6428nS Wireless Router (BR Series)", "user": "admin", "pass": "1234", "wifi": "Wi-Fi 4 (802.11n)", "link": "/ip/192-168-2-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Philips Hue Bridge 2.0 (HomeKit Gateway)", "user": "[Pairing Button]", "pass": "[N/A]", "wifi": "Zigbee / Ethernet Hub", "link": "/ip/192-168-2-1/", "link_text": "Setup Guide &rarr;"}
+    ],
+    "192.168.8.1": [
+        {"model": "GL.iNet Beryl AX (GL-MT3000) Pocket Travel Router", "user": "admin", "pass": "admin (First Boot)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/gl-inet/", "link_text": "GL.iNet Hub &rarr;"},
+        {"model": "GL.iNet Slate AX (GL-AXT1800) Gigabit Travel Router", "user": "admin", "pass": "admin (First Boot)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/gl-inet/", "link_text": "GL.iNet Hub &rarr;"},
+        {"model": "GL.iNet Flint 2 (GL-MT6000) Dual-Band Router", "user": "admin", "pass": "admin (First Boot)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/gl-inet/", "link_text": "GL.iNet Hub &rarr;"},
+        {"model": "Huawei B535 4G LTE Router 3 Pro", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/huawei/", "link_text": "Huawei Hub &rarr;"},
+        {"model": "Huawei B818 4G Router Prime (Cat 19)", "user": "admin", "pass": "admin (Sticker)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/huawei/", "link_text": "Huawei Hub &rarr;"},
+        {"model": "Huawei 5G CPE Pro 2 (H122-373)", "user": "admin", "pass": "Printed Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/huawei/", "link_text": "Huawei Hub &rarr;"},
+        {"model": "GL.iNet Puli AX (GL-XE3000) 5G Cellular Gateway", "user": "admin", "pass": "admin (First Boot)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/gl-inet/", "link_text": "GL.iNet Hub &rarr;"}
+    ],
+    "192.168.10.1": [
+        {"model": "Trendnet TEW-827DRU AC2600 StreamBoost Router", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-10-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Trendnet TEW-829DRU AC3000 Tri-Band Commercial Router", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-10-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "ZyXEL USG FLEX 100 Unified Security Gateway", "user": "admin", "pass": "1234", "wifi": "Gigabit Ethernet / VPN", "link": "/brands/zyxel/", "link_text": "ZyXEL Hub &rarr;"},
+        {"model": "ZyXEL Armor G5 Multi-Gigabit Wi-Fi 6 Router", "user": "admin", "pass": "Printed Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/zyxel/", "link_text": "ZyXEL Hub &rarr;"},
+        {"model": "Motorola MG7700 AC1900 Cable Gateway Combo", "user": "admin", "pass": "motorola", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-10-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Trendnet TW100-S4W1CA 4-Port Broadband Router", "user": "admin", "pass": "admin", "wifi": "Fast Ethernet", "link": "/ip/192-168-10-1/", "link_text": "Setup Guide &rarr;"}
+    ],
+    "192.168.11.1": [
+        {"model": "Buffalo AirStation WXR-5700AX7S Wi-Fi 6 Gaming Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Buffalo AirStation Extreme AC1900 (WZR-1750DHPD)", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Buffalo AirStation HighPower (WZR-HP-G450H)", "user": "root", "pass": "[Leave Blank]", "wifi": "Wi-Fi 4 (802.11n)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Buffalo AirStation WSR-3200AX4S Dual-Band Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Buffalo AirStation WXR-1900DHP3 Gigabit Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Buffalo WSR-2533DHP2 High-Spec Wi-Fi Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"}
+    ],
+    "192.168.12.1": [
+        {"model": "T-Mobile 5G Gateway (Arcadyan KVD21)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Sagemcom Fast 5688W)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Sercomm G4SE)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Nokia 5G21 'Silver Trashcan')", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile Home Internet G4AR External Antenna Gateway", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "Inseego Wavemaker 5G Indoor Router (FX2000)", "user": "admin", "pass": "Printed Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"}
+    ],
+    "192.168.31.1": [
+        {"model": "Xiaomi Mi Router AX9000 Tri-Band Gaming Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
+        {"model": "Xiaomi Router BE7000 Multi-Gigabit Wi-Fi 7 Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 7 (802.11be)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
+        {"model": "Xiaomi Router AX3000 NE Dual-Band Wi-Fi 6", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
+        {"model": "Redmi Gaming Router AX5400 Dual-Band Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
+        {"model": "Xiaomi Mi Router AX6000 AIoT Flagship Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
+        {"model": "Redmi Router AC2100 Dual-Core Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"}
+    ],
+    "192.168.68.1": [
+        {"model": "TP-Link Deco X55 AX3000 Whole Home Mesh System", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "TP-Link Deco XE75 Pro Tri-Band Wi-Fi 6E Mesh", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 6E (802.11axe)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "TP-Link Deco BE85 Multi-Gigabit Wi-Fi 7 Mesh", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 7 (802.11be)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "TP-Link Deco X20 AX1800 Dual-Band Mesh Wi-Fi", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "TP-Link Deco S4 AC1200 Seamless Roaming Mesh", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "TP-Link Deco Voice X20 Mesh with Smart Speaker", "user": "TP-Link ID", "pass": "Cloud Account Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"}
+    ],
+    "192.168.88.1": [
+        {"model": "MikroTik hAP ax3 (C53UiG+5HPaxD2HPaxD) Router", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"},
+        {"model": "MikroTik RB5009UG+S+IN Heavy-Duty Home Lab Router", "user": "admin", "pass": "[Leave Blank]", "wifi": "Gigabit / 10G SFP+", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"},
+        {"model": "MikroTik hEX S (RB760iGS) Gigabit Ethernet Router", "user": "admin", "pass": "[Leave Blank]", "wifi": "Gigabit / SFP Cage", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"},
+        {"model": "MikroTik Chateau 5G ax Dual-Band Cellular Router", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"},
+        {"model": "MikroTik Cloud Router Switch (CRS305-1G-4S+IN)", "user": "admin", "pass": "[Leave Blank]", "wifi": "10Gbps SFP+ Fiber", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"},
+        {"model": "MikroTik cAP ax Dual-Band Ceiling Access Point", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/mikrotik/", "link_text": "MikroTik Hub &rarr;"}
+    ],
+    "192.168.100.1": [
+        {"model": "Motorola SURFboard SB8200 DOCSIS 3.1 Cable Modem", "user": "admin", "pass": "motorola", "wifi": "Gigabit Ethernet (Bridge)", "link": "/ip/192-168-100-1/", "link_text": "Diagnostics &rarr;"},
+        {"model": "Arris SURFboard SB6190 DOCSIS 3.0 Cable Modem", "user": "admin", "pass": "password", "wifi": "Gigabit Ethernet (Bridge)", "link": "/ip/192-168-100-1/", "link_text": "Diagnostics &rarr;"},
+        {"model": "Netgear Nighthawk CM2000 Multi-Gigabit Cable Modem", "user": "admin", "pass": "password", "wifi": "2.5Gbps Multi-Gig WAN", "link": "/brands/netgear/", "link_text": "Netgear Hub &rarr;"},
+        {"model": "Virgin Media SuperHub 4 (Diagnostic Modem Mode)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Modem Mode Bridge", "link": "/isp/", "link_text": "ISP Hub &rarr;"},
+        {"model": "Huawei EchoLife HG8245H GPON Optical Terminal (ONT)", "user": "telecomadmin", "pass": "admintelecom", "wifi": "GPON Fiber / Ethernet", "link": "/brands/huawei/", "link_text": "Huawei Hub &rarr;"},
+        {"model": "Arris Touchstone CM8200 DOCSIS 3.1 Ultra-Fast Modem", "user": "admin", "pass": "password", "wifi": "Gigabit Ethernet (Bridge)", "link": "/ip/192-168-100-1/", "link_text": "Diagnostics &rarr;"}
+    ],
+    "192.168.178.1": [
+        {"model": "AVM FRITZ!Box 7590 AX Flagship VDSL/Wi-Fi 6 Router", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"},
+        {"model": "AVM FRITZ!Box 6660 Cable DOCSIS 3.1 Cable Gateway", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"},
+        {"model": "AVM FRITZ!Box 5590 Fiber Integrated AON/GPON Router", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"},
+        {"model": "AVM FRITZ!Box 4060 Tri-Band Wi-Fi 6 Router", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"},
+        {"model": "AVM FRITZ!Box 7530 AX Compact VDSL/Mesh Router", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"},
+        {"model": "AVM FRITZ!Box 6850 5G Cellular Home Gateway", "user": "admin", "pass": "FRITZ!Box-Kennwort (Sticker)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/avm-fritzbox/", "link_text": "FRITZ!Box Hub &rarr;"}
+    ],
+    "10.0.1.1": [
+        {"model": "Apple AirPort Extreme 802.11ac (6th Gen Tower)", "user": "admin", "pass": "Configured in AirPort Utility", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/10-0-1-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Apple AirPort Time Capsule 802.11ac (2TB / 3TB)", "user": "admin", "pass": "Configured in AirPort Utility", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/10-0-1-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Apple AirPort Express 802.11n (2nd Gen)", "user": "admin", "pass": "Configured in AirPort Utility", "wifi": "Wi-Fi 4 (802.11n)", "link": "/ip/10-0-1-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Cisco Small Business RV110W Wireless-N VPN Firewall", "user": "cisco", "pass": "cisco", "wifi": "Wi-Fi 4 (802.11n)", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"},
+        {"model": "Apple AirPort Extreme (5th Gen Flat)", "user": "admin", "pass": "Configured in AirPort Utility", "wifi": "Wi-Fi 4 (802.11n)", "link": "/ip/10-0-1-1/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Cisco Meraki Go GR10 Dual-Band Access Point", "user": "admin", "pass": "Meraki Cloud App", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"}
+    ],
+    "10.0.0.138": [
+        {"model": "Telstra Smart Modem Gen 3 (Arcadyan LH1000)", "user": "admin", "pass": "admin (Telstra Printed)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/ip/10-0-0-138/", "link_text": "Telstra Hub &rarr;"},
+        {"model": "Telstra Smart Modem Gen 2 (Technicolor DJA0231)", "user": "admin", "pass": "admin (Telstra Printed)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/10-0-0-138/", "link_text": "Telstra Hub &rarr;"},
+        {"model": "Thomson TG585 v7 ADSL2+ Wireless Gateway", "user": "Administrator", "pass": "[Leave Blank]", "wifi": "802.11g / b", "link": "/ip/10-0-0-138/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Technicolor TG799vac Dual-Band Voice Gateway", "user": "admin", "pass": "admin", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/10-0-0-138/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Thomson SpeedTouch 530 Ethernet ADSL Modem", "user": "Administrator", "pass": "[Leave Blank]", "wifi": "Fast Ethernet", "link": "/ip/10-0-0-138/", "link_text": "Setup Guide &rarr;"},
+        {"model": "Telstra Gateway Max (Netgear C6300TL DOCSIS)", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/10-0-0-138/", "link_text": "Telstra Hub &rarr;"}
+    ],
+    "192.168.1.2": [
+        {"model": "Netgear Nighthawk Mesh Satellite (MS60 Wi-Fi 6)", "user": "admin", "pass": "Syncs with Router", "wifi": "Wi-Fi 6 Mesh Satellite", "link": "/brands/netgear/", "link_text": "Netgear Hub &rarr;"},
+        {"model": "TP-Link RE705X AX3000 Wi-Fi 6 Range Extender", "user": "admin", "pass": "admin (First Boot)", "wifi": "Wi-Fi 6 Range Extender", "link": "/brands/tp-link/", "link_text": "TP-Link Hub &rarr;"},
+        {"model": "HP LaserJet Pro M404dn (Network Office Printer)", "user": "admin", "pass": "Printed Service PIN", "wifi": "Gigabit Ethernet Host", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"},
+        {"model": "Hikvision DS-2CD2143G2-I (4MP IP Security Camera)", "user": "admin", "pass": "Initial Activation Pass", "wifi": "PoE Security Camera", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"},
+        {"model": "Dahua 4K NVR Network Video Recorder (NVR4108HS)", "user": "admin", "pass": "admin / Custom Pattern", "wifi": "Gigabit Ethernet NVR", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"},
+        {"model": "Synology DiskStation DS220+ 2-Bay NAS (LAN Port 1)", "user": "admin", "pass": "DSM Account Password", "wifi": "Gigabit Ethernet Storage", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"}
+    ]
+}
+
 def generate_ip_pages():
     print(f"Generating {len(IP_GATEWAYS)} private gateway IP pages (Intent-First Technical SEO Pattern)...")
     for ip_item in IP_GATEWAYS:
@@ -1568,16 +1680,55 @@ def generate_ip_pages():
             ]
         }
 
+        faq_schema = {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": f"Why does {ip} send me to a Google search page?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f"Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type http://{ip} explicitly."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": f"Can I access {ip} from outside my home network?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f"No. {ip} is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure VPN tunnel into your home LAN."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the difference between admin credentials and the Wi-Fi password?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often admin / admin or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": f"How do I fix {ip} connection timed out errors?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f"Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using ipconfig or netstat -nr, and enter http://{ip} over plain HTTP."
+                    }
+                }
+            ]
+        }
+
         breadcrumbs = [
             ("Home", "/"),
             ("IP Directory", "/ip/"),
             (ip, f"/ip/{slug}/")
         ]
 
-        # 2. Hardware models matching this IP
+        # 2. Hardware models matching this IP (Populate Table 2 with specific distinct hardware rows)
         ip_models = [m for m in ROUTER_MODELS if m["default_ip"] == ip]
         model_rows = ""
-        for m in ip_models[:12]:
+        # If models exist in ROUTER_MODELS, include them
+        for m in ip_models[:8]:
             model_rows += f"""
             <tr>
               <td><a href="/routers/{escape(m['slug'])}/"><strong>{escape(m['brand'])} {escape(m['model_name'])}</strong></a></td>
@@ -1587,14 +1738,18 @@ def generate_ip_pages():
               <td><a href="/routers/{escape(m['slug'])}/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
             </tr>
             """
-        if not model_rows:
-            model_rows = f"""
+        # If fewer than 6 models, supplement from IP_HARDWARE_CATALOG
+        if len(ip_models) < 6 and ip in IP_HARDWARE_CATALOG:
+            for item in IP_HARDWARE_CATALOG[ip]:
+                model_rows += f"""
             <tr>
-              <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">
-                Standard gateway across {escape(ip_item['brands'])} hardware with credentials <code>{escape(ip_item['default_creds'])}</code>.
-              </td>
+              <td><strong>{escape(item['model'])}</strong></td>
+              <td><code>{escape(item['user'])}</code></td>
+              <td><code>{escape(item['pass'])}</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">{escape(item['wifi'])}</span></td>
+              <td><a href="{escape(item['link'])}" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">{item['link_text']}</a></td>
             </tr>
-            """
+                """
 
         # 3. Intent-Matching Intro & Verdict Content
         if is_correction:
@@ -1970,6 +2125,12 @@ def generate_ip_pages():
             Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often <code>admin / admin</code> or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings.
           </p>
         </div>
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">How do I fix {escape(ip)} connection timed out errors?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using <code>ipconfig</code> or <code>netstat -nr</code>, and enter <code>http://{escape(ip)}</code> over plain HTTP.
+          </p>
+        </div>
       </div>
 
       <!-- The Bottom Line Callout -->
@@ -1995,7 +2156,7 @@ def generate_ip_pages():
     </div>
   </main>
 """
-        full_html = get_header(title, desc, canonical, active_nav="ip", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema]) + content + get_footer()
+        full_html = get_header(title, desc, canonical, active_nav="ip", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + content + get_footer()
         with open(os.path.join(ip_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(full_html)
 

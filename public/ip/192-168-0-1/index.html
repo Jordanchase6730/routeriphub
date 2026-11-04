@@ -131,6 +131,43 @@
           "text": "Submit username 'admin' and password 'admin (or set during initial setup)' or check the physical router sticker."
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does 192.168.0.1 send me to a Google search page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type http://192.168.0.1 explicitly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I access 192.168.0.1 from outside my home network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. 192.168.0.1 is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure VPN tunnel into your home LAN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between admin credentials and the Wi-Fi password?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often admin / admin or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I fix 192.168.0.1 connection timed out errors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using ipconfig or netstat -nr, and enter http://192.168.0.1 over plain HTTP."
+          }
+        }
+      ]
     }
   ]
 }
@@ -485,38 +522,6 @@
               <td><a href="/routers/tp-link-archer-ax90/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
             </tr>
             
-            <tr>
-              <td><a href="/routers/tp-link-archer-ax11000/"><strong>TP-Link Archer AX11000</strong></a></td>
-              <td><code>admin</code></td>
-              <td><code>admin</code></td>
-              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 6 (AX11000 Tri-Band)</span></td>
-              <td><a href="/routers/tp-link-archer-ax11000/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
-            </tr>
-            
-            <tr>
-              <td><a href="/routers/tp-link-archer-gx90/"><strong>TP-Link Archer GX90 (AX6600)</strong></a></td>
-              <td><code>admin</code></td>
-              <td><code>admin</code></td>
-              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 6 (AX6600 Gaming)</span></td>
-              <td><a href="/routers/tp-link-archer-gx90/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
-            </tr>
-            
-            <tr>
-              <td><a href="/routers/tp-link-archer-be550/"><strong>TP-Link Archer BE550 (BE9300)</strong></a></td>
-              <td><code>admin</code></td>
-              <td><code>admin</code></td>
-              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 7 (BE9300 Tri-Band)</span></td>
-              <td><a href="/routers/tp-link-archer-be550/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
-            </tr>
-            
-            <tr>
-              <td><a href="/routers/tp-link-archer-be800/"><strong>TP-Link Archer BE800 (BE19000)</strong></a></td>
-              <td><code>admin</code></td>
-              <td><code>admin</code></td>
-              <td><span style="font-size: 0.825rem; color: var(--text-muted);">Wi-Fi 7 (BE19000)</span></td>
-              <td><a href="/routers/tp-link-archer-be800/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
-            </tr>
-            
           </tbody>
         </table>
       </div>
@@ -621,6 +626,12 @@
           <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">What is the difference between admin credentials and the Wi-Fi password?</h3>
           <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
             Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often <code>admin / admin</code> or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings.
+          </p>
+        </div>
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">How do I fix 192.168.0.1 connection timed out errors?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using <code>ipconfig</code> or <code>netstat -nr</code>, and enter <code>http://192.168.0.1</code> over plain HTTP.
           </p>
         </div>
       </div>
