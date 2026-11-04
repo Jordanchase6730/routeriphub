@@ -15,6 +15,7 @@ Generates:
 """
 
 import os
+import shutil
 import json
 import csv
 import html
@@ -1438,6 +1439,89 @@ def generate_tool_pages():
         </div>
       </div>
             """
+        elif slug == "ip-address-checker":
+            tool_ui = """
+      <div class="tool-card" style="max-width: 800px; margin: 0 auto 2.5rem auto;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="ip-lookup-input" class="form-control" style="flex: 1; min-width: 260px; font-family: var(--font-mono);" placeholder="Enter IPv4, IPv6, or domain (e.g. 8.8.8.8, 1.1.1.1, github.com)...">
+          <button id="ip-lookup-btn" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">
+            🔍 Inspect IP
+          </button>
+          <button id="ip-my-ip-btn" class="btn btn-secondary" style="padding: 0.65rem 1rem;">
+            ⚡ My Public IP
+          </button>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Lookups:</span>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">My Public IP</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="8.8.8.8" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">8.8.8.8 (Google)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="1.1.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">1.1.1.1 (Cloudflare)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="192.168.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">192.168.1.1 (Gateway)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="10.0.0.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">10.0.0.1 (Xfinity)</button>
+        </div>
+
+        <div id="ip-lookup-results" style="margin-top: 1rem;">
+          <div style="text-align: center; padding: 2rem 1rem; color: var(--text-muted); background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px dashed var(--border-color);">
+            Click <strong>"Inspect IP"</strong> or <strong>"My Public IP"</strong> to analyze network routing, ISP, ASN, and geolocation details.
+          </div>
+        </div>
+      </div>
+            """
+        elif slug == "dns-propagation":
+            tool_ui = """
+      <div class="tool-card" style="max-width: 900px; margin: 0 auto 2.5rem auto;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="dns-domain-input" class="form-control" style="flex: 2; min-width: 220px; font-family: var(--font-mono);" placeholder="e.g. google.com, cloudflare.com, yourdomain.com" value="google.com">
+          <select id="dns-type-select" class="form-control" style="flex: 1; min-width: 130px; font-family: var(--font-mono); font-weight: 600;">
+            <option value="A" selected>A (IPv4)</option>
+            <option value="AAAA">AAAA (IPv6)</option>
+            <option value="CNAME">CNAME (Alias)</option>
+            <option value="MX">MX (Mail)</option>
+            <option value="TXT">TXT (SPF/DKIM)</option>
+            <option value="NS">NS (Name Server)</option>
+            <option value="SOA">SOA (Authority)</option>
+            <option value="PTR">PTR (Reverse)</option>
+          </select>
+          <button id="dns-check-btn" class="btn btn-primary" style="padding: 0.65rem 1.5rem;">
+            ⚡ Check Global DNS
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Domains:</span>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="google.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">google.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="cloudflare.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">cloudflare.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="github.com" data-type="MX" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">github.com (MX)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="wikipedia.org" data-type="NS" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">wikipedia.org (NS)</button>
+        </div>
+
+        <div id="dns-summary-bar" style="display: none; justify-content: space-between; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.75rem 1.25rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <!-- Populated by tools.js -->
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="table" id="dns-results-table">
+            <thead>
+              <tr>
+                <th style="min-width: 180px;">DNS Resolver Node</th>
+                <th style="min-width: 140px;">Location / Anycast</th>
+                <th style="min-width: 100px;">Status</th>
+                <th style="min-width: 220px;">Resolved Records</th>
+                <th style="min-width: 80px;">TTL</th>
+                <th style="min-width: 80px;">Latency</th>
+              </tr>
+            </thead>
+            <tbody id="dns-table-body">
+              <tr>
+                <td colspan="6" style="text-align: center; padding: 2rem 1rem; color: var(--text-muted);">
+                  Enter a domain and click <strong>"Check Global DNS"</strong> to probe Cloudflare, Google, Quad9, AdGuard, and AliDNS resolvers via DNS-over-HTTPS.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+            """
         elif slug == "cidr-cheat-sheet":
             tool_ui = """
       <div class="tool-card">
@@ -1719,6 +1803,164 @@ def generate_tool_pages():
         </ul>
       </section>
 """
+        elif slug == "ip-address-checker":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Use the Public IP Address &amp; Geolocation Checker</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Every device connected to the Internet requires an Internet Protocol (IP) address to route data packets between servers, websites, and client computers. This free utility lets you instantly inspect any public IPv4 or IPv6 address or analyze your own active internet connection without running third-party tracking scripts:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Detect Your Own IP:</strong> Click <strong>"My Public IP"</strong> to automatically discover the public WAN IP assigned to your cable modem or fiber gateway by your Internet Service Provider (ISP).</li>
+          <li><strong>Inspect Any Remote IP or Hostname:</strong> Type any IPv4 address (e.g. <code>8.8.8.8</code>), IPv6 address, or domain name (e.g. <code>github.com</code>) into the search field and click <strong>"Inspect IP"</strong>.</li>
+          <li><strong>Analyze Routing &amp; Geolocation Data:</strong> The tool queries authoritative BGP and Whois records to display your Autonomous System Number (ASN), ISP name, approximate city/region coordinates, and local timezone.</li>
+          <li><strong>Identify Private Local Subnets:</strong> If you enter a private LAN address (such as <code>192.168.1.1</code> or <code>10.0.0.1</code>), the tool immediately classifies the RFC 1918 subnet and provides local router configuration instructions.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Public WAN IP vs. Private Default Gateway (192.168.1.1)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          A common source of confusion in computer networking is the difference between your <strong>Public IP</strong> and your <strong>Private Gateway IP</strong>:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-accent);">🌐 Public IP (WAN)</h3>
+            <ul style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Assigned globally by your ISP (Comcast, AT&amp;T, Verizon, Spectrum).</li>
+              <li>Globally unique and routable across the worldwide Internet.</li>
+              <li>Shared by all devices connected to your home Wi-Fi network via Network Address Translation (NAT).</li>
+              <li>Determines your external geographic location visible to websites and streaming services.</li>
+            </ul>
+          </div>
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-accent);">🏠 Private IP / Gateway (LAN)</h3>
+            <ul style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Assigned locally by your router's internal DHCP server (e.g. <code>192.168.1.1</code>).</li>
+              <li>Only accessible within your local home or office physical network.</li>
+              <li>Non-routable over the public Internet (governed by RFC 1918 specifications).</li>
+              <li>Used to open your router's administrative setup dashboard and change Wi-Fi settings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">RFC 1918 Private IPv4 Address Ranges</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>Address Block</th>
+                <th>CIDR Prefix</th>
+                <th>Total Addresses</th>
+                <th>Standard Networking Deployments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>10.0.0.0 &ndash; 10.255.255.255</code></td><td><code>10.0.0.0/8</code></td><td>16,777,216</td><td>Comcast Xfinity xFi (10.0.0.1), Apple AirPort, Large Enterprise LANs</td></tr>
+              <tr><td><code>172.16.0.0 &ndash; 172.31.255.255</code></td><td><code>172.16.0.0/12</code></td><td>1,048,576</td><td>Docker Bridges, Enterprise VPN tunnels, Corporate VLANs</td></tr>
+              <tr><td><code>192.168.0.0 &ndash; 192.168.255.255</code></td><td><code>192.168.0.0/16</code></td><td>65,536</td><td>Netgear, ASUS, TP-Link, Linksys, and AT&amp;T Fiber (192.168.1.1 / 192.168.0.1)</td></tr>
+              <tr><td><code>100.64.0.0 &ndash; 100.127.255.255</code></td><td><code>100.64.0.0/10</code></td><td>4,194,304</td><td>Carrier-Grade NAT (CGNAT, RFC 6598) used by Starlink and Cellular 5G ISPs</td></tr>
+              <tr><td><code>169.254.0.0 &ndash; 169.254.255.255</code></td><td><code>169.254.0.0/16</code></td><td>65,536</td><td>Automatic Private IP Addressing (APIPA / Link-Local) when DHCP fails</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Understanding Autonomous System Numbers (ASN) &amp; BGP Routing</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          The global Internet is composed of thousands of independently operated networks called <strong>Autonomous Systems (AS)</strong>. Each Autonomous System is assigned a globally unique 16-bit or 32-bit Autonomous System Number (ASN) by regional internet registries (such as ARIN, RIPE NCC, and APNIC).
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Using the Border Gateway Protocol (BGP), these autonomous systems advertise IP prefix blocks to one another. When you perform an IP lookup on this tool, the ASN identifies the primary network operator (such as <code>AS7922</code> for Comcast, <code>AS7018</code> for AT&amp;T, <code>AS15169</code> for Google, or <code>AS13335</code> for Cloudflare) responsible for routing packets to and from that IP address.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Frequently Asked Questions About Public IP Addresses</h2>
+        <div class="faq-list" style="margin-top: 1rem;">
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Can someone find my exact home street address from my IP?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              No. Public IP geolocation databases map IP addresses to the ISP's local point of presence (PoP), central routing exchange, or metropolitan city center. Geolocation is generally accurate to the city or postal area level, but cannot reveal your physical street address or house number without a court subpoena served directly to your ISP.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Why is my IP address different when connected to a VPN?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              When using a Virtual Private Network (VPN), your computer establishes an encrypted tunnel to a remote server. All your outbound internet traffic exits through that VPN server, so websites and lookup tools see the VPN provider's IP address and location instead of your real ISP-assigned IP.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">How can I change my public IP address?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              Most residential internet plans use dynamic IP addressing. You can often obtain a new public IP by powering off your cable/fiber modem for 15&ndash;30 minutes (allowing the ISP DHCP lease to expire) before turning it back on, or by cloning a different MAC address into your router's WAN settings.
+            </p>
+          </div>
+        </div>
+      </section>
+"""
+        elif slug == "dns-propagation":
+            tool_editorial = """
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Check Global DNS Propagation</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          When you update DNS records with your domain registrar or cloud hosting provider (such as adding a new <code>A</code> record, switching nameservers, or configuring email <code>MX</code> records), the changes do not take effect across the entire world instantly. This tool queries multiple authoritative recursive resolvers globally in parallel via <strong>DNS-over-HTTPS (DoH)</strong> to verify real-time propagation:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Enter your Domain Name:</strong> Type the apex domain (e.g., <code>example.com</code>) or subdomain (e.g., <code>mail.example.com</code>) into the input box.</li>
+          <li><strong>Select DNS Record Type:</strong> Choose the record type you want to verify: <code>A</code> (IPv4), <code>AAAA</code> (IPv6), <code>CNAME</code> (Aliases), <code>MX</code> (Mail exchangers), <code>TXT</code> (SPF / DKIM / Verification), <code>NS</code> (Nameservers), or <code>SOA</code> (Start of Authority).</li>
+          <li><strong>Execute Query:</strong> Click <strong>"Check Global DNS"</strong>. Your browser queries Cloudflare (1.1.1.1), Google Public DNS (8.8.8.8), Quad9 (9.9.9.9), AdGuard, and AliDNS simultaneously.</li>
+          <li><strong>Compare Results &amp; Consistency:</strong> The status table displays whether each global node has resolved your updated record, including TTL and response latency.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Why Does DNS Propagation Take Time? (TTL &amp; Recursive Caching)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          DNS is a globally distributed, hierarchical caching system designed to minimize load on authoritative nameservers. Two key factors dictate how long DNS changes take to propagate:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Time to Live (TTL):</strong> Every DNS record includes a TTL value (measured in seconds). When an ISP or recursive resolver fetches your record, it caches the answer locally for the duration of the TTL. If your previous TTL was set to <code>86400</code> (24 hours), worldwide resolvers will continue serving the old cached record until that 24-hour countdown finishes.</li>
+          <li><strong>ISP Recursive Cache Policies:</strong> Some internet service providers ignore short TTLs and enforce minimum cache retention windows (e.g. 1 to 2 hours) to conserve upstream bandwidth, creating temporary regional discrepancies.</li>
+          <li><strong>NS (Nameserver) Delegation Delays:</strong> When changing domain nameservers at your registrar, the root TLD zone file (such as <code>.com</code> or <code>.org</code>) must update, which typically takes 24 to 48 hours to fully propagate worldwide.</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Common DNS Record Types Explained</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>Record Type</th>
+                <th>Standard Purpose</th>
+                <th>Example Value</th>
+                <th>Recommended TTL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>A</code></td><td>Maps a hostname to an IPv4 address</td><td><code>192.0.2.1</code></td><td>300 &ndash; 3600 seconds</td></tr>
+              <tr><td><code>AAAA</code></td><td>Maps a hostname to an IPv6 address</td><td><code>2001:db8::1</code></td><td>300 &ndash; 3600 seconds</td></tr>
+              <tr><td><code>CNAME</code></td><td>Canonical Name alias pointing to another domain</td><td><code>app.vercel-dns.com</code></td><td>300 &ndash; 1800 seconds</td></tr>
+              <tr><td><code>MX</code></td><td>Mail Exchange server for receiving email</td><td><code>10 mail.google.com</code></td><td>3600 &ndash; 14400 seconds</td></tr>
+              <tr><td><code>TXT</code></td><td>Human/machine readable text (SPF, DKIM, DMARC, SSL verification)</td><td><code>v=spf1 include:_spf.google.com ~all</code></td><td>3600 seconds</td></tr>
+              <tr><td><code>NS</code></td><td>Delegates a DNS zone to authoritative nameservers</td><td><code>ns1.cloudflare.com</code></td><td>86400 seconds (24 hrs)</td></tr>
+              <tr><td><code>SOA</code></td><td>Start of Authority (zone serial number, refresh intervals)</td><td><code>ns1.example.com admin.example.com 2026110401</code></td><td>86400 seconds</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How DNS-over-HTTPS (DoH) Works</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Traditional DNS queries are sent over plaintext UDP port 53, making them vulnerable to eavesdropping, ISP manipulation, and DNS spoofing. <strong>DNS-over-HTTPS (RFC 8484)</strong> encapsulates DNS queries inside an encrypted HTTPS connection over standard TCP port 443.
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          This tool communicates directly with global DoH JSON endpoints (Cloudflare, Google Public DNS, and Quad9). Because the browser requests data directly via secure HTTPS APIs, local ISP DNS interception is bypassed, giving you an authentic snapshot of global DNS records.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How to Flush Your Local DNS Cache</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          If our tool shows that global DNS has propagated, but your computer still cannot reach the new server, your local operating system or browser cache is likely holding the old IP. Follow these terminal commands to flush your cache:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Windows (CMD as Administrator):</strong> Run <code>ipconfig /flushdns</code></li>
+          <li><strong>macOS (Terminal):</strong> Run <code>sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder</code></li>
+          <li><strong>Linux (systemd-resolved):</strong> Run <code>sudo resolvectl flush-caches</code> or <code>sudo systemd-resolve --flush-caches</code></li>
+          <li><strong>Google Chrome Browser:</strong> Navigate to <code>chrome://net-internals/#dns</code> and click <strong>"Clear host cache"</strong>.</li>
+        </ul>
+      </section>
+"""
         elif slug == "cidr-cheat-sheet":
             tool_editorial = """
       <section style="margin-top: 3.5rem;">
@@ -1773,9 +2015,13 @@ def generate_tool_pages():
         <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Tools</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
           <a href="/tools/" class="btn btn-secondary" style="font-size: 0.85rem;">All Tools Suite &rarr;</a>
+          <a href="/tools/ip-address-checker/" class="btn btn-secondary" style="font-size: 0.85rem;">IP Address Checker &rarr;</a>
+          <a href="/tools/dns-propagation/" class="btn btn-secondary" style="font-size: 0.85rem;">DNS Propagation &rarr;</a>
           <a href="/tools/subnet-calculator/" class="btn btn-secondary" style="font-size: 0.85rem;">Subnet Calculator &rarr;</a>
           <a href="/tools/wifi-qr-code/" class="btn btn-secondary" style="font-size: 0.85rem;">Wi-Fi QR Code &rarr;</a>
           <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">Gateway Auto-Detector &rarr;</a>
+          <a href="/tools/router-password-generator/" class="btn btn-secondary" style="font-size: 0.85rem;">Password Generator &rarr;</a>
+          <a href="/tools/cidr-cheat-sheet/" class="btn btn-secondary" style="font-size: 0.85rem;">CIDR Cheat-Sheet &rarr;</a>
         </div>
       </div>
     </div>
@@ -1784,6 +2030,12 @@ def generate_tool_pages():
         full_html = get_header(title, desc, canonical, active_nav="tools", breadcrumbs=breadcrumbs) + content + get_footer()
         with open(os.path.join(tool_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(full_html)
+
+    # Sync master tools hub at /tools/index.html
+    tools_hub_path = os.path.join(PUBLIC_DIR, "tools", "index.html")
+    tools_html_path = os.path.join(PUBLIC_DIR, "tools.html")
+    if os.path.exists(tools_html_path):
+        shutil.copyfile(tools_html_path, tools_hub_path)
 
 # ==============================================================================
 # 7. GENERATE CATEGORIZED SITEMAP INDEX ARCHITECTURE
@@ -2026,7 +2278,7 @@ def update_search_index():
         "category": "Interactive Tool",
         "badge": "Suite",
         "url": "/tools/",
-        "snippet": "All 7 client-side tools: Wi-Fi QR generator, CIDR subnet calculator, gateway detector, password generator.",
+        "snippet": "All 8 client-side tools: IP Address Checker, DNS Propagation, Wi-Fi QR generator, CIDR subnet calculator, gateway detector, password generator, port checker, CIDR cheat sheet.",
         "keywords": "tools utilities subnet qr code password generator webrtc probe"
     })
 

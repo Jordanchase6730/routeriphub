@@ -11,6 +11,8 @@ function initToolsApp() {
   initGatewayProbe();
   initLocalIPDetector();
   initSubnetCheatSheet();
+  initIpAddressChecker();
+  initDnsPropagationChecker();
 }
 
 if (document.readyState === 'loading') {
@@ -686,3 +688,431 @@ function initSubnetCheatSheet() {
 }
 
 
+
+/* ==========================================================================
+   8. Public IP Address & Geolocation Checker
+   ========================================================================== */
+function initIpAddressChecker() {
+  const input = document.getElementById('ip-lookup-input');
+  const lookupBtn = document.getElementById('ip-lookup-btn');
+  const myIpBtn = document.getElementById('ip-my-ip-btn');
+  const resultsContainer = document.getElementById('ip-lookup-results');
+  const quickChips = document.querySelectorAll('.ip-quick-chip');
+
+  if (!resultsContainer) return;
+
+  function classifyPrivateIP(ip) {
+    const trimmed = (ip || '').trim();
+    if (trimmed === '127.0.0.1' || trimmed === '::1' || trimmed.startsWith('127.')) {
+      return { isPrivate: true, type: 'Loopback / Localhost (RFC 1122)', desc: 'Internal loopback interface on your local operating system.' };
+    }
+    if (trimmed.startsWith('10.')) {
+      return { isPrivate: true, type: 'Class A Private (10.0.0.0/8)', desc: 'RFC 1918 private address space. Common on Comcast Xfinity gateways (10.0.0.1) and enterprise VLANs.' };
+    }
+    if (trimmed.startsWith('192.168.')) {
+      return { isPrivate: true, type: 'Class C Private (192.168.0.0/16)', desc: 'RFC 1918 private address space. Standard default gateway IP for home Wi-Fi routers (Netgear, ASUS, TP-Link, Linksys).' };
+    }
+    const match172 = trimmed.match(/^172\.(\d+)\./);
+    if (match172) {
+      const octet2 = parseInt(match172[1], 10);
+      if (octet2 >= 16 && octet2 <= 31) {
+        return { isPrivate: true, type: 'Class B Private (172.16.0.0/12)', desc: 'RFC 1918 private address space. Commonly used in Docker containers and corporate intranet subnets.' };
+      }
+    }
+    if (trimmed.startsWith('169.254.')) {
+      return { isPrivate: true, type: 'Link-Local / APIPA (169.254.0.0/16)', desc: 'Automatic Private IP Addressing (APIPA, RFC 3927). Assigned by your OS when the router DHCP server fails to respond.' };
+    }
+    const match100 = trimmed.match(/^100\.(\d+)\./);
+    if (match100) {
+      const octet2 = parseInt(match100[1], 10);
+      if (octet2 >= 64 && octet2 <= 127) {
+        return { isPrivate: true, type: 'Carrier-Grade NAT / CGNAT (100.64.0.0/10)', desc: 'RFC 6598 shared address space used by cellular 5G and satellite ISPs (such as Starlink).' };
+      }
+    }
+    return { isPrivate: false };
+  }
+
+  async function performLookup(query) {
+    const q = (query !== undefined ? query : (input ? input.value : '')).trim();
+    resultsContainer.innerHTML = `
+      <div style="text-align: center; padding: 2rem 1rem;">
+        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚡</div>
+        <div style="font-size: 0.95rem; color: var(--text-secondary);">Querying IP intelligence & geolocation database...</div>
+      </div>
+    `;
+
+    // Check if user entered a private RFC 1918 IP
+    const privateCheck = classifyPrivateIP(q);
+    if (privateCheck.isPrivate) {
+      resultsContainer.innerHTML = `
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div>
+              <span class="badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.3); font-weight: 700; margin-bottom: 0.5rem; display: inline-block;">
+                🔒 Private LAN Address (RFC 1918)
+              </span>
+              <h2 style="font-size: 1.75rem; font-family: var(--font-mono); margin: 0; color: var(--text-primary);">${escapeHtml(q)}</h2>
+            </div>
+            <button class="btn btn-primary copy-btn" data-copy="${escapeHtml(q)}">Copy IP</button>
+          </div>
+          <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem; color: var(--text-primary);">${privateCheck.type}</div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">${privateCheck.desc}</p>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+            💡 <strong>Note:</strong> Private IP addresses do not route over the public Internet and have no public ISP, ASN, or external physical geolocation. To configure your router, open <a href="http://${escapeHtml(q)}" target="_blank" style="color: var(--text-accent); text-decoration: underline;">http://${escapeHtml(q)}</a> in your browser.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    try {
+      const url = q ? `https://ipwho.is/${encodeURIComponent(q)}` : `https://ipwho.is/`;
+      const res = await fetch(url, { cache: 'no-store' });
+      const data = await res.json();
+
+      if (!data.success && data.message) {
+        throw new Error(data.message);
+      }
+
+      const ip = data.ip || q;
+      const type = data.type || 'IPv4';
+      const isp = data.connection?.isp || data.connection?.org || 'Unknown ISP';
+      const asn = data.connection?.asn ? `AS${data.connection.asn}` : 'N/A';
+      const org = data.connection?.org || isp;
+      const city = data.city || '';
+      const region = data.region || '';
+      const country = data.country || 'Unknown';
+      const flag = data.flag?.emoji || '🌐';
+      const lat = data.latitude !== undefined ? `${data.latitude}°` : 'N/A';
+      const lon = data.longitude !== undefined ? `${data.longitude}°` : 'N/A';
+      const timezone = data.timezone?.id || 'UTC';
+
+      resultsContainer.innerHTML = `
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow);">
+          <!-- Top IP Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div>
+              <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+                <span class="badge" style="background: rgba(2, 132, 199, 0.15); color: var(--text-accent); border: 1px solid rgba(2, 132, 199, 0.3); font-weight: 700;">
+                  ${type} Public WAN
+                </span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">${flag} ${escapeHtml(country)}</span>
+              </div>
+              <h2 style="font-size: 1.85rem; font-family: var(--font-mono); margin: 0; color: var(--text-primary); letter-spacing: -0.02em;">
+                ${escapeHtml(ip)}
+              </h2>
+            </div>
+            <button class="btn btn-primary copy-btn" data-copy="${escapeHtml(ip)}">Copy IP</button>
+          </div>
+
+          <!-- Information Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;">
+            <div style="background: var(--bg-secondary); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">ISP / Provider</div>
+              <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary);">${escapeHtml(isp)}</div>
+            </div>
+            <div style="background: var(--bg-secondary); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Autonomous System (ASN)</div>
+              <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary); font-family: var(--font-mono);">${escapeHtml(asn)} (${escapeHtml(org)})</div>
+            </div>
+            <div style="background: var(--bg-secondary); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Location &amp; Region</div>
+              <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary);">${escapeHtml([city, region, country].filter(Boolean).join(', '))}</div>
+            </div>
+            <div style="background: var(--bg-secondary); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Coordinates &amp; Timezone</div>
+              <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary); font-family: var(--font-mono);">${lat}, ${lon} &bull; ${escapeHtml(timezone)}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    } catch (err) {
+      // Fallback to ipify if ipwho.is fails
+      try {
+        const fallbackRes = await fetch('https://api.ipify.org?format=json');
+        const fallbackData = await fallbackRes.json();
+        resultsContainer.innerHTML = `
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+              <div>
+                <span class="badge" style="background: rgba(2, 132, 199, 0.15); color: var(--text-accent);">Public WAN IP</span>
+                <h2 style="font-size: 1.75rem; font-family: var(--font-mono); margin: 0.25rem 0 0 0;">${escapeHtml(fallbackData.ip)}</h2>
+              </div>
+              <button class="btn btn-primary copy-btn" data-copy="${escapeHtml(fallbackData.ip)}">Copy IP</button>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Basic public IP detected via fallback resolver.</p>
+          </div>
+        `;
+      } catch (fbErr) {
+        resultsContainer.innerHTML = `
+          <div style="background: var(--bg-card); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 1.25rem; color: #ef4444;">
+            <strong>Lookup Error:</strong> Could not retrieve IP details (${escapeHtml(err.message)}). Please check your internet connection.
+          </div>
+        `;
+      }
+    }
+  }
+
+  if (lookupBtn && input) {
+    lookupBtn.addEventListener('click', () => performLookup(input.value));
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        performLookup(input.value);
+      }
+    });
+  }
+
+  if (myIpBtn) {
+    myIpBtn.addEventListener('click', () => {
+      if (input) input.value = '';
+      performLookup('');
+    });
+  }
+
+  quickChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const targetIp = chip.getAttribute('data-ip') || '';
+      if (input) input.value = targetIp;
+      performLookup(targetIp);
+    });
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const qIp = urlParams.get('ip');
+  if (qIp) {
+    if (input) input.value = qIp;
+    performLookup(qIp);
+  }
+}
+
+/* ==========================================================================
+   9. Global DNS Propagation Checker (DoH JSON API)
+   ========================================================================== */
+function initDnsPropagationChecker() {
+  const domainInput = document.getElementById('dns-domain-input');
+  const typeSelect = document.getElementById('dns-type-select');
+  const checkBtn = document.getElementById('dns-check-btn');
+  const tbody = document.getElementById('dns-table-body');
+  const summaryBar = document.getElementById('dns-summary-bar');
+  const quickChips = document.querySelectorAll('.dns-quick-chip');
+
+  if (!tbody || !checkBtn) return;
+
+  const RESOLVERS = [
+    {
+      name: 'Cloudflare DNS',
+      ip: '1.1.1.1',
+      location: 'North America / Global Anycast',
+      flag: '🇺🇸',
+      query: (domain, type) => `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=${type}`,
+      headers: { 'Accept': 'application/dns-json' }
+    },
+    {
+      name: 'Google Public DNS',
+      ip: '8.8.8.8',
+      location: 'North America / Global Anycast',
+      flag: '🇺🇸',
+      query: (domain, type) => `https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=${type}`,
+      headers: {}
+    },
+    {
+      name: 'Quad9 Security DNS',
+      ip: '9.9.9.9',
+      location: 'Zurich, Switzerland / Europe',
+      flag: '🇨🇭',
+      query: (domain, type) => `https://dns.quad9.net/dns-query?name=${encodeURIComponent(domain)}&type=${type}`,
+      headers: { 'Accept': 'application/dns-json' }
+    },
+    {
+      name: 'AdGuard DNS',
+      ip: '94.140.14.14',
+      location: 'Frankfurt, Germany / Europe',
+      flag: '🇩🇪',
+      query: (domain, type) => `https://dns.adguard-dns.com/resolve?name=${encodeURIComponent(domain)}&type=${type}`,
+      headers: {}
+    },
+    {
+      name: 'AliDNS Global',
+      ip: '223.5.5.5',
+      location: 'Hangzhou, China / Asia Pacific',
+      flag: '🇨🇳',
+      query: (domain, type) => `https://dns.alidns.com/resolve?name=${encodeURIComponent(domain)}&type=${type}`,
+      headers: {}
+    }
+  ];
+
+  async function checkServer(resolver, domain, type) {
+    const startTime = performance.now();
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+      const res = await fetch(resolver.query(domain, type), {
+        headers: resolver.headers,
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      const latency = Math.round(performance.now() - startTime);
+
+      if (!res.ok) {
+        return {
+          resolver,
+          status: 'HTTP ' + res.status,
+          isOk: false,
+          answers: [],
+          ttl: '-',
+          latency: latency + ' ms'
+        };
+      }
+
+      const json = await res.json();
+      const statusNum = json.Status; // 0 = NOERROR, 3 = NXDOMAIN
+      let statusStr = 'Resolved';
+      let isOk = true;
+
+      if (statusNum === 3) {
+        statusStr = 'NXDOMAIN';
+        isOk = false;
+      } else if (statusNum !== 0) {
+        statusStr = `Status ${statusNum}`;
+        isOk = false;
+      }
+
+      const answers = [];
+      let minTtl = '-';
+
+      if (json.Answer && json.Answer.length > 0) {
+        json.Answer.forEach(ans => {
+          if (ans.data) answers.push(ans.data);
+          if (ans.TTL !== undefined) minTtl = ans.TTL + 's';
+        });
+      } else if (isOk) {
+        statusStr = 'No Records';
+        isOk = false;
+      }
+
+      return {
+        resolver,
+        status: statusStr,
+        isOk,
+        answers,
+        ttl: minTtl,
+        latency: latency + ' ms'
+      };
+    } catch (err) {
+      const latency = Math.round(performance.now() - startTime);
+      return {
+        resolver,
+        status: err.name === 'AbortError' ? 'Timeout' : 'Blocked / Offline',
+        isOk: false,
+        answers: [],
+        ttl: '-',
+        latency: latency > 5000 ? '>5000 ms' : latency + ' ms'
+      };
+    }
+  }
+
+  async function runPropagationCheck() {
+    let domain = (domainInput.value || '').trim().toLowerCase();
+    domain = domain.replace(/^https?:\/\//i, '').replace(/\/.*$/, '');
+    const type = (typeSelect ? typeSelect.value : 'A') || 'A';
+
+    if (!domain) {
+      alert('Please enter a valid domain name.');
+      return;
+    }
+
+    tbody.innerHTML = RESOLVERS.map(r => `
+      <tr>
+        <td><strong>${r.name}</strong> <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">(${r.ip})</span></td>
+        <td>${r.flag} ${r.location}</td>
+        <td><span style="color: var(--text-muted);">Querying...</span></td>
+        <td><span style="color: var(--text-muted); font-family: var(--font-mono);">&hellip;</span></td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    `).join('');
+
+    if (summaryBar) {
+      summaryBar.style.display = 'flex';
+      summaryBar.innerHTML = `
+        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+          Checking <strong>${escapeHtml(domain)}</strong> (Record: <strong>${escapeHtml(type)}</strong>) across 5 global DNS nodes...
+        </div>
+      `;
+    }
+
+    const results = await Promise.all(RESOLVERS.map(r => checkServer(r, domain, type)));
+
+    let resolvedCount = 0;
+    const answerSignatures = {};
+
+    tbody.innerHTML = results.map(res => {
+      let statusBadge = '';
+      if (res.isOk && res.answers.length > 0) {
+        statusBadge = `<span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3);">🟢 ${escapeHtml(res.status)}</span>`;
+        resolvedCount++;
+        const sig = res.answers.sort().join(',');
+        answerSignatures[sig] = (answerSignatures[sig] || 0) + 1;
+      } else if (res.status === 'NXDOMAIN') {
+        statusBadge = `<span class="badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.3);">🟡 NXDOMAIN</span>`;
+      } else {
+        statusBadge = `<span class="badge" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">🔴 ${escapeHtml(res.status)}</span>`;
+      }
+
+      const answersHtml = res.answers.length > 0
+        ? res.answers.map(a => `<code class="cell-code" style="display: block; margin-bottom: 0.2rem;">${escapeHtml(a)}</code>`).join('')
+        : `<span style="color: var(--text-muted); font-size: 0.85rem;">None</span>`;
+
+      return `
+        <tr>
+          <td><strong>${res.resolver.name}</strong> <div style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">${res.resolver.ip}</div></td>
+          <td>${res.resolver.flag} ${res.resolver.location}</td>
+          <td>${statusBadge}</td>
+          <td>${answersHtml}</td>
+          <td style="font-family: var(--font-mono); font-size: 0.85rem;">${escapeHtml(res.ttl)}</td>
+          <td style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">${escapeHtml(res.latency)}</td>
+        </tr>
+      `;
+    }).join('');
+
+    if (summaryBar) {
+      const matchPct = Math.round((resolvedCount / results.length) * 100);
+      const isConsistent = Object.keys(answerSignatures).length <= 1 && resolvedCount > 0;
+      summaryBar.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">Propagation: ${matchPct}% (${resolvedCount}/${results.length} Nodes Resolved)</span>
+          ${isConsistent ? '<span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3);">✓ 100% Consistent Records</span>' : ''}
+        </div>
+        <div style="font-size: 0.825rem; color: var(--text-muted);">
+          Queried domain: <strong style="color: var(--text-primary);">${escapeHtml(domain)}</strong> &bull; Type: <strong style="color: var(--text-primary);">${escapeHtml(type)}</strong>
+        </div>
+      `;
+    }
+  }
+
+  checkBtn.addEventListener('click', runPropagationCheck);
+  domainInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') runPropagationCheck();
+  });
+
+  quickChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const d = chip.getAttribute('data-domain');
+      const t = chip.getAttribute('data-type');
+      if (d) domainInput.value = d;
+      if (t && typeSelect) typeSelect.value = t;
+      runPropagationCheck();
+    });
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const qDomain = urlParams.get('domain');
+  const qType = urlParams.get('type');
+  if (qDomain) {
+    domainInput.value = qDomain;
+    if (qType && typeSelect) typeSelect.value = qType;
+    runPropagationCheck();
+  }
+}

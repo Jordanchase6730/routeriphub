@@ -613,5 +613,19 @@ TOOL_PAGES = [
         "short_title": "CIDR Cheat-Sheet",
         "desc": "Complete reference table for IPv4 prefix lengths (/0 to /32) with total IPs, usable hosts, and wildcard masks with CSV download.",
         "icon": "table"
+    },
+    {
+        "slug": "ip-address-checker",
+        "title": "Public IP Address & Geolocation Lookup",
+        "short_title": "IP Address Checker",
+        "desc": "Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.",
+        "icon": "globe"
+    },
+    {
+        "slug": "dns-propagation",
+        "title": "Global DNS Propagation Checker",
+        "short_title": "DNS Propagation",
+        "desc": "Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.",
+        "icon": "satellite"
     }
 ]

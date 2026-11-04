@@ -279,11 +279,14 @@
 
       <!-- Quick Anchor Pills -->
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+        <a href="#ip-checker" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">IP Address Checker</a>
+        <a href="#dns-prop" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">DNS Propagation</a>
         <a href="#wifi-qr" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Wi-Fi QR Generator</a>
         <a href="#subnet-calc" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Subnet Calculator</a>
         <a href="#pass-gen" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">WPA3 Password Generator</a>
         <a href="#port-dir" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Port Forwarding Directory</a>
         <a href="#gw-probe" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">Gateway Probe</a>
+        <a href="#subnet-cheat-sheet" class="ip-btn" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">CIDR Cheat-Sheet</a>
       </div>
 
       <!-- ==========================================================================
@@ -555,6 +558,111 @@
         </div>
       </section>
 
+
+      <!-- ==========================================================================
+           TOOL 8: Public IP Address & Geolocation Lookup
+           ========================================================================== -->
+      <section id="ip-checker" class="tool-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <h2 style="font-size: 1.5rem; margin: 0;">8. Public IP Address &amp; Geolocation Lookup</h2>
+          <a href="/tools/ip-address-checker/" class="btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">
+            Dedicated Page &rarr;
+          </a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          Inspect your public IPv4 or IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.
+        </p>
+
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="ip-lookup-input" class="form-control" style="flex: 1; min-width: 240px; font-family: var(--font-mono);" placeholder="Enter IPv4, IPv6, or domain (e.g. 8.8.8.8, 1.1.1.1, github.com)...">
+          <button id="ip-lookup-btn" class="btn-primary" style="padding: 0.65rem 1.25rem;">
+            🔍 Inspect IP
+          </button>
+          <button id="ip-my-ip-btn" class="btn-secondary" style="padding: 0.65rem 1rem;">
+            ⚡ My Public IP
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Lookups:</span>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">My Public IP</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="8.8.8.8" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">8.8.8.8 (Google)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="1.1.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">1.1.1.1 (Cloudflare)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="192.168.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">192.168.1.1 (Gateway)</button>
+        </div>
+
+        <div id="ip-lookup-results" style="margin-top: 1rem;">
+          <div style="text-align: center; padding: 2rem 1rem; color: var(--text-muted); background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px dashed var(--border-color);">
+            Click <strong>"Inspect IP"</strong> or <strong>"My Public IP"</strong> to analyze network routing, ISP, ASN, and geolocation details.
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TOOL 9: Global DNS Propagation Checker
+           ========================================================================== -->
+      <section id="dns-prop" class="tool-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <h2 style="font-size: 1.5rem; margin: 0;">9. Global DNS Propagation Checker (DoH)</h2>
+          <a href="/tools/dns-propagation/" class="btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">
+            Dedicated Page &rarr;
+          </a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across worldwide recursive DNS servers via DNS-over-HTTPS.
+        </p>
+
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="dns-domain-input" class="form-control" style="flex: 2; min-width: 200px; font-family: var(--font-mono);" placeholder="e.g. google.com, cloudflare.com, yourdomain.com" value="google.com">
+          <select id="dns-type-select" class="form-control" style="flex: 1; min-width: 120px; font-family: var(--font-mono); font-weight: 600;">
+            <option value="A" selected>A (IPv4)</option>
+            <option value="AAAA">AAAA (IPv6)</option>
+            <option value="CNAME">CNAME (Alias)</option>
+            <option value="MX">MX (Mail)</option>
+            <option value="TXT">TXT (SPF/DKIM)</option>
+            <option value="NS">NS (Name Server)</option>
+            <option value="SOA">SOA (Authority)</option>
+            <option value="PTR">PTR (Reverse)</option>
+          </select>
+          <button id="dns-check-btn" class="btn-primary" style="padding: 0.65rem 1.25rem;">
+            ⚡ Check DNS
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Domains:</span>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="google.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">google.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="cloudflare.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">cloudflare.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="github.com" data-type="MX" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">github.com (MX)</button>
+        </div>
+
+        <div id="dns-summary-bar" style="display: none; justify-content: space-between; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.75rem 1.25rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <!-- Populated by tools.js -->
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="table" id="dns-results-table">
+            <thead>
+              <tr>
+                <th style="min-width: 170px;">DNS Resolver Node</th>
+                <th style="min-width: 140px;">Location / Anycast</th>
+                <th style="min-width: 90px;">Status</th>
+                <th style="min-width: 200px;">Resolved Records</th>
+                <th style="min-width: 70px;">TTL</th>
+                <th style="min-width: 70px;">Latency</th>
+              </tr>
+            </thead>
+            <tbody id="dns-table-body">
+              <tr>
+                <td colspan="6" style="text-align: center; padding: 2rem 1rem; color: var(--text-muted);">
+                  Enter a domain and click <strong>"Check DNS"</strong> to query global recursive resolvers in real time.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -565,10 +673,11 @@
         <div class="footer-col">
           <h4>Networking Tools</h4>
           <ul>
-            <li><a href="/tools.html#wifi-qr">Wi-Fi QR Code Generator</a></li>
-            <li><a href="/tools.html#subnet-calc">Subnet & CIDR Calculator</a></li>
-            <li><a href="/tools.html#pass-gen">WPA3 Password Generator</a></li>
-            <li><a href="/tools.html#port-dir">Port Forwarding Database</a></li>
+            <li><a href="/tools/ip-address-checker/">IP Address Checker</a></li>
+            <li><a href="/tools/dns-propagation/">DNS Propagation Checker</a></li>
+            <li><a href="/tools/wifi-qr-code/">Wi-Fi QR Code Generator</a></li>
+            <li><a href="/tools/subnet-calculator/">Subnet & CIDR Calculator</a></li>
+            <li><a href="/tools/router-password-generator/">WPA3 Password Generator</a></li>
           </ul>
         </div>
         <div class="footer-col">

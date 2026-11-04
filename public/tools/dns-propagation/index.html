@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global DNS Propagation Checker (Free Client-Side Utility)</title>
+  <meta name="description" content="Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.">
+  <link rel="canonical" href="https://routeriphub.com/tools/dns-propagation/">
+
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0284c7">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://routeriphub.com/tools/dns-propagation/">
+  <meta property="og:title" content="Global DNS Propagation Checker (Free Client-Side Utility)">
+  <meta property="og:description" content="Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.">
+  <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="Global DNS Propagation Checker (Free Client-Side Utility)">
+  <meta name="twitter:description" content="Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/tools.js" defer></script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://routeriphub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://routeriphub.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DNS Propagation",
+          "item": "https://routeriphub.com/tools/dns-propagation/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/routers/" class="">Routers</a></li>
+          <li><a href="/isp/" class="">ISP Gateways</a></li>
+          <li><a href="/brands/" class="">Brands</a></li>
+          <li><a href="/ip/" class="">IP Directory</a></li>
+          <li><a href="/tools/" class="active">Tools</a></li>
+          <li><a href="/howto.html" class="">Guides</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a> <span class="sep">&rsaquo;</span> <a href="/tools/">Tools</a> <span class="sep">&rsaquo;</span> <span aria-current="page">DNS Propagation</span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3.5rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-tool">🛠️ Interactive Utility</div>
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        Global DNS Propagation Checker
+      </h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.
+      </p>
+
+      <!-- Embed Tool UI -->
+      
+      <div class="tool-card" style="max-width: 900px; margin: 0 auto 2.5rem auto;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="dns-domain-input" class="form-control" style="flex: 2; min-width: 220px; font-family: var(--font-mono);" placeholder="e.g. google.com, cloudflare.com, yourdomain.com" value="google.com">
+          <select id="dns-type-select" class="form-control" style="flex: 1; min-width: 130px; font-family: var(--font-mono); font-weight: 600;">
+            <option value="A" selected>A (IPv4)</option>
+            <option value="AAAA">AAAA (IPv6)</option>
+            <option value="CNAME">CNAME (Alias)</option>
+            <option value="MX">MX (Mail)</option>
+            <option value="TXT">TXT (SPF/DKIM)</option>
+            <option value="NS">NS (Name Server)</option>
+            <option value="SOA">SOA (Authority)</option>
+            <option value="PTR">PTR (Reverse)</option>
+          </select>
+          <button id="dns-check-btn" class="btn btn-primary" style="padding: 0.65rem 1.5rem;">
+            ⚡ Check Global DNS
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Domains:</span>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="google.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">google.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="cloudflare.com" data-type="A" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">cloudflare.com (A)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="github.com" data-type="MX" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">github.com (MX)</button>
+          <button class="btn btn-secondary dns-quick-chip" data-domain="wikipedia.org" data-type="NS" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">wikipedia.org (NS)</button>
+        </div>
+
+        <div id="dns-summary-bar" style="display: none; justify-content: space-between; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.75rem 1.25rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <!-- Populated by tools.js -->
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="table" id="dns-results-table">
+            <thead>
+              <tr>
+                <th style="min-width: 180px;">DNS Resolver Node</th>
+                <th style="min-width: 140px;">Location / Anycast</th>
+                <th style="min-width: 100px;">Status</th>
+                <th style="min-width: 220px;">Resolved Records</th>
+                <th style="min-width: 80px;">TTL</th>
+                <th style="min-width: 80px;">Latency</th>
+              </tr>
+            </thead>
+            <tbody id="dns-table-body">
+              <tr>
+                <td colspan="6" style="text-align: center; padding: 2rem 1rem; color: var(--text-muted);">
+                  Enter a domain and click <strong>"Check Global DNS"</strong> to probe Cloudflare, Google, Quad9, AdGuard, and AliDNS resolvers via DNS-over-HTTPS.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+            
+
+      <!-- Detailed SEO Guides and Reference Documentation -->
+      
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Check Global DNS Propagation</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          When you update DNS records with your domain registrar or cloud hosting provider (such as adding a new <code>A</code> record, switching nameservers, or configuring email <code>MX</code> records), the changes do not take effect across the entire world instantly. This tool queries multiple authoritative recursive resolvers globally in parallel via <strong>DNS-over-HTTPS (DoH)</strong> to verify real-time propagation:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Enter your Domain Name:</strong> Type the apex domain (e.g., <code>example.com</code>) or subdomain (e.g., <code>mail.example.com</code>) into the input box.</li>
+          <li><strong>Select DNS Record Type:</strong> Choose the record type you want to verify: <code>A</code> (IPv4), <code>AAAA</code> (IPv6), <code>CNAME</code> (Aliases), <code>MX</code> (Mail exchangers), <code>TXT</code> (SPF / DKIM / Verification), <code>NS</code> (Nameservers), or <code>SOA</code> (Start of Authority).</li>
+          <li><strong>Execute Query:</strong> Click <strong>"Check Global DNS"</strong>. Your browser queries Cloudflare (1.1.1.1), Google Public DNS (8.8.8.8), Quad9 (9.9.9.9), AdGuard, and AliDNS simultaneously.</li>
+          <li><strong>Compare Results &amp; Consistency:</strong> The status table displays whether each global node has resolved your updated record, including TTL and response latency.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Why Does DNS Propagation Take Time? (TTL &amp; Recursive Caching)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          DNS is a globally distributed, hierarchical caching system designed to minimize load on authoritative nameservers. Two key factors dictate how long DNS changes take to propagate:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Time to Live (TTL):</strong> Every DNS record includes a TTL value (measured in seconds). When an ISP or recursive resolver fetches your record, it caches the answer locally for the duration of the TTL. If your previous TTL was set to <code>86400</code> (24 hours), worldwide resolvers will continue serving the old cached record until that 24-hour countdown finishes.</li>
+          <li><strong>ISP Recursive Cache Policies:</strong> Some internet service providers ignore short TTLs and enforce minimum cache retention windows (e.g. 1 to 2 hours) to conserve upstream bandwidth, creating temporary regional discrepancies.</li>
+          <li><strong>NS (Nameserver) Delegation Delays:</strong> When changing domain nameservers at your registrar, the root TLD zone file (such as <code>.com</code> or <code>.org</code>) must update, which typically takes 24 to 48 hours to fully propagate worldwide.</li>
+        </ul>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Common DNS Record Types Explained</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>Record Type</th>
+                <th>Standard Purpose</th>
+                <th>Example Value</th>
+                <th>Recommended TTL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>A</code></td><td>Maps a hostname to an IPv4 address</td><td><code>192.0.2.1</code></td><td>300 &ndash; 3600 seconds</td></tr>
+              <tr><td><code>AAAA</code></td><td>Maps a hostname to an IPv6 address</td><td><code>2001:db8::1</code></td><td>300 &ndash; 3600 seconds</td></tr>
+              <tr><td><code>CNAME</code></td><td>Canonical Name alias pointing to another domain</td><td><code>app.vercel-dns.com</code></td><td>300 &ndash; 1800 seconds</td></tr>
+              <tr><td><code>MX</code></td><td>Mail Exchange server for receiving email</td><td><code>10 mail.google.com</code></td><td>3600 &ndash; 14400 seconds</td></tr>
+              <tr><td><code>TXT</code></td><td>Human/machine readable text (SPF, DKIM, DMARC, SSL verification)</td><td><code>v=spf1 include:_spf.google.com ~all</code></td><td>3600 seconds</td></tr>
+              <tr><td><code>NS</code></td><td>Delegates a DNS zone to authoritative nameservers</td><td><code>ns1.cloudflare.com</code></td><td>86400 seconds (24 hrs)</td></tr>
+              <tr><td><code>SOA</code></td><td>Start of Authority (zone serial number, refresh intervals)</td><td><code>ns1.example.com admin.example.com 2026110401</code></td><td>86400 seconds</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How DNS-over-HTTPS (DoH) Works</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Traditional DNS queries are sent over plaintext UDP port 53, making them vulnerable to eavesdropping, ISP manipulation, and DNS spoofing. <strong>DNS-over-HTTPS (RFC 8484)</strong> encapsulates DNS queries inside an encrypted HTTPS connection over standard TCP port 443.
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          This tool communicates directly with global DoH JSON endpoints (Cloudflare, Google Public DNS, and Quad9). Because the browser requests data directly via secure HTTPS APIs, local ISP DNS interception is bypassed, giving you an authentic snapshot of global DNS records.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">How to Flush Your Local DNS Cache</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          If our tool shows that global DNS has propagated, but your computer still cannot reach the new server, your local operating system or browser cache is likely holding the old IP. Follow these terminal commands to flush your cache:
+        </p>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Windows (CMD as Administrator):</strong> Run <code>ipconfig /flushdns</code></li>
+          <li><strong>macOS (Terminal):</strong> Run <code>sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder</code></li>
+          <li><strong>Linux (systemd-resolved):</strong> Run <code>sudo resolvectl flush-caches</code> or <code>sudo systemd-resolve --flush-caches</code></li>
+          <li><strong>Google Chrome Browser:</strong> Navigate to <code>chrome://net-internals/#dns</code> and click <strong>"Clear host cache"</strong>.</li>
+        </ul>
+      </section>
+
+
+      <!-- Cross Silo Links -->
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Tools</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/tools/" class="btn btn-secondary" style="font-size: 0.85rem;">All Tools Suite &rarr;</a>
+          <a href="/tools/ip-address-checker/" class="btn btn-secondary" style="font-size: 0.85rem;">IP Address Checker &rarr;</a>
+          <a href="/tools/dns-propagation/" class="btn btn-secondary" style="font-size: 0.85rem;">DNS Propagation &rarr;</a>
+          <a href="/tools/subnet-calculator/" class="btn btn-secondary" style="font-size: 0.85rem;">Subnet Calculator &rarr;</a>
+          <a href="/tools/wifi-qr-code/" class="btn btn-secondary" style="font-size: 0.85rem;">Wi-Fi QR Code &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">Gateway Auto-Detector &rarr;</a>
+          <a href="/tools/router-password-generator/" class="btn btn-secondary" style="font-size: 0.85rem;">Password Generator &rarr;</a>
+          <a href="/tools/cidr-cheat-sheet/" class="btn btn-secondary" style="font-size: 0.85rem;">CIDR Cheat-Sheet &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Programmatic Silos</h4>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Models</a></li>
+          <li><a href="/isp/">ISP Gateways</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/ip/">Gateway IP Hubs</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Open Data & Developers</h4>
+        <ul class="footer-links">
+          <li><a href="/developers.html">Developer API & Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/data/routers.csv" download>routers.csv (Tabular)</a></li>
+          <li><a href="/data/routers.sql" download>routers.sql (ANSI Schema)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Compliance & Sitemaps</h4>
+        <ul class="footer-links">
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+          <li><a href="/robots.txt">robots.txt</a></li>
+          <li><a href="/find-router-ip.html">Find My Gateway IP</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0. Hardware trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

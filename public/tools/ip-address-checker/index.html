@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public IP Address &amp; Geolocation Lookup (Free Client-Side Utility)</title>
+  <meta name="description" content="Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.">
+  <link rel="canonical" href="https://routeriphub.com/tools/ip-address-checker/">
+
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0284c7">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://routeriphub.com/tools/ip-address-checker/">
+  <meta property="og:title" content="Public IP Address &amp; Geolocation Lookup (Free Client-Side Utility)">
+  <meta property="og:description" content="Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.">
+  <meta property="og:site_name" content="RouterIPHub">
+  <meta property="og:image" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RouterIPHub">
+  <meta name="twitter:creator" content="@RouterIPHub">
+  <meta name="twitter:title" content="Public IP Address &amp; Geolocation Lookup (Free Client-Side Utility)">
+  <meta name="twitter:description" content="Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.">
+  <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
+  <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
+
+  <!-- Instant Theme Initializer (Light Mode Default, 0ms FOUT) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/tools.js" defer></script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://routeriphub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://routeriphub.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "IP Address Checker",
+          "item": "https://routeriphub.com/tools/ip-address-checker/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+          <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          <line x1="6" y1="6" x2="6.01" y2="6"></line>
+          <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        </svg>
+        <span>RouterIPHub</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="/routers/" class="">Routers</a></li>
+          <li><a href="/isp/" class="">ISP Gateways</a></li>
+          <li><a href="/brands/" class="">Brands</a></li>
+          <li><a href="/ip/" class="">IP Directory</a></li>
+          <li><a href="/tools/" class="active">Tools</a></li>
+          <li><a href="/howto.html" class="">Guides</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Global Search Bar Button -->
+        <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search site...</span>
+          <kbd class="search-trigger-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="container">
+        <div style="margin-bottom: 0.75rem;">
+          <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
+            <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
+              <span>🌓 Switch Dark / Light Mode</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Toggle</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a> <span class="sep">&rsaquo;</span> <a href="/tools/">Tools</a> <span class="sep">&rsaquo;</span> <span aria-current="page">IP Address Checker</span>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3.5rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-tool">🛠️ Interactive Utility</div>
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        Public IP Address &amp; Geolocation Lookup
+      </h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.
+      </p>
+
+      <!-- Embed Tool UI -->
+      
+      <div class="tool-card" style="max-width: 800px; margin: 0 auto 2.5rem auto;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="ip-lookup-input" class="form-control" style="flex: 1; min-width: 260px; font-family: var(--font-mono);" placeholder="Enter IPv4, IPv6, or domain (e.g. 8.8.8.8, 1.1.1.1, github.com)...">
+          <button id="ip-lookup-btn" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">
+            🔍 Inspect IP
+          </button>
+          <button id="ip-my-ip-btn" class="btn btn-secondary" style="padding: 0.65rem 1rem;">
+            ⚡ My Public IP
+          </button>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-muted);">
+          <span>Quick Lookups:</span>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">My Public IP</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="8.8.8.8" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">8.8.8.8 (Google)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="1.1.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">1.1.1.1 (Cloudflare)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="192.168.1.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">192.168.1.1 (Gateway)</button>
+          <button class="btn btn-secondary ip-quick-chip" data-ip="10.0.0.1" style="font-size: 0.78rem; padding: 0.2rem 0.6rem;">10.0.0.1 (Xfinity)</button>
+        </div>
+
+        <div id="ip-lookup-results" style="margin-top: 1rem;">
+          <div style="text-align: center; padding: 2rem 1rem; color: var(--text-muted); background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px dashed var(--border-color);">
+            Click <strong>"Inspect IP"</strong> or <strong>"My Public IP"</strong> to analyze network routing, ISP, ASN, and geolocation details.
+          </div>
+        </div>
+      </div>
+            
+
+      <!-- Detailed SEO Guides and Reference Documentation -->
+      
+      <section style="margin-top: 3.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">How to Use the Public IP Address &amp; Geolocation Checker</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Every device connected to the Internet requires an Internet Protocol (IP) address to route data packets between servers, websites, and client computers. This free utility lets you instantly inspect any public IPv4 or IPv6 address or analyze your own active internet connection without running third-party tracking scripts:
+        </p>
+        <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+          <li><strong>Detect Your Own IP:</strong> Click <strong>"My Public IP"</strong> to automatically discover the public WAN IP assigned to your cable modem or fiber gateway by your Internet Service Provider (ISP).</li>
+          <li><strong>Inspect Any Remote IP or Hostname:</strong> Type any IPv4 address (e.g. <code>8.8.8.8</code>), IPv6 address, or domain name (e.g. <code>github.com</code>) into the search field and click <strong>"Inspect IP"</strong>.</li>
+          <li><strong>Analyze Routing &amp; Geolocation Data:</strong> The tool queries authoritative BGP and Whois records to display your Autonomous System Number (ASN), ISP name, approximate city/region coordinates, and local timezone.</li>
+          <li><strong>Identify Private Local Subnets:</strong> If you enter a private LAN address (such as <code>192.168.1.1</code> or <code>10.0.0.1</code>), the tool immediately classifies the RFC 1918 subnet and provides local router configuration instructions.</li>
+        </ol>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Public WAN IP vs. Private Default Gateway (192.168.1.1)</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          A common source of confusion in computer networking is the difference between your <strong>Public IP</strong> and your <strong>Private Gateway IP</strong>:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-accent);">🌐 Public IP (WAN)</h3>
+            <ul style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Assigned globally by your ISP (Comcast, AT&amp;T, Verizon, Spectrum).</li>
+              <li>Globally unique and routable across the worldwide Internet.</li>
+              <li>Shared by all devices connected to your home Wi-Fi network via Network Address Translation (NAT).</li>
+              <li>Determines your external geographic location visible to websites and streaming services.</li>
+            </ul>
+          </div>
+          <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-accent);">🏠 Private IP / Gateway (LAN)</h3>
+            <ul style="margin-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <li>Assigned locally by your router's internal DHCP server (e.g. <code>192.168.1.1</code>).</li>
+              <li>Only accessible within your local home or office physical network.</li>
+              <li>Non-routable over the public Internet (governed by RFC 1918 specifications).</li>
+              <li>Used to open your router's administrative setup dashboard and change Wi-Fi settings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">RFC 1918 Private IPv4 Address Ranges</h2>
+        <div style="overflow-x: auto; margin-bottom: 2rem;">
+          <table class="table" style="font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th>Address Block</th>
+                <th>CIDR Prefix</th>
+                <th>Total Addresses</th>
+                <th>Standard Networking Deployments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>10.0.0.0 &ndash; 10.255.255.255</code></td><td><code>10.0.0.0/8</code></td><td>16,777,216</td><td>Comcast Xfinity xFi (10.0.0.1), Apple AirPort, Large Enterprise LANs</td></tr>
+              <tr><td><code>172.16.0.0 &ndash; 172.31.255.255</code></td><td><code>172.16.0.0/12</code></td><td>1,048,576</td><td>Docker Bridges, Enterprise VPN tunnels, Corporate VLANs</td></tr>
+              <tr><td><code>192.168.0.0 &ndash; 192.168.255.255</code></td><td><code>192.168.0.0/16</code></td><td>65,536</td><td>Netgear, ASUS, TP-Link, Linksys, and AT&amp;T Fiber (192.168.1.1 / 192.168.0.1)</td></tr>
+              <tr><td><code>100.64.0.0 &ndash; 100.127.255.255</code></td><td><code>100.64.0.0/10</code></td><td>4,194,304</td><td>Carrier-Grade NAT (CGNAT, RFC 6598) used by Starlink and Cellular 5G ISPs</td></tr>
+              <tr><td><code>169.254.0.0 &ndash; 169.254.255.255</code></td><td><code>169.254.0.0/16</code></td><td>65,536</td><td>Automatic Private IP Addressing (APIPA / Link-Local) when DHCP fails</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Understanding Autonomous System Numbers (ASN) &amp; BGP Routing</h2>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          The global Internet is composed of thousands of independently operated networks called <strong>Autonomous Systems (AS)</strong>. Each Autonomous System is assigned a globally unique 16-bit or 32-bit Autonomous System Number (ASN) by regional internet registries (such as ARIN, RIPE NCC, and APNIC).
+        </p>
+        <p style="margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7;">
+          Using the Border Gateway Protocol (BGP), these autonomous systems advertise IP prefix blocks to one another. When you perform an IP lookup on this tool, the ASN identifies the primary network operator (such as <code>AS7922</code> for Comcast, <code>AS7018</code> for AT&amp;T, <code>AS15169</code> for Google, or <code>AS13335</code> for Cloudflare) responsible for routing packets to and from that IP address.
+        </p>
+
+        <h2 style="font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary);">Frequently Asked Questions About Public IP Addresses</h2>
+        <div class="faq-list" style="margin-top: 1rem;">
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Can someone find my exact home street address from my IP?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              No. Public IP geolocation databases map IP addresses to the ISP's local point of presence (PoP), central routing exchange, or metropolitan city center. Geolocation is generally accurate to the city or postal area level, but cannot reveal your physical street address or house number without a court subpoena served directly to your ISP.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Why is my IP address different when connected to a VPN?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              When using a Virtual Private Network (VPN), your computer establishes an encrypted tunnel to a remote server. All your outbound internet traffic exits through that VPN server, so websites and lookup tools see the VPN provider's IP address and location instead of your real ISP-assigned IP.
+            </p>
+          </div>
+          <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">How can I change my public IP address?</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+              Most residential internet plans use dynamic IP addressing. You can often obtain a new public IP by powering off your cable/fiber modem for 15&ndash;30 minutes (allowing the ISP DHCP lease to expire) before turning it back on, or by cloning a different MAC address into your router's WAN settings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Cross Silo Links -->
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Tools</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/tools/" class="btn btn-secondary" style="font-size: 0.85rem;">All Tools Suite &rarr;</a>
+          <a href="/tools/ip-address-checker/" class="btn btn-secondary" style="font-size: 0.85rem;">IP Address Checker &rarr;</a>
+          <a href="/tools/dns-propagation/" class="btn btn-secondary" style="font-size: 0.85rem;">DNS Propagation &rarr;</a>
+          <a href="/tools/subnet-calculator/" class="btn btn-secondary" style="font-size: 0.85rem;">Subnet Calculator &rarr;</a>
+          <a href="/tools/wifi-qr-code/" class="btn btn-secondary" style="font-size: 0.85rem;">Wi-Fi QR Code &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">Gateway Auto-Detector &rarr;</a>
+          <a href="/tools/router-password-generator/" class="btn btn-secondary" style="font-size: 0.85rem;">Password Generator &rarr;</a>
+          <a href="/tools/cidr-cheat-sheet/" class="btn btn-secondary" style="font-size: 0.85rem;">CIDR Cheat-Sheet &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Programmatic Silos</h4>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Models</a></li>
+          <li><a href="/isp/">ISP Gateways</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/ip/">Gateway IP Hubs</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Open Data & Developers</h4>
+        <ul class="footer-links">
+          <li><a href="/developers.html">Developer API & Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/data/routers.csv" download>routers.csv (Tabular)</a></li>
+          <li><a href="/data/routers.sql" download>routers.sql (ANSI Schema)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Compliance & Sitemaps</h4>
+        <ul class="footer-links">
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+          <li><a href="/robots.txt">robots.txt</a></li>
+          <li><a href="/find-router-ip.html">Find My Gateway IP</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0. Hardware trademarks belong to their respective owners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -2416,6 +2416,22 @@
     "keywords": "cidr cheat-sheet cidr-cheat-sheet tool utility networking"
   },
   {
+    "title": "Public IP Address & Geolocation Lookup",
+    "category": "Interactive Tool",
+    "badge": "Tool",
+    "url": "/tools/ip-address-checker/",
+    "snippet": "Inspect your public IPv4 and IPv6 address, ISP provider, Autonomous System Number (ASN), reverse DNS, and geolocation details.",
+    "keywords": "ip address checker ip-address-checker tool utility networking"
+  },
+  {
+    "title": "Global DNS Propagation Checker",
+    "category": "Interactive Tool",
+    "badge": "Tool",
+    "url": "/tools/dns-propagation/",
+    "snippet": "Check real-time DNS record propagation (A, AAAA, CNAME, MX, TXT, NS, SOA) across multiple worldwide recursive DNS servers via DNS-over-HTTPS.",
+    "keywords": "dns propagation dns-propagation tool utility networking"
+  },
+  {
     "title": "Universal Router IP Discovery Guide (Windows, Mac, iOS, Android)",
     "category": "Setup Guide",
     "badge": "Guide",
@@ -2444,7 +2460,7 @@
     "category": "Interactive Tool",
     "badge": "Suite",
     "url": "/tools/",
-    "snippet": "All 7 client-side tools: Wi-Fi QR generator, CIDR subnet calculator, gateway detector, password generator.",
+    "snippet": "All 8 client-side tools: IP Address Checker, DNS Propagation, Wi-Fi QR generator, CIDR subnet calculator, gateway detector, password generator, port checker, CIDR cheat sheet.",
     "keywords": "tools utilities subnet qr code password generator webrtc probe"
   }
 ]
