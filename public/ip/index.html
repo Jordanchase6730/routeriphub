@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Default Gateway IP Directory (RFC 1918 Private Subnets)</title>
-  <meta name="description" content="Complete directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.88.1, and Class A/B/C subnets.">
+  <title>Default Gateway IP Directory: Find, Access &amp; Fix Your Router Address (2026)</title>
+  <meta name="description" content="Intent-first directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.1.2, and Class A/B/C subnets. Fast diagnostic access.">
   <link rel="canonical" href="https://routeriphub.com/ip/">
 
   <!-- Favicon Suite -->
@@ -19,8 +19,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://routeriphub.com/ip/">
-  <meta property="og:title" content="Default Gateway IP Directory (RFC 1918 Private Subnets)">
-  <meta property="og:description" content="Complete directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.88.1, and Class A/B/C subnets.">
+  <meta property="og:title" content="Default Gateway IP Directory: Find, Access &amp; Fix Your Router Address (2026)">
+  <meta property="og:description" content="Intent-first directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.1.2, and Class A/B/C subnets. Fast diagnostic access.">
   <meta property="og:site_name" content="RouterIPHub">
   <meta property="og:image" content="https://routeriphub.com/og-image.png">
   <meta property="og:image:secure_url" content="https://routeriphub.com/og-image.png">
@@ -33,8 +33,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@RouterIPHub">
   <meta name="twitter:creator" content="@RouterIPHub">
-  <meta name="twitter:title" content="Default Gateway IP Directory (RFC 1918 Private Subnets)">
-  <meta name="twitter:description" content="Complete directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.88.1, and Class A/B/C subnets.">
+  <meta name="twitter:title" content="Default Gateway IP Directory: Find, Access &amp; Fix Your Router Address (2026)">
+  <meta name="twitter:description" content="Intent-first directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.1.2, and Class A/B/C subnets. Fast diagnostic access.">
   <meta name="twitter:image" content="https://routeriphub.com/og-image.png">
   <meta name="twitter:image:alt" content="RouterIPHub - The Definitive Default Router IP & Gateway Reference">
 
@@ -174,23 +174,89 @@
   </div>
 
   <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
-    <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
-      <div class="silo-badge silo-badge-ip">⚡ Private Gateway IP Silo</div>
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem auto;">
+      <div class="silo-badge silo-badge-ip">⚡ Private Gateway IP Directory</div>
       <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem;">
-        Default Gateway IP Directory
+        Default Router IP Directory
       </h1>
-      <p style="font-size: 1.1rem; color: var(--text-secondary);">
-        Complete index of RFC 1918 private IPv4 subnets used as administration web portals across commercial routers.
+      <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+        Most users searching for a router IP are either fixing a failed login, confused between a router gateway and a client device (such as 192.168.1.2), or looking for factory admin credentials. Match your hardware below for instant diagnostic resolution.
       </p>
+      <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="/tools/detect-gateway/" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">
+          ⚡ Auto-Detect My Router Gateway
+        </a>
+        <a href="/tools/ip-address-checker/" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
+          🔍 Public IP &amp; ASN Checker
+        </a>
+      </div>
     </div>
 
+    <!-- Gateway vs Client Device Overview Table -->
+    <div style="max-width: 900px; margin: 0 auto 3rem auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem;">
+      <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">
+        Which Router IP Do You Actually Need?
+      </h2>
+      <div style="overflow-x: auto;">
+        <table class="table" style="font-size: 0.9rem;">
+          <thead>
+            <tr>
+              <th>Gateway IP Address</th>
+              <th>Primary Hardware Brands</th>
+              <th>Default Credentials</th>
+              <th>Address Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/ip/192-168-1-1/"><strong>192.168.1.1</strong></a></td>
+              <td>Netgear, ASUS, Linksys, Cisco, Ubiquiti</td>
+              <td><code>admin / admin</code></td>
+              <td>Primary Default Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-0-1/"><strong>192.168.0.1</strong></a></td>
+              <td>TP-Link, D-Link, Arris, Sky Broadband</td>
+              <td><code>admin / admin</code></td>
+              <td>Primary Default Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/10-0-0-1/"><strong>10.0.0.1</strong></a></td>
+              <td>Comcast Xfinity xFi (XB6/XB7/XB8), Spectrum</td>
+              <td><code>admin / password</code></td>
+              <td>Class A ISP Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-1-254/"><strong>192.168.1.254</strong></a></td>
+              <td>AT&amp;T Fiber (BGW320), BT Smart Hub 2</td>
+              <td><code>admin / Printed DAC</code></td>
+              <td>Highest Host Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-1-2/"><strong>192.168.1.2</strong></a></td>
+              <td>Client Laptops, Phones, Printers, Extenders</td>
+              <td><code>Varies by Device</code></td>
+              <td><span style="color: #ea580c; font-weight: 700;">Client Device (Not Router)</span></td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-100-1/"><strong>192.168.100.1</strong></a></td>
+              <td>DOCSIS Cable Modems, Fiber ONTs</td>
+              <td><code>admin / admin</code></td>
+              <td>Bridge Mode Diagnostic IP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Complete IP Cards Grid -->
     <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;">
       
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-1-1/">192.168.1.1</a>
@@ -201,7 +267,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-1-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-1-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -209,7 +275,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-0-1/">192.168.0.1</a>
@@ -220,7 +286,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-0-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-0-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -228,7 +294,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24 standard local allocation)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class A Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/10-0-0-1/">10.0.0.1</a>
@@ -239,7 +305,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/10-0-0-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/10-0-0-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -247,7 +313,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-1-254/">192.168.1.254</a>
@@ -258,7 +324,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-1-254/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-1-254/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -266,7 +332,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-2-1/">192.168.2.1</a>
@@ -277,7 +343,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-2-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-2-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -285,7 +351,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-8-1/">192.168.8.1</a>
@@ -296,7 +362,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-8-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-8-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -304,7 +370,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-10-1/">192.168.10.1</a>
@@ -315,7 +381,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-10-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-10-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -323,7 +389,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-11-1/">192.168.11.1</a>
@@ -334,7 +400,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>root</code></span>
-            <a href="/ip/192-168-11-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-11-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -342,7 +408,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-12-1/">192.168.12.1</a>
@@ -353,7 +419,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-12-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-12-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -361,7 +427,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-31-1/">192.168.31.1</a>
@@ -372,7 +438,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-31-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-31-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -380,7 +446,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-68-1/">192.168.68.1</a>
@@ -391,7 +457,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>Managed</code></span>
-            <a href="/ip/192-168-68-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-68-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -399,7 +465,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-88-1/">192.168.88.1</a>
@@ -410,7 +476,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-88-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-88-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -418,7 +484,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-100-1/">192.168.100.1</a>
@@ -429,7 +495,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-100-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-100-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -437,7 +503,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-178-1/">192.168.178.1</a>
@@ -448,7 +514,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-178-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-178-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -456,7 +522,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class A Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/10-0-1-1/">10.0.1.1</a>
@@ -467,7 +533,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/10-0-1-1/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/10-0-1-1/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
@@ -475,7 +541,7 @@
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class A Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/10-0-0-138/">10.0.0.138</a>
@@ -486,15 +552,15 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/10-0-0-138/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/10-0-0-138/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">255.255.255.0 (/24)</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Class</span>
+              <span class="badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.3);">Client / Extender IP</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Class C Private</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
               <a href="/ip/192-168-1-2/">192.168.1.2</a>
@@ -505,7 +571,7 @@
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>admin</code></span>
-            <a href="/ip/192-168-1-2/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/192-168-1-2/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         

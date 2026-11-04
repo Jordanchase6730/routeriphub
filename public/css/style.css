@@ -1576,3 +1576,117 @@ article.prose pre code {
   text-decoration: none;
   background: var(--bg-card-hover);
 }
+
+
+/* ==========================================================================
+   Intent-First Technical SEO Components
+   ========================================================================== */
+.verdict-box {
+  background: var(--bg-card);
+  border: 2px solid var(--text-accent);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: var(--shadow);
+}
+.verdict-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+}
+.symptom-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.symptom-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+}
+.symptom-header {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.symptom-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.symptom-cause {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-color);
+}
+.network-topology-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+.warning-box {
+  background: rgba(239, 68, 68, 0.08);
+  border-left: 4px solid #ef4444;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  color: var(--text-primary);
+}
+.warning-box strong {
+  color: #dc2626;
+}
+.bottom-line-callout {
+  background: var(--bg-card);
+  border: 2px solid #16a34a;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+.typo-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.typo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+.typo-wrong {
+  color: #ef4444;
+  text-decoration: line-through;
+}
+.typo-correct {
+  color: #16a34a;
+  font-weight: 700;
+}

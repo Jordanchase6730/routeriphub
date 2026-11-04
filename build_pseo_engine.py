@@ -1031,8 +1031,466 @@ def generate_brand_pages():
 # ==============================================================================
 # 5. GENERATE IP GATEWAY PAGES (/ip/[ip]/ & /ip/)
 # ==============================================================================
+# ==============================================================================
+# 5. GENERATE PRIVATE GATEWAY IP HUBS (/ip/[gateway-ip]/ & /ip/)
+# IMPLEMENTS: Router IP Guide "Intent-First Technical SEO" Pattern
+# ==============================================================================
+
+IP_INTENT_METADATA = {
+    "192.168.1.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Netgear, ASUS, Linksys & Cisco",
+        "primary_cause": "typing into the browser search bar instead of the URL bar, an active VPN, or your router actually using 192.168.0.1",
+        "target_audience": "Netgear, ASUS, Linksys, Cisco, and Verizon Fios",
+        "verdict": "You are either disconnected from your router's local Wi-Fi, your phone is routing traffic over cellular data, an active VPN is intercepting local DNS queries, or your router is on a different subnet (such as 192.168.0.1 or 10.0.0.1).",
+        "default_user": "admin",
+        "default_pass": "password (or admin)",
+        "web_alias": "routerlogin.net / asusrouter.com",
+        "device_types": "Home Wi-Fi 6/7 Routers, Mesh Base Stations, Fiber Gateways",
+        "common_devices": "Windows laptops, MacBooks, iPhones, Android smartphones, PS5, Xbox Series X, Smart TVs, smart thermostats",
+        "typos": ["192.168.l.l", "http//192.168.1.1", "192.168.1.1.", "www.192.168.1.1", "192.168.1.1:8080"]
+    },
+    "192.168.0.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "TP-Link, D-Link & Arris",
+        "primary_cause": "browser forcing an HTTPS connection on a router with no SSL certificate, or an IP collision with an upstream modem",
+        "target_audience": "TP-Link, D-Link, Arris SURFboard, and Sky Broadband",
+        "verdict": "Your browser is either auto-upgrading to HTTPS (which drops port 80 requests), you are disconnected from Wi-Fi, or your upstream cable/fiber modem is colliding with 192.168.0.1.",
+        "default_user": "admin",
+        "default_pass": "admin (or set during initial setup)",
+        "web_alias": "tplinkwifi.net / dlinkrouter.local",
+        "device_types": "TP-Link Archer routers, D-Link EXO routers, Arris cable gateway combos",
+        "common_devices": "iPhones, iPads, Windows desktop PCs, smart plugs, wireless security cameras, smart lightbulbs",
+        "typos": ["192.168.0.l", "192.168.o.1", "http//192.168.0.1", "192.168.0.1.", "www.192.168.0.1"]
+    },
+    "10.0.0.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Comcast Xfinity (xFi) & Spectrum",
+        "primary_cause": "your phone using mobile cellular data instead of home Wi-Fi, or Xfinity enforcing management via the xFi mobile app",
+        "target_audience": "Comcast Xfinity xFi Gateways (XB6, XB7, XB8) and Spectrum",
+        "verdict": "Comcast Xfinity xFi gateways use 10.0.0.1 by default. If it will not load, your device is likely disconnected from your in-home xFi network, routing via cellular data, or using an active VPN.",
+        "default_user": "admin",
+        "default_pass": "password (changed on first boot)",
+        "web_alias": "Xfinity App (iOS/Android)",
+        "device_types": "xFi Advanced Gateway, DOCSIS 3.1 Gateway Combos",
+        "common_devices": "Smart TVs, Roku streaming sticks, Apple TV 4K, smart speakers, home computers",
+        "typos": ["10.0.0.l", "10.0.0.1.", "http//10.0.0.1", "10.0.0.1:8080", "10.0.0.1/admin"]
+    },
+    "192.168.1.254": {
+        "variant": "troubleshooting",
+        "primary_brand": "AT&T Fiber & BT Smart Hub",
+        "primary_cause": "attempting to log in with generic 'admin/admin' credentials instead of the unique 10-digit Device Access Code printed on the gateway sticker",
+        "target_audience": "AT&T Fiber (BGW320, BGW210, NVG589) and British Telecom (BT Smart Hub 2)",
+        "verdict": "192.168.1.254 occupies the highest usable host address in the /24 subnet. AT&T gateways require the physical 10-digit 'Device Access Code' printed in bold on the router label, not a generic password.",
+        "default_user": "admin",
+        "default_pass": "Printed 10-digit Device Access Code (DAC)",
+        "web_alias": "att-smart-home-manager / bthomehub.home",
+        "device_types": "AT&T BGW320 Wi-Fi 6 Optical Gateway, BT Smart Hub 2, 2Wire Modems",
+        "common_devices": "Fiber ONTs, home office workstations, mesh extenders, network attached storage (NAS)",
+        "typos": ["192.168.1.254.", "192.168.l.254", "http//192.168.1.254", "192.168.1.254:80", "192.168.1.254/login"]
+    },
+    "192.168.2.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Belkin & Bell Canada Home Hub",
+        "primary_cause": "the manufacturer intentionally offset the subnet to .2.1 to prevent IP address clashes with upstream 192.168.1.1 broadband modems",
+        "target_audience": "Belkin Wi-Fi routers, Bell Canada Home Hub gateways, and Philips Hue Bridge",
+        "verdict": "Belkin and Bell Canada assign 192.168.2.1 to prevent Double NAT conflicts with upstream modems. If it fails, check if you are connected directly to the Belkin LAN rather than the upstream modem.",
+        "default_user": "admin",
+        "default_pass": "[Leave Blank] or admin",
+        "web_alias": "router.belkin.com",
+        "device_types": "Belkin Dual-Band routers, Bell Fibe Home Hub, Philips Hue Zigbee Bridges",
+        "common_devices": "Smart home hubs, Philips Hue lighting bridges, Bell Fibe TV set-top boxes, laptops",
+        "typos": ["192.168.2.l", "192.168.2.1.", "http//192.168.2.1", "192.168.2.1:8080"]
+    },
+    "192.168.8.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "GL.iNet & Huawei 4G/5G Hotspots",
+        "primary_cause": "the travel router's captive portal is conflicting with hotel or airport public Wi-Fi, or cellular tethering is disconnected",
+        "target_audience": "GL.iNet OpenWrt Travel Routers (Beryl, Slate, Flint) and Huawei Mobile Wi-Fi",
+        "verdict": "192.168.8.1 is the global default for portable OpenWrt travel routers and cellular 4G/5G hotspots. If unreached, reconnect to the travel router's private Wi-Fi SSID (e.g. GL-AXT1800-XXX).",
+        "default_user": "admin / root",
+        "default_pass": "admin (or set on first boot)",
+        "web_alias": "gl-inet.com/admin",
+        "device_types": "GL.iNet Pocket Travel Routers, Huawei LTE Dongles, Mobile Hotspots",
+        "common_devices": "Travel laptops, Steam Deck, Nintendo Switch, smartphones, travel streaming dongles",
+        "typos": ["192.168.8.l", "192.168.8.1.", "http//192.168.8.1", "192.168.8.1:80"]
+    },
+    "192.168.10.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Trendnet & ZyXEL Commercial Gateways",
+        "primary_cause": "management access is restricted to specific physical LAN ports or blocked across guest VLANs",
+        "target_audience": "Trendnet, ZyXEL, and multi-WAN balancing business routers",
+        "verdict": "Commercial routers using 192.168.10.1 frequently isolate the web management console to LAN Port 1 or management VLAN 1. Verify you are not connected via a guest network.",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "web_alias": "trendnetrouter.com",
+        "device_types": "Trendnet TEW series, ZyXEL ZyWALL VPN Firewalls",
+        "common_devices": "VoIP desk phones, PoE network switches, office laser printers, server consoles",
+        "typos": ["192.168.10.l", "192.168.10.1.", "http//192.168.10.1"]
+    },
+    "192.168.11.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Buffalo AirStation",
+        "primary_cause": "the physical hardware switch on the bottom of the AirStation is set to 'AP' (Access Point) or 'WB' (Wireless Bridge) instead of 'Router'",
+        "target_audience": "Buffalo AirStation Wi-Fi routers and DD-WRT OEM firmware",
+        "verdict": "Buffalo AirStation hardware includes a physical mode toggle switch. When switched to AP or WB, the internal routing engine and 192.168.11.1 web portal are automatically disabled.",
+        "default_user": "root / admin",
+        "default_pass": "[Leave Blank] or password",
+        "web_alias": "airstation",
+        "device_types": "Buffalo AirStation HighPower series, DD-WRT powered gateways",
+        "common_devices": "Desktop PCs, network attached storage (LinkStation), smart TVs",
+        "typos": ["192.168.11.l", "192.168.11.1.", "http//192.168.11.1"]
+    },
+    "192.168.12.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "T-Mobile 5G Home Internet",
+        "primary_cause": "T-Mobile 5G gateways provide a read-only diagnostic web portal; all Wi-Fi password changes and network settings require the official T-Mobile mobile app",
+        "target_audience": "T-Mobile 5G Home Internet (Arcadyan KVD21, Sagemcom Fast 5688W, Sercomm)",
+        "verdict": "192.168.12.1 is strictly a diagnostic status page showing 5G cellular signal bands (RSRP/RSRQ/SINR). You cannot change Wi-Fi settings via the browser; you MUST use the T-Life (T-Mobile Internet) app.",
+        "default_user": "admin",
+        "default_pass": "Printed on gateway base sticker",
+        "web_alias": "T-Life App / T-Mobile Internet App",
+        "device_types": "T-Mobile 5G Gateway (KVD21, Fast 5688W, G4AR)",
+        "common_devices": "Laptops, gaming consoles, smart TVs, smartphones, smart home appliances",
+        "typos": ["192.168.12.l", "192.168.12.1.", "http//192.168.12.1"]
+    },
+    "192.168.31.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Xiaomi & Redmi Routers",
+        "primary_cause": "the router is in factory unconfigured state or DNS redirection to miwifi.com failed",
+        "target_audience": "Xiaomi Mi WiFi Routers (AX3000, AX9000, BE7000) and Redmi Routers",
+        "verdict": "Xiaomi routers default to 192.168.31.1. On first boot, the router will redirect to miwifi.com. If the page fails, connect to the unencrypted 'Xiaomi_XXXX' Wi-Fi beacon first.",
+        "default_user": "admin",
+        "default_pass": "Configured by user during first boot setup wizard",
+        "web_alias": "miwifi.com / Mi Home App",
+        "device_types": "Xiaomi Mi AIoT Router, Redmi Gaming Routers, Wi-Fi 7 BE series",
+        "common_devices": "Xiaomi Smart Home sensors, robot vacuums, smart cameras, mobile devices",
+        "typos": ["192.168.31.l", "192.168.31.1.", "http//192.168.31.1", "miwifi.com"]
+    },
+    "192.168.68.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "TP-Link Deco Whole Home Mesh",
+        "primary_cause": "TP-Link Deco mesh systems are managed via cloud app; the local 192.168.68.1 web interface is a read-only diagnostic monitor",
+        "target_audience": "TP-Link Deco Mesh systems (X55, XE75 Pro, BE85, X20)",
+        "verdict": "TP-Link deliberately chose 192.168.68.1 to prevent IP clashes with ISP modems. The web interface allows firmware upgrades, but Wi-Fi setup requires the mobile Deco app.",
+        "default_user": "TP-Link ID Email Account",
+        "default_pass": "TP-Link Cloud Password",
+        "web_alias": "tplinkdeco.net / TP-Link Deco App",
+        "device_types": "Deco Wi-Fi 6E/7 Mesh Nodes, Outdoor Mesh Satellites",
+        "common_devices": "Roaming smartphones, laptops, smart TVs, smart speakers, IoT plugs",
+        "typos": ["192.168.68.l", "192.168.68.1.", "http//192.168.68.1"]
+    },
+    "192.168.88.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "MikroTik RouterBOARD & RouterOS",
+        "primary_cause": "MikroTik default firewall drops WebFig requests on WAN ports, or Web service (port 80) is disabled in favor of WinBox (port 8291)",
+        "target_audience": "MikroTik RouterOS devices (hAP ax3, RB5009, CCR series, Cloud Core)",
+        "verdict": "MikroTik factory defaults have NO password (blank) for user 'admin'. You must connect your PC to LAN Port 2 or higher (Port 1 is configured as an isolated WAN interface).",
+        "default_user": "admin",
+        "default_pass": "[Leave Blank] (No password on factory reset)",
+        "web_alias": "router.lan / WinBox (Port 8291)",
+        "device_types": "MikroTik hAP, Chateau LTE, Cloud Router Switch (CRS)",
+        "common_devices": "Managed access points, enterprise switches, home lab server racks",
+        "typos": ["192.168.88.l", "192.168.88.1.", "http//192.168.88.1", "192.168.88.1:8291"]
+    },
+    "192.168.100.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "DOCSIS Cable Modems & Fiber ONTs",
+        "primary_cause": "your cable modem is running in Bridge / Passthrough mode, meaning you must plug an Ethernet cable directly into the modem rather than through your separate router",
+        "target_audience": "Motorola SURFboard, Arris, Netgear Nighthawk Modems (CM2000), Huawei ONTs, and Virgin Media SuperHub (Modem Mode)",
+        "verdict": "192.168.100.1 is the diagnostic IP for DOCSIS cable modems and fiber optical terminals (ONTs). It is used to monitor downstream/upstream signal levels (dBmV) and correctable errors.",
+        "default_user": "admin",
+        "default_pass": "admin (or password / printed on base sticker)",
+        "web_alias": "Modem Signal Diagnostics",
+        "device_types": "DOCSIS 3.1 Standalone Modems, Optical Network Terminals (ONT)",
+        "common_devices": "Cable line analyzers, primary WAN routers, diagnostic laptops",
+        "typos": ["192.168.100.l", "192.168.100.1.", "http//192.168.100.1"]
+    },
+    "192.168.178.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "AVM FRITZ!Box (Germany & Europe)",
+        "primary_cause": "local mDNS resolution for 'fritz.box' failed or user entered incorrect printed sticker password",
+        "target_audience": "AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber, 4060)",
+        "verdict": "192.168.178.1 is the universal default gateway across all AVM FRITZ!Box hardware in Europe. The router requires the unique randomized FRITZ!Box-Kennwort printed on the base sticker.",
+        "default_user": "admin (or no username required)",
+        "default_pass": "Unique randomized password printed on underside label",
+        "web_alias": "http://fritz.box",
+        "device_types": "FRITZ!Box DSL/Cable/Fiber Gateways, FRITZ!Repeater units",
+        "common_devices": "DECT cordless phones, European smart plugs, home computers, laptops",
+        "typos": ["192.168.178.l", "192.168.178.1.", "http//192.168.178.1", "fritz.box"]
+    },
+    "10.0.1.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Apple AirPort Extreme & Time Capsule",
+        "primary_cause": "Apple AirPort routers do NOT have a web browser interface; attempting to load 10.0.1.1 in Chrome or Safari will fail because Apple requires the AirPort Utility app",
+        "target_audience": "Apple AirPort Extreme, AirPort Express, and AirPort Time Capsule",
+        "verdict": "Apple AirPort hardware does NOT run an HTTP web server. Navigating to http://10.0.1.1 in any web browser will time out. You MUST open 'AirPort Utility' on macOS or iOS to configure the device.",
+        "default_user": "admin",
+        "default_pass": "public (or configured via AirPort Utility)",
+        "web_alias": "AirPort Utility (macOS / iOS)",
+        "device_types": "AirPort Extreme 802.11ac, Time Capsule Wireless Backup Drives",
+        "common_devices": "MacBooks, iMacs, iPhones, iPads, Time Machine network backups, AirPlay speakers",
+        "typos": ["10.0.1.l", "10.0.1.1.", "http//10.0.1.1"]
+    },
+    "10.0.0.138": {
+        "variant": "troubleshooting",
+        "primary_brand": "Telstra (Australia) & Technicolor",
+        "primary_cause": "the Telstra Smart Modem is operating on 4G cellular backup or Technicolor Telnet port lock",
+        "target_audience": "Telstra Smart Modem Gen 2/3 (Australia) and Thomson / Technicolor modems",
+        "verdict": "10.0.0.138 is the standard default gateway for Telstra broadband in Australia. If it fails to load, ensure you are not connected via a third-party VPN and try navigating to http://telstra.gateway.",
+        "default_user": "admin",
+        "default_pass": "admin (or Telstra printed password)",
+        "web_alias": "http://telstra.gateway",
+        "device_types": "Telstra NBN Smart Modems, Technicolor TG series gateways",
+        "common_devices": "Australian NBN FTTP/FTTC connections, Foxtel IQ set-top boxes, laptops, smartphones",
+        "typos": ["10.0.0.138.", "http//10.0.0.138", "telstra.gateway"]
+    },
+    "192.168.1.2": {
+        "variant": "correction",
+        "primary_brand": "Client Devices & Secondary Wi-Fi Extenders",
+        "primary_cause": "192.168.1.2 is assigned to an individual client device (your laptop, phone, printer, smart TV, or camera), NOT your primary router gateway",
+        "target_audience": "DHCP Client Devices, Network Printers, IP Security Cameras, and Chained Wi-Fi Extenders",
+        "verdict": "192.168.1.2 is the first dynamic client IP leased by your router's DHCP server. It is NOT your router's admin portal. Your actual router gateway is 192.168.1.1.",
+        "default_user": "admin",
+        "default_pass": "admin (on range extenders) or device PIN",
+        "web_alias": "http://192.168.1.1 (Actual Router Gateway)",
+        "device_types": "Laptops, Smart TVs, Wireless Laser Printers, Hikvision/Dahua IP Cameras, Wi-Fi Extenders",
+        "common_devices": "HP/Canon printers, Ring/Nest security cameras, NVR surveillance systems, laptops, iPhones",
+        "typos": ["192.168.1.2.", "http//192.168.1.2", "192.168.l.2", "192.168.1.2:80"]
+    }
+}
+
+# ==============================================================================
+# 5. GENERATE PRIVATE GATEWAY IP HUBS (/ip/[gateway-ip]/ & /ip/)
+# IMPLEMENTS: Router IP Guide "Intent-First Technical SEO" Pattern
+# ==============================================================================
+
+IP_INTENT_METADATA = {
+    "192.168.1.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Netgear, ASUS, Linksys & Cisco",
+        "primary_cause": "typing into the browser search bar instead of the URL bar, an active VPN, or your router actually using 192.168.0.1",
+        "target_audience": "Netgear, ASUS, Linksys, Cisco, and Verizon Fios",
+        "verdict": "You are either disconnected from your router's local Wi-Fi, your phone is routing traffic over cellular data, an active VPN is intercepting local DNS queries, or your router is on a different subnet (such as 192.168.0.1 or 10.0.0.1).",
+        "default_user": "admin",
+        "default_pass": "password (or admin)",
+        "web_alias": "routerlogin.net / asusrouter.com",
+        "device_types": "Home Wi-Fi 6/7 Routers, Mesh Base Stations, Fiber Gateways",
+        "common_devices": "Windows laptops, MacBooks, iPhones, Android smartphones, PS5, Xbox Series X, Smart TVs, smart thermostats",
+        "typos": ["192.168.l.l", "http//192.168.1.1", "192.168.1.1.", "www.192.168.1.1", "192.168.1.1:8080"]
+    },
+    "192.168.0.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "TP-Link, D-Link & Arris",
+        "primary_cause": "browser forcing an HTTPS connection on a router with no SSL certificate, or an IP collision with an upstream modem",
+        "target_audience": "TP-Link, D-Link, Arris SURFboard, and Sky Broadband",
+        "verdict": "Your browser is either auto-upgrading to HTTPS (which drops port 80 requests), you are disconnected from Wi-Fi, or your upstream cable/fiber modem is colliding with 192.168.0.1.",
+        "default_user": "admin",
+        "default_pass": "admin (or set during initial setup)",
+        "web_alias": "tplinkwifi.net / dlinkrouter.local",
+        "device_types": "TP-Link Archer routers, D-Link EXO routers, Arris cable gateway combos",
+        "common_devices": "iPhones, iPads, Windows desktop PCs, smart plugs, wireless security cameras, smart lightbulbs",
+        "typos": ["192.168.0.l", "192.168.o.1", "http//192.168.0.1", "192.168.0.1.", "www.192.168.0.1"]
+    },
+    "10.0.0.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Comcast Xfinity (xFi) & Spectrum",
+        "primary_cause": "your phone using mobile cellular data instead of home Wi-Fi, or Xfinity enforcing management via the xFi mobile app",
+        "target_audience": "Comcast Xfinity xFi Gateways (XB6, XB7, XB8) and Spectrum",
+        "verdict": "Comcast Xfinity xFi gateways use 10.0.0.1 by default. If it will not load, your device is likely disconnected from your in-home xFi network, routing via cellular data, or using an active VPN.",
+        "default_user": "admin",
+        "default_pass": "password (changed on first boot)",
+        "web_alias": "Xfinity App (iOS/Android)",
+        "device_types": "xFi Advanced Gateway, DOCSIS 3.1 Gateway Combos",
+        "common_devices": "Smart TVs, Roku streaming sticks, Apple TV 4K, smart speakers, home computers",
+        "typos": ["10.0.0.l", "10.0.0.1.", "http//10.0.0.1", "10.0.0.1:8080", "10.0.0.1/admin"]
+    },
+    "192.168.1.254": {
+        "variant": "troubleshooting",
+        "primary_brand": "AT&T Fiber & BT Smart Hub",
+        "primary_cause": "attempting to log in with generic 'admin/admin' credentials instead of the unique 10-digit Device Access Code printed on the gateway sticker",
+        "target_audience": "AT&T Fiber (BGW320, BGW210, NVG589) and British Telecom (BT Smart Hub 2)",
+        "verdict": "192.168.1.254 occupies the highest usable host address in the /24 subnet. AT&T gateways require the physical 10-digit 'Device Access Code' printed in bold on the router label, not a generic password.",
+        "default_user": "admin",
+        "default_pass": "Printed 10-digit Device Access Code (DAC)",
+        "web_alias": "att-smart-home-manager / bthomehub.home",
+        "device_types": "AT&T BGW320 Wi-Fi 6 Optical Gateway, BT Smart Hub 2, 2Wire Modems",
+        "common_devices": "Fiber ONTs, home office workstations, mesh extenders, network attached storage (NAS)",
+        "typos": ["192.168.1.254.", "192.168.l.254", "http//192.168.1.254", "192.168.1.254:80", "192.168.1.254/login"]
+    },
+    "192.168.2.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Belkin & Bell Canada Home Hub",
+        "primary_cause": "the manufacturer intentionally offset the subnet to .2.1 to prevent IP address clashes with upstream 192.168.1.1 broadband modems",
+        "target_audience": "Belkin Wi-Fi routers, Bell Canada Home Hub gateways, and Philips Hue Bridge",
+        "verdict": "Belkin and Bell Canada assign 192.168.2.1 to prevent Double NAT conflicts with upstream modems. If it fails, check if you are connected directly to the Belkin LAN rather than the upstream modem.",
+        "default_user": "admin",
+        "default_pass": "[Leave Blank] or admin",
+        "web_alias": "router.belkin.com",
+        "device_types": "Belkin Dual-Band routers, Bell Fibe Home Hub, Philips Hue Zigbee Bridges",
+        "common_devices": "Smart home hubs, Philips Hue lighting bridges, Bell Fibe TV set-top boxes, laptops",
+        "typos": ["192.168.2.l", "192.168.2.1.", "http//192.168.2.1", "192.168.2.1:8080"]
+    },
+    "192.168.8.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "GL.iNet & Huawei 4G/5G Hotspots",
+        "primary_cause": "the travel router's captive portal is conflicting with hotel or airport public Wi-Fi, or cellular tethering is disconnected",
+        "target_audience": "GL.iNet OpenWrt Travel Routers (Beryl, Slate, Flint) and Huawei Mobile Wi-Fi",
+        "verdict": "192.168.8.1 is the global default for portable OpenWrt travel routers and cellular 4G/5G hotspots. If unreached, reconnect to the travel router's private Wi-Fi SSID (e.g. GL-AXT1800-XXX).",
+        "default_user": "admin / root",
+        "default_pass": "admin (or set on first boot)",
+        "web_alias": "gl-inet.com/admin",
+        "device_types": "GL.iNet Pocket Travel Routers, Huawei LTE Dongles, Mobile Hotspots",
+        "common_devices": "Travel laptops, Steam Deck, Nintendo Switch, smartphones, travel streaming dongles",
+        "typos": ["192.168.8.l", "192.168.8.1.", "http//192.168.8.1", "192.168.8.1:80"]
+    },
+    "192.168.10.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Trendnet & ZyXEL Commercial Gateways",
+        "primary_cause": "management access is restricted to specific physical LAN ports or blocked across guest VLANs",
+        "target_audience": "Trendnet, ZyXEL, and multi-WAN balancing business routers",
+        "verdict": "Commercial routers using 192.168.10.1 frequently isolate the web management console to LAN Port 1 or management VLAN 1. Verify you are not connected via a guest network.",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "web_alias": "trendnetrouter.com",
+        "device_types": "Trendnet TEW series, ZyXEL ZyWALL VPN Firewalls",
+        "common_devices": "VoIP desk phones, PoE network switches, office laser printers, server consoles",
+        "typos": ["192.168.10.l", "192.168.10.1.", "http//192.168.10.1"]
+    },
+    "192.168.11.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Buffalo AirStation",
+        "primary_cause": "the physical hardware switch on the bottom of the AirStation is set to 'AP' (Access Point) or 'WB' (Wireless Bridge) instead of 'Router'",
+        "target_audience": "Buffalo AirStation Wi-Fi routers and DD-WRT OEM firmware",
+        "verdict": "Buffalo AirStation hardware includes a physical mode toggle switch. When switched to AP or WB, the internal routing engine and 192.168.11.1 web portal are automatically disabled.",
+        "default_user": "root / admin",
+        "default_pass": "[Leave Blank] or password",
+        "web_alias": "airstation",
+        "device_types": "Buffalo AirStation HighPower series, DD-WRT powered gateways",
+        "common_devices": "Desktop PCs, network attached storage (LinkStation), smart TVs",
+        "typos": ["192.168.11.l", "192.168.11.1.", "http//192.168.11.1"]
+    },
+    "192.168.12.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "T-Mobile 5G Home Internet",
+        "primary_cause": "T-Mobile 5G gateways provide a read-only diagnostic web portal; all Wi-Fi password changes and network settings require the official T-Mobile mobile app",
+        "target_audience": "T-Mobile 5G Home Internet (Arcadyan KVD21, Sagemcom Fast 5688W, Sercomm)",
+        "verdict": "192.168.12.1 is strictly a diagnostic status page showing 5G cellular signal bands (RSRP/RSRQ/SINR). You cannot change Wi-Fi settings via the browser; you MUST use the T-Life (T-Mobile Internet) app.",
+        "default_user": "admin",
+        "default_pass": "Printed on gateway base sticker",
+        "web_alias": "T-Life App / T-Mobile Internet App",
+        "device_types": "T-Mobile 5G Gateway (KVD21, Fast 5688W, G4AR)",
+        "common_devices": "Laptops, gaming consoles, smart TVs, smartphones, smart home appliances",
+        "typos": ["192.168.12.l", "192.168.12.1.", "http//192.168.12.1"]
+    },
+    "192.168.31.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Xiaomi & Redmi Routers",
+        "primary_cause": "the router is in factory unconfigured state or DNS redirection to miwifi.com failed",
+        "target_audience": "Xiaomi Mi WiFi Routers (AX3000, AX9000, BE7000) and Redmi Routers",
+        "verdict": "Xiaomi routers default to 192.168.31.1. On first boot, the router will redirect to miwifi.com. If the page fails, connect to the unencrypted 'Xiaomi_XXXX' Wi-Fi beacon first.",
+        "default_user": "admin",
+        "default_pass": "Configured by user during first boot setup wizard",
+        "web_alias": "miwifi.com / Mi Home App",
+        "device_types": "Xiaomi Mi AIoT Router, Redmi Gaming Routers, Wi-Fi 7 BE series",
+        "common_devices": "Xiaomi Smart Home sensors, robot vacuums, smart cameras, mobile devices",
+        "typos": ["192.168.31.l", "192.168.31.1.", "http//192.168.31.1", "miwifi.com"]
+    },
+    "192.168.68.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "TP-Link Deco Whole Home Mesh",
+        "primary_cause": "TP-Link Deco mesh systems are managed via cloud app; the local 192.168.68.1 web interface is a read-only diagnostic monitor",
+        "target_audience": "TP-Link Deco Mesh systems (X55, XE75 Pro, BE85, X20)",
+        "verdict": "TP-Link deliberately chose 192.168.68.1 to prevent IP clashes with ISP modems. The web interface allows firmware upgrades, but Wi-Fi setup requires the mobile Deco app.",
+        "default_user": "TP-Link ID Email Account",
+        "default_pass": "TP-Link Cloud Password",
+        "web_alias": "tplinkdeco.net / TP-Link Deco App",
+        "device_types": "Deco Wi-Fi 6E/7 Mesh Nodes, Outdoor Mesh Satellites",
+        "common_devices": "Roaming smartphones, laptops, smart TVs, smart speakers, IoT plugs",
+        "typos": ["192.168.68.l", "192.168.68.1.", "http//192.168.68.1"]
+    },
+    "192.168.88.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "MikroTik RouterBOARD & RouterOS",
+        "primary_cause": "MikroTik default firewall drops WebFig requests on WAN ports, or Web service (port 80) is disabled in favor of WinBox (port 8291)",
+        "target_audience": "MikroTik RouterOS devices (hAP ax3, RB5009, CCR series, Cloud Core)",
+        "verdict": "MikroTik factory defaults have NO password (blank) for user 'admin'. You must connect your PC to LAN Port 2 or higher (Port 1 is configured as an isolated WAN interface).",
+        "default_user": "admin",
+        "default_pass": "[Leave Blank] (No password on factory reset)",
+        "web_alias": "router.lan / WinBox (Port 8291)",
+        "device_types": "MikroTik hAP, Chateau LTE, Cloud Router Switch (CRS)",
+        "common_devices": "Managed access points, enterprise switches, home lab server racks",
+        "typos": ["192.168.88.l", "192.168.88.1.", "http//192.168.88.1", "192.168.88.1:8291"]
+    },
+    "192.168.100.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "DOCSIS Cable Modems & Fiber ONTs",
+        "primary_cause": "your cable modem is running in Bridge / Passthrough mode, meaning you must plug an Ethernet cable directly into the modem rather than through your separate router",
+        "target_audience": "Motorola SURFboard, Arris, Netgear Nighthawk Modems (CM2000), Huawei ONTs, and Virgin Media SuperHub (Modem Mode)",
+        "verdict": "192.168.100.1 is the diagnostic IP for DOCSIS cable modems and fiber optical terminals (ONTs). It is used to monitor downstream/upstream signal levels (dBmV) and correctable errors.",
+        "default_user": "admin",
+        "default_pass": "admin (or password / printed on base sticker)",
+        "web_alias": "Modem Signal Diagnostics",
+        "device_types": "DOCSIS 3.1 Standalone Modems, Optical Network Terminals (ONT)",
+        "common_devices": "Cable line analyzers, primary WAN routers, diagnostic laptops",
+        "typos": ["192.168.100.l", "192.168.100.1.", "http//192.168.100.1"]
+    },
+    "192.168.178.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "AVM FRITZ!Box (Germany & Europe)",
+        "primary_cause": "local mDNS resolution for 'fritz.box' failed or user entered incorrect printed sticker password",
+        "target_audience": "AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber, 4060)",
+        "verdict": "192.168.178.1 is the universal default gateway across all AVM FRITZ!Box hardware in Europe. The router requires the unique randomized FRITZ!Box-Kennwort printed on the base sticker.",
+        "default_user": "admin (or no username required)",
+        "default_pass": "Unique randomized password printed on underside label",
+        "web_alias": "http://fritz.box",
+        "device_types": "FRITZ!Box DSL/Cable/Fiber Gateways, FRITZ!Repeater units",
+        "common_devices": "DECT cordless phones, European smart plugs, home computers, laptops",
+        "typos": ["192.168.178.l", "192.168.178.1.", "http//192.168.178.1", "fritz.box"]
+    },
+    "10.0.1.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Apple AirPort Extreme & Time Capsule",
+        "primary_cause": "Apple AirPort routers do NOT have a web browser interface; attempting to load 10.0.1.1 in Chrome or Safari will fail because Apple requires the AirPort Utility app",
+        "target_audience": "Apple AirPort Extreme, AirPort Express, and AirPort Time Capsule",
+        "verdict": "Apple AirPort hardware does NOT run an HTTP web server. Navigating to http://10.0.1.1 in any web browser will time out. You MUST open 'AirPort Utility' on macOS or iOS to configure the device.",
+        "default_user": "admin",
+        "default_pass": "public (or configured via AirPort Utility)",
+        "web_alias": "AirPort Utility (macOS / iOS)",
+        "device_types": "AirPort Extreme 802.11ac, Time Capsule Wireless Backup Drives",
+        "common_devices": "MacBooks, iMacs, iPhones, iPads, Time Machine network backups, AirPlay speakers",
+        "typos": ["10.0.1.l", "10.0.1.1.", "http//10.0.1.1"]
+    },
+    "10.0.0.138": {
+        "variant": "troubleshooting",
+        "primary_brand": "Telstra (Australia) & Technicolor",
+        "primary_cause": "the Telstra Smart Modem is operating on 4G cellular backup or Technicolor Telnet port lock",
+        "target_audience": "Telstra Smart Modem Gen 2/3 (Australia) and Thomson / Technicolor modems",
+        "verdict": "10.0.0.138 is the standard default gateway for Telstra broadband in Australia. If it fails to load, ensure you are not connected via a third-party VPN and try navigating to http://telstra.gateway.",
+        "default_user": "admin",
+        "default_pass": "admin (or Telstra printed password)",
+        "web_alias": "http://telstra.gateway",
+        "device_types": "Telstra NBN Smart Modems, Technicolor TG series gateways",
+        "common_devices": "Australian NBN FTTP/FTTC connections, Foxtel IQ set-top boxes, laptops, smartphones",
+        "typos": ["10.0.0.138.", "http//10.0.0.138", "telstra.gateway"]
+    },
+    "192.168.1.2": {
+        "variant": "correction",
+        "primary_brand": "Client Devices & Secondary Wi-Fi Extenders",
+        "primary_cause": "192.168.1.2 is assigned to an individual client device (your laptop, phone, printer, smart TV, or camera), NOT your primary router gateway",
+        "target_audience": "DHCP Client Devices, Network Printers, IP Security Cameras, and Chained Wi-Fi Extenders",
+        "verdict": "192.168.1.2 is the first dynamic client IP leased by your router's DHCP server. It is NOT your router's admin portal. Your actual router gateway is 192.168.1.1.",
+        "default_user": "admin",
+        "default_pass": "admin (on range extenders) or device PIN",
+        "web_alias": "http://192.168.1.1 (Actual Router Gateway)",
+        "device_types": "Laptops, Smart TVs, Wireless Laser Printers, Hikvision/Dahua IP Cameras, Wi-Fi Extenders",
+        "common_devices": "HP/Canon printers, Ring/Nest security cameras, NVR surveillance systems, laptops, iPhones",
+        "typos": ["192.168.1.2.", "http//192.168.1.2", "192.168.l.2", "192.168.1.2:80"]
+    }
+}
+
 def generate_ip_pages():
-    print(f"Generating {len(IP_GATEWAYS)} private gateway IP pages...")
+    print(f"Generating {len(IP_GATEWAYS)} private gateway IP pages (Intent-First Technical SEO Pattern)...")
     for ip_item in IP_GATEWAYS:
         ip = ip_item["ip"]
         slug = ip_item["slug"]
@@ -1040,12 +1498,36 @@ def generate_ip_pages():
         make_dirs(ip_dir)
 
         canonical = f"https://routeriphub.com/ip/{slug}/"
-        title = f"{ip} Router Admin Login, Default Password & Troubleshooting (2026)"
-        desc = f"Access {ip} router login portal. Default username, password, network configuration, and troubleshooting guide for {ip_item['brands']} routers."
+        meta = IP_INTENT_METADATA.get(ip, {
+            "variant": "troubleshooting",
+            "primary_brand": ip_item["brands"].split(",")[0],
+            "primary_cause": "subnet conflict, VPN connection, or browser search redirect",
+            "target_audience": ip_item["brands"],
+            "verdict": f"If {ip} is not loading, verify your device is connected to the router Wi-Fi without VPN and enter http://{ip} over plain HTTP.",
+            "default_user": ip_item["default_creds"].split("/")[0].strip(),
+            "default_pass": ip_item["default_creds"].split("/")[1].strip() if "/" in ip_item["default_creds"] else "admin",
+            "web_alias": f"http://{ip}",
+            "device_types": "Home Wi-Fi Routers, Gateways",
+            "common_devices": "Laptops, smartphones, smart TVs, tablets",
+            "typos": [f"{ip}.", f"http//{ip}"]
+        })
 
+        is_correction = meta["variant"] == "correction"
+
+        # 1. Page Title & Contrarian H1 Formulas
+        if is_correction:
+            title = f"{ip} — What This Address Actually Is (It’s Usually Not Your Router)"
+            h1 = f"{ip} — What This Address Actually Is (It’s Usually Not Your Router)"
+            desc = f"Searched {ip} expecting your router login? Here is why {ip} is a client device or extender, not your primary router gateway, and how to reach 192.168.1.1."
+        else:
+            title = f"{ip} Not Working? {meta['primary_brand']} Router Login Fix (2026)"
+            h1 = f"{ip} Not Working? {meta['primary_brand']} Router Login Fix"
+            desc = f"{ip} not loading? Instant fix for {meta['target_audience']} router login failures. Factory credentials, why connection timeouts happen, and step-by-step diagnostic resolution."
+
+        # Schemas
         tech_schema = {
             "@type": "TechArticle",
-            "headline": f"{ip} Default Gateway IP Administration Reference",
+            "headline": title,
             "description": desc,
             "mainEntityOfPage": canonical,
             "datePublished": "2026-01-15T08:00:00+00:00",
@@ -1056,25 +1538,32 @@ def generate_ip_pages():
 
         howto_schema = {
             "@type": "HowTo",
-            "name": f"How to Log Into {ip} Admin Console",
+            "name": f"How to Resolve {ip} Router Access & Login",
+            "description": f"Step-by-step technical diagnostic sequence to resolve {ip} browser connection failures.",
             "step": [
                 {
                     "@type": "HowToStep",
                     "position": 1,
-                    "name": "Connect to Local Network",
-                    "text": "Connect to your home router via Wi-Fi or directly connect an Ethernet cable to any LAN port."
+                    "name": "Disconnect VPNs & Cellular Data",
+                    "text": "Disconnect active corporate or commercial VPNs (NordVPN, ExpressVPN) and turn off mobile cellular data to prevent local subnet isolation."
                 },
                 {
                     "@type": "HowToStep",
                     "position": 2,
-                    "name": "Navigate to Gateway Address",
-                    "text": f"Open your web browser (Chrome, Safari, Edge, Firefox) and type http://{ip} in the URL bar."
+                    "name": "Verify Physical or Wi-Fi Connection",
+                    "text": "Ensure your phone or computer is actively joined to the router's local Wi-Fi SSID or connected via Ethernet."
                 },
                 {
                     "@type": "HowToStep",
                     "position": 3,
-                    "name": "Submit Admin Credentials",
-                    "text": f"Enter the default credentials: '{ip_item['default_creds']}' or check the router underside label."
+                    "name": "Navigate to Gateway Address",
+                    "text": f"Open your web browser and type http://{ip} explicitly in the URL address bar, not the search engine omnibox."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Authenticate with Factory Credentials",
+                    "text": f"Submit username '{meta['default_user']}' and password '{meta['default_pass']}' or check the physical router sticker."
                 }
             ]
         }
@@ -1085,93 +1574,298 @@ def generate_ip_pages():
             (ip, f"/ip/{slug}/")
         ]
 
-        # Find models using this IP
+        # 2. Hardware models matching this IP
         ip_models = [m for m in ROUTER_MODELS if m["default_ip"] == ip]
         model_rows = ""
-        for m in ip_models:
+        for m in ip_models[:12]:
             model_rows += f"""
             <tr>
               <td><a href="/routers/{escape(m['slug'])}/"><strong>{escape(m['brand'])} {escape(m['model_name'])}</strong></a></td>
               <td><code>{escape(m['default_username'])}</code></td>
               <td><code>{escape(m['default_password'])}</code></td>
+              <td><span style="font-size: 0.825rem; color: var(--text-muted);">{escape(m['wifi_standard'])}</span></td>
               <td><a href="/routers/{escape(m['slug'])}/" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.3rem 0.65rem;">Setup Sheet &rarr;</a></td>
             </tr>
             """
         if not model_rows:
             model_rows = f"""
             <tr>
-              <td colspan="4" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">
-                Commonly deployed on {escape(ip_item['brands'])} hardware with credentials <code>{escape(ip_item['default_creds'])}</code>.
+              <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">
+                Standard gateway across {escape(ip_item['brands'])} hardware with credentials <code>{escape(ip_item['default_creds'])}</code>.
               </td>
             </tr>
             """
 
-        content = f"""
-  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3.5rem;">
-    <div class="content-container">
-      <div class="silo-badge silo-badge-ip">⚡ Private Gateway IP Pillar</div>
-      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
-        {escape(ip)} Admin Login & Setup Guide
-      </h1>
-      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        {escape(ip_item['summary'])}
+        # 3. Intent-Matching Intro & Verdict Content
+        if is_correction:
+            intro_html = f"""
+        <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+          If you searched <strong>{escape(ip)}</strong> expecting to open your router setup page, here is why that assumption is wrong: <strong>{escape(ip)} is almost always an individual client device</strong>—such as your laptop, phone, wireless printer, smart TV, or security camera/NVR—or a secondary Wi-Fi range extender, while your actual primary default gateway router is almost certainly <strong><a href="/ip/192-168-1-1/" style="color: var(--text-accent); text-decoration: underline;">192.168.1.1</a></strong>.
+        </p>
+            """
+            quick_answer_html = f"""
+        <div class="verdict-box">
+          <div class="verdict-tag">⚠️ Central Address Correction &amp; Verdict</div>
+          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+            Verdict: {escape(ip)} is a client device or secondary repeater, NOT your primary router gateway.
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+            In standard home and small business networks running on the <code>192.168.1.0/24</code> subnet, the primary router reserves <code>192.168.1.1</code> for its own administration web server. When your laptop, desktop PC, or iPhone joins the network, the router's DHCP server assigns it the first available host IP: <strong>{escape(ip)}</strong>. Navigating to this address in a browser will either time out or display the configuration page of an IoT smart device, not your router.
+          </p>
+          <div class="action-btn-group">
+            <a href="http://192.168.1.1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Open Real Router Gateway (http://192.168.1.1) &rarr;
+            </a>
+            <a href="http://{escape(ip)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Open http://{escape(ip)} (Inspect Client Device)
+            </a>
+            <button class="btn btn-secondary copy-btn" data-copy="192.168.1.1">Copy Router IP (192.168.1.1)</button>
+          </div>
+        </div>
+            """
+        else:
+            intro_html = f"""
+        <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+          <strong>{escape(ip)} not working?</strong> If your browser displays <em>"This site can’t be reached"</em>, <em>"Connection timed out"</em>, or redirects you to a Google search results page instead of your router admin console, here is why {escape(meta['primary_cause'])} happens and how to fix it in under 60 seconds.
+        </p>
+            """
+            quick_answer_html = f"""
+        <div class="verdict-box">
+          <div class="verdict-tag">⚡ Immediate Diagnostic Verdict &amp; Login Fix</div>
+          <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+            Verdict: {escape(meta['verdict'])}
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+            Default credentials for {escape(meta['target_audience'])} routers on this gateway are typically username: <code>{escape(meta['default_user'])}</code> and password: <code>{escape(meta['default_pass'])}</code>. You must connect over plain, unencrypted HTTP without an active VPN tunnel.
+          </p>
+          <div class="action-btn-group">
+            <a href="http://{escape(ip)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Open http://{escape(ip)} in Browser &rarr;
+            </a>
+            <button class="btn btn-secondary copy-btn" data-copy="{escape(ip)}">Copy Gateway IP ({escape(ip)})</button>
+            <a href="/tools/detect-gateway/" class="btn btn-secondary">⚡ Auto-Detect My Actual Gateway</a>
+          </div>
+        </div>
+            """
+
+        # 4. Visual Diagnostic Matrix & Topology Context
+        topology_diagram = """
+    ┌─────────────────────────────────────────────────────────────┐
+    │                INTERNET (Public WAN / ISP)                  │
+    └──────────────────────────────┬──────────────────────────────┘
+                                   │
+                      [Cable / Fiber / 5G Modem]
+                                   │ (WAN Port)
+    ┌──────────────────────────────▼──────────────────────────────┐
+    │  PRIMARY DEFAULT GATEWAY ROUTER (192.168.1.1)               │
+    │  Web Administration Console & DHCP Server                   │
+    └──────┬───────────────────────┬───────────────────────┬──────┘
+           │ (LAN 1)               │ (Wi-Fi 5 GHz)         │ (LAN 2)
+    ┌──────▼──────┐         ┌──────▼──────┐         ┌──────▼──────┐
+    │ Your Laptop │         │ Smartphone  │         │ IoT Device  │
+    │ 192.168.1.2 │         │ 192.168.1.3 │         │ 192.168.1.4 │
+    │ (Client PC) │         │ (Client)    │         │ (Printer)   │
+    └─────────────┘         └─────────────┘         └─────────────┘
+        """ if is_correction else f"""
+    ┌─────────────────────────────────────────────────────────────┐
+    │                INTERNET (Public WAN / ISP)                  │
+    └──────────────────────────────┬──────────────────────────────┘
+                                   │
+                      [Cable / Fiber / 5G Modem]
+                                   │ (WAN Interface)
+    ┌──────────────────────────────▼──────────────────────────────┐
+    │  DEFAULT GATEWAY ROUTER ({escape(ip)})                           │
+    │  Admin Portal (Port 80 HTTP) & DHCP Lease Server            │
+    └──────┬───────────────────────┬───────────────────────┬──────┘
+           │ (Wi-Fi 6 / LAN)       │ (Wi-Fi Guest)         │ (Ethernet)
+    ┌──────▼──────┐         ┌──────▼──────┐         ┌──────▼──────┐
+    │ Phone / PC  │         │ Guest Phone │         │ Smart TV    │
+    │ (Host LAN)  │         │ (Isolated)  │         │ (Streaming) │
+    └─────────────┘         └─────────────┘         └─────────────┘
+        """
+
+        # Decision Table HTML
+        decision_table = f"""
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Decision Table: Match Your Situation to the Immediate Resolution
+      </h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+        Find your current symptom below to identify what your network actually requires and the exact action to take next:
       </p>
-
-      <!-- Answer Box -->
-      <div class="answer-box">
-        <div class="answer-box-label">RFC 1918 Private IPv4 Reference</div>
-        <div class="answer-box-main">
-          Gateway IP: <strong>{escape(ip)}</strong> &bull; Subnet: <strong>{escape(ip_item['subnet_mask'])}</strong>
-        </div>
-        <div class="answer-box-sub">
-          Default Credentials: <strong>{escape(ip_item['default_creds'])}</strong> &bull; Usable Hosts: {escape(ip_item['usable_range'])}
-        </div>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Your Situation / Error</th>
+              <th style="min-width: 220px;">What You Actually Need</th>
+              <th style="min-width: 260px;">Immediate Action to Take</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Changing Wi-Fi Name or Password</strong></td>
+              <td>Primary Router Web Admin Console</td>
+              <td>Connect to your router Wi-Fi, open <code>{'http://192.168.1.1' if is_correction else f'http://{ip}'}</code>, and navigate to Wireless Settings.</td>
+            </tr>
+            <tr>
+              <td><strong>Browser opens Google / Bing search instead of login</strong></td>
+              <td>Direct URL Address Navigation</td>
+              <td>Type <code>http://{escape(ip)}</code> with the <code>http://</code> scheme directly in the top browser address bar, not the search engine input.</td>
+            </tr>
+            <tr>
+              <td><strong>"This site can’t be reached" (ERR_CONNECTION_TIMED_OUT)</strong></td>
+              <td>Local Subnet Alignment &amp; Direct Connection</td>
+              <td>Turn off corporate or commercial VPNs (NordVPN, ExpressVPN), disconnect mobile cellular data, and verify your gateway with <code>ipconfig</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>"Your connection is not private" (SSL/TLS Error)</strong></td>
+              <td>Unencrypted HTTP Port 80 Daemon</td>
+              <td>Remove <code>https://</code> from your URL. Consumer routers do not maintain public SSL certificates and reject HTTPS requests.</td>
+            </tr>
+            <tr>
+              <td><strong>Device says "Connected, no Internet"</strong></td>
+              <td>Modem WAN Uplink Connection</td>
+              <td>Ensure the Ethernet cable from your ISP optical ONT or cable modem is seated securely into the router's yellow/blue <strong>WAN/Internet port</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Can't remember custom admin password</strong></td>
+              <td>Physical Hardware Factory Reset</td>
+              <td>Locate the physical <strong>Reset</strong> pinhole on the rear panel, press and hold for 15 seconds with a paperclip, and log in with default credentials.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+        """
 
-      <!-- Action Buttons -->
-      <div class="action-btn-group">
-        <a href="http://{escape(ip)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Open http://{escape(ip)} in Browser &rarr;
-        </a>
-        <button class="btn btn-secondary copy-btn" data-copy="{escape(ip)}">
-          Copy IP ({escape(ip)})
-        </button>
-      </div>
+        # Typo correction chips
+        typo_chips = "".join([f'<div class="typo-chip"><span class="typo-wrong">{escape(tp)}</span> &rarr; <span class="typo-correct">http://{escape(ip)}</span></div>' for tp in meta['typos']])
 
-      <!-- Subnet Specifications -->
-      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem;">
-        Subnet Parameters & Range Allocation
+        # Secondary Scenario HTML
+        if is_correction:
+            secondary_scenario_html = """
+        <p style="margin-bottom: 0.75rem;">
+          If you are looking at your network scan and see <strong>192.168.1.2</strong> active, you can identify the exact hardware device using simple command line tools:
+        </p>
+        <ol style="margin-left: 1.25rem; margin-bottom: 0.75rem;">
+          <li><strong>Windows / Mac Terminal:</strong> Run <code>ping 192.168.1.2</code> followed by <code>arp -a</code>.</li>
+          <li><strong>Find the Physical MAC Address:</strong> Look at the entry for 192.168.1.2 (e.g. <code>b4-fb-e4-xx-xx-xx</code>).</li>
+          <li><strong>Match the Manufacturer:</strong> The first 6 characters represent the Organizationally Unique Identifier (OUI). Common devices assigned to 192.168.1.2 include HP / Epson wireless printers, Dahua / Hikvision IP security cameras, Synology NAS units, or Apple TV streaming boxes.</li>
+        </ol>
+            """
+        else:
+            secondary_scenario_html = f"""
+        <p style="margin-bottom: 0.75rem;">
+          If your network includes a secondary Wi-Fi router configured in <strong>Access Point (AP) mode</strong>, a Wi-Fi range extender, or a mesh node satellite (such as Netgear Orbi or TP-Link Deco), the device's internal DHCP server is disabled to prevent Double NAT routing loops.
+        </p>
+        <p style="margin: 0;">
+          In AP mode, the secondary unit ceases to act as a gateway and receives a dynamic client IP address from your primary modem or router. To access its setup page, log into your main gateway router (e.g. 192.168.1.1), check the <strong>Attached Devices / DHCP Client List</strong>, find the satellite's dynamically leased IP, and open that specific address in your browser.
+        </p>
+            """
+
+        # Content Assembly
+        content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Reference</div>
+      
+      <!-- Contrarian / Problem H1 -->
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        {escape(h1)}
+      </h1>
+      
+      <!-- Intent-Matching Intro -->
+      {intro_html}
+
+      <!-- Quick Answer Box with Bold Verdict -->
+      {quick_answer_html}
+
+      <!-- Visual Diagnostic Context (Symptom vs Cause Matrix) -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;">
+        Visual Diagnostic Context: Symptom vs. Root Cause
       </h2>
-      <div class="specs-grid">
-        <div class="spec-item">
-          <span class="spec-item-label">Address Class</span>
-          <span class="spec-item-val">{escape(ip_item['class_type'])}</span>
+      <div class="symptom-matrix">
+        <div class="symptom-card">
+          <span class="symptom-header">Symptom A</span>
+          <div class="symptom-title">Browser Redirects to Search Engine</div>
+          <div class="symptom-cause">
+            <strong>Root Cause:</strong> Omnibox search trigger. Typing raw numbers without <code>http://</code> prompts modern browsers to send queries to Google or Bing.
+          </div>
         </div>
-        <div class="spec-item">
-          <span class="spec-item-label">Subnet Mask</span>
-          <span class="spec-item-val">{escape(ip_item['subnet_mask'])}</span>
+        <div class="symptom-card">
+          <span class="symptom-header">Symptom B</span>
+          <div class="symptom-title">Connection Timed Out / Unreachable</div>
+          <div class="symptom-cause">
+            <strong>Root Cause:</strong> Subnet mismatch, active VPN tunnel encapsulation, or smartphone Wi-Fi Assist silently routing through cellular data.
+          </div>
         </div>
-        <div class="spec-item">
-          <span class="spec-item-label">Common Brands</span>
-          <span class="spec-item-val">{escape(ip_item['brands'])}</span>
+        <div class="symptom-card">
+          <span class="symptom-header">Symptom C</span>
+          <div class="symptom-title">SSL / Connection Not Private Error</div>
+          <div class="symptom-cause">
+            <strong>Root Cause:</strong> Browser forcing HTTPS port 443 on an embedded router web server that only listens on unencrypted HTTP port 80.
+          </div>
         </div>
-        <div class="spec-item">
-          <span class="spec-item-label">Usable Host Range</span>
-          <span class="spec-item-val">{escape(ip_item['usable_range'])}</span>
+        <div class="symptom-card">
+          <span class="symptom-header">Symptom D</span>
+          <div class="symptom-title">Incorrect Password Error Message</div>
+          <div class="symptom-cause">
+            <strong>Root Cause:</strong> Confusing your Wi-Fi wireless password with the router administrative setup password.
+          </div>
         </div>
       </div>
 
-      <!-- Router Models on this IP -->
-      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
-        Routers Configured on {escape(ip)}
+      <!-- Network Topology Diagram -->
+      <div class="network-topology-card">
+        <pre style="margin: 0; color: var(--text-primary);">{topology_diagram}</pre>
+      </div>
+
+      <!-- Decision Table -->
+      {decision_table}
+
+      <!-- Why This Happens (In Plain Technical Language) -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why This Happens: The Non-Obvious Technical Causes
       </h2>
-      <div style="overflow-x: auto;">
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+        When an IP address fails to load in your browser, the problem is rarely hardware failure. In 98% of cases, the issue stems from one of four networking protocols:
+      </p>
+      <div style="background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 1.25rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-primary);">1. Subnet Mismatch &amp; RFC 1918 Routing Rules</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+          To communicate with <code>{escape(ip)}</code> without a layer-3 router between them, your client device (laptop, phone) must be bound to the exact same subnet mask (usually <code>255.255.255.0</code> / <code>/24</code>). If your router is on <code>192.168.0.1</code> but your computer has a static IP of <code>192.168.1.50</code>, TCP packets cannot route across the subnet boundary.
+        </p>
+
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-primary);">2. VPN Tunnel Encapsulation (Split-Tunneling Disabled)</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+          When an active VPN client (such as NordVPN, ExpressVPN, or corporate Cisco AnyConnect) is running, your operating system creates a virtual network adapter. If split-tunneling is disabled, 100% of outbound packets—including private LAN traffic—are encrypted and routed to the remote VPN exit node, blinding your PC to local router web servers.
+        </p>
+
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-primary);">3. Smartphone Cellular Fallback (Wi-Fi Assist)</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+          Modern smartphones running iOS (Wi-Fi Assist) and Android (Intelligent Wi-Fi) automatically detect when a Wi-Fi connection lacks active Internet access (typical during initial router setup). The OS silently switches outbound HTTP requests to cellular 5G/LTE, making private gateway IPs completely unreachable.
+        </p>
+
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-primary);">4. HTTP Port 80 vs. HTTPS Port 443 Rejection</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+          Modern web browsers enforce HTTPS-First modes. Because embedded routers lack public CA-signed SSL certificates, they only run lightweight HTTP daemons on port 80. When a browser auto-upgrades the request to <code>https://{escape(ip)}:443</code>, the router drops the connection, producing a timeout or certificate rejection error.
+        </p>
+      </div>
+
+      <!-- Reference Table (Hardware Models on this IP) -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Hardware Reference Table: Routers Configured on {escape(ip)}
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Official hardware models using <code>{escape(ip)}</code> as their primary default gateway address:
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
         <table class="table">
           <thead>
             <tr>
               <th>Model Name</th>
-              <th>Username</th>
-              <th>Password</th>
+              <th>Default Username</th>
+              <th>Default Password</th>
+              <th>Wi-Fi Standard</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -1181,13 +1875,13 @@ def generate_ip_pages():
         </table>
       </div>
 
-      <!-- In-Page Diagnostic Reachability Console -->
-      <div class="card" style="margin: 2.5rem 0; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: var(--radius-lg); padding: 1.5rem;">
+      <!-- Live Reachability Console Card -->
+      <div class="card" style="margin: 2rem 0; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: var(--radius-lg); padding: 1.5rem;">
         <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">
           ⚡ Live Gateway Reachability Probe
         </h3>
         <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
-          Test whether your current device can reach {escape(ip)} across your local network:
+          Test whether your current browser can communicate with {escape(ip)} across your local network:
         </p>
         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
           <button id="probe-btn" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.875rem;">
@@ -1197,24 +1891,103 @@ def generate_ip_pages():
         </div>
       </div>
 
-      <!-- Troubleshooting Guide -->
-      <h2 style="font-size: 1.4rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.5rem;">
-        Why is {escape(ip)} Not Loading?
+      <!-- Numbered How-To Guide (Safest to Destructive) -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step Troubleshooting: Safest to Destructive Actions
       </h2>
-      <div class="card" style="padding: 1.25rem; line-height: 1.7;">
-        <ul style="padding-left: 1.25rem;">
-          <li><strong>Typo check:</strong> Ensure you are typing numbers, not letters (avoid "192.168.l.l" with lowercase L).</li>
-          <li><strong>VPN Active:</strong> Disconnect any active VPNs (Work VPN, NordVPN, ExpressVPN) as they route DNS away from your local subnet.</li>
-          <li><strong>Protocol:</strong> Use <code>http://{escape(ip)}</code> rather than <code>https://</code> unless your router enforces SSL certificates.</li>
-          <li><strong>Different Gateway:</strong> Your router might use a different subnet. Use our <a href="/tools/detect-gateway/">Local Gateway Auto-Detector</a> to confirm your exact IP.</li>
-        </ul>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Disconnect All VPNs and Cellular Data (Safest):</strong> Temporarily disable any active VPN software on your PC or phone. If using an iPhone or Android, disable Mobile Data so the device is forced to route strictly over Wi-Fi.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Confirm Physical or Wi-Fi Link:</strong> Check your Wi-Fi settings to ensure you are connected to the router's network name (SSID), or plug an Ethernet patch cable into one of the numbered LAN ports (1&ndash;4) on the back of the router.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Type the Exact HTTP URL:</strong> Open a fresh browser window in Incognito/Private mode and type <code>http://{escape(ip)}</code> explicitly in the top address bar. Do not click search suggestions.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Authenticate with Underside Label Credentials:</strong> Locate the physical barcode sticker on the router's base. Enter the printed administrator credentials (e.g. <code>{escape(meta['default_user'])}</code> / <code>{escape(meta['default_pass'])}</code>). Remember that the router admin password is distinct from your wireless Wi-Fi password.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Verify Your Computer's Real Gateway via Command Line:</strong>
+          <ul style="margin-top: 0.25rem;">
+            <li><strong>Windows:</strong> Open Command Prompt and type <code>ipconfig | findstr "Default Gateway"</code>.</li>
+            <li><strong>macOS:</strong> Open Terminal and type <code>route -n get default | grep gateway</code>.</li>
+            <li><strong>Android/iOS:</strong> Open Wi-Fi settings, tap the network details icon, and verify the <strong>Router</strong> IP field.</li>
+          </ul>
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Power Cycle Router &amp; Modem (Clean Reboot):</strong> Unplug the power adapter from both the modem and router. Wait 30 seconds for capacitors to discharge, plug the modem back in, wait 2 minutes for WAN sync, then power on the router.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>⚠️ The 30-Second Factory Reset (Destructive Action Warning):</strong>
+          <div class="warning-box">
+            <strong>Warning:</strong> A factory reset wipes all customized network names (SSID), Wi-Fi passwords, port forwarding rules, and static IP reservations. Only execute this if you cannot recover your login password.
+          </div>
+          With the router powered on, insert an unfolded paperclip into the <strong>Reset</strong> pinhole on the rear panel. Hold firmly for 15&ndash;30 seconds until the front LED indicators flash amber or power cycle. Wait 3 minutes for factory reboot.
+        </li>
+      </ol>
+
+      <!-- Secondary Scenario -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        {'Secondary Scenario: How to Identify Which Device Uses 192.168.1.2' if is_correction else f'Secondary Scenario: What If {ip} Is an Access Point or Mesh Satellite?'}
+      </h2>
+      <div style="background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 1.25rem; margin-bottom: 2rem; line-height: 1.7; color: var(--text-secondary);">
+        {secondary_scenario_html}
+      </div>
+
+      <!-- Common Mistakes & Typo-Correction Block -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Typos, Syntax Errors &amp; Adjacent Queries
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Entering IP addresses on smartphone touchscreens frequently leads to typographic errors. The table below illustrates common mistakes and their corrected syntax:
+      </p>
+      <div class="typo-tag-list">
+        {typo_chips}
+      </div>
+
+      <!-- Frequently Asked Questions (FAQ) -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions: {escape(ip)} Access &amp; Routing
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Why does {escape(ip)} send me to a Google search page?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type <code>http://{escape(ip)}</code> explicitly.
+          </p>
+        </div>
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Can I access {escape(ip)} from outside my home network?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            No. {escape(ip)} is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure WireGuard or OpenVPN tunnel into your home LAN.
+          </p>
+        </div>
+        <div class="faq-card" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">What is the difference between admin credentials and the Wi-Fi password?</h3>
+          <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+            Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often <code>admin / admin</code> or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings.
+          </p>
+        </div>
+      </div>
+
+      <!-- The Bottom Line Callout -->
+      <div class="bottom-line-callout">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line: Fastest Diagnostic Resolution
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          {'If you searched 192.168.1.2 to configure your Wi-Fi, stop trying to load .1.2: your router is at <strong><a href="/ip/192-168-1-1/" style="color: var(--text-accent); text-decoration: underline;">http://192.168.1.1</a></strong>. If you are investigating a device occupying 192.168.1.2, run <code>arp -a</code> in terminal to inspect its MAC address.' if is_correction else f'If <strong>{escape(ip)}</strong> will not open, 95% of failures stem from one of two causes: either an active VPN / cellular connection is bypassing your LAN, or your router is actually running on a different subnet (such as 192.168.0.1 or 10.0.0.1). Disconnect your VPN, run our <a href="/tools/detect-gateway/" style="color: var(--text-accent); font-weight: 700; text-decoration: underline;">Local Gateway Auto-Detector</a>, and open the confirmed IP over plain HTTP.'}
+        </p>
       </div>
 
       <!-- Cross Silo Links -->
       <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
-        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Gateway IPs</h3>
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Gateway IPs &amp; Tools</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
           <a href="/ip/" class="btn btn-secondary" style="font-size: 0.85rem;">All Gateway IPs &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">⚡ Auto-Detect Local Gateway &rarr;</a>
           <a href="/tools/subnet-calculator/" class="btn btn-secondary" style="font-size: 0.85rem;">Subnet Calculator &rarr;</a>
           <a href="/find-router-ip.html" class="btn btn-secondary" style="font-size: 0.85rem;">Find My IP (OS Commands) &rarr;</a>
         </div>
@@ -1226,23 +1999,28 @@ def generate_ip_pages():
         with open(os.path.join(ip_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(full_html)
 
-    # Master IP Directory
+    # Master IP Directory (/ip/index.html)
     ip_master_dir = os.path.join(PUBLIC_DIR, "ip")
     canonical_master = "https://routeriphub.com/ip/"
-    title_master = "Default Gateway IP Directory (RFC 1918 Private Subnets)"
-    desc_master = "Complete directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.88.1, and Class A/B/C subnets."
+    title_master = "Default Gateway IP Directory: Find, Access & Fix Your Router Address (2026)"
+    desc_master = "Intent-first directory of private default gateway IPs: 192.168.1.1, 192.168.0.1, 10.0.0.1, 192.168.1.254, 192.168.1.2, and Class A/B/C subnets. Fast diagnostic access."
 
     ip_cards = ""
     for ip_item in IP_GATEWAYS:
+        ip_addr = ip_item["ip"]
+        meta_item = IP_INTENT_METADATA.get(ip_addr, {})
+        is_corr = meta_item.get("variant") == "correction"
+        tag_badge = '<span class="badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.3);">Client / Extender IP</span>' if is_corr else f'<span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(ip_item["subnet_mask"])}</span>'
+
         ip_cards += f"""
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-              <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(ip_item['subnet_mask'])}</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">{escape(ip_item['class_type'].split()[0])}</span>
+              {tag_badge}
+              <span style="font-size: 0.75rem; color: var(--text-muted);">{escape(ip_item['class_type'].split('(')[0].strip())}</span>
             </div>
             <h3 style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; margin-bottom: 0.4rem;">
-              <a href="/ip/{escape(ip_item['slug'])}/">{escape(ip_item['ip'])}</a>
+              <a href="/ip/{escape(ip_item['slug'])}/">{escape(ip_addr)}</a>
             </h3>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
               {escape(ip_item['brands'])}
@@ -1250,23 +2028,89 @@ def generate_ip_pages():
           </div>
           <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="font-size: 0.775rem; color: var(--text-muted);">Pass: <code>{escape(ip_item['default_creds'].split()[0])}</code></span>
-            <a href="/ip/{escape(ip_item['slug'])}/" style="font-size: 0.85rem; font-weight: 600;">Explore IP &rarr;</a>
+            <a href="/ip/{escape(ip_item['slug'])}/" style="font-size: 0.85rem; font-weight: 600;">Explore &amp; Fix &rarr;</a>
           </div>
         </div>
         """
 
     content_master = f"""
   <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
-    <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
-      <div class="silo-badge silo-badge-ip">⚡ Private Gateway IP Silo</div>
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem auto;">
+      <div class="silo-badge silo-badge-ip">⚡ Private Gateway IP Directory</div>
       <h1 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem;">
-        Default Gateway IP Directory
+        Default Router IP Directory
       </h1>
-      <p style="font-size: 1.1rem; color: var(--text-secondary);">
-        Complete index of RFC 1918 private IPv4 subnets used as administration web portals across commercial routers.
+      <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+        Most users searching for a router IP are either fixing a failed login, confused between a router gateway and a client device (such as 192.168.1.2), or looking for factory admin credentials. Match your hardware below for instant diagnostic resolution.
       </p>
+      <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="/tools/detect-gateway/" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">
+          ⚡ Auto-Detect My Router Gateway
+        </a>
+        <a href="/tools/ip-address-checker/" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">
+          🔍 Public IP &amp; ASN Checker
+        </a>
+      </div>
     </div>
 
+    <!-- Gateway vs Client Device Overview Table -->
+    <div style="max-width: 900px; margin: 0 auto 3rem auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem;">
+      <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">
+        Which Router IP Do You Actually Need?
+      </h2>
+      <div style="overflow-x: auto;">
+        <table class="table" style="font-size: 0.9rem;">
+          <thead>
+            <tr>
+              <th>Gateway IP Address</th>
+              <th>Primary Hardware Brands</th>
+              <th>Default Credentials</th>
+              <th>Address Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/ip/192-168-1-1/"><strong>192.168.1.1</strong></a></td>
+              <td>Netgear, ASUS, Linksys, Cisco, Ubiquiti</td>
+              <td><code>admin / admin</code></td>
+              <td>Primary Default Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-0-1/"><strong>192.168.0.1</strong></a></td>
+              <td>TP-Link, D-Link, Arris, Sky Broadband</td>
+              <td><code>admin / admin</code></td>
+              <td>Primary Default Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/10-0-0-1/"><strong>10.0.0.1</strong></a></td>
+              <td>Comcast Xfinity xFi (XB6/XB7/XB8), Spectrum</td>
+              <td><code>admin / password</code></td>
+              <td>Class A ISP Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-1-254/"><strong>192.168.1.254</strong></a></td>
+              <td>AT&amp;T Fiber (BGW320), BT Smart Hub 2</td>
+              <td><code>admin / Printed DAC</code></td>
+              <td>Highest Host Gateway</td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-1-2/"><strong>192.168.1.2</strong></a></td>
+              <td>Client Laptops, Phones, Printers, Extenders</td>
+              <td><code>Varies by Device</code></td>
+              <td><span style="color: #ea580c; font-weight: 700;">Client Device (Not Router)</span></td>
+            </tr>
+            <tr>
+              <td><a href="/ip/192-168-100-1/"><strong>192.168.100.1</strong></a></td>
+              <td>DOCSIS Cable Modems, Fiber ONTs</td>
+              <td><code>admin / admin</code></td>
+              <td>Bridge Mode Diagnostic IP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Complete IP Cards Grid -->
     <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;">
       {ip_cards}
     </div>
@@ -1276,6 +2120,7 @@ def generate_ip_pages():
     full_html = get_header(title_master, desc_master, canonical_master, active_nav="ip", breadcrumbs=breadcrumbs) + content_master + get_footer()
     with open(os.path.join(ip_master_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(full_html)
+
 
 # ==============================================================================
 # 6. GENERATE STANDALONE TOOL PAGES (/tools/[tool]/ & /tools/)
