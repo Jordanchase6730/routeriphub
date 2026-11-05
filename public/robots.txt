@@ -27,7 +27,9 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Canonical Sitemaps & Machine-Readable LLM Manifests
+# Canonical Sitemaps
 Sitemap: https://routeriphub.com/sitemap.xml
-llms-txt: https://routeriphub.com/llms.txt
-llms-full-txt: https://routeriphub.com/llms-full.txt
+
+# Machine-Readable AI & LLM Discovery (Refer to https://routeriphub.com/llms.txt)
+# llms-txt: https://routeriphub.com/llms.txt
+# llms-full-txt: https://routeriphub.com/llms-full.txt

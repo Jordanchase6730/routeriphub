@@ -132,6 +132,24 @@ for txt_name in ["llms.txt", "llms-full.txt"]:
             if not re.search(r"\[.+?\]\(.+?\)", txt_content):
                 errors.append(f"{t_path} missing Markdown links ([Text](url))")
 
+# 5. Validate robots.txt (RFC 9309 compliance)
+robots_path = os.path.join(PUBLIC_DIR, "robots.txt")
+if not os.path.exists(robots_path):
+    errors.append("Missing robots.txt in public directory")
+else:
+    with open(robots_path, "r", encoding="utf-8") as rf:
+        valid_directives = ("user-agent", "allow", "disallow", "sitemap", "crawl-delay")
+        for line_num, line in enumerate(rf, 1):
+            line_str = line.strip()
+            if not line_str or line_str.startswith("#"):
+                continue
+            if ":" in line_str:
+                directive = line_str.split(":", 1)[0].strip().lower()
+                if directive not in valid_directives:
+                    errors.append(f"robots.txt line {line_num} has unknown directive: '{directive}'")
+            else:
+                errors.append(f"robots.txt line {line_num} invalid format: '{line_str}'")
+
 print(f"Total HTML files validated: {checked_files}")
 print(f"Total Errors: {len(errors)}")
 print(f"Total Warnings: {len(warnings)}")
