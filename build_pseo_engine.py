@@ -309,7 +309,11 @@ def generate_router_model_pages():
         make_dirs(model_dir)
 
         canonical = f"https://routeriphub.com/routers/{slug}/"
-        title = f"{m['brand']} {m['model_name']} Default IP, Password & Setup Guide (2026)"
+        base_m_title = f"{m['brand']} {m['model_name']}"
+        if len(base_m_title) + len(" Default IP & Password (2026)") <= 60:
+            title = f"{base_m_title} Default IP & Password (2026)"
+        else:
+            title = f"{base_m_title[:33]} Default IP & Password"
         desc = f"Access {m['brand']} {m['model_name']} default login IP ({m['default_ip']}), admin password, factory reset procedure, and LED diagnostics cheat-sheet."
 
         # Structured Schemas
@@ -586,7 +590,7 @@ def generate_router_index_page():
     make_dirs(routers_dir)
 
     canonical = "https://routeriphub.com/routers/"
-    title = "Router Hardware Models Directory (Default IP, Credentials & Reset Sheets)"
+    title = "Router Hardware Models Directory & Setup Sheets (2026)"
     desc = "Browse hardware setup sheets for Netgear, TP-Link, ASUS, Linksys, Ubiquiti, MikroTik, Eero, and Arris. Find factory passwords, reset buttons, and LED codes."
 
     cards_html = ""
@@ -645,7 +649,7 @@ def generate_isp_pages():
         make_dirs(isp_dir)
 
         canonical = f"https://routeriphub.com/isp/{slug}/"
-        title = f"{isp['isp_name']} Gateway Login, Default Password & Bridge Mode ({isp['default_ip']})"
+        title = f"{isp['isp_name']} Gateway Login & Password ({isp['default_ip']})"
         desc = f"Access {isp['isp_name']} router admin portal at {isp['default_ip']}. Default username, printed access code instructions, factory reset, and bridge mode guide."
 
         tech_schema = {
@@ -866,7 +870,7 @@ def generate_brand_pages():
         make_dirs(b_dir)
 
         canonical = f"https://routeriphub.com/brands/{slug}/"
-        title = f"{b['name']} Router Default IP, Password & Model Directory (2026)"
+        title = f"{b['name']} Router Default IP & Password List (2026)"
         desc = f"Complete {b['name']} router login directory. Factory default passwords, standard IP addresses ({', '.join(b['default_ips'])}), and model setup sheets."
 
         # Find models for this brand
@@ -1636,13 +1640,13 @@ def generate_ip_pages():
 
         # 1. Page Title & Contrarian H1 Formulas
         if is_correction:
-            title = f"{ip} — What This Address Actually Is (It’s Usually Not Your Router)"
+            title = f"{ip} — What This IP Address Actually Is (2026)"
             h1 = f"{ip} — What This Address Actually Is (It’s Usually Not Your Router)"
-            desc = f"Searched {ip} expecting your router login? Here is why {ip} is a client device or extender, not your primary router gateway, and how to reach 192.168.1.1."
+            desc = f"Searched {ip} expecting router login? Learn why {ip} is a client device or extender, not your primary gateway, and how to access 192.168.1.1."
         else:
-            title = f"{ip} Not Working? {meta['primary_brand']} Router Login Fix (2026)"
+            title = f"{ip} Router Login Fix & Default Password (2026)"
             h1 = f"{ip} Not Working? {meta['primary_brand']} Router Login Fix"
-            desc = f"{ip} not loading? Instant fix for {meta['target_audience']} router login failures. Factory credentials, why connection timeouts happen, and step-by-step diagnostic resolution."
+            desc = f"Fix {ip} router login timeouts. Verified factory credentials, admin access instructions, and setup diagnostics for {meta['primary_brand'][:25]}."
 
         # Schemas
         tech_schema = {
@@ -2302,7 +2306,7 @@ def generate_tool_pages():
         make_dirs(tool_dir)
 
         canonical = f"https://routeriphub.com/tools/{slug}/"
-        title = f"{t['title']} (Free Client-Side Utility)"
+        title = f"{t['title']} | Free Network Utility"
         desc = t["desc"]
 
         breadcrumbs = [
