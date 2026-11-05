@@ -2088,6 +2088,30 @@
     "keywords": "telstra (australia) telstra-smart-modem 192.168.0.1 bridge mode passthrough xfi bgw320 fiber"
   },
   {
+    "title": "mywifiext.net Netgear Extender Setup (192.168.1.250)",
+    "category": "Wi-Fi Extender",
+    "badge": "NETGEAR",
+    "url": "/extenders/mywifiext-net/",
+    "snippet": "Netgear EX, EAX, and EXS extender setup guide, default admin login, and 192.168.1.250 fallback IP.",
+    "keywords": "mywifiext net mywifiext 192.168.1.250 netgear extender setup eax ex ex3700 ex6120"
+  },
+  {
+    "title": "tplinkrepeater.net TP-Link Extender Setup (192.168.0.254)",
+    "category": "Wi-Fi Extender",
+    "badge": "TP-Link",
+    "url": "/extenders/tplinkrepeater-net/",
+    "snippet": "TP-Link RE series range extender setup guide, default admin password, and 192.168.0.254 fallback IP.",
+    "keywords": "tplinkrepeater net tplinkrepeater 192.168.0.254 tp-link extender re220 re315 re505x"
+  },
+  {
+    "title": "Wi-Fi Extenders & Repeaters Master Directory",
+    "category": "Programmatic Hub",
+    "badge": "Extenders",
+    "url": "/extenders/",
+    "snippet": "Master directory of Wi-Fi range extender setup portals, fallback IPs, and diagnostic guides.",
+    "keywords": "extenders repeaters wifi boosters mywifiext tplinkrepeater fallback ip pairing"
+  },
+  {
     "title": "DrayTek Brand Directory & Model Matrix",
     "category": "Brand Directory",
     "badge": "Brand",
@@ -2366,6 +2390,14 @@
     "url": "/ip/192-168-1-2/",
     "snippet": "Class C Private (192.168.0.0/16) - Used on Wi-Fi Range Extenders, Secondary Access Points, Repeater Hubs.",
     "keywords": "192.168.1.2 192-168-1-2 login admin gateway wi-fi range extenders, secondary access points, repeater hubs"
+  },
+  {
+    "title": "192.168.1.250 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.1.250",
+    "url": "/ip/192-168-1-250/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on NETGEAR Wi-Fi Range Extenders (EX, EAX, EXS Series).",
+    "keywords": "192.168.1.250 192-168-1-250 login admin gateway netgear wi-fi range extenders (ex, eax, exs series)"
   },
   {
     "title": "IPv4 CIDR Subnet Calculator",

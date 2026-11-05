@@ -9,6 +9,8 @@ RouterIPHub indexes 250+ specific router models, 18 major hardware brands, 10 ca
 - [Hardware Brand Directories](https://routeriphub.com/brands/): Master index across 18 major networking hardware manufacturers including Netgear, TP-Link, ASUS, Linksys, and MikroTik.
 - [Private IP Gateway Hubs](https://routeriphub.com/ip/): Comprehensive diagnostic guides for RFC 1918 gateway subnets including 192.168.1.1, 192.168.0.1, 10.0.0.1, and 192.168.1.254.
 - [Interactive Networking Utilities](https://routeriphub.com/tools/): Browser-based networking tools including Subnet Calculator, Wi-Fi QR Code Generator, IP Address Checker, and DNS Propagation Tester.
+- [Wi-Fi Range Extenders Directory](https://routeriphub.com/extenders/): Setup portals, fallback IPs (192.168.1.250, 192.168.0.254), and pairing diagnostics for Netgear, TP-Link, and Linksys extenders.
+- [mywifiext.net Netgear Setup Guide](https://routeriphub.com/extenders/mywifiext-net/): Official login and fallback IP guide for Netgear EX, EAX, and EXS series extenders.
 - [Gateway IP Discovery Guide](https://routeriphub.com/find-router-ip.html): Platform-specific terminal commands (Windows, macOS, Linux, iOS, Android) to determine local gateway addresses.
 - [Router Setup & Reset Guides](https://routeriphub.com/howto.html): Step-by-step instructions for initial router setup, 30-30-30 hard resets, and factory restoration.
 

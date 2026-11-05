@@ -568,6 +568,75 @@ IP_GATEWAYS = [
         "subnet_mask": "255.255.255.0 (/24)",
         "usable_range": "192.168.1.3 - 192.168.1.254",
         "summary": "Standard IP assigned to secondary access points, mesh satellites, and Wi-Fi repeaters chained off 192.168.1.1."
+    },
+    {
+        "ip": "192.168.1.250",
+        "slug": "192-168-1-250",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "NETGEAR Wi-Fi Range Extenders (EX, EAX, EXS Series)",
+        "default_creds": "admin / password",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.1.1 - 192.168.1.254",
+        "summary": "192.168.1.250 is the default fallback IP address for NETGEAR Wi-Fi range extenders (EX, EAX, and EXS families) before pairing with a router."
+    }
+]
+
+EXTENDER_PROFILES = [
+    {
+        "slug": "mywifiext-net",
+        "domain": "mywifiext.net",
+        "brand": "NETGEAR",
+        "title": "mywifiext.net: Netgear Extender Setup & Login (2026)",
+        "meta_desc": "Access Netgear extender login at mywifiext.net or 192.168.1.250. Default credentials, EX and EAX models, DHCP IP change fix, and setup steps.",
+        "fallback_ip": "192.168.1.250",
+        "local_domain_win": "http://www.mywifiext.net",
+        "local_domain_mac": "http://mywifiext.local",
+        "default_user": "admin",
+        "default_pass": "password",
+        "series": "EX Series (Wi-Fi 5), Nighthawk EAX Series (Wi-Fi 6), EXS Series (Wi-Fi 7)",
+        "models": ["EX2800", "EX3110", "EX3700", "EX3800", "EX6100", "EX6120", "EX6150", "EX6200", "EX6400", "EX7000", "EAX12", "EAX15", "EAX20", "EAX80", "EXS18", "EXS25", "EXS27"]
+    },
+    {
+        "slug": "tplinkrepeater-net",
+        "domain": "tplinkrepeater.net",
+        "brand": "TP-Link",
+        "title": "tplinkrepeater.net: TP-Link Extender Setup (2026)",
+        "meta_desc": "Log in to TP-Link range extenders at tplinkrepeater.net or 192.168.0.254. Default admin setup, RE series models, DHCP IP change fix, and reset steps.",
+        "fallback_ip": "192.168.0.254",
+        "local_domain_win": "http://tplinkrepeater.net",
+        "local_domain_mac": "http://tplinkrepeater.net",
+        "default_user": "admin (or user-created)",
+        "default_pass": "admin (or user-created)",
+        "series": "RE Series (Wi-Fi 5 & Wi-Fi 6)",
+        "models": ["RE220", "RE315", "RE450", "RE505X", "RE605X", "RE650", "RE700X", "RE705X", "RE815X"]
+    },
+    {
+        "slug": "extender-linksys-com",
+        "domain": "extender.linksys.com",
+        "brand": "Linksys",
+        "title": "extender.linksys.com: Linksys Extender Setup (2026)",
+        "meta_desc": "Set up Linksys Wi-Fi range extenders via extender.linksys.com or 192.168.1.1. Default admin password, RE series models, Spot Finder, and reset guide.",
+        "fallback_ip": "192.168.1.1",
+        "local_domain_win": "http://extender.linksys.com",
+        "local_domain_mac": "http://extender.linksys.com",
+        "default_user": "[Leave Blank] or admin",
+        "default_pass": "admin",
+        "series": "Linksys RE Series",
+        "models": ["RE6300", "RE6400", "RE6700", "RE7000", "RE9000"]
+    },
+    {
+        "slug": "dlinkap-local",
+        "domain": "dlinkap.local",
+        "brand": "D-Link",
+        "title": "dlinkap.local: D-Link Extender Setup & Login (2026)",
+        "meta_desc": "Access D-Link Wi-Fi extender setup at dlinkap.local or 192.168.0.50. Default credentials, DAP series models, SmartConnect, and troubleshooting guide.",
+        "fallback_ip": "192.168.0.50",
+        "local_domain_win": "http://dlinkap.local",
+        "local_domain_mac": "http://dlinkap.local",
+        "default_user": "admin",
+        "default_pass": "[Leave Blank] or printed PIN",
+        "series": "D-Link DAP Series",
+        "models": ["DAP-1530", "DAP-1610", "DAP-1620", "DAP-1755", "DAP-X1860", "DAP-1955"]
     }
 ]
 

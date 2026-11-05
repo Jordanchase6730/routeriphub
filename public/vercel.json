@@ -75,6 +75,36 @@
       "permanent": true
     },
     {
+      "source": "/192-168-1-250.html",
+      "destination": "/ip/192-168-1-250/",
+      "permanent": true
+    },
+    {
+      "source": "/mywifiext.net",
+      "destination": "/extenders/mywifiext-net/",
+      "permanent": true
+    },
+    {
+      "source": "/mywifiext",
+      "destination": "/extenders/mywifiext-net/",
+      "permanent": true
+    },
+    {
+      "source": "/mywifiext-net",
+      "destination": "/extenders/mywifiext-net/",
+      "permanent": true
+    },
+    {
+      "source": "/tplinkrepeater.net",
+      "destination": "/extenders/tplinkrepeater-net/",
+      "permanent": true
+    },
+    {
+      "source": "/tplinkrepeater",
+      "destination": "/extenders/tplinkrepeater-net/",
+      "permanent": true
+    },
+    {
       "source": "/brands.html",
       "destination": "/brands/",
       "permanent": true

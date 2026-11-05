@@ -22,6 +22,7 @@ Website: https://routeriphub.com
 - [10.0.1.1 Guide](https://routeriphub.com/ip/10-0-1-1/): Subnet 255.255.255.0 (/24). Brands: Apple AirPort Extreme, AirPort Time Capsule, Cisco. Default credentials: admin / admin (or configured via AirPort Utility).
 - [10.0.0.138 Guide](https://routeriphub.com/ip/10-0-0-138/): Subnet 255.255.255.0 (/24). Brands: Telstra (Australia), Thomson / SpeedTouch, Technicolor. Default credentials: admin / admin.
 - [192.168.1.2 Guide](https://routeriphub.com/ip/192-168-1-2/): Subnet 255.255.255.0 (/24). Brands: Wi-Fi Range Extenders, Secondary Access Points, Repeater Hubs. Default credentials: admin / admin.
+- [192.168.1.250 Guide](https://routeriphub.com/ip/192-168-1-250/): Subnet 255.255.255.0 (/24). Brands: NETGEAR Wi-Fi Range Extenders (EX, EAX, EXS Series). Default credentials: admin / password.
 
 ## 2. Hardware Models Database
 - [Netgear Nighthawk AX6 (RAX50)](https://routeriphub.com/routers/netgear-nighthawk-rax50/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.

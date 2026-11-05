@@ -25,7 +25,8 @@ from generate_pseo_data import (
     ISP_GATEWAYS,
     BRAND_PROFILES,
     IP_GATEWAYS,
-    TOOL_PAGES
+    TOOL_PAGES,
+    EXTENDER_PROFILES
 )
 
 ROOT_DIR = r"C:\Users\acer\.gemini\antigravity\scratch\routeriphub"
@@ -163,6 +164,7 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
           <li><a href="/isp/" class="{'active' if active_nav == 'isp' else ''}">ISP Gateways</a></li>
           <li><a href="/brands/" class="{'active' if active_nav == 'brands' else ''}">Brands</a></li>
           <li><a href="/ip/" class="{'active' if active_nav == 'ip' else ''}">IP Directory</a></li>
+          <li><a href="/extenders/" class="{'active' if active_nav == 'extenders' else ''}">Extenders</a></li>
           <li><a href="/tools/" class="{'active' if active_nav == 'tools' else ''}">Tools</a></li>
           <li><a href="/howto.html" class="{'active' if active_nav == 'howto' else ''}">Guides</a></li>
         </ul>
@@ -209,6 +211,7 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
           <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
           <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
           <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/extenders/"><span>📶 Wi-Fi Extenders &amp; Repeaters</span><span>&rarr;</span></a></li>
           <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
           <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
           <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
@@ -259,6 +262,7 @@ def get_footer():
           <li><a href="/isp/">ISP Gateways</a></li>
           <li><a href="/brands/">Hardware Brands</a></li>
           <li><a href="/ip/">Gateway IP Hubs</a></li>
+          <li><a href="/extenders/">Wi-Fi Extenders</a></li>
           <li><a href="/tools/">Interactive Tools</a></li>
         </ul>
       </div>
@@ -361,18 +365,18 @@ def generate_router_model_pages():
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": f"What is the default IP address for {m['brand']} {m['model_name']}?",
+                    "name": f"What is the default login IP for {m['brand']} {m['model_name']}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": f"The primary default IP address is {m['default_ip']}. You can also access the management portal via {m['web_domain']} (or fallback IP {m['fallback_ip']})."
+                        "text": f"The factory default IP address for {m['brand']} {m['model_name']} is {m['default_ip']}. You can also access it via {m['web_domain']}."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": f"What is the default password for {m['brand']} {m['model_name']}?",
+                    "name": f"What is the default username and password for {m['brand']} {m['model_name']}?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": f"The default username is '{m['default_username']}' and the default password is '{m['default_password']}'. {'Note: The unique factory password is also printed on the device sticker.' if m['password_on_sticker'] else ''}"
+                        "text": f"The default username is '{m['default_username']}' and password is '{m['default_password']}'."
                     }
                 },
                 {
@@ -1265,240 +1269,38 @@ IP_INTENT_METADATA = {
         "device_types": "Laptops, Smart TVs, Wireless Laser Printers, Hikvision/Dahua IP Cameras, Wi-Fi Extenders",
         "common_devices": "HP/Canon printers, Ring/Nest security cameras, NVR surveillance systems, laptops, iPhones",
         "typos": ["192.168.1.2.", "http//192.168.1.2", "192.168.l.2", "192.168.1.2:80"]
+    },
+    "192.168.1.250": {
+        "variant": "correction",
+        "primary_brand": "NETGEAR Wi-Fi Range Extenders (EX, EAX, EXS Series)",
+        "primary_cause": "192.168.1.250 is NETGEAR's factory default fallback management IP for Wi-Fi range extenders, NOT your primary router gateway (which is typically 192.168.1.1 or 192.168.0.1)",
+        "target_audience": "NETGEAR EX Series (Wi-Fi 5), Nighthawk EAX Series (Wi-Fi 6), and EXS Series (Wi-Fi 7)",
+        "verdict": "192.168.1.250 is the default fallback IP address for most NETGEAR Wi-Fi range extenders before they are paired with your home router. It is commonly used to open the extender setup page when in factory state or when no DHCP server is found.",
+        "default_user": "admin",
+        "default_pass": "password",
+        "web_alias": "http://www.mywifiext.net / http://mywifiext.local",
+        "device_types": "Wi-Fi 5 EX Extenders, Wi-Fi 6 Nighthawk EAX Mesh, Wi-Fi 7 EXS Extenders",
+        "common_devices": "EX2800, EX3700, EX6120, EX6150, EX7000, EAX15, EAX20, EAX80, EXS25",
+        "typos": ["192.168.l.250", "192.168.1.25", "192.168.1.254", "http//192.168.1.250", "https://192.168.1.250"]
     }
 }
 
 # ==============================================================================
 # 5. GENERATE PRIVATE GATEWAY IP HUBS (/ip/[gateway-ip]/ & /ip/)
 # IMPLEMENTS: Router IP Guide "Intent-First Technical SEO" Pattern
-# ==============================================================================
-
-IP_INTENT_METADATA = {
-    "192.168.1.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Netgear, ASUS, Linksys & Cisco",
-        "primary_cause": "typing into the browser search bar instead of the URL bar, an active VPN, or your router actually using 192.168.0.1",
-        "target_audience": "Netgear, ASUS, Linksys, Cisco, and Verizon Fios",
-        "verdict": "You are either disconnected from your router's local Wi-Fi, your phone is routing traffic over cellular data, an active VPN is intercepting local DNS queries, or your router is on a different subnet (such as 192.168.0.1 or 10.0.0.1).",
-        "default_user": "admin",
-        "default_pass": "password (or admin)",
-        "web_alias": "routerlogin.net / asusrouter.com",
-        "device_types": "Home Wi-Fi 6/7 Routers, Mesh Base Stations, Fiber Gateways",
-        "common_devices": "Windows laptops, MacBooks, iPhones, Android smartphones, PS5, Xbox Series X, Smart TVs, smart thermostats",
-        "typos": ["192.168.l.l", "http//192.168.1.1", "192.168.1.1.", "www.192.168.1.1", "192.168.1.1:8080"]
-    },
-    "192.168.0.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "TP-Link, D-Link & Arris",
-        "primary_cause": "browser forcing an HTTPS connection on a router with no SSL certificate, or an IP collision with an upstream modem",
-        "target_audience": "TP-Link, D-Link, Arris SURFboard, and Sky Broadband",
-        "verdict": "Your browser is either auto-upgrading to HTTPS (which drops port 80 requests), you are disconnected from Wi-Fi, or your upstream cable/fiber modem is colliding with 192.168.0.1.",
-        "default_user": "admin",
-        "default_pass": "admin (or set during initial setup)",
-        "web_alias": "tplinkwifi.net / dlinkrouter.local",
-        "device_types": "TP-Link Archer routers, D-Link EXO routers, Arris cable gateway combos",
-        "common_devices": "iPhones, iPads, Windows desktop PCs, smart plugs, wireless security cameras, smart lightbulbs",
-        "typos": ["192.168.0.l", "192.168.o.1", "http//192.168.0.1", "192.168.0.1.", "www.192.168.0.1"]
-    },
-    "10.0.0.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Comcast Xfinity (xFi) & Spectrum",
-        "primary_cause": "your phone using mobile cellular data instead of home Wi-Fi, or Xfinity enforcing management via the xFi mobile app",
-        "target_audience": "Comcast Xfinity xFi Gateways (XB6, XB7, XB8) and Spectrum",
-        "verdict": "Comcast Xfinity xFi gateways use 10.0.0.1 by default. If it will not load, your device is likely disconnected from your in-home xFi network, routing via cellular data, or using an active VPN.",
-        "default_user": "admin",
-        "default_pass": "password (changed on first boot)",
-        "web_alias": "Xfinity App (iOS/Android)",
-        "device_types": "xFi Advanced Gateway, DOCSIS 3.1 Gateway Combos",
-        "common_devices": "Smart TVs, Roku streaming sticks, Apple TV 4K, smart speakers, home computers",
-        "typos": ["10.0.0.l", "10.0.0.1.", "http//10.0.0.1", "10.0.0.1:8080", "10.0.0.1/admin"]
-    },
-    "192.168.1.254": {
-        "variant": "troubleshooting",
-        "primary_brand": "AT&T Fiber & BT Smart Hub",
-        "primary_cause": "attempting to log in with generic 'admin/admin' credentials instead of the unique 10-digit Device Access Code printed on the gateway sticker",
-        "target_audience": "AT&T Fiber (BGW320, BGW210, NVG589) and British Telecom (BT Smart Hub 2)",
-        "verdict": "192.168.1.254 occupies the highest usable host address in the /24 subnet. AT&T gateways require the physical 10-digit 'Device Access Code' printed in bold on the router label, not a generic password.",
-        "default_user": "admin",
-        "default_pass": "Printed 10-digit Device Access Code (DAC)",
-        "web_alias": "att-smart-home-manager / bthomehub.home",
-        "device_types": "AT&T BGW320 Wi-Fi 6 Optical Gateway, BT Smart Hub 2, 2Wire Modems",
-        "common_devices": "Fiber ONTs, home office workstations, mesh extenders, network attached storage (NAS)",
-        "typos": ["192.168.1.254.", "192.168.l.254", "http//192.168.1.254", "192.168.1.254:80", "192.168.1.254/login"]
-    },
-    "192.168.2.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Belkin & Bell Canada Home Hub",
-        "primary_cause": "the manufacturer intentionally offset the subnet to .2.1 to prevent IP address clashes with upstream 192.168.1.1 broadband modems",
-        "target_audience": "Belkin Wi-Fi routers, Bell Canada Home Hub gateways, and Philips Hue Bridge",
-        "verdict": "Belkin and Bell Canada assign 192.168.2.1 to prevent Double NAT conflicts with upstream modems. If it fails, check if you are connected directly to the Belkin LAN rather than the upstream modem.",
-        "default_user": "admin",
-        "default_pass": "[Leave Blank] or admin",
-        "web_alias": "router.belkin.com",
-        "device_types": "Belkin Dual-Band routers, Bell Fibe Home Hub, Philips Hue Zigbee Bridges",
-        "common_devices": "Smart home hubs, Philips Hue lighting bridges, Bell Fibe TV set-top boxes, laptops",
-        "typos": ["192.168.2.l", "192.168.2.1.", "http//192.168.2.1", "192.168.2.1:8080"]
-    },
-    "192.168.8.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "GL.iNet & Huawei 4G/5G Hotspots",
-        "primary_cause": "the travel router's captive portal is conflicting with hotel or airport public Wi-Fi, or cellular tethering is disconnected",
-        "target_audience": "GL.iNet OpenWrt Travel Routers (Beryl, Slate, Flint) and Huawei Mobile Wi-Fi",
-        "verdict": "192.168.8.1 is the global default for portable OpenWrt travel routers and cellular 4G/5G hotspots. If unreached, reconnect to the travel router's private Wi-Fi SSID (e.g. GL-AXT1800-XXX).",
-        "default_user": "admin / root",
-        "default_pass": "admin (or set on first boot)",
-        "web_alias": "gl-inet.com/admin",
-        "device_types": "GL.iNet Pocket Travel Routers, Huawei LTE Dongles, Mobile Hotspots",
-        "common_devices": "Travel laptops, Steam Deck, Nintendo Switch, smartphones, travel streaming dongles",
-        "typos": ["192.168.8.l", "192.168.8.1.", "http//192.168.8.1", "192.168.8.1:80"]
-    },
-    "192.168.10.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Trendnet & ZyXEL Commercial Gateways",
-        "primary_cause": "management access is restricted to specific physical LAN ports or blocked across guest VLANs",
-        "target_audience": "Trendnet, ZyXEL, and multi-WAN balancing business routers",
-        "verdict": "Commercial routers using 192.168.10.1 frequently isolate the web management console to LAN Port 1 or management VLAN 1. Verify you are not connected via a guest network.",
-        "default_user": "admin",
-        "default_pass": "admin",
-        "web_alias": "trendnetrouter.com",
-        "device_types": "Trendnet TEW series, ZyXEL ZyWALL VPN Firewalls",
-        "common_devices": "VoIP desk phones, PoE network switches, office laser printers, server consoles",
-        "typos": ["192.168.10.l", "192.168.10.1.", "http//192.168.10.1"]
-    },
-    "192.168.11.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Buffalo AirStation",
-        "primary_cause": "the physical hardware switch on the bottom of the AirStation is set to 'AP' (Access Point) or 'WB' (Wireless Bridge) instead of 'Router'",
-        "target_audience": "Buffalo AirStation Wi-Fi routers and DD-WRT OEM firmware",
-        "verdict": "Buffalo AirStation hardware includes a physical mode toggle switch. When switched to AP or WB, the internal routing engine and 192.168.11.1 web portal are automatically disabled.",
-        "default_user": "root / admin",
-        "default_pass": "[Leave Blank] or password",
-        "web_alias": "airstation",
-        "device_types": "Buffalo AirStation HighPower series, DD-WRT powered gateways",
-        "common_devices": "Desktop PCs, network attached storage (LinkStation), smart TVs",
-        "typos": ["192.168.11.l", "192.168.11.1.", "http//192.168.11.1"]
-    },
-    "192.168.12.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "T-Mobile 5G Home Internet",
-        "primary_cause": "T-Mobile 5G gateways provide a read-only diagnostic web portal; all Wi-Fi password changes and network settings require the official T-Mobile mobile app",
-        "target_audience": "T-Mobile 5G Home Internet (Arcadyan KVD21, Sagemcom Fast 5688W, Sercomm)",
-        "verdict": "192.168.12.1 is strictly a diagnostic status page showing 5G cellular signal bands (RSRP/RSRQ/SINR). You cannot change Wi-Fi settings via the browser; you MUST use the T-Life (T-Mobile Internet) app.",
-        "default_user": "admin",
-        "default_pass": "Printed on gateway base sticker",
-        "web_alias": "T-Life App / T-Mobile Internet App",
-        "device_types": "T-Mobile 5G Gateway (KVD21, Fast 5688W, G4AR)",
-        "common_devices": "Laptops, gaming consoles, smart TVs, smartphones, smart home appliances",
-        "typos": ["192.168.12.l", "192.168.12.1.", "http//192.168.12.1"]
-    },
-    "192.168.31.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Xiaomi & Redmi Routers",
-        "primary_cause": "the router is in factory unconfigured state or DNS redirection to miwifi.com failed",
-        "target_audience": "Xiaomi Mi WiFi Routers (AX3000, AX9000, BE7000) and Redmi Routers",
-        "verdict": "Xiaomi routers default to 192.168.31.1. On first boot, the router will redirect to miwifi.com. If the page fails, connect to the unencrypted 'Xiaomi_XXXX' Wi-Fi beacon first.",
-        "default_user": "admin",
-        "default_pass": "Configured by user during first boot setup wizard",
-        "web_alias": "miwifi.com / Mi Home App",
-        "device_types": "Xiaomi Mi AIoT Router, Redmi Gaming Routers, Wi-Fi 7 BE series",
-        "common_devices": "Xiaomi Smart Home sensors, robot vacuums, smart cameras, mobile devices",
-        "typos": ["192.168.31.l", "192.168.31.1.", "http//192.168.31.1", "miwifi.com"]
-    },
-    "192.168.68.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "TP-Link Deco Whole Home Mesh",
-        "primary_cause": "TP-Link Deco mesh systems are managed via cloud app; the local 192.168.68.1 web interface is a read-only diagnostic monitor",
-        "target_audience": "TP-Link Deco Mesh systems (X55, XE75 Pro, BE85, X20)",
-        "verdict": "TP-Link deliberately chose 192.168.68.1 to prevent IP clashes with ISP modems. The web interface allows firmware upgrades, but Wi-Fi setup requires the mobile Deco app.",
-        "default_user": "TP-Link ID Email Account",
-        "default_pass": "TP-Link Cloud Password",
-        "web_alias": "tplinkdeco.net / TP-Link Deco App",
-        "device_types": "Deco Wi-Fi 6E/7 Mesh Nodes, Outdoor Mesh Satellites",
-        "common_devices": "Roaming smartphones, laptops, smart TVs, smart speakers, IoT plugs",
-        "typos": ["192.168.68.l", "192.168.68.1.", "http//192.168.68.1"]
-    },
-    "192.168.88.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "MikroTik RouterBOARD & RouterOS",
-        "primary_cause": "MikroTik default firewall drops WebFig requests on WAN ports, or Web service (port 80) is disabled in favor of WinBox (port 8291)",
-        "target_audience": "MikroTik RouterOS devices (hAP ax3, RB5009, CCR series, Cloud Core)",
-        "verdict": "MikroTik factory defaults have NO password (blank) for user 'admin'. You must connect your PC to LAN Port 2 or higher (Port 1 is configured as an isolated WAN interface).",
-        "default_user": "admin",
-        "default_pass": "[Leave Blank] (No password on factory reset)",
-        "web_alias": "router.lan / WinBox (Port 8291)",
-        "device_types": "MikroTik hAP, Chateau LTE, Cloud Router Switch (CRS)",
-        "common_devices": "Managed access points, enterprise switches, home lab server racks",
-        "typos": ["192.168.88.l", "192.168.88.1.", "http//192.168.88.1", "192.168.88.1:8291"]
-    },
-    "192.168.100.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "DOCSIS Cable Modems & Fiber ONTs",
-        "primary_cause": "your cable modem is running in Bridge / Passthrough mode, meaning you must plug an Ethernet cable directly into the modem rather than through your separate router",
-        "target_audience": "Motorola SURFboard, Arris, Netgear Nighthawk Modems (CM2000), Huawei ONTs, and Virgin Media SuperHub (Modem Mode)",
-        "verdict": "192.168.100.1 is the diagnostic IP for DOCSIS cable modems and fiber optical terminals (ONTs). It is used to monitor downstream/upstream signal levels (dBmV) and correctable errors.",
-        "default_user": "admin",
-        "default_pass": "admin (or password / printed on base sticker)",
-        "web_alias": "Modem Signal Diagnostics",
-        "device_types": "DOCSIS 3.1 Standalone Modems, Optical Network Terminals (ONT)",
-        "common_devices": "Cable line analyzers, primary WAN routers, diagnostic laptops",
-        "typos": ["192.168.100.l", "192.168.100.1.", "http//192.168.100.1"]
-    },
-    "192.168.178.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "AVM FRITZ!Box (Germany & Europe)",
-        "primary_cause": "local mDNS resolution for 'fritz.box' failed or user entered incorrect printed sticker password",
-        "target_audience": "AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber, 4060)",
-        "verdict": "192.168.178.1 is the universal default gateway across all AVM FRITZ!Box hardware in Europe. The router requires the unique randomized FRITZ!Box-Kennwort printed on the base sticker.",
-        "default_user": "admin (or no username required)",
-        "default_pass": "Unique randomized password printed on underside label",
-        "web_alias": "http://fritz.box",
-        "device_types": "FRITZ!Box DSL/Cable/Fiber Gateways, FRITZ!Repeater units",
-        "common_devices": "DECT cordless phones, European smart plugs, home computers, laptops",
-        "typos": ["192.168.178.l", "192.168.178.1.", "http//192.168.178.1", "fritz.box"]
-    },
-    "10.0.1.1": {
-        "variant": "troubleshooting",
-        "primary_brand": "Apple AirPort Extreme & Time Capsule",
-        "primary_cause": "Apple AirPort routers do NOT have a web browser interface; attempting to load 10.0.1.1 in Chrome or Safari will fail because Apple requires the AirPort Utility app",
-        "target_audience": "Apple AirPort Extreme, AirPort Express, and AirPort Time Capsule",
-        "verdict": "Apple AirPort hardware does NOT run an HTTP web server. Navigating to http://10.0.1.1 in any web browser will time out. You MUST open 'AirPort Utility' on macOS or iOS to configure the device.",
-        "default_user": "admin",
-        "default_pass": "public (or configured via AirPort Utility)",
-        "web_alias": "AirPort Utility (macOS / iOS)",
-        "device_types": "AirPort Extreme 802.11ac, Time Capsule Wireless Backup Drives",
-        "common_devices": "MacBooks, iMacs, iPhones, iPads, Time Machine network backups, AirPlay speakers",
-        "typos": ["10.0.1.l", "10.0.1.1.", "http//10.0.1.1"]
-    },
-    "10.0.0.138": {
-        "variant": "troubleshooting",
-        "primary_brand": "Telstra (Australia) & Technicolor",
-        "primary_cause": "the Telstra Smart Modem is operating on 4G cellular backup or Technicolor Telnet port lock",
-        "target_audience": "Telstra Smart Modem Gen 2/3 (Australia) and Thomson / Technicolor modems",
-        "verdict": "10.0.0.138 is the standard default gateway for Telstra broadband in Australia. If it fails to load, ensure you are not connected via a third-party VPN and try navigating to http://telstra.gateway.",
-        "default_user": "admin",
-        "default_pass": "admin (or Telstra printed password)",
-        "web_alias": "http://telstra.gateway",
-        "device_types": "Telstra NBN Smart Modems, Technicolor TG series gateways",
-        "common_devices": "Australian NBN FTTP/FTTC connections, Foxtel IQ set-top boxes, laptops, smartphones",
-        "typos": ["10.0.0.138.", "http//10.0.0.138", "telstra.gateway"]
-    },
-    "192.168.1.2": {
-        "variant": "correction",
-        "primary_brand": "Client Devices & Secondary Wi-Fi Extenders",
-        "primary_cause": "192.168.1.2 is assigned to an individual client device (your laptop, phone, printer, smart TV, or camera), NOT your primary router gateway",
-        "target_audience": "DHCP Client Devices, Network Printers, IP Security Cameras, and Chained Wi-Fi Extenders",
-        "verdict": "192.168.1.2 is the first dynamic client IP leased by your router's DHCP server. It is NOT your router's admin portal. Your actual router gateway is 192.168.1.1.",
-        "default_user": "admin",
-        "default_pass": "admin (on range extenders) or device PIN",
-        "web_alias": "http://192.168.1.1 (Actual Router Gateway)",
-        "device_types": "Laptops, Smart TVs, Wireless Laser Printers, Hikvision/Dahua IP Cameras, Wi-Fi Extenders",
-        "common_devices": "HP/Canon printers, Ring/Nest security cameras, NVR surveillance systems, laptops, iPhones",
-        "typos": ["192.168.1.2.", "http//192.168.1.2", "192.168.l.2", "192.168.1.2:80"]
-    }
-}
 
 
 IP_HARDWARE_CATALOG = {
+    "192.168.1.250": [
+        {"model": "NETGEAR EX3700 AC750 Wi-Fi Range Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EX6120 AC1200 Dual-Band Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EX6400 AC1900 Mesh Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EX7000 Nighthawk AC1900 Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EAX15 Nighthawk AX1800 Wi-Fi 6 Mesh", "user": "admin", "pass": "password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EAX20 Nighthawk AX1800 4-Stream Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EAX80 Nighthawk AX6000 8-Stream Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"},
+        {"model": "NETGEAR EXS25 Nighthawk BE9300 Wi-Fi 7 Extender", "user": "admin", "pass": "password", "wifi": "Wi-Fi 7 (802.11be)", "link": "/extenders/mywifiext-net/", "link_text": "Extender Guide &rarr;"}
+    ],
     "192.168.2.1": [
         {"model": "Belkin N300 Wireless Router (F9K1002)", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 4 (802.11n)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
         {"model": "Belkin N600 Dual-Band Router (F9K1102)", "user": "admin", "pass": "[Leave Blank]", "wifi": "Wi-Fi 4 (802.11n)", "link": "/brands/belkin/", "link_text": "Belkin Hub &rarr;"},
@@ -1634,10 +1436,14 @@ def generate_ip_pages():
 
         is_correction = meta["variant"] == "correction"
 
-        # 1. Page Title & Contrarian H1 Formulas
-        if is_correction:
+                # 1. Page Title & Contrarian H1 Formulas
+        if ip == "192.168.1.250":
+            title = "192.168.1.250: Netgear Extender Login & Setup (2026)"
+            h1 = "192.168.1.250 — Netgear Extender Login: What This IP Is and How to Access It"
+            desc = "192.168.1.250 is Netgear's default Wi-Fi extender fallback IP. Access admin portal, default login admin/password, mywifiext.net, and DHCP fixes."
+        elif is_correction:
             title = f"{ip} — What This IP Address Actually Is (2026)"
-            h1 = f"{ip} — What This Address Actually Is (It’s Usually Not Your Router)"
+            h1 = f"{ip} — What This Address Actually Is (It's Usually Not Your Router)"
             desc = f"Searched {ip} expecting router login? Learn why {ip} is a client device or extender, not your primary gateway, and how to access 192.168.1.1."
         else:
             title = f"{ip} Router Login Fix & Default Password (2026)"
@@ -1693,34 +1499,34 @@ def generate_ip_pages():
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": f"Why does {ip} send me to a Google search page?",
+                    "name": "Is 192.168.1.250 a router IP or an extender IP?" if ip == "192.168.1.250" else f"Why does {ip} send me to a Google search page?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": f"Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type http://{ip} explicitly."
+                        "text": "It is almost always a range extender IP, specifically used by NETGEAR. Most home routers use 192.168.1.1, 192.168.0.1, or 10.0.0.1." if ip == "192.168.1.250" else f"Modern web browser omniboxes combine search and address bars. If you type numbers without the protocol scheme, or include a typo like a trailing comma or space, the browser treats the input as a search keyword. Always type http://{ip} explicitly."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": f"Can I access {ip} from outside my home network?",
+                    "name": "Can I access 192.168.1.250 from anywhere on my network?" if ip == "192.168.1.250" else f"Can I access {ip} from outside my home network?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": f"No. {ip} is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure VPN tunnel into your home LAN."
+                        "text": "Usually only before the extender is paired with your router, or when your computer is connected directly to the extender's Wi-Fi network or Ethernet port. Once paired, the extender takes a new IP from your main router." if ip == "192.168.1.250" else f"No. {ip} is an RFC 1918 private IPv4 address. Private addresses are non-routable over the public Internet. You must be physically connected to the router's local Wi-Fi or Ethernet network to load the management portal unless you have established a secure VPN tunnel into your home LAN."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "What is the difference between admin credentials and the Wi-Fi password?",
+                    "name": "What is the default login for 192.168.1.250?" if ip == "192.168.1.250" else "What is the difference between admin credentials and the Wi-Fi password?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often admin / admin or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings."
+                        "text": "The default username is admin and the default password is password. On newer models, setup requires you to create a personalized password during first-time configuration." if ip == "192.168.1.250" else "Your Wi-Fi password (WPA2/WPA3 Pre-Shared Key) connects phones and laptops to the wireless signal. The router admin username and password (often admin / admin or a printed serial PIN) authenticate access to the internal web console to alter firewall, DNS, and network settings."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": f"How do I fix {ip} connection timed out errors?",
+                    "name": "Why does mywifiext.net say I am not connected to your extender's network?" if ip == "192.168.1.250" else f"How do I fix {ip} connection timed out errors?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": f"Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using ipconfig or netstat -nr, and enter http://{ip} over plain HTTP."
+                        "text": "mywifiext.net is a local redirect address handled by the extender's internal DNS. If your computer or phone is connected to your main router, cellular data, or a guest network instead of the extender, the request goes to the public internet where the domain cannot reach your local device." if ip == "192.168.1.250" else f"Disconnect any active commercial or corporate VPNs, turn off mobile cellular data on your smartphone, and ensure your device is connected to the router via Wi-Fi or LAN cable. Verify your default gateway in terminal using ipconfig or netstat -nr, and enter http://{ip} over plain HTTP."
                     }
                 }
             ]
@@ -2294,6 +2100,789 @@ def generate_ip_pages():
 # ==============================================================================
 # 6. GENERATE STANDALONE TOOL PAGES (/tools/[tool]/ & /tools/)
 # ==============================================================================
+
+# ==============================================================================
+# 5b. GENERATE WI-FI RANGE EXTENDER SILO (/extenders/ & /extenders/[slug]/)
+# ==============================================================================
+def generate_extender_pages():
+    print(f"Generating Wi-Fi Range Extender Silo (Master Hub + {len(EXTENDER_PROFILES)} Guides)...")
+    extenders_root_dir = os.path.join(PUBLIC_DIR, "extenders")
+    make_dirs(extenders_root_dir)
+
+    # --------------------------------------------------------------------------
+    # A. MASTER EXTENDERS DIRECTORY (/extenders/index.html)
+    # --------------------------------------------------------------------------
+    master_canonical = "https://routeriphub.com/extenders/"
+    master_title = "Wi-Fi Extender Setup: Default IPs & Logins (2026)" # 50 chars <= 60
+    master_desc = "Master directory of Wi-Fi range extender setup domains and fallback IPs: mywifiext.net, tplinkrepeater.net, extender.linksys.com, and dlinkap.local." # 152 chars
+
+    master_breadcrumbs = [
+        ("Home", "/"),
+        ("Wi-Fi Extenders", "/extenders/")
+    ]
+
+    master_faq_schema = {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between a router gateway IP and an extender fallback IP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A router default gateway (such as 192.168.1.1 or 192.168.0.1) is permanent and manages DHCP routing for the entire network. An extender fallback IP (such as 192.168.1.250 for Netgear or 192.168.0.254 for TP-Link) is only active before pairing. Once joined to your router, the extender takes a dynamic DHCP IP from the router."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why do setup domains like mywifiext.net or tplinkrepeater.net fail to load?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Extender setup domains rely on the extender's internal DNS daemon. If your device is connected to mobile data, an active VPN, or your main router's Wi-Fi instead of the extender's direct signal, the DNS request fails or routes to the public internet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I find my extender's IP address after pairing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Log into your primary router's admin console (e.g. 192.168.1.1) and navigate to Connected Devices, Attached Devices, or the DHCP Client Table. Look for the extender by its brand name (Netgear, TP-Link) or MAC address to find its newly assigned LAN IP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I reset a Wi-Fi extender to factory settings?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "With the extender plugged in and powered on, locate the physical Reset pinhole on the side or bottom. Insert an unfolded paperclip and hold the button for 7 to 10 seconds until the Power LED blinks amber, then release and allow 2 minutes to reboot."
+                }
+            }
+        ]
+    }
+
+    # Brand Cards HTML
+    extender_cards = ""
+    for ext in EXTENDER_PROFILES:
+        extender_cards += f"""
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--bg-card);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="badge" style="background: rgba(2, 132, 199, 0.12); color: var(--text-accent); font-weight: 700;">{escape(ext['brand'])} Extender</span>
+              <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">{escape(ext['fallback_ip'])}</span>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.4rem;">
+              <a href="/extenders/{escape(ext['slug'])}/" style="color: var(--text-primary); text-decoration: none;">{escape(ext['domain'])}</a>
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.55;">
+              {escape(ext['meta_desc'])}
+            </p>
+            <div style="background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem;">
+              <div style="margin-bottom: 0.25rem;"><strong>Fallback IP:</strong> <code>{escape(ext['fallback_ip'])}</code></div>
+              <div style="margin-bottom: 0.25rem;"><strong>Default User:</strong> <code>{escape(ext['default_user'])}</code></div>
+              <div><strong>Default Pass:</strong> <code>{escape(ext['default_pass'])}</code></div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; pt-2; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+            <a href="/extenders/{escape(ext['slug'])}/" class="btn btn-primary" style="font-size: 0.825rem; padding: 0.45rem 0.85rem;">Setup Guide &rarr;</a>
+            <a href="{escape(ext['local_domain_win'])}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.45rem 0.85rem;">Open {escape(ext['domain'])}</a>
+          </div>
+        </div>
+        """
+
+    # Master Content HTML
+    master_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">📶 Wi-Fi Range Extender &amp; Repeater Reference</div>
+      
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        Wi-Fi Range Extender Setup: Default IPs, Local Domains &amp; Login Guide
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you are setting up or troubleshooting a Wi-Fi range extender, repeater, or booster, standard router gateway addresses like <code>192.168.1.1</code> will not open your extender's settings. Extenders utilize dedicated <strong>local setup domains</strong> (such as <code>mywifiext.net</code> or <code>tplinkrepeater.net</code>) and factory <strong>fallback IP addresses</strong> (such as <code>192.168.1.250</code> or <code>192.168.0.254</code>) before they are paired with your main router.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Immediate Extender Diagnostic Verdict</div>
+        <p style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.6;">
+          Extender addresses are temporary setup gateways, not permanent routers.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          To access an extender, you must connect directly to its standalone Wi-Fi SSID or Ethernet port. Once paired with your home router, the extender receives a dynamic DHCP IP address from the router, causing fallback IPs to stop responding.
+        </p>
+        <div class="action-btn-group">
+          <a href="/extenders/mywifiext-net/" class="btn btn-primary">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary">TP-Link tplinkrepeater.net Guide &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary">⚡ Detect Active Network Gateway</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+        Major Extender Brands: Setup Domains &amp; Fallback IPs
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        {extender_cards}
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Main Gateway Router vs. Wi-Fi Extender vs. Client Device
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 180px;">Device Class</th>
+              <th style="min-width: 180px;">Typical IP Address</th>
+              <th style="min-width: 220px;">Primary Network Function</th>
+              <th style="min-width: 200px;">How to Access</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main Gateway Router</strong></td>
+              <td><code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>WAN Uplink, DHCP Server, Firewall, Main Wi-Fi</td>
+              <td><a href="/ip/192-168-1-1/">Open 192.168.1.1 &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><strong>Unpaired Extender</strong></td>
+              <td><code>192.168.1.250</code> or <code>192.168.0.254</code></td>
+              <td>Setup Wizard, Initial Pairing, SSID Mirroring</td>
+              <td><a href="/extenders/mywifiext-net/">Open mywifiext.net &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><strong>Paired Extender (Repeater)</strong></td>
+              <td>Assigned by Router DHCP (e.g. <code>192.168.1.45</code>)</td>
+              <td>Relaying Wireless Frames, Extending Range</td>
+              <td>Check Router DHCP Client Table</td>
+            </tr>
+            <tr>
+              <td><strong>Client Device (Phone / PC)</strong></td>
+              <td>Leased by DHCP (e.g. <code>192.168.1.100</code>)</td>
+              <td>End-host client consuming bandwidth</td>
+              <td>OS Network Properties</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic Decision Table: What Are You Trying to Do?
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Your Situation</th>
+              <th>What You Actually Need</th>
+              <th>Immediate Action to Take</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Setting up a new or reset extender</strong></td>
+              <td>Extender Setup Wizard</td>
+              <td>Connect to the extender's default Wi-Fi SSID, then open <code>mywifiext.net</code> or <code>192.168.1.250</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Extender already connected to router</strong></td>
+              <td>Router-Assigned DHCP IP</td>
+              <td>Log into your main router (<code>192.168.1.1</code>) and find the extender in Attached Devices.</td>
+            </tr>
+            <tr>
+              <td><strong>Want to change main Wi-Fi password</strong></td>
+              <td>Primary Router Gateway Console</td>
+              <td>Connect to your router and open <code>http://192.168.1.1</code> or <code>http://192.168.0.1</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Forgot custom extender admin password</strong></td>
+              <td>Hardware Factory Reset</td>
+              <td>Press and hold the physical Reset pinhole for 10 seconds until the Power LED flashes amber.</td>
+            </tr>
+            <tr>
+              <td><strong>Browser says "You are not connected"</strong></td>
+              <td>Direct Extender Link</td>
+              <td>Turn off Cellular Mobile Data and VPNs on your phone, then reconnect directly to the extender.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Universal Extender Setup Steps (Safest to Destructive)
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Plug in Close to Your Main Router for Setup:</strong> During initial configuration, plug the extender into an electrical outlet in the same room as your router. You can relocate it halfway to the dead zone after pairing completes.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Connect Directly to the Extender's Default SSID:</strong> Search Wi-Fi networks on your phone or PC for names like <code>NETGEAR_EXT</code> or <code>TP-Link_Extender</code>. Connect directly (no password required out of the box).
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Disable Mobile Data &amp; VPNs:</strong> On iOS and Android, turn off Cellular Data. When an unconfigured extender has no internet access, phones will automatically bypass Wi-Fi and route queries over cellular, preventing local setup domains from opening.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Navigate to the Official Setup Address in the URL Bar:</strong> Open your browser and type <code>http://www.mywifiext.net</code> or <code>http://192.168.1.250</code> directly into the address bar.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Run the Setup Wizard &amp; Note New DHCP IP:</strong> Follow the on-screen wizard to select your existing 2.4 GHz and 5 GHz networks and enter your main Wi-Fi password. Once paired, note the new IP assigned by your router.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Factory Reset If Password Is Lost:</strong> If the default credentials fail, insert a paperclip into the Reset pinhole for 10 seconds to restore factory defaults.
+        </li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions: Wi-Fi Extenders &amp; Setup Portals
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">What is the difference between a router gateway IP and an extender fallback IP?</div>
+          <p class="faq-answer">
+            A router default gateway (such as 192.168.1.1 or 192.168.0.1) is permanent and manages DHCP routing for the entire network. An extender fallback IP (such as 192.168.1.250 for Netgear or 192.168.0.254 for TP-Link) is only active before pairing. Once joined to your router, the extender takes a dynamic DHCP IP from the router.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why do setup domains like mywifiext.net or tplinkrepeater.net fail to load?</div>
+          <p class="faq-answer">
+            Extender setup domains rely on the extender's internal DNS daemon. If your device is connected to mobile data, an active VPN, or your main router's Wi-Fi instead of the extender's direct signal, the DNS request fails or routes to the public internet.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I find my extender's IP address after pairing?</div>
+          <p class="faq-answer">
+            Log into your primary router's admin console (e.g. 192.168.1.1) and navigate to Connected Devices, Attached Devices, or the DHCP Client Table. Look for the extender by its brand name (Netgear, TP-Link) or MAC address to find its newly assigned LAN IP.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I reset a Wi-Fi extender to factory settings?</div>
+          <p class="faq-answer">
+            With the extender plugged in and powered on, locate the physical Reset pinhole on the side or bottom. Insert an unfolded paperclip and hold the button for 7 to 10 seconds until the Power LED blinks amber, then release and allow 2 minutes to reboot.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line: Fastest Diagnostic Resolution
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          If an extender setup page will not load, verify that you are connected directly to the extender's Wi-Fi network with mobile data turned off. If the extender was already paired with your router, find its new dynamically leased IP inside your main router's client list at <a href="/ip/192-168-1-1/" style="color: var(--text-accent); font-weight: 700; text-decoration: underline;">192.168.1.1</a>.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Hardware Hubs &amp; Gateways</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/ip/192-168-1-250/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.250 Hub &rarr;</a>
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">tplinkrepeater.net Guide &rarr;</a>
+          <a href="/ip/192-168-1-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.1 Router Gateway &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">⚡ Auto-Detect Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+    master_html = get_header(master_title, master_desc, master_canonical, active_nav="extenders", breadcrumbs=master_breadcrumbs, schemas_json_ld=[master_faq_schema]) + master_content + get_footer()
+    with open(os.path.join(extenders_root_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(master_html)
+
+    # --------------------------------------------------------------------------
+    # B. DEDICATED EXTENDER GUIDES (/extenders/[slug]/index.html)
+    # --------------------------------------------------------------------------
+    for ext in EXTENDER_PROFILES:
+        slug = ext["slug"]
+        ext_dir = os.path.join(extenders_root_dir, slug)
+        make_dirs(ext_dir)
+
+        canonical = f"https://routeriphub.com/extenders/{slug}/"
+        title = ext["title"]
+        desc = ext["meta_desc"]
+        breadcrumbs = [
+            ("Home", "/"),
+            ("Wi-Fi Extenders", "/extenders/"),
+            (ext["domain"], f"/extenders/{slug}/")
+        ]
+
+        if slug == "mywifiext-net":
+            # Exact content specified by user!
+            tech_schema = {
+                "@type": "TechArticle",
+                "headline": title,
+                "description": desc,
+                "mainEntityOfPage": canonical,
+                "datePublished": "2026-01-15T08:00:00+00:00",
+                "dateModified": f"{TODAY}T02:00:00+00:00",
+                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
+            }
+
+            howto_schema = {
+                "@type": "HowTo",
+                "name": "How to Log In to a NETGEAR Wi-Fi Range Extender",
+                "description": "Step-by-step technical guide to connect and log into NETGEAR Wi-Fi extenders using 192.168.1.250 and mywifiext.net.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Connect directly to the extender",
+                        "text": "Connect your computer or phone to the extender's Wi-Fi network, or plug an Ethernet cable into the extender's LAN port."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Open the correct address",
+                        "text": "Type http://192.168.1.250, http://www.mywifiext.net, or http://mywifiext.local directly into the browser address bar."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Enter the default login",
+                        "text": "Authenticate with username 'admin' and password 'password' if never previously changed."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Complete or adjust the setup",
+                        "text": "Follow the on-screen NETGEAR setup wizard to link the extender to your home Wi-Fi network."
+                    }
+                ]
+            }
+
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is 192.168.1.250 a router IP or an extender IP?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It is almost always a range extender IP, specifically used by NETGEAR. Most home routers use 192.168.1.1, 192.168.0.1, or 10.0.0.1."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I access 192.168.1.250 from anywhere on my network?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Usually only before the extender is paired with your router, or when your computer is connected directly to the extender's Wi-Fi network or Ethernet port. Once paired, the extender takes a new IP from your main router."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the default login for 192.168.1.250?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The default username is admin and the default password is password. On newer models, setup requires you to create a personalized password during first-time configuration."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does mywifiext.net say I am not connected to your extender's network?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "mywifiext.net is a local redirect address handled by the extender's internal DNS. If your computer or phone is connected to your main router, cellular data, or a guest network instead of the extender, the request goes to the public internet where the domain cannot reach your local device."
+                        }
+                    }
+                ]
+            }
+
+            guide_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Guide</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        192.168.1.250 — Netgear Extender Login: What This IP Is and How to Access It
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you searched <code>192.168.1.250</code> expecting your main router’s login page, you are probably trying to reach a <strong>NETGEAR Wi-Fi range extender</strong>. This address is NETGEAR’s factory-default management IP for its EX, EAX, and EXS extender families—not the usual address for your router or modem.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          192.168.1.250 is the default fallback IP address for most NETGEAR Wi-Fi range extenders before they are paired with your home router.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          It is commonly used to open the extender’s setup or admin page when the extender is in its factory state or cannot find a DHCP server. To log in, connect directly to the extender’s Wi-Fi network or Ethernet port, enter <code>http://192.168.1.250</code> in your browser’s address bar, and use:
+        </p>
+        <ul style="margin-left: 1.25rem; margin-bottom: 1.25rem; color: var(--text-primary); line-height: 1.6;">
+          <li><strong>Username:</strong> <code>admin</code></li>
+          <li><strong>Password:</strong> <code>password</code></li>
+        </ul>
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+          If you want to set up the extender instead, NETGEAR also provides <code>http://www.mywifiext.net</code> for Windows and Android, while macOS and iOS devices can use <code>http://mywifiext.local</code>.
+        </p>
+        <div class="action-btn-group">
+          <a href="http://192.168.1.250" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open http://192.168.1.250 &rarr;
+          </a>
+          <a href="http://www.mywifiext.net" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Open http://www.mywifiext.net
+          </a>
+          <button class="btn btn-secondary copy-btn" data-copy="192.168.1.250">Copy Fallback IP (192.168.1.250)</button>
+          <a href="/ip/192-168-1-250/" class="btn btn-secondary">192.168.1.250 IP Hub</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Which NETGEAR Extenders Use 192.168.1.250?
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        NETGEAR uses <code>192.168.1.250</code> across most of its current consumer extender lineup, including Wi-Fi 5, Wi-Fi 6, and Wi-Fi 7 models.
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">NETGEAR Extender Family</th>
+              <th style="min-width: 280px;">Example Models</th>
+              <th style="min-width: 140px;">Default IP</th>
+              <th style="min-width: 200px;">Setup URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Wi-Fi 5 / Essentials EX series</strong></td>
+              <td>EX2800, EX3110, EX3700, EX3800, EX6100, EX6120, EX6150, EX6200, EX6400, EX7000</td>
+              <td><code>192.168.1.250</code></td>
+              <td><a href="http://www.mywifiext.net" target="_blank" rel="noopener">http://www.mywifiext.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>Wi-Fi 6 / Nighthawk EAX series</strong></td>
+              <td>EAX12, EAX15, EAX20, EAX80</td>
+              <td><code>192.168.1.250</code></td>
+              <td><a href="http://www.mywifiext.net" target="_blank" rel="noopener">http://www.mywifiext.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>Wi-Fi 7 / EXS series</strong></td>
+              <td>EXS18, EXS25, EXS27</td>
+              <td><code>192.168.1.250</code></td>
+              <td><a href="http://www.mywifiext.net" target="_blank" rel="noopener">http://www.mywifiext.net</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        This IP is a <strong>fallback address</strong>, not a permanent address. Once the extender successfully connects to your router in Repeater or Access Point mode, your router assigns it a new dynamic LAN IP through DHCP.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Extender vs. Router
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Device</th>
+              <th style="min-width: 200px;">Typical Address</th>
+              <th style="min-width: 280px;">What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main router / gateway</strong></td>
+              <td>Often <code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>Internet connection, DHCP, firewall, primary Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><strong>NETGEAR extender</strong></td>
+              <td><code>192.168.1.250</code> before pairing</td>
+              <td>Extender setup, Wi-Fi extension, firmware, local settings</td>
+            </tr>
+            <tr>
+              <td><strong>Phone, laptop, or smart TV</strong></td>
+              <td>Assigned by router after connection</td>
+              <td>Ordinary client device on your network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+        So, if <code>192.168.1.250</code> does not open your router’s admin page, that is expected: it is designed to reach the <strong>NETGEAR extender</strong>, not the router itself.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic: What Are You Trying to Do?
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Your Situation</th>
+              <th style="min-width: 200px;">What You Actually Need</th>
+              <th style="min-width: 280px;">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>You want to set up a new NETGEAR extender</strong></td>
+              <td>Extender setup wizard</td>
+              <td>Connect to the extender, then open <code>http://www.mywifiext.net</code> or <code>192.168.1.250</code></td>
+            </tr>
+            <tr>
+              <td><strong>You want to change extender settings</strong></td>
+              <td>NETGEAR extender admin page</td>
+              <td>Connect directly to the extender and log in with <code>admin</code> / <code>password</code> if never changed</td>
+            </tr>
+            <tr>
+              <td><strong>You want to log into your main router</strong></td>
+              <td>Router gateway address</td>
+              <td>Use <a href="/ip/192-168-1-1/">192.168.1.1</a>, <a href="/ip/192-168-0-1/">192.168.0.1</a>, or the address printed on your router</td>
+            </tr>
+            <tr>
+              <td><strong>The extender was already set up</strong></td>
+              <td>Its new DHCP-assigned IP</td>
+              <td>Check the router’s Attached Devices / DHCP client list</td>
+            </tr>
+            <tr>
+              <td><strong>You forgot the extender password</strong></td>
+              <td>Factory reset</td>
+              <td>Hold the Reset pinhole until the Power LED blinks, then set it up again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why 192.168.1.250 Stops Working After Setup
+      </h2>
+      <div style="background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 1.25rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">
+        <p style="margin-bottom: 1rem;">
+          The most common reason <code>192.168.1.250</code> stops working is that the extender is no longer using its factory default address. After it joins your router, NETGEAR’s extender receives a new IP address from the router’s DHCP server.
+        </p>
+        <p style="margin: 0;">
+          That means the extender may now appear in your router’s client list under a different local IP, such as <code>192.168.1.x</code> or <code>192.168.0.x</code>, depending on your router’s subnet. To access it again, log into your main router and look for the NETGEAR extender in the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> section.
+        </p>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step: Log In to a NETGEAR Extender
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Connect directly to the extender:</strong> Connect your computer or phone to the extender’s Wi-Fi network, or plug an Ethernet cable from your computer into the extender’s LAN port. Do not stay connected only to your main router’s Wi-Fi, because the extender’s local setup address may not resolve from that network.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Open the correct address:</strong> Type one of these into the browser <strong>address bar</strong>, not the search box:
+          <ul style="margin-top: 0.25rem;">
+            <li><code>http://192.168.1.250</code></li>
+            <li><code>http://www.mywifiext.net</code></li>
+            <li><code>http://mywifiext.local</code> — mainly for macOS and iOS</li>
+          </ul>
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Enter the default login:</strong> Use these credentials only if you have not previously changed them:
+          <ul style="margin-top: 0.25rem;">
+            <li><strong>Username:</strong> <code>admin</code></li>
+            <li><strong>Password:</strong> <code>password</code></li>
+          </ul>
+          If the extender was configured before, use the admin password you created during setup. If you cannot remember it, a factory reset is required.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Complete or adjust the setup:</strong> From the extender dashboard, you can connect it to your home Wi-Fi, change the extender’s admin password, update firmware, and manage the extended network. For the most reliable setup, use the NETGEAR setup wizard rather than manually assigning network settings.
+        </li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        If 192.168.1.250 Will Not Load
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Turn off mobile data and VPN:</strong> On a phone, disable mobile data, VPNs, and proxies. When the extender’s Wi-Fi has no internet access, your phone may route browser traffic over cellular data, causing local addresses such as <code>192.168.1.250</code> to fail.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Use the address bar, not Google:</strong> Enter <code>http://192.168.1.250</code> directly into the browser address bar. Searching for the IP in Google or Bing can redirect you to a search results page instead of the extender login screen.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Try the NETGEAR setup URL:</strong> Use <code>http://www.mywifiext.net</code> on Windows or Android, or <code>http://mywifiext.local</code> on macOS or iOS. These local management domains rely on the extender itself, so they work only while you are connected to the extender’s network or Ethernet port.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Check the extender’s new IP:</strong> If the extender is already paired, open your main router’s admin page and find the extender in the DHCP client list. Then enter its assigned IP address directly into your browser.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Check your computer’s IP address:</strong> Make sure your computer or phone is receiving an IP in the <code>192.168.1.x</code> range while connected to the unconfigured extender. If your device has a self-assigned IP (such as <code>169.254.x.x</code>), the extender’s DHCP server may not have responded yet.
+        </li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        What If You Forgot the Extender’s Admin Password?
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+        If the default credentials do not work and you forgot the custom password:
+      </p>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li>Locate the <strong>Reset</strong> button or pinhole on the back or side of the extender.</li>
+        <li>Use a paperclip to press and hold the button for about <strong>7 to 10 seconds</strong> (or until the Power LED blinks amber).</li>
+        <li>Release the button and wait for the extender to reboot.</li>
+        <li>Once the Power LED turns solid, reconnect to the default Wi-Fi network and start setup again using <code>192.168.1.250</code> or <code>mywifiext.net</code>.</li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Mistakes and Typos
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        When trying to reach this IP, avoid these common search mistakes:
+      </p>
+      <div class="typo-tag-list" style="margin-bottom: 2rem;">
+        <div class="typo-chip"><span class="typo-wrong">192.168.l.250</span> &rarr; <span class="typo-correct">http://192.168.1.250</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.1.25</span> &rarr; <span class="typo-correct">http://192.168.1.250</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.1.254</span> &rarr; <span class="typo-correct">http://192.168.1.250</span></div>
+        <div class="typo-chip"><span class="typo-wrong">http//192.168.1.250</span> &rarr; <span class="typo-correct">http://192.168.1.250</span></div>
+        <div class="typo-chip"><span class="typo-wrong">https://192.168.1.250</span> &rarr; <span class="typo-correct">http://192.168.1.250 (Use HTTP)</span></div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">Is 192.168.1.250 a router IP or an extender IP?</div>
+          <p class="faq-answer">
+            It is almost always a <strong>range extender IP</strong>, specifically used by NETGEAR. Most home routers use <code>192.168.1.1</code>, <code>192.168.0.1</code>, or <code>10.0.0.1</code>.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I access 192.168.1.250 from anywhere on my network?</div>
+          <p class="faq-answer">
+            Usually only before the extender is paired with your router, or when your computer is connected directly to the extender’s Wi-Fi network or Ethernet port. Once paired, the extender takes a new IP from your main router.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the default login for 192.168.1.250?</div>
+          <p class="faq-answer">
+            The default username is <code>admin</code> and the default password is <code>password</code>. On newer models, setup requires you to create a personalized password during first-time configuration.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why does mywifiext.net say I am not connected to your extender’s network?</div>
+          <p class="faq-answer">
+            <code>mywifiext.net</code> is a local redirect address handled by the extender’s internal DNS. If your computer or phone is connected to your main router, cellular data, or a guest network instead of the extender, the request goes to the public internet where the domain cannot reach your local device.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          <strong>192.168.1.250 is the initial setup address for NETGEAR Wi-Fi extenders, not your main router.</strong> If it does not load, you are either not connected directly to the extender, or the extender has already joined your router and received a new local IP through DHCP.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateway IPs &amp; Extender Hubs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/ip/192-168-1-250/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.250 IP Hub &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders &rarr;</a>
+          <a href="/brands/netgear/" class="btn btn-secondary" style="font-size: 0.85rem;">Netgear Brand Hub &rarr;</a>
+          <a href="/ip/192-168-1-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.1 Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + guide_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+        else:
+            # Generic Extender guide for TP-Link, Linksys, D-Link
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": f"How do I log in to {ext['brand']} range extender?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": f"Connect to the {ext['brand']} extender Wi-Fi network and open {ext['local_domain_win']} or http://{ext['fallback_ip']} in your browser. Log in with default credentials ({ext['default_user']} / {ext['default_pass']})."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": f"Why does {ext['domain']} not load?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Disconnect cellular data and any active VPN, ensure your device is connected to the extender Wi-Fi SSID, and enter the URL in the browser address bar instead of Google search."
+                        }
+                    }
+                ]
+            }
+
+            model_chips = "".join([f'<span class="badge" style="background: var(--bg-secondary); border: 1px solid var(--border-color); font-size: 0.85rem; padding: 0.35rem 0.65rem;">{escape(m)}</span>' for m in ext.get('models', [])])
+
+            generic_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">📶 {escape(ext['brand'])} Extender Setup</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        {escape(ext['domain'])} — {escape(ext['brand'])} Extender Setup &amp; {escape(ext['fallback_ip'])} Login
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        {escape(ext['meta_desc'])}
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          {escape(ext['domain'])} is the local web management portal for {escape(ext['brand'])} range extenders.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          Default factory fallback address is <code>http://{escape(ext['fallback_ip'])}</code>. Default username: <code>{escape(ext['default_user'])}</code> | Default password: <code>{escape(ext['default_pass'])}</code>.
+        </p>
+        <div class="action-btn-group">
+          <a href="{escape(ext['local_domain_win'])}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open {escape(ext['domain'])} &rarr;
+          </a>
+          <a href="http://{escape(ext['fallback_ip'])}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Open http://{escape(ext['fallback_ip'])}
+          </a>
+          <a href="/extenders/" class="btn btn-secondary">All Wi-Fi Extenders</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Supported {escape(ext['brand'])} Extender Models
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Applies to {escape(ext.get('series', 'consumer models'))}:
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+        {model_chips}
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step Setup Sequence
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;"><strong>Plug into an outlet</strong> within 5 feet of your main router for initial configuration.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Connect your phone or PC</strong> to the extender's default setup Wi-Fi network.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Turn off cellular data and VPNs</strong> on your smartphone.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Open <code>{escape(ext['domain'])}</code></strong> or <code>http://{escape(ext['fallback_ip'])}</code> in your address bar.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Follow the quick setup wizard</strong> to pair with your home Wi-Fi and set a secure admin password.</li>
+      </ol>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Explore Other Extender Guides</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders Hub &rarr;</a>
+          <a href="/tools/detect-gateway/" class="btn btn-secondary" style="font-size: 0.85rem;">Auto-Detect Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[faq_schema]) + generic_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+
 def generate_tool_pages():
     print(f"Generating {len(TOOL_PAGES)} dedicated tool pages...")
     for t in TOOL_PAGES:
@@ -3103,6 +3692,16 @@ def generate_sitemaps():
         tool_urls.append((f"https://routeriphub.com/tools/{t['slug']}/", "0.8", "monthly"))
     write_sub_sitemap("tools.xml", tool_urls)
 
+    # 5b. extenders.xml
+    extender_urls = [
+        ("https://routeriphub.com/extenders/", "0.9", "weekly"),
+        ("https://routeriphub.com/extenders/mywifiext-net/", "0.9", "monthly"),
+        ("https://routeriphub.com/extenders/tplinkrepeater-net/", "0.8", "monthly"),
+        ("https://routeriphub.com/extenders/extender-linksys-com/", "0.8", "monthly"),
+        ("https://routeriphub.com/extenders/dlinkap-local/", "0.8", "monthly")
+    ]
+    write_sub_sitemap("extenders.xml", extender_urls)
+
     # 6. guides.xml
     guide_urls = [
         ("https://routeriphub.com/", "1.0", "daily"),
@@ -3134,6 +3733,10 @@ def generate_sitemaps():
         '  </sitemap>',
         '  <sitemap>',
         '    <loc>https://routeriphub.com/sitemaps/tools.xml</loc>',
+        f'    <lastmod>{TODAY}</lastmod>',
+        '  </sitemap>',
+        '  <sitemap>',
+        '    <loc>https://routeriphub.com/sitemaps/extenders.xml</loc>',
         f'    <lastmod>{TODAY}</lastmod>',
         '  </sitemap>',
         '  <sitemap>',
@@ -3229,6 +3832,32 @@ def update_search_index():
             "keywords": f"{isp['isp_name'].lower()} {isp['slug']} {isp['default_ip']} bridge mode passthrough xfi bgw320 fiber"
         })
 
+    # 2b. Wi-Fi Extenders
+    search_index.append({
+        "title": "mywifiext.net Netgear Extender Setup (192.168.1.250)",
+        "category": "Wi-Fi Extender",
+        "badge": "NETGEAR",
+        "url": "/extenders/mywifiext-net/",
+        "snippet": "Netgear EX, EAX, and EXS extender setup guide, default admin login, and 192.168.1.250 fallback IP.",
+        "keywords": "mywifiext net mywifiext 192.168.1.250 netgear extender setup eax ex ex3700 ex6120"
+    })
+    search_index.append({
+        "title": "tplinkrepeater.net TP-Link Extender Setup (192.168.0.254)",
+        "category": "Wi-Fi Extender",
+        "badge": "TP-Link",
+        "url": "/extenders/tplinkrepeater-net/",
+        "snippet": "TP-Link RE series range extender setup guide, default admin password, and 192.168.0.254 fallback IP.",
+        "keywords": "tplinkrepeater net tplinkrepeater 192.168.0.254 tp-link extender re220 re315 re505x"
+    })
+    search_index.append({
+        "title": "Wi-Fi Extenders & Repeaters Master Directory",
+        "category": "Programmatic Hub",
+        "badge": "Extenders",
+        "url": "/extenders/",
+        "snippet": "Master directory of Wi-Fi range extender setup portals, fallback IPs, and diagnostic guides.",
+        "keywords": "extenders repeaters wifi boosters mywifiext tplinkrepeater fallback ip pairing"
+    })
+
     # 3. Brands
     for b in BRAND_PROFILES:
         search_index.append({
@@ -3319,6 +3948,12 @@ def update_vercel_config():
         {"source": "/192-168-100-1.html", "destination": "/ip/192-168-100-1/", "permanent": True},
         {"source": "/10-0-1-1.html", "destination": "/ip/10-0-1-1/", "permanent": True},
         {"source": "/192-168-1-2.html", "destination": "/ip/192-168-1-2/", "permanent": True},
+        {"source": "/192-168-1-250.html", "destination": "/ip/192-168-1-250/", "permanent": True},
+        {"source": "/mywifiext.net", "destination": "/extenders/mywifiext-net/", "permanent": True},
+        {"source": "/mywifiext", "destination": "/extenders/mywifiext-net/", "permanent": True},
+        {"source": "/mywifiext-net", "destination": "/extenders/mywifiext-net/", "permanent": True},
+        {"source": "/tplinkrepeater.net", "destination": "/extenders/tplinkrepeater-net/", "permanent": True},
+        {"source": "/tplinkrepeater", "destination": "/extenders/tplinkrepeater-net/", "permanent": True},
         {"source": "/brands.html", "destination": "/brands/", "permanent": True},
         {"source": "/tools.html", "destination": "/tools/", "permanent": True},
         {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True}
@@ -3395,6 +4030,8 @@ RouterIPHub indexes 250+ specific router models, 18 major hardware brands, 10 ca
 - [Hardware Brand Directories](https://routeriphub.com/brands/): Master index across 18 major networking hardware manufacturers including Netgear, TP-Link, ASUS, Linksys, and MikroTik.
 - [Private IP Gateway Hubs](https://routeriphub.com/ip/): Comprehensive diagnostic guides for RFC 1918 gateway subnets including 192.168.1.1, 192.168.0.1, 10.0.0.1, and 192.168.1.254.
 - [Interactive Networking Utilities](https://routeriphub.com/tools/): Browser-based networking tools including Subnet Calculator, Wi-Fi QR Code Generator, IP Address Checker, and DNS Propagation Tester.
+- [Wi-Fi Range Extenders Directory](https://routeriphub.com/extenders/): Setup portals, fallback IPs (192.168.1.250, 192.168.0.254), and pairing diagnostics for Netgear, TP-Link, and Linksys extenders.
+- [mywifiext.net Netgear Setup Guide](https://routeriphub.com/extenders/mywifiext-net/): Official login and fallback IP guide for Netgear EX, EAX, and EXS series extenders.
 - [Gateway IP Discovery Guide](https://routeriphub.com/find-router-ip.html): Platform-specific terminal commands (Windows, macOS, Linux, iOS, Android) to determine local gateway addresses.
 - [Router Setup & Reset Guides](https://routeriphub.com/howto.html): Step-by-step instructions for initial router setup, 30-30-30 hard resets, and factory restoration.
 
@@ -3456,6 +4093,7 @@ def main():
     generate_isp_pages()
     generate_brand_pages()
     generate_ip_pages()
+    generate_extender_pages()
     generate_tool_pages()
     generate_sitemaps()
     export_datasets()
