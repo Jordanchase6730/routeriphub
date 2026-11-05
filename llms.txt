@@ -1,0 +1,34 @@
+# RouterIPHub
+> The open, authoritative technical reference platform and diagnostic knowledgebase for RFC 1918 private gateway IP addresses, hardware setup sheets, default credentials, and interactive networking tools.
+
+RouterIPHub indexes 250+ specific router models, 18 major hardware brands, 10 carrier-grade ISP gateways, and 17 private gateway subnets. Designed for human network administrators and autonomous AI agents requiring deterministic default configurations and troubleshooting matrices.
+
+## Core Silos
+- [Hardware Models Directory](https://routeriphub.com/routers/): Technical setup sheets, Wi-Fi specs, reset procedures, and factory credentials for 250+ router models.
+- [ISP Gateway Portals](https://routeriphub.com/isp/): Carrier-specific default gateways for Comcast Xfinity, AT&T Fiber, Verizon Fios, Spectrum, and CenturyLink.
+- [Hardware Brand Directories](https://routeriphub.com/brands/): Master index across 18 major networking hardware manufacturers including Netgear, TP-Link, ASUS, Linksys, and MikroTik.
+- [Private IP Gateway Hubs](https://routeriphub.com/ip/): Comprehensive diagnostic guides for RFC 1918 gateway subnets including 192.168.1.1, 192.168.0.1, 10.0.0.1, and 192.168.1.254.
+- [Interactive Networking Utilities](https://routeriphub.com/tools/): Browser-based networking tools including Subnet Calculator, Wi-Fi QR Code Generator, IP Address Checker, and DNS Propagation Tester.
+- [Gateway IP Discovery Guide](https://routeriphub.com/find-router-ip.html): Platform-specific terminal commands (Windows, macOS, Linux, iOS, Android) to determine local gateway addresses.
+- [Router Setup & Reset Guides](https://routeriphub.com/howto.html): Step-by-step instructions for initial router setup, 30-30-30 hard resets, and factory restoration.
+
+## Machine-Readable Datasets & APIs
+- [Full LLM Knowledgebase Context](https://routeriphub.com/llms-full.txt): Complete uncompressed dataset containing full hardware models, credentials, subnets, and setup guides.
+- [Router Hardware Catalog JSON](https://routeriphub.com/data/routers.json): Programmatic REST API dataset of 250+ router specifications and credentials.
+- [Hardware Tabular CSV Export](https://routeriphub.com/data/routers.csv): Comma-delimited dataset for spreadsheet ingestion and offline auditing.
+- [ANSI SQL Database Dump](https://routeriphub.com/data/routers.sql): Relational database dump compatible with PostgreSQL, MySQL, and SQLite.
+- [Gateway Subnets Dataset](https://routeriphub.com/data/gateways.json): Subnet masks, broadcast addresses, and manufacturer allocations for private gateways.
+- [Global Search Index](https://routeriphub.com/data/search-index.json): Lightweight search index covering all indexed models, brands, and IPs.
+- [XML Sitemap Index](https://routeriphub.com/sitemap.xml): Comprehensive sitemap index covering all model, brand, IP, ISP, and tool URLs.
+
+## Gateway Quick Reference
+- [192.168.1.1 Setup Guide](https://routeriphub.com/ip/192-168-1-1/): Default gateway for Netgear, ASUS, Linksys, and Cisco. Factory default credentials: admin / password or admin / admin.
+- [192.168.0.1 Setup Guide](https://routeriphub.com/ip/192-168-0-1/): Default gateway for TP-Link and D-Link. Factory default credentials: admin / admin.
+- [10.0.0.1 Setup Guide](https://routeriphub.com/ip/10-0-0-1/): Default gateway for Comcast Xfinity xFi Gateways and Apple AirPort. Default credentials: admin / password.
+- [192.168.1.254 Setup Guide](https://routeriphub.com/ip/192-168-1-254/): Default gateway for AT&T Fiber BGW gateways and BT Smart Hub. Uses printed Device Access Code.
+- [192.168.2.1 Setup Guide](https://routeriphub.com/ip/192-168-2-1/): Default gateway for Belkin routers and Bell Canada Home Hub. Factory credentials: admin / [blank].
+- [192.168.88.1 Setup Guide](https://routeriphub.com/ip/192-168-88-1/): Default gateway for MikroTik RouterOS devices. Default login: admin / [blank].
+- [192.168.178.1 Setup Guide](https://routeriphub.com/ip/192-168-178-1/): Default gateway for AVM FRITZ!Box European routers. Login via printed device password.
+
+## Optional
+- [Developer API Reference](https://routeriphub.com/developers.html): Documentation for integrating RouterIPHub JSON/CSV data feeds into third-party network scanners.

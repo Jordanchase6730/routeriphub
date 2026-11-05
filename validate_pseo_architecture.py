@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import json
+import re
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
@@ -112,6 +113,24 @@ for json_name in ["routers.json", "gateways.json", "search-index.json"]:
                 json.load(jf)
         except Exception as e:
             errors.append(f"Corrupt JSON in {j_path}: {e}")
+
+# 4. Validate llms.txt & llms-full.txt (Lighthouse Agentic Browsing & llmstxt.org conformance)
+for txt_name in ["llms.txt", "llms-full.txt"]:
+    for dir_path in [PUBLIC_DIR, ROOT_DIR]:
+        t_path = os.path.join(dir_path, txt_name)
+        if not os.path.exists(t_path):
+            errors.append(f"Missing {txt_name} at {t_path}")
+        else:
+            with open(t_path, "r", encoding="utf-8") as tf:
+                txt_content = tf.read()
+            if len(txt_content) < 50:
+                errors.append(f"{t_path} is too short ({len(txt_content)} chars)")
+            if not re.search(r"^#\s+[^\n]+", txt_content, re.MULTILINE):
+                errors.append(f"{t_path} missing H1 header (# Title)")
+            if not re.search(r"^>\s+[^\n]+", txt_content, re.MULTILINE):
+                errors.append(f"{t_path} missing summary blockquote (> Description)")
+            if not re.search(r"\[.+?\]\(.+?\)", txt_content):
+                errors.append(f"{t_path} missing Markdown links ([Text](url))")
 
 print(f"Total HTML files validated: {checked_files}")
 print(f"Total Errors: {len(errors)}")

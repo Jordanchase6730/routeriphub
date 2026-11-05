@@ -1,1865 +1,277 @@
 # RouterIPHub - Complete Programmatic Technical Knowledgebase
+> Uncompressed technical dataset of router default gateways, hardware models, factory credentials, and network configuration profiles.
+
 Date: 2026-11-03
 Website: https://routeriphub.com
 
 ## 1. Gateway IP Directory
-- IP: 192.168.1.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Netgear, ASUS, Linksys, Cisco, Verizon Fios, Ubiquiti
-  Default Credentials: admin / admin or admin / password
-  URL: https://routeriphub.com/ip/192-168-1-1/
-
-- IP: 192.168.0.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: TP-Link, D-Link, Arris, Sky Broadband, Virgin Media
-  Default Credentials: admin / admin (or created on first boot)
-  URL: https://routeriphub.com/ip/192-168-0-1/
-
-- IP: 10.0.0.1
-  Subnet: 255.255.255.0 (/24 standard local allocation)
-  Brands: Xfinity (Comcast), Apple AirPort, Cisco, Spectrum
-  Default Credentials: admin / password
-  URL: https://routeriphub.com/ip/10-0-0-1/
-
-- IP: 192.168.1.254
-  Subnet: 255.255.255.0 (/24)
-  Brands: AT&T Fiber (BGW320), BT Smart Hub (UK), Plusnet, 2Wire
-  Default Credentials: admin / Printed Access Code
-  URL: https://routeriphub.com/ip/192-168-1-254/
-
-- IP: 192.168.2.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Belkin, SMC, Bell Home Hub (Canada), Philips Hue Bridge
-  Default Credentials: admin / [empty] or admin / admin
-  URL: https://routeriphub.com/ip/192-168-2-1/
-
-- IP: 192.168.8.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Huawei, GL.iNet Travel Routers, 4G/5G Mobile Hotspots
-  Default Credentials: admin / admin
-  URL: https://routeriphub.com/ip/192-168-8-1/
-
-- IP: 192.168.10.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Trendnet, ZyXEL, Motorola Gateway combos
-  Default Credentials: admin / admin
-  URL: https://routeriphub.com/ip/192-168-10-1/
-
-- IP: 192.168.11.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Buffalo AirStation, DD-WRT Japanese releases
-  Default Credentials: root / [empty] or admin / password
-  URL: https://routeriphub.com/ip/192-168-11-1/
-
-- IP: 192.168.12.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: T-Mobile 5G Home Internet (KVD21, Arcadyan, Sagemcom)
-  Default Credentials: admin / sticker password
-  URL: https://routeriphub.com/ip/192-168-12-1/
-
-- IP: 192.168.31.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Xiaomi Mi WiFi, Redmi Routers
-  Default Credentials: admin / set on first boot via miwifi.com
-  URL: https://routeriphub.com/ip/192-168-31-1/
-
-- IP: 192.168.68.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: TP-Link Deco Whole Home Mesh Series (X55, XE75, BE85)
-  Default Credentials: Managed via TP-Link Deco App
-  URL: https://routeriphub.com/ip/192-168-68-1/
-
-- IP: 192.168.88.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: MikroTik RouterBOARD & RouterOS (hAP, RB series)
-  Default Credentials: admin / [empty]
-  URL: https://routeriphub.com/ip/192-168-88-1/
-
-- IP: 192.168.100.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Huawei ONT, Motorola & Arris Cable Modems, Virgin Media Modem Mode
-  Default Credentials: admin / admin (or TelecomAdmin)
-  URL: https://routeriphub.com/ip/192-168-100-1/
-
-- IP: 192.168.178.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber)
-  Default Credentials: admin / sticker password
-  URL: https://routeriphub.com/ip/192-168-178-1/
-
-- IP: 10.0.1.1
-  Subnet: 255.255.255.0 (/24)
-  Brands: Apple AirPort Extreme, AirPort Time Capsule, Cisco
-  Default Credentials: admin / admin (or configured via AirPort Utility)
-  URL: https://routeriphub.com/ip/10-0-1-1/
-
-- IP: 10.0.0.138
-  Subnet: 255.255.255.0 (/24)
-  Brands: Telstra (Australia), Thomson / SpeedTouch, Technicolor
-  Default Credentials: admin / admin
-  URL: https://routeriphub.com/ip/10-0-0-138/
-
-- IP: 192.168.1.2
-  Subnet: 255.255.255.0 (/24)
-  Brands: Wi-Fi Range Extenders, Secondary Access Points, Repeater Hubs
-  Default Credentials: admin / admin
-  URL: https://routeriphub.com/ip/192-168-1-2/
+- [192.168.1.1 Guide](https://routeriphub.com/ip/192-168-1-1/): Subnet 255.255.255.0 (/24). Brands: Netgear, ASUS, Linksys, Cisco, Verizon Fios, Ubiquiti. Default credentials: admin / admin or admin / password.
+- [192.168.0.1 Guide](https://routeriphub.com/ip/192-168-0-1/): Subnet 255.255.255.0 (/24). Brands: TP-Link, D-Link, Arris, Sky Broadband, Virgin Media. Default credentials: admin / admin (or created on first boot).
+- [10.0.0.1 Guide](https://routeriphub.com/ip/10-0-0-1/): Subnet 255.255.255.0 (/24 standard local allocation). Brands: Xfinity (Comcast), Apple AirPort, Cisco, Spectrum. Default credentials: admin / password.
+- [192.168.1.254 Guide](https://routeriphub.com/ip/192-168-1-254/): Subnet 255.255.255.0 (/24). Brands: AT&T Fiber (BGW320), BT Smart Hub (UK), Plusnet, 2Wire. Default credentials: admin / Printed Access Code.
+- [192.168.2.1 Guide](https://routeriphub.com/ip/192-168-2-1/): Subnet 255.255.255.0 (/24). Brands: Belkin, SMC, Bell Home Hub (Canada), Philips Hue Bridge. Default credentials: admin / [empty] or admin / admin.
+- [192.168.8.1 Guide](https://routeriphub.com/ip/192-168-8-1/): Subnet 255.255.255.0 (/24). Brands: Huawei, GL.iNet Travel Routers, 4G/5G Mobile Hotspots. Default credentials: admin / admin.
+- [192.168.10.1 Guide](https://routeriphub.com/ip/192-168-10-1/): Subnet 255.255.255.0 (/24). Brands: Trendnet, ZyXEL, Motorola Gateway combos. Default credentials: admin / admin.
+- [192.168.11.1 Guide](https://routeriphub.com/ip/192-168-11-1/): Subnet 255.255.255.0 (/24). Brands: Buffalo AirStation, DD-WRT Japanese releases. Default credentials: root / [empty] or admin / password.
+- [192.168.12.1 Guide](https://routeriphub.com/ip/192-168-12-1/): Subnet 255.255.255.0 (/24). Brands: T-Mobile 5G Home Internet (KVD21, Arcadyan, Sagemcom). Default credentials: admin / sticker password.
+- [192.168.31.1 Guide](https://routeriphub.com/ip/192-168-31-1/): Subnet 255.255.255.0 (/24). Brands: Xiaomi Mi WiFi, Redmi Routers. Default credentials: admin / set on first boot via miwifi.com.
+- [192.168.68.1 Guide](https://routeriphub.com/ip/192-168-68-1/): Subnet 255.255.255.0 (/24). Brands: TP-Link Deco Whole Home Mesh Series (X55, XE75, BE85). Default credentials: Managed via TP-Link Deco App.
+- [192.168.88.1 Guide](https://routeriphub.com/ip/192-168-88-1/): Subnet 255.255.255.0 (/24). Brands: MikroTik RouterBOARD & RouterOS (hAP, RB series). Default credentials: admin / [empty].
+- [192.168.100.1 Guide](https://routeriphub.com/ip/192-168-100-1/): Subnet 255.255.255.0 (/24). Brands: Huawei ONT, Motorola & Arris Cable Modems, Virgin Media Modem Mode. Default credentials: admin / admin (or TelecomAdmin).
+- [192.168.178.1 Guide](https://routeriphub.com/ip/192-168-178-1/): Subnet 255.255.255.0 (/24). Brands: AVM FRITZ!Box (7590 AX, 6660 Cable, 5590 Fiber). Default credentials: admin / sticker password.
+- [10.0.1.1 Guide](https://routeriphub.com/ip/10-0-1-1/): Subnet 255.255.255.0 (/24). Brands: Apple AirPort Extreme, AirPort Time Capsule, Cisco. Default credentials: admin / admin (or configured via AirPort Utility).
+- [10.0.0.138 Guide](https://routeriphub.com/ip/10-0-0-138/): Subnet 255.255.255.0 (/24). Brands: Telstra (Australia), Thomson / SpeedTouch, Technicolor. Default credentials: admin / admin.
+- [192.168.1.2 Guide](https://routeriphub.com/ip/192-168-1-2/): Subnet 255.255.255.0 (/24). Brands: Wi-Fi Range Extenders, Secondary Access Points, Repeater Hubs. Default credentials: admin / admin.
 
 ## 2. Hardware Models Database
-- Model: Netgear Nighthawk AX6 (RAX50)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax50/
-
-- Model: Netgear Nighthawk AX12 (RAX120)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax120/
-
-- Model: Netgear Nighthawk Pro Gaming XR1000
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-xr1000/
-
-- Model: Netgear Nighthawk Pro Gaming XR500
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-xr500/
-
-- Model: Netgear Nighthawk Pro Gaming XR700
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-xr700/
-
-- Model: Netgear Nighthawk Pro Gaming XR300
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-xr300/
-
-- Model: Netgear Nighthawk AX4 (RAX40)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax40/
-
-- Model: Netgear Nighthawk AX5 (RAX43)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax43/
-
-- Model: Netgear Nighthawk AX8 (RAX80)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax80/
-
-- Model: Netgear Nighthawk Tri-Band AX12 (RAX200)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax200/
-
-- Model: Netgear Nighthawk RS700S
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rs700s/
-
-- Model: Netgear Nighthawk RS300
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rs300/
-
-- Model: Netgear Nighthawk AC1900 (R7000)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r7000/
-
-- Model: Netgear Nighthawk AC1750 (R6700)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r6700/
-
-- Model: Netgear Nighthawk X6 AC3200 (R8000)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r8000/
-
-- Model: Netgear Nighthawk X8 AC5300 (R8500)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r8500/
-
-- Model: Netgear Nighthawk X10 AD7200 (R9000)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r9000/
-
-- Model: Netgear Nighthawk AC2300 (R7000P)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-r7000p/
-
-- Model: Netgear Nighthawk AX3000 (RAX35)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-nighthawk-rax35/
-
-- Model: Netgear Orbi Tri-Band WiFi 6 (RBK752)
-  IP: 192.168.1.1
-  Domain: http://orbilogin.com
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-orbi-rbk752/
-
-- Model: Netgear Orbi WiFi 6 (RBK852)
-  IP: 192.168.1.1
-  Domain: http://orbilogin.com
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-orbi-rbk852/
-
-- Model: Netgear Orbi Quad-Band WiFi 6E (RBKE963)
-  IP: 192.168.1.1
-  Domain: http://orbilogin.com
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-orbi-rbke963/
-
-- Model: Netgear Orbi WiFi 7 (RBE973)
-  IP: 192.168.1.1
-  Domain: http://orbilogin.com
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-orbi-rbe973/
-
-- Model: Netgear Orbi 4G LTE WiFi Router (LBR20)
-  IP: 192.168.1.1
-  Domain: http://orbilogin.com
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-orbi-lbr20/
-
-- Model: Netgear Netgear AC1200 (R6220)
-  IP: 192.168.1.1
-  Domain: http://routerlogin.net
-  Credentials: admin / password
-  Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
-  URL: https://routeriphub.com/routers/netgear-r6220/
-
-- Model: TP-Link Archer AX55 (AX3000)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax55/
-
-- Model: TP-Link Archer AX73 (AX5400)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax73/
-
-- Model: TP-Link Archer AX21 (AX1800)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax21/
-
-- Model: TP-Link Archer AX10 (AX1500)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax10/
-
-- Model: TP-Link Archer AX20 (AX1800)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax20/
-
-- Model: TP-Link Archer AX50 (AX3000)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax50/
-
-- Model: TP-Link Archer AX72 (AX5400)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax72/
-
-- Model: TP-Link Archer AX90 (AX6600)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax90/
-
-- Model: TP-Link Archer AX11000
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-ax11000/
-
-- Model: TP-Link Archer GX90 (AX6600)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-gx90/
-
-- Model: TP-Link Archer BE550 (BE9300)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-be550/
-
-- Model: TP-Link Archer BE800 (BE19000)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-be800/
-
-- Model: TP-Link Archer BE900 (BE24000)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-be900/
-
-- Model: TP-Link Archer C7 (AC1750)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-c7/
-
-- Model: TP-Link Archer A7 (AC1750)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-a7/
-
-- Model: TP-Link Archer C6 (AC1200)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-c6/
-
-- Model: TP-Link Archer A6 (AC1200)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-a6/
-
-- Model: TP-Link Archer C80 (AC1900)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-c80/
-
-- Model: TP-Link Archer C2300 (AC2300)
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-c2300/
-
-- Model: TP-Link Archer C5400X
-  IP: 192.168.0.1
-  Domain: http://tplinkwifi.net
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-archer-c5400x/
-
-- Model: TP-Link Deco X20 (AX1800)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-x20/
-
-- Model: TP-Link Deco X50 (AX3000)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-x50/
-
-- Model: TP-Link Deco X55 (AX3000)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-x55/
-
-- Model: TP-Link Deco X60 (AX5400)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-x60/
-
-- Model: TP-Link Deco XE75 (AXE5400)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-xe75/
-
-- Model: TP-Link Deco XE75 Pro (AXE5400)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-xe75-pro/
-
-- Model: TP-Link Deco BE85 (BE22000)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-be85/
-
-- Model: TP-Link Deco M4 (AC1200)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-m4/
-
-- Model: TP-Link Deco M5 (AC1300)
-  IP: 192.168.68.1
-  Domain: http://tplinkdeco.net
-  Credentials: TP-Link ID / TP-Link ID
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-deco-m5/
-
-- Model: TP-Link Omada ER605 (TL-R605)
-  IP: 192.168.0.1
-  Domain: N/A (Web GUI)
-  Credentials: admin / admin
-  Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
-  URL: https://routeriphub.com/routers/tp-link-omada-er605/
-
-- Model: ASUS RT-AX88U (AX6000)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax88u/
-
-- Model: ASUS RT-AX86U (AX5700)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax86u/
-
-- Model: ASUS RT-AX86U Pro (AX5700)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax86u-pro/
-
-- Model: ASUS RT-AX88U Pro (AX6000)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax88u-pro/
-
-- Model: ASUS RT-AX58U (AX3000)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax58u/
-
-- Model: ASUS RT-AX55 (AX1800)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax55/
-
-- Model: ASUS RT-AX53U (AX1800)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax53u/
-
-- Model: ASUS RT-AX68U (AX2700)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax68u/
-
-- Model: ASUS RT-AX82U (AX5400)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax82u/
-
-- Model: ASUS RT-AX89X (AX6000)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax89x/
-
-- Model: ASUS RT-AX92U (AX6100)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ax92u/
-
-- Model: ASUS ROG Rapture GT-AX11000
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-ax11000/
-
-- Model: ASUS ROG Rapture GT-AX11000 Pro
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-ax11000-pro/
-
-- Model: ASUS ROG Rapture GT-AX6000
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-ax6000/
-
-- Model: ASUS ROG Rapture GT-AXE11000
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-axe11000/
-
-- Model: ASUS ROG Rapture GT-AXE16000
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-axe16000/
-
-- Model: ASUS ROG Rapture GT-BE98
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt-be98/
-
-- Model: ASUS ROG Rapture GT6
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rog-rapture-gt6/
-
-- Model: ASUS TUF Gaming AX3000
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-tuf-gaming-ax3000/
-
-- Model: ASUS TUF Gaming AX4200
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-tuf-gaming-ax4200/
-
-- Model: ASUS TUF Gaming AX5400
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-tuf-gaming-ax5400/
-
-- Model: ASUS ZenWiFi XT8 (AX6600)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-zenwifi-xt8/
-
-- Model: ASUS ZenWiFi XT9 (AX7800)
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-zenwifi-xt9/
-
-- Model: ASUS ZenWiFi Pro XT12
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-zenwifi-pro-xt12/
-
-- Model: ASUS ZenWiFi Pro ET12
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-zenwifi-pro-et12/
-
-- Model: ASUS ZenWiFi BQ16
-  IP: 192.168.50.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-zenwifi-bq16/
-
-- Model: ASUS RT-AC68U (AC1900)
-  IP: 192.168.1.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ac68u/
-
-- Model: ASUS RT-AC86U (AC2900)
-  IP: 192.168.1.1
-  Domain: http://router.asus.com
-  Credentials: admin / admin
-  Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
-  URL: https://routeriphub.com/routers/asus-rt-ac86u/
-
-- Model: Linksys Velop Micro 6 Mesh (LN1301)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-micro-6-mesh-ln1301/
-
-- Model: Linksys Velop Pro 6E (MX6200)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-pro-6e-mx6200/
-
-- Model: Linksys Velop Pro 7 (MBE7000)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-pro-7-mbe7000/
-
-- Model: Linksys Atlas Pro 6 (MX5500)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-atlas-pro-6-mx5500/
-
-- Model: Linksys Atlas Max 6E (MX8500)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-atlas-max-6e-mx8500/
-
-- Model: Linksys Velop AX4200 (MX4200)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-ax4200-mx4200/
-
-- Model: Linksys Velop AX5300 (MX5300)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-ax5300-mx5300/
-
-- Model: Linksys Velop Tri-Band (WHW0303)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-velop-whw0303/
-
-- Model: Linksys Hydra Pro 6E (MR7500)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-hydra-pro-6e-mr7500/
-
-- Model: Linksys Hydra 6 (MR2000)
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-hydra-6-mr2000/
-
-- Model: Linksys Max-Stream MR9600
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-mr9600/
-
-- Model: Linksys Max-Stream MR9000
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-mr9000/
-
-- Model: Linksys Max-Stream MR8300
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-mr8300/
-
-- Model: Linksys Max-Stream MR7350
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-mr7350/
-
-- Model: Linksys Classic WRT54G
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 30 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-wrt54g/
-
-- Model: Linksys WRT1900ACS
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-wrt1900acs/
-
-- Model: Linksys WRT3200ACM
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-wrt3200acm/
-
-- Model: Linksys WRT32X
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-wrt32x/
-
-- Model: Linksys Max-Stream EA7500
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-ea7500/
-
-- Model: Linksys Max-Stream EA8300
-  IP: 192.168.1.1
-  Domain: http://myrouter.local
-  Credentials: admin / admin
-  Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
-  URL: https://routeriphub.com/routers/linksys-ea8300/
-
-- Model: Ubiquiti UniFi Dream Machine Pro (UDM-Pro)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-machine-pro/
-
-- Model: Ubiquiti UniFi Dream Machine Special Edition (UDM-SE)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-machine-se/
-
-- Model: Ubiquiti UniFi Dream Machine (UDM)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-machine/
-
-- Model: Ubiquiti UniFi Dream Router (UDR)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-router/
-
-- Model: Ubiquiti UniFi Cloud Gateway Ultra (UCG-Ultra)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-cloud-gateway-ultra/
-
-- Model: Ubiquiti UniFi Cloud Gateway Max (UCG-Max)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-cloud-gateway-max/
-
-- Model: Ubiquiti UniFi Express (UX)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-express/
-
-- Model: Ubiquiti UniFi Security Gateway (USG-3P)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: root / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-security-gateway/
-
-- Model: Ubiquiti UniFi Security Gateway Pro (USG-PRO-4)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: root / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-security-gateway-pro/
-
-- Model: Ubiquiti UniFi Dream Wall (UDW)
-  IP: 192.168.1.1
-  Domain: https://unifi.ui.com
-  Credentials: UI Account / root / UI Account / root
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-unifi-dream-wall/
-
-- Model: Ubiquiti EdgeRouter X (ER-X)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-x/
-
-- Model: Ubiquiti EdgeRouter X SFP (ER-X-SFP)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-x-sfp/
-
-- Model: Ubiquiti EdgeRouter 4 (ER-4)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-4/
-
-- Model: Ubiquiti EdgeRouter 6P (ER-6P)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-6p/
-
-- Model: Ubiquiti EdgeRouter 12 (ER-12)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-12/
-
-- Model: Ubiquiti EdgeRouter Infinity (ER-8-XG)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: ubnt / ubnt
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-edgerouter-infinity/
-
-- Model: Ubiquiti AmpliFi Alien (AFi-ALN)
-  IP: 192.168.112.1
-  Domain: http://amplifi.lan
-  Credentials: admin / admin
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-amplifi-alien/
-
-- Model: Ubiquiti AmpliFi HD (AFi-R)
-  IP: 192.168.112.1
-  Domain: http://amplifi.lan
-  Credentials: admin / admin
-  Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
-  URL: https://routeriphub.com/routers/ubiquiti-amplifi-hd/
-
-- Model: MikroTik hEX (RB750Gr3)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hex-rb750gr3/
-
-- Model: MikroTik hEX S (RB760iGS)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hex-s-rb760igs/
-
-- Model: MikroTik hEX PoE (RB960PGS)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hex-poe-rb960pgs/
-
-- Model: MikroTik hAP ax2 (C52iG-5HaxD2HaxD-TC)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / Unique sticker password
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hap-ax2/
-
-- Model: MikroTik hAP ax3 (C53UiG+5HPaxD2HPaxD)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / Unique sticker password
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hap-ax3/
-
-- Model: MikroTik hAP ac2 (RBD52G-5HacD2HnD-TC)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hap-ac2/
-
-- Model: MikroTik hAP ac3 (RBD53iG-5HacD2HnD)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hap-ac3/
-
-- Model: MikroTik hAP lite (RB941-2nD)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-hap-lite/
-
-- Model: MikroTik RB4011iGS+5HacQ2HnD-IN
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-rb4011/
-
-- Model: MikroTik RB5009UG+S+IN
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-rb5009/
-
-- Model: MikroTik L009UiGS-2HaxD-IN
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-l009uigs/
-
-- Model: MikroTik CCR2004-16G-2S+
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-ccr2004/
-
-- Model: MikroTik Chateau 5G ax
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / Unique sticker password
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-chateau-5g-ax/
-
-- Model: MikroTik Chateau LTE12
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / Unique sticker password
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-chateau-lte12/
-
-- Model: MikroTik Cloud Router Switch (CRS305-1G-4S+IN)
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-crs305/
-
-- Model: MikroTik RouterBOARD 3011UiAS-RM
-  IP: 192.168.88.1
-  Domain: http://router.lan
-  Credentials: admin / [empty]
-  Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
-  URL: https://routeriphub.com/routers/mikrotik-rb3011/
-
-- Model: D-Link EAGLE PRO AI AX1500 (R15)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty or sticker password]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-eagle-pro-ai-r15/
-
-- Model: D-Link EAGLE PRO AI AX3200 (R32)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty or sticker password]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-eagle-pro-ai-r32/
-
-- Model: D-Link EXO AX5400 (DIR-X5460)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / password
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-exo-dir-x5460/
-
-- Model: D-Link EXO AX1800 (DIR-X1860)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / password
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-exo-dir-x1860/
-
-- Model: D-Link EXO AX1500 (DIR-X1560)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / password
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-exo-dir-x1560/
-
-- Model: D-Link DIR-882 (AC2600)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-882/
-
-- Model: D-Link DIR-878 (AC1900)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-878/
-
-- Model: D-Link DIR-867 (AC1750)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-867/
-
-- Model: D-Link DIR-842 (AC1200)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-842/
-
-- Model: D-Link DIR-825 (AC1200)
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-825/
-
-- Model: D-Link DIR-615
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-615/
-
-- Model: D-Link DIR-600
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-600/
-
-- Model: D-Link DIR-850L
-  IP: 192.168.0.1
-  Domain: http://dlinkrouter.local
-  Credentials: Admin / [empty]
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dir-850l/
-
-- Model: D-Link COVR AX1800 (COVR-X1870)
-  IP: 192.168.0.1
-  Domain: http://covr.local
-  Credentials: Admin / Sticker password
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-covr-x1870/
-
-- Model: D-Link COVR AC1200 (COVR-1100)
-  IP: 192.168.0.1
-  Domain: http://covr.local
-  Credentials: Admin / Sticker password
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-covr-1100/
-
-- Model: D-Link DWR-960
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/d-link-dwr-960/
-
-- Model: Cisco Cisco Business RV340
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv340/
-
-- Model: Cisco Cisco Business RV345
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv345/
-
-- Model: Cisco Cisco Business RV260
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv260/
-
-- Model: Cisco Cisco Business RV160
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv160/
-
-- Model: Cisco Cisco Business RV130
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv130/
-
-- Model: Cisco Cisco Business RV042
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: Press and hold the Reset button with a paperclip for 30 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-business-rv042/
-
-- Model: Cisco Cisco Meraki Go GX20
-  IP: 192.168.128.1
-  Domain: https://meraki-go.com
-  Credentials: admin (Meraki Account) / admin
-  Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-meraki-go-gx20/
-
-- Model: Cisco Cisco Meraki Go GX50
-  IP: 192.168.128.1
-  Domain: https://meraki-go.com
-  Credentials: admin (Meraki Account) / admin
-  Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-meraki-go-gx50/
-
-- Model: Cisco Cisco Catalyst 1000-8T-2G-L
-  IP: 192.168.1.254
-  Domain: http://192.168.1.254
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-catalyst-1000/
-
-- Model: Cisco Cisco ISR 1100 (C1111-8P)
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-isr-1100/
-
-- Model: Cisco Cisco ISR 4331
-  IP: 10.0.0.1
-  Domain: https://10.0.0.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-isr-4331/
-
-- Model: Cisco Cisco C921-4P
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: cisco / cisco
-  Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
-  URL: https://routeriphub.com/routers/cisco-c921-4p/
-
-- Model: Synology Synology RT6600ax
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-rt6600ax/
-
-- Model: Synology Synology RT2600ac
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-rt2600ac/
-
-- Model: Synology Synology WRX560
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-wrx560/
-
-- Model: Synology Synology MR2200ac
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin (created on setup) / admin (created on setup)
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-mr2200ac/
-
-- Model: Synology Synology RT1900ac
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin / admin
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-rt1900ac/
-
-- Model: Synology Synology DS-Gateway
-  IP: 192.168.1.1
-  Domain: http://router.synology.com
-  Credentials: admin / admin
-  Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
-  URL: https://routeriphub.com/routers/synology-ds-gateway/
-
-- Model: Google Nest Nest Wifi Pro (G6ZUC)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-nest-wifi-pro/
-
-- Model: Google Nest Nest Wifi Router (H2D)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-nest-wifi-router/
-
-- Model: Google Nest Nest Wifi Point (H2E)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-nest-wifi-point/
-
-- Model: Google Nest Google Wifi (NLS-1304-25)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-wifi/
-
-- Model: Google Nest Google OnHub Asus (SRT-AC1900)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-onhub-asus/
-
-- Model: Google Nest Google OnHub TP-Link (TGR1900)
-  IP: 192.168.86.1
-  Domain: N/A (Google Home App)
-  Credentials: Managed via Google Home / Managed via Google Home
-  Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
-  URL: https://routeriphub.com/routers/google-onhub-tplink/
-
-- Model: Amazon Eero Eero Max 7
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-max-7/
-
-- Model: Amazon Eero Eero Pro 6E (S010001)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-pro-6e/
-
-- Model: Amazon Eero Eero Pro 6 (K010001)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-pro-6/
-
-- Model: Amazon Eero Eero 6+ (R010001)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-6-plus/
-
-- Model: Amazon Eero Eero 6 (N010001)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-6/
-
-- Model: Amazon Eero Eero Pro (2nd Gen - B010001)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-pro-2nd-gen/
-
-- Model: Amazon Eero Eero Beacon
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-beacon/
-
-- Model: Amazon Eero Eero (1st Gen)
-  IP: 192.168.4.1
-  Domain: N/A (Eero App)
-  Credentials: Managed via Amazon eero App / Managed via Amazon eero App
-  Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
-  URL: https://routeriphub.com/routers/amazon-eero-1st-gen/
-
-- Model: AVM FRITZ!Box FRITZ!Box 7590 AX
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-7590-ax/
-
-- Model: AVM FRITZ!Box FRITZ!Box 7590
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-7590/
-
-- Model: AVM FRITZ!Box FRITZ!Box 7530 AX
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-7530-ax/
-
-- Model: AVM FRITZ!Box FRITZ!Box 7530
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-7530/
-
-- Model: AVM FRITZ!Box FRITZ!Box 5590 Fiber
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-5590-fiber/
-
-- Model: AVM FRITZ!Box FRITZ!Box 5530 Fiber
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-5530-fiber/
-
-- Model: AVM FRITZ!Box FRITZ!Box 6690 Cable
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-6690-cable/
-
-- Model: AVM FRITZ!Box FRITZ!Box 6660 Cable
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-6660-cable/
-
-- Model: AVM FRITZ!Box FRITZ!Box 4060
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-4060/
-
-- Model: AVM FRITZ!Box FRITZ!Box 4040
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-4040/
-
-- Model: AVM FRITZ!Box FRITZ!Box 6850 5G
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-6850-5g/
-
-- Model: AVM FRITZ!Box FRITZ!Box 6890 LTE
-  IP: 192.168.178.1
-  Domain: http://fritz.box
-  Credentials: admin / Unique sticker password
-  Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
-  URL: https://routeriphub.com/routers/avm-fritzbox-6890-lte/
-
-- Model: Zyxel Armor G5 (NBG7815)
-  IP: 192.168.1.1
-  Domain: http://zyxelwifi.net
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-armor-g5/
-
-- Model: Zyxel Armor G1 (NBG6818)
-  IP: 192.168.1.1
-  Domain: http://zyxelwifi.net
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-armor-g1/
-
-- Model: Zyxel Multy X (WSQ50)
-  IP: 192.168.212.1
-  Domain: http://zyxelwifi.com
-  Credentials: admin / admin
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-multy-x/
-
-- Model: Zyxel Multy M1 (WSM20)
-  IP: 192.168.212.1
-  Domain: http://zyxelwifi.com
-  Credentials: admin / admin
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-multy-m1/
-
-- Model: Zyxel USG FLEX 100
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-usg-flex-100/
-
-- Model: Zyxel USG FLEX 200
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-usg-flex-200/
-
-- Model: Zyxel USG20-VPN
-  IP: 192.168.1.1
-  Domain: https://192.168.1.1
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-usg20-vpn/
-
-- Model: Zyxel VMG8825-B50B
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-vmg8825-b50b/
-
-- Model: Zyxel DX3301-T0
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-dx3301-t0/
-
-- Model: Zyxel NBG6604
-  IP: 192.168.1.1
-  Domain: http://zyxelwifi.net
-  Credentials: admin / 1234
-  Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
-  URL: https://routeriphub.com/routers/zyxel-nbg6604/
-
-- Model: Huawei WiFi AX3 (Quad-Core WS7200)
-  IP: 192.168.3.1
-  Domain: http://192.168.3.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-wifi-ax3-quad-core/
-
-- Model: Huawei WiFi AX3 (Dual-Core WS7100)
-  IP: 192.168.3.1
-  Domain: http://192.168.3.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-wifi-ax3-dual-core/
-
-- Model: Huawei WiFi AX2 (WS7001)
-  IP: 192.168.3.1
-  Domain: http://192.168.3.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-wifi-ax2/
-
-- Model: Huawei WiFi Mesh 7 (WS8800)
-  IP: 192.168.3.1
-  Domain: http://192.168.3.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-wifi-mesh-7/
-
-- Model: Huawei WiFi Mesh 3 (WS5800)
-  IP: 192.168.3.1
-  Domain: http://192.168.3.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-wifi-mesh-3/
-
-- Model: Huawei 5G CPE Pro 2 (H122-373)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: admin / Unique sticker password
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-5g-cpe-pro-2/
-
-- Model: Huawei 4G Router 3 Pro (B535-232)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-4g-router-3-pro/
-
-- Model: Huawei EchoLife HG8245H
-  IP: 192.168.100.1
-  Domain: http://192.168.100.1
-  Credentials: telecomadmin / admintelecom
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-echolife-hg8245h/
-
-- Model: Huawei EchoLife HG8145V5
-  IP: 192.168.100.1
-  Domain: http://192.168.100.1
-  Credentials: telecomadmin / admintelecom
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-echolife-hg8145v5/
-
-- Model: Huawei 4G Router B311 (B311-221)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: admin / admin
-  Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
-  URL: https://routeriphub.com/routers/huawei-b311-221/
-
-- Model: GL.iNet Slate AX (GL-AXT1800)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-slate-ax-gl-axt1800/
-
-- Model: GL.iNet Beryl AX (GL-MT3000)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-beryl-ax-gl-mt3000/
-
-- Model: GL.iNet Beryl (GL-MT1300)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-beryl-gl-mt1300/
-
-- Model: GL.iNet Opal (GL-SFT1200)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-opal-gl-sft1200/
-
-- Model: GL.iNet Slate (GL-AR750S-Ext)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-slate-gl-ar750s/
-
-- Model: GL.iNet Shadow (GL-AR300M16)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-shadow-gl-ar300m/
-
-- Model: GL.iNet Flint (GL-AX1800)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-flint-gl-ax1800/
-
-- Model: GL.iNet Flint 2 (GL-MT6000)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-flint-2-gl-mt6000/
-
-- Model: GL.iNet Spitz AX (GL-X3000)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-spitz-ax-gl-x3000/
-
-- Model: GL.iNet Mudi (GL-E750)
-  IP: 192.168.8.1
-  Domain: http://192.168.8.1
-  Credentials: root / admin (created on setup)
-  Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
-  URL: https://routeriphub.com/routers/gl-inet-mudi-gl-e750/
-
-- Model: DrayTek Vigor 2927 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2927/
-
-- Model: DrayTek Vigor 2962
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2962/
-
-- Model: DrayTek Vigor 2865 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2865/
-
-- Model: DrayTek Vigor 3910
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-3910/
-
-- Model: DrayTek Vigor 2135 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2135/
-
-- Model: DrayTek Vigor 2765 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2765/
-
-- Model: DrayTek Vigor 2926 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2926/
-
-- Model: DrayTek Vigor 2862 Series
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / admin
-  Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
-  URL: https://routeriphub.com/routers/draytek-vigor-2862/
-
-- Model: Arris SURFboard G54
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-g54/
-
-- Model: Arris SURFboard G36
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-g36/
-
-- Model: Arris SURFboard G34
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-g34/
-
-- Model: Arris SURFboard SBG8300
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-sbg8300/
-
-- Model: Arris SURFboard SBG7600AC2
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-sbg7600ac2/
-
-- Model: Arris SURFboard SBG7400AC2
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-sbg7400ac2/
-
-- Model: Arris SURFboard SBG6900-AC
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-sbg6900-ac/
-
-- Model: Arris SURFboard SBG10
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-surfboard-sbg10/
-
-- Model: Arris Arris NVG589
-  IP: 192.168.1.254
-  Domain: http://192.168.1.254
-  Credentials: admin / Sticker password
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-nvg589/
-
-- Model: Arris Arris BGW210-700
-  IP: 192.168.1.254
-  Domain: http://192.168.1.254
-  Credentials: admin / Sticker Access Code
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/arris-bgw210-700/
-
-- Model: Motorola Motorola MG8725
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mg8725/
-
-- Model: Motorola Motorola MG8702
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mg8702/
-
-- Model: Motorola Motorola MG7700
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mg7700/
-
-- Model: Motorola Motorola MG7550
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mg7550/
-
-- Model: Motorola Motorola MT7711
-  IP: 192.168.0.1
-  Domain: http://192.168.0.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mt7711/
-
-- Model: Motorola Motorola MR2600
-  IP: 192.168.1.1
-  Domain: http://192.168.1.1
-  Credentials: admin / motorola
-  Reset: Press and hold the recessed Reset button on the rear for 10 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
-  URL: https://routeriphub.com/routers/motorola-mr2600/
-
+- [Netgear Nighthawk AX6 (RAX50)](https://routeriphub.com/routers/netgear-nighthawk-rax50/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AX12 (RAX120)](https://routeriphub.com/routers/netgear-nighthawk-rax120/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk Pro Gaming XR1000](https://routeriphub.com/routers/netgear-nighthawk-xr1000/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk Pro Gaming XR500](https://routeriphub.com/routers/netgear-nighthawk-xr500/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk Pro Gaming XR700](https://routeriphub.com/routers/netgear-nighthawk-xr700/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk Pro Gaming XR300](https://routeriphub.com/routers/netgear-nighthawk-xr300/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AX4 (RAX40)](https://routeriphub.com/routers/netgear-nighthawk-rax40/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AX5 (RAX43)](https://routeriphub.com/routers/netgear-nighthawk-rax43/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AX8 (RAX80)](https://routeriphub.com/routers/netgear-nighthawk-rax80/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk Tri-Band AX12 (RAX200)](https://routeriphub.com/routers/netgear-nighthawk-rax200/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk RS700S](https://routeriphub.com/routers/netgear-nighthawk-rs700s/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk RS300](https://routeriphub.com/routers/netgear-nighthawk-rs300/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AC1900 (R7000)](https://routeriphub.com/routers/netgear-nighthawk-r7000/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AC1750 (R6700)](https://routeriphub.com/routers/netgear-nighthawk-r6700/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk X6 AC3200 (R8000)](https://routeriphub.com/routers/netgear-nighthawk-r8000/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk X8 AC5300 (R8500)](https://routeriphub.com/routers/netgear-nighthawk-r8500/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk X10 AD7200 (R9000)](https://routeriphub.com/routers/netgear-nighthawk-r9000/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AC2300 (R7000P)](https://routeriphub.com/routers/netgear-nighthawk-r7000p/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Nighthawk AX3000 (RAX35)](https://routeriphub.com/routers/netgear-nighthawk-rax35/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Orbi Tri-Band WiFi 6 (RBK752)](https://routeriphub.com/routers/netgear-orbi-rbk752/): Gateway 192.168.1.1 (http://orbilogin.com). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Orbi WiFi 6 (RBK852)](https://routeriphub.com/routers/netgear-orbi-rbk852/): Gateway 192.168.1.1 (http://orbilogin.com). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Orbi Quad-Band WiFi 6E (RBKE963)](https://routeriphub.com/routers/netgear-orbi-rbke963/): Gateway 192.168.1.1 (http://orbilogin.com). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Orbi WiFi 7 (RBE973)](https://routeriphub.com/routers/netgear-orbi-rbe973/): Gateway 192.168.1.1 (http://orbilogin.com). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 15 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Orbi 4G LTE WiFi Router (LBR20)](https://routeriphub.com/routers/netgear-orbi-lbr20/): Gateway 192.168.1.1 (http://orbilogin.com). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [Netgear Netgear AC1200 (R6220)](https://routeriphub.com/routers/netgear-r6220/): Gateway 192.168.1.1 (http://routerlogin.net). Credentials: admin / password. Reset: With the router powered ON, press and hold the recessed Reset pinhole on the rear panel with a paperclip for 10 seconds until the Power LED starts blinking amber. Release and wait 2-3 minutes for the factory restart.
+- [TP-Link Archer AX55 (AX3000)](https://routeriphub.com/routers/tp-link-archer-ax55/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin (created on setup) / admin (created on setup). Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX73 (AX5400)](https://routeriphub.com/routers/tp-link-archer-ax73/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin (created on setup) / admin (created on setup). Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX21 (AX1800)](https://routeriphub.com/routers/tp-link-archer-ax21/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin (created on setup) / admin (created on setup). Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX10 (AX1500)](https://routeriphub.com/routers/tp-link-archer-ax10/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX20 (AX1800)](https://routeriphub.com/routers/tp-link-archer-ax20/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX50 (AX3000)](https://routeriphub.com/routers/tp-link-archer-ax50/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX72 (AX5400)](https://routeriphub.com/routers/tp-link-archer-ax72/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX90 (AX6600)](https://routeriphub.com/routers/tp-link-archer-ax90/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer AX11000](https://routeriphub.com/routers/tp-link-archer-ax11000/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer GX90 (AX6600)](https://routeriphub.com/routers/tp-link-archer-gx90/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer BE550 (BE9300)](https://routeriphub.com/routers/tp-link-archer-be550/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer BE800 (BE19000)](https://routeriphub.com/routers/tp-link-archer-be800/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer BE900 (BE24000)](https://routeriphub.com/routers/tp-link-archer-be900/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer C7 (AC1750)](https://routeriphub.com/routers/tp-link-archer-c7/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer A7 (AC1750)](https://routeriphub.com/routers/tp-link-archer-a7/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer C6 (AC1200)](https://routeriphub.com/routers/tp-link-archer-c6/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer A6 (AC1200)](https://routeriphub.com/routers/tp-link-archer-a6/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer C80 (AC1900)](https://routeriphub.com/routers/tp-link-archer-c80/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer C2300 (AC2300)](https://routeriphub.com/routers/tp-link-archer-c2300/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Archer C5400X](https://routeriphub.com/routers/tp-link-archer-c5400x/): Gateway 192.168.0.1 (http://tplinkwifi.net). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 8 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco X20 (AX1800)](https://routeriphub.com/routers/tp-link-deco-x20/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco X50 (AX3000)](https://routeriphub.com/routers/tp-link-deco-x50/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco X55 (AX3000)](https://routeriphub.com/routers/tp-link-deco-x55/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco X60 (AX5400)](https://routeriphub.com/routers/tp-link-deco-x60/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco XE75 (AXE5400)](https://routeriphub.com/routers/tp-link-deco-xe75/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco XE75 Pro (AXE5400)](https://routeriphub.com/routers/tp-link-deco-xe75-pro/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco BE85 (BE22000)](https://routeriphub.com/routers/tp-link-deco-be85/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco M4 (AC1200)](https://routeriphub.com/routers/tp-link-deco-m4/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Deco M5 (AC1300)](https://routeriphub.com/routers/tp-link-deco-m5/): Gateway 192.168.68.1 (http://tplinkdeco.net). Credentials: TP-Link ID / TP-Link ID. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [TP-Link Omada ER605 (TL-R605)](https://routeriphub.com/routers/tp-link-omada-er605/): Gateway 192.168.0.1 (N/A (Web GUI)). Credentials: admin / admin. Reset: With the unit powered ON, use a pin to press and hold the Reset button on the bottom/rear panel for 10 seconds until the System LED blinks rapidly. Release and wait 90 seconds for reboot.
+- [ASUS RT-AX88U (AX6000)](https://routeriphub.com/routers/asus-rt-ax88u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX86U (AX5700)](https://routeriphub.com/routers/asus-rt-ax86u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX86U Pro (AX5700)](https://routeriphub.com/routers/asus-rt-ax86u-pro/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX88U Pro (AX6000)](https://routeriphub.com/routers/asus-rt-ax88u-pro/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX58U (AX3000)](https://routeriphub.com/routers/asus-rt-ax58u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX55 (AX1800)](https://routeriphub.com/routers/asus-rt-ax55/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX53U (AX1800)](https://routeriphub.com/routers/asus-rt-ax53u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX68U (AX2700)](https://routeriphub.com/routers/asus-rt-ax68u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX82U (AX5400)](https://routeriphub.com/routers/asus-rt-ax82u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX89X (AX6000)](https://routeriphub.com/routers/asus-rt-ax89x/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AX92U (AX6100)](https://routeriphub.com/routers/asus-rt-ax92u/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-AX11000](https://routeriphub.com/routers/asus-rog-rapture-gt-ax11000/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-AX11000 Pro](https://routeriphub.com/routers/asus-rog-rapture-gt-ax11000-pro/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-AX6000](https://routeriphub.com/routers/asus-rog-rapture-gt-ax6000/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-AXE11000](https://routeriphub.com/routers/asus-rog-rapture-gt-axe11000/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-AXE16000](https://routeriphub.com/routers/asus-rog-rapture-gt-axe16000/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT-BE98](https://routeriphub.com/routers/asus-rog-rapture-gt-be98/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ROG Rapture GT6](https://routeriphub.com/routers/asus-rog-rapture-gt6/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS TUF Gaming AX3000](https://routeriphub.com/routers/asus-tuf-gaming-ax3000/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS TUF Gaming AX4200](https://routeriphub.com/routers/asus-tuf-gaming-ax4200/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS TUF Gaming AX5400](https://routeriphub.com/routers/asus-tuf-gaming-ax5400/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ZenWiFi XT8 (AX6600)](https://routeriphub.com/routers/asus-zenwifi-xt8/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ZenWiFi XT9 (AX7800)](https://routeriphub.com/routers/asus-zenwifi-xt9/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ZenWiFi Pro XT12](https://routeriphub.com/routers/asus-zenwifi-pro-xt12/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ZenWiFi Pro ET12](https://routeriphub.com/routers/asus-zenwifi-pro-et12/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS ZenWiFi BQ16](https://routeriphub.com/routers/asus-zenwifi-bq16/): Gateway 192.168.50.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AC68U (AC1900)](https://routeriphub.com/routers/asus-rt-ac68u/): Gateway 192.168.1.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [ASUS RT-AC86U (AC2900)](https://routeriphub.com/routers/asus-rt-ac86u/): Gateway 192.168.1.1 (http://router.asus.com). Credentials: admin / admin. Reset: While router is powered ON, press and hold the rear Reset button for 10 seconds until the Power LED starts blinking slowly. Release the button and wait 2 minutes for the factory nvram wipe.
+- [Linksys Velop Micro 6 Mesh (LN1301)](https://routeriphub.com/routers/linksys-velop-micro-6-mesh-ln1301/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Velop Pro 6E (MX6200)](https://routeriphub.com/routers/linksys-velop-pro-6e-mx6200/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Velop Pro 7 (MBE7000)](https://routeriphub.com/routers/linksys-velop-pro-7-mbe7000/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Atlas Pro 6 (MX5500)](https://routeriphub.com/routers/linksys-atlas-pro-6-mx5500/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Atlas Max 6E (MX8500)](https://routeriphub.com/routers/linksys-atlas-max-6e-mx8500/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Velop AX4200 (MX4200)](https://routeriphub.com/routers/linksys-velop-ax4200-mx4200/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Velop AX5300 (MX5300)](https://routeriphub.com/routers/linksys-velop-ax5300-mx5300/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Velop Tri-Band (WHW0303)](https://routeriphub.com/routers/linksys-velop-whw0303/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Hydra Pro 6E (MR7500)](https://routeriphub.com/routers/linksys-hydra-pro-6e-mr7500/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Hydra 6 (MR2000)](https://routeriphub.com/routers/linksys-hydra-6-mr2000/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream MR9600](https://routeriphub.com/routers/linksys-mr9600/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream MR9000](https://routeriphub.com/routers/linksys-mr9000/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream MR8300](https://routeriphub.com/routers/linksys-mr8300/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream MR7350](https://routeriphub.com/routers/linksys-mr7350/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Classic WRT54G](https://routeriphub.com/routers/linksys-wrt54g/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 30 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys WRT1900ACS](https://routeriphub.com/routers/linksys-wrt1900acs/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys WRT3200ACM](https://routeriphub.com/routers/linksys-wrt3200acm/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys WRT32X](https://routeriphub.com/routers/linksys-wrt32x/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream EA7500](https://routeriphub.com/routers/linksys-ea7500/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Linksys Max-Stream EA8300](https://routeriphub.com/routers/linksys-ea8300/): Gateway 192.168.1.1 (http://myrouter.local). Credentials: admin / admin. Reset: Locate the red Reset button on the back or bottom. Press and hold for 10 seconds until the top status light pulses red/amber. Release and wait 2 minutes.
+- [Ubiquiti UniFi Dream Machine Pro (UDM-Pro)](https://routeriphub.com/routers/ubiquiti-unifi-dream-machine-pro/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Dream Machine Special Edition (UDM-SE)](https://routeriphub.com/routers/ubiquiti-unifi-dream-machine-se/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Dream Machine (UDM)](https://routeriphub.com/routers/ubiquiti-unifi-dream-machine/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Dream Router (UDR)](https://routeriphub.com/routers/ubiquiti-unifi-dream-router/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Cloud Gateway Ultra (UCG-Ultra)](https://routeriphub.com/routers/ubiquiti-unifi-cloud-gateway-ultra/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Cloud Gateway Max (UCG-Max)](https://routeriphub.com/routers/ubiquiti-unifi-cloud-gateway-max/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Express (UX)](https://routeriphub.com/routers/ubiquiti-unifi-express/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Security Gateway (USG-3P)](https://routeriphub.com/routers/ubiquiti-unifi-security-gateway/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: root / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Security Gateway Pro (USG-PRO-4)](https://routeriphub.com/routers/ubiquiti-unifi-security-gateway-pro/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: root / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti UniFi Dream Wall (UDW)](https://routeriphub.com/routers/ubiquiti-unifi-dream-wall/): Gateway 192.168.1.1 (https://unifi.ui.com). Credentials: UI Account / root / UI Account / root. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter X (ER-X)](https://routeriphub.com/routers/ubiquiti-edgerouter-x/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter X SFP (ER-X-SFP)](https://routeriphub.com/routers/ubiquiti-edgerouter-x-sfp/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter 4 (ER-4)](https://routeriphub.com/routers/ubiquiti-edgerouter-4/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter 6P (ER-6P)](https://routeriphub.com/routers/ubiquiti-edgerouter-6p/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter 12 (ER-12)](https://routeriphub.com/routers/ubiquiti-edgerouter-12/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti EdgeRouter Infinity (ER-8-XG)](https://routeriphub.com/routers/ubiquiti-edgerouter-infinity/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: ubnt / ubnt. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti AmpliFi Alien (AFi-ALN)](https://routeriphub.com/routers/ubiquiti-amplifi-alien/): Gateway 192.168.112.1 (http://amplifi.lan). Credentials: admin / admin. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [Ubiquiti AmpliFi HD (AFi-R)](https://routeriphub.com/routers/ubiquiti-amplifi-hd/): Gateway 192.168.112.1 (http://amplifi.lan). Credentials: admin / admin. Reset: With device powered ON, use a pin to hold the recessed Reset button for 10 seconds until the LED ring or LCD screen announces 'Restoring to Factory Defaults'. Release and wait 3 minutes.
+- [MikroTik hEX (RB750Gr3)](https://routeriphub.com/routers/mikrotik-hex-rb750gr3/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hEX S (RB760iGS)](https://routeriphub.com/routers/mikrotik-hex-s-rb760igs/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hEX PoE (RB960PGS)](https://routeriphub.com/routers/mikrotik-hex-poe-rb960pgs/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hAP ax2 (C52iG-5HaxD2HaxD-TC)](https://routeriphub.com/routers/mikrotik-hap-ax2/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / Unique sticker password. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hAP ax3 (C53UiG+5HPaxD2HPaxD)](https://routeriphub.com/routers/mikrotik-hap-ax3/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / Unique sticker password. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hAP ac2 (RBD52G-5HacD2HnD-TC)](https://routeriphub.com/routers/mikrotik-hap-ac2/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hAP ac3 (RBD53iG-5HacD2HnD)](https://routeriphub.com/routers/mikrotik-hap-ac3/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik hAP lite (RB941-2nD)](https://routeriphub.com/routers/mikrotik-hap-lite/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik RB4011iGS+5HacQ2HnD-IN](https://routeriphub.com/routers/mikrotik-rb4011/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik RB5009UG+S+IN](https://routeriphub.com/routers/mikrotik-rb5009/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik L009UiGS-2HaxD-IN](https://routeriphub.com/routers/mikrotik-l009uigs/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik CCR2004-16G-2S+](https://routeriphub.com/routers/mikrotik-ccr2004/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik Chateau 5G ax](https://routeriphub.com/routers/mikrotik-chateau-5g-ax/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / Unique sticker password. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik Chateau LTE12](https://routeriphub.com/routers/mikrotik-chateau-lte12/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / Unique sticker password. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik Cloud Router Switch (CRS305-1G-4S+IN)](https://routeriphub.com/routers/mikrotik-crs305/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [MikroTik RouterBOARD 3011UiAS-RM](https://routeriphub.com/routers/mikrotik-rb3011/): Gateway 192.168.88.1 (http://router.lan). Credentials: admin / [empty]. Reset: Unplug power. Hold the Reset button down while inserting the power plug. Keep holding for 5 seconds until the ACT LED starts flashing. Release immediately to reset RouterOS configuration to default 192.168.88.1.
+- [D-Link EAGLE PRO AI AX1500 (R15)](https://routeriphub.com/routers/d-link-eagle-pro-ai-r15/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty or sticker password]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link EAGLE PRO AI AX3200 (R32)](https://routeriphub.com/routers/d-link-eagle-pro-ai-r32/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty or sticker password]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link EXO AX5400 (DIR-X5460)](https://routeriphub.com/routers/d-link-exo-dir-x5460/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / password. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link EXO AX1800 (DIR-X1860)](https://routeriphub.com/routers/d-link-exo-dir-x1860/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / password. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link EXO AX1500 (DIR-X1560)](https://routeriphub.com/routers/d-link-exo-dir-x1560/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / password. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-882 (AC2600)](https://routeriphub.com/routers/d-link-dir-882/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-878 (AC1900)](https://routeriphub.com/routers/d-link-dir-878/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-867 (AC1750)](https://routeriphub.com/routers/d-link-dir-867/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-842 (AC1200)](https://routeriphub.com/routers/d-link-dir-842/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-825 (AC1200)](https://routeriphub.com/routers/d-link-dir-825/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-615](https://routeriphub.com/routers/d-link-dir-615/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-600](https://routeriphub.com/routers/d-link-dir-600/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DIR-850L](https://routeriphub.com/routers/d-link-dir-850l/): Gateway 192.168.0.1 (http://dlinkrouter.local). Credentials: Admin / [empty]. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link COVR AX1800 (COVR-X1870)](https://routeriphub.com/routers/d-link-covr-x1870/): Gateway 192.168.0.1 (http://covr.local). Credentials: Admin / Sticker password. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link COVR AC1200 (COVR-1100)](https://routeriphub.com/routers/d-link-covr-1100/): Gateway 192.168.0.1 (http://covr.local). Credentials: Admin / Sticker password. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [D-Link DWR-960](https://routeriphub.com/routers/d-link-dwr-960/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / admin. Reset: With the router powered ON, use an unfolded paperclip to press and hold the recessed Reset button on the bottom or rear for 10 seconds until the Power light turns orange/amber. Release and wait 1 minute.
+- [Cisco Cisco Business RV340](https://routeriphub.com/routers/cisco-business-rv340/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Business RV345](https://routeriphub.com/routers/cisco-business-rv345/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Business RV260](https://routeriphub.com/routers/cisco-business-rv260/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Business RV160](https://routeriphub.com/routers/cisco-business-rv160/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Business RV130](https://routeriphub.com/routers/cisco-business-rv130/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Business RV042](https://routeriphub.com/routers/cisco-business-rv042/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: Press and hold the Reset button with a paperclip for 30 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Meraki Go GX20](https://routeriphub.com/routers/cisco-meraki-go-gx20/): Gateway 192.168.128.1 (https://meraki-go.com). Credentials: admin (Meraki Account) / admin. Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Meraki Go GX50](https://routeriphub.com/routers/cisco-meraki-go-gx50/): Gateway 192.168.128.1 (https://meraki-go.com). Credentials: admin (Meraki Account) / admin. Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco Catalyst 1000-8T-2G-L](https://routeriphub.com/routers/cisco-catalyst-1000/): Gateway 192.168.1.254 (http://192.168.1.254). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 10 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco ISR 1100 (C1111-8P)](https://routeriphub.com/routers/cisco-isr-1100/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco ISR 4331](https://routeriphub.com/routers/cisco-isr-4331/): Gateway 10.0.0.1 (https://10.0.0.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Cisco Cisco C921-4P](https://routeriphub.com/routers/cisco-c921-4p/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: cisco / cisco. Reset: Press and hold the Reset button with a paperclip for 15 seconds until the DIAG LED flashes. The unit will wipe all NVRAM startup configurations and restore factory defaults.
+- [Synology Synology RT6600ax](https://routeriphub.com/routers/synology-rt6600ax/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin (created on setup) / admin (created on setup). Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Synology Synology RT2600ac](https://routeriphub.com/routers/synology-rt2600ac/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin (created on setup) / admin (created on setup). Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Synology Synology WRX560](https://routeriphub.com/routers/synology-wrx560/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin (created on setup) / admin (created on setup). Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Synology Synology MR2200ac](https://routeriphub.com/routers/synology-mr2200ac/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin (created on setup) / admin (created on setup). Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Synology Synology RT1900ac](https://routeriphub.com/routers/synology-rt1900ac/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin / admin. Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Synology Synology DS-Gateway](https://routeriphub.com/routers/synology-ds-gateway/): Gateway 192.168.1.1 (http://router.synology.com). Credentials: admin / admin. Reset: Use a paperclip to press and hold the Reset button on the back for 10 seconds until you hear a beep sound. Release the button and wait 2 minutes for SRM to restore default IP 192.168.1.1.
+- [Google Nest Nest Wifi Pro (G6ZUC)](https://routeriphub.com/routers/google-nest-wifi-pro/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Google Nest Nest Wifi Router (H2D)](https://routeriphub.com/routers/google-nest-wifi-router/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Google Nest Nest Wifi Point (H2E)](https://routeriphub.com/routers/google-nest-wifi-point/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Google Nest Google Wifi (NLS-1304-25)](https://routeriphub.com/routers/google-wifi/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Google Nest Google OnHub Asus (SRT-AC1900)](https://routeriphub.com/routers/google-onhub-asus/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Google Nest Google OnHub TP-Link (TGR1900)](https://routeriphub.com/routers/google-onhub-tplink/): Gateway 192.168.86.1 (N/A (Google Home App)). Credentials: Managed via Google Home / Managed via Google Home. Reset: While plugged into power, press and hold the physical reset button on the base for 10 seconds. The indicator light will pulse yellow/amber, then turn solid yellow. Release and wait 5 minutes until it pulses white, indicating it is ready for setup.
+- [Amazon Eero Eero Max 7](https://routeriphub.com/routers/amazon-eero-max-7/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero Pro 6E (S010001)](https://routeriphub.com/routers/amazon-eero-pro-6e/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero Pro 6 (K010001)](https://routeriphub.com/routers/amazon-eero-pro-6/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero 6+ (R010001)](https://routeriphub.com/routers/amazon-eero-6-plus/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero 6 (N010001)](https://routeriphub.com/routers/amazon-eero-6/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero Pro (2nd Gen - B010001)](https://routeriphub.com/routers/amazon-eero-pro-2nd-gen/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero Beacon](https://routeriphub.com/routers/amazon-eero-beacon/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [Amazon Eero Eero (1st Gen)](https://routeriphub.com/routers/amazon-eero-1st-gen/): Gateway 192.168.4.1 (N/A (Eero App)). Credentials: Managed via Amazon eero App / Managed via Amazon eero App. Reset: Locate the reset button on the back/base. Hold down for 15 seconds until the LED light flashes red. Release immediately to reset the unit back to factory defaults. (Holding for 7 seconds resets network only without clearing registration).
+- [AVM FRITZ!Box FRITZ!Box 7590 AX](https://routeriphub.com/routers/avm-fritzbox-7590-ax/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 7590](https://routeriphub.com/routers/avm-fritzbox-7590/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 7530 AX](https://routeriphub.com/routers/avm-fritzbox-7530-ax/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 7530](https://routeriphub.com/routers/avm-fritzbox-7530/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 5590 Fiber](https://routeriphub.com/routers/avm-fritzbox-5590-fiber/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 5530 Fiber](https://routeriphub.com/routers/avm-fritzbox-5530-fiber/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 6690 Cable](https://routeriphub.com/routers/avm-fritzbox-6690-cable/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 6660 Cable](https://routeriphub.com/routers/avm-fritzbox-6660-cable/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 4060](https://routeriphub.com/routers/avm-fritzbox-4060/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 4040](https://routeriphub.com/routers/avm-fritzbox-4040/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 6850 5G](https://routeriphub.com/routers/avm-fritzbox-6850-5g/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [AVM FRITZ!Box FRITZ!Box 6890 LTE](https://routeriphub.com/routers/avm-fritzbox-6890-lte/): Gateway 192.168.178.1 (http://fritz.box). Credentials: admin / Unique sticker password. Reset: Unplug the FRITZ!Box power cord. Wait 10 seconds, plug back in. Open a browser to emergency fallback IP http://169.254.1.1 or navigate to System > Backup > Factory Settings in FRITZ!OS.
+- [Zyxel Armor G5 (NBG7815)](https://routeriphub.com/routers/zyxel-armor-g5/): Gateway 192.168.1.1 (http://zyxelwifi.net). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel Armor G1 (NBG6818)](https://routeriphub.com/routers/zyxel-armor-g1/): Gateway 192.168.1.1 (http://zyxelwifi.net). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel Multy X (WSQ50)](https://routeriphub.com/routers/zyxel-multy-x/): Gateway 192.168.212.1 (http://zyxelwifi.com). Credentials: admin / admin. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel Multy M1 (WSM20)](https://routeriphub.com/routers/zyxel-multy-m1/): Gateway 192.168.212.1 (http://zyxelwifi.com). Credentials: admin / admin. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel USG FLEX 100](https://routeriphub.com/routers/zyxel-usg-flex-100/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel USG FLEX 200](https://routeriphub.com/routers/zyxel-usg-flex-200/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel USG20-VPN](https://routeriphub.com/routers/zyxel-usg20-vpn/): Gateway 192.168.1.1 (https://192.168.1.1). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 15 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel VMG8825-B50B](https://routeriphub.com/routers/zyxel-vmg8825-b50b/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel DX3301-T0](https://routeriphub.com/routers/zyxel-dx3301-t0/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Zyxel NBG6604](https://routeriphub.com/routers/zyxel-nbg6604/): Gateway 192.168.1.1 (http://zyxelwifi.net). Credentials: admin / 1234. Reset: Press and hold the Reset button on the rear for 10 seconds until the Power LED begins to blink amber. Release and wait 90 seconds for default 192.168.1.1 reload.
+- [Huawei WiFi AX3 (Quad-Core WS7200)](https://routeriphub.com/routers/huawei-wifi-ax3-quad-core/): Gateway 192.168.3.1 (http://192.168.3.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei WiFi AX3 (Dual-Core WS7100)](https://routeriphub.com/routers/huawei-wifi-ax3-dual-core/): Gateway 192.168.3.1 (http://192.168.3.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei WiFi AX2 (WS7001)](https://routeriphub.com/routers/huawei-wifi-ax2/): Gateway 192.168.3.1 (http://192.168.3.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei WiFi Mesh 7 (WS8800)](https://routeriphub.com/routers/huawei-wifi-mesh-7/): Gateway 192.168.3.1 (http://192.168.3.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei WiFi Mesh 3 (WS5800)](https://routeriphub.com/routers/huawei-wifi-mesh-3/): Gateway 192.168.3.1 (http://192.168.3.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei 5G CPE Pro 2 (H122-373)](https://routeriphub.com/routers/huawei-5g-cpe-pro-2/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: admin / Unique sticker password. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei 4G Router 3 Pro (B535-232)](https://routeriphub.com/routers/huawei-4g-router-3-pro/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei EchoLife HG8245H](https://routeriphub.com/routers/huawei-echolife-hg8245h/): Gateway 192.168.100.1 (http://192.168.100.1). Credentials: telecomadmin / admintelecom. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei EchoLife HG8145V5](https://routeriphub.com/routers/huawei-echolife-hg8145v5/): Gateway 192.168.100.1 (http://192.168.100.1). Credentials: telecomadmin / admintelecom. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [Huawei 4G Router B311 (B311-221)](https://routeriphub.com/routers/huawei-b311-221/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: admin / admin. Reset: With the router powered ON, press the Reset pinhole on the bottom or back for 10 seconds until the indicator light flashes or turns off. Wait 2 minutes for the unit to reboot to default settings.
+- [GL.iNet Slate AX (GL-AXT1800)](https://routeriphub.com/routers/gl-inet-slate-ax-gl-axt1800/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Beryl AX (GL-MT3000)](https://routeriphub.com/routers/gl-inet-beryl-ax-gl-mt3000/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Beryl (GL-MT1300)](https://routeriphub.com/routers/gl-inet-beryl-gl-mt1300/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Opal (GL-SFT1200)](https://routeriphub.com/routers/gl-inet-opal-gl-sft1200/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Slate (GL-AR750S-Ext)](https://routeriphub.com/routers/gl-inet-slate-gl-ar750s/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Shadow (GL-AR300M16)](https://routeriphub.com/routers/gl-inet-shadow-gl-ar300m/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Flint (GL-AX1800)](https://routeriphub.com/routers/gl-inet-flint-gl-ax1800/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Flint 2 (GL-MT6000)](https://routeriphub.com/routers/gl-inet-flint-2-gl-mt6000/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Spitz AX (GL-X3000)](https://routeriphub.com/routers/gl-inet-spitz-ax-gl-x3000/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [GL.iNet Mudi (GL-E750)](https://routeriphub.com/routers/gl-inet-mudi-gl-e750/): Gateway 192.168.8.1 (http://192.168.8.1). Credentials: root / admin (created on setup). Reset: With the router powered ON, press and hold the Reset button for 10 seconds until the blue LED starts blinking rapidly, then release. The router will revert to factory OpenWrt settings at 192.168.8.1.
+- [DrayTek Vigor 2927 Series](https://routeriphub.com/routers/draytek-vigor-2927/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2962](https://routeriphub.com/routers/draytek-vigor-2962/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2865 Series](https://routeriphub.com/routers/draytek-vigor-2865/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 3910](https://routeriphub.com/routers/draytek-vigor-3910/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2135 Series](https://routeriphub.com/routers/draytek-vigor-2135/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2765 Series](https://routeriphub.com/routers/draytek-vigor-2765/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2926 Series](https://routeriphub.com/routers/draytek-vigor-2926/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [DrayTek Vigor 2862 Series](https://routeriphub.com/routers/draytek-vigor-2862/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / admin. Reset: While router is running, press and hold the Factory Reset pinhole on the front panel for 10 seconds until the ACT LED starts blinking rapidly. Release and wait 1 minute.
+- [Arris SURFboard G54](https://routeriphub.com/routers/arris-surfboard-g54/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard G36](https://routeriphub.com/routers/arris-surfboard-g36/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard G34](https://routeriphub.com/routers/arris-surfboard-g34/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard SBG8300](https://routeriphub.com/routers/arris-surfboard-sbg8300/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard SBG7600AC2](https://routeriphub.com/routers/arris-surfboard-sbg7600ac2/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard SBG7400AC2](https://routeriphub.com/routers/arris-surfboard-sbg7400ac2/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard SBG6900-AC](https://routeriphub.com/routers/arris-surfboard-sbg6900-ac/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris SURFboard SBG10](https://routeriphub.com/routers/arris-surfboard-sbg10/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris Arris NVG589](https://routeriphub.com/routers/arris-nvg589/): Gateway 192.168.1.254 (http://192.168.1.254). Credentials: admin / Sticker password. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Arris Arris BGW210-700](https://routeriphub.com/routers/arris-bgw210-700/): Gateway 192.168.1.254 (http://192.168.1.254). Credentials: admin / Sticker Access Code. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MG8725](https://routeriphub.com/routers/motorola-mg8725/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MG8702](https://routeriphub.com/routers/motorola-mg8702/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MG7700](https://routeriphub.com/routers/motorola-mg7700/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MG7550](https://routeriphub.com/routers/motorola-mg7550/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MT7711](https://routeriphub.com/routers/motorola-mt7711/): Gateway 192.168.0.1 (http://192.168.0.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 15 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.
+- [Motorola Motorola MR2600](https://routeriphub.com/routers/motorola-mr2600/): Gateway 192.168.1.1 (http://192.168.1.1). Credentials: admin / motorola. Reset: Press and hold the recessed Reset button on the rear for 10 seconds using a paperclip until all front LEDs blink simultaneously. Wait 3 minutes for DOCSIS upstream locking.

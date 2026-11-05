@@ -92,6 +92,10 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0284c7">
 
+  <!-- LLM / AI Manifest Discovery -->
+  <link rel="describedby" type="text/markdown" href="/llms.txt">
+  <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM Context">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{escape(canonical_url)}">
@@ -3346,6 +3350,22 @@ def update_vercel_config():
                     {"key": "Access-Control-Allow-Origin", "value": "*"},
                     {"key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800"}
                 ]
+            },
+            {
+                "source": "/llms.txt",
+                "headers": [
+                    {"key": "Content-Type", "value": "text/markdown; charset=utf-8"},
+                    {"key": "Access-Control-Allow-Origin", "value": "*"},
+                    {"key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400"}
+                ]
+            },
+            {
+                "source": "/llms-full.txt",
+                "headers": [
+                    {"key": "Content-Type", "value": "text/markdown; charset=utf-8"},
+                    {"key": "Access-Control-Allow-Origin", "value": "*"},
+                    {"key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400"}
+                ]
             }
         ]
     }
@@ -3360,55 +3380,64 @@ def update_vercel_config():
 # ==============================================================================
 def update_llm_manifests():
     print("Updating llms.txt & llms-full.txt...")
-    llms_txt = """# RouterIPHub - AI & LLM Machine-Readable Index
-> Reference platform for RFC 1918 private gateway IP addresses, hardware setup sheets, factory credentials, and network diagnostics.
+    llms_txt = """# RouterIPHub
+> The open, authoritative technical reference platform and diagnostic knowledgebase for RFC 1918 private gateway IP addresses, hardware setup sheets, default credentials, and interactive networking tools.
 
-## Canonical Silo Taxonomy
-- Hardware Models Directory: https://routeriphub.com/routers/
-- ISP Gateway Portals: https://routeriphub.com/isp/
-- Hardware Brand Matrix: https://routeriphub.com/brands/
-- Private IP Hubs: https://routeriphub.com/ip/
-- Interactive Utilities: https://routeriphub.com/tools/
-- Universal Discovery Guide: https://routeriphub.com/find-router-ip.html
+RouterIPHub indexes 250+ specific router models, 18 major hardware brands, 10 carrier-grade ISP gateways, and 17 private gateway subnets. Designed for human network administrators and autonomous AI agents requiring deterministic default configurations and troubleshooting matrices.
 
-## Key Machine-Readable Endpoints (REST API)
-- JSON Hardware Catalog (32+ models): https://routeriphub.com/data/routers.json
-- CSV Tabular Export: https://routeriphub.com/data/routers.csv
-- ANSI SQL Schema Dump: https://routeriphub.com/data/routers.sql
-- Gateway Subnets Dataset: https://routeriphub.com/data/gateways.json
-- Global Search Index: https://routeriphub.com/data/search-index.json
-- XML Sitemap Index: https://routeriphub.com/sitemap.xml
+## Core Silos
+- [Hardware Models Directory](https://routeriphub.com/routers/): Technical setup sheets, Wi-Fi specs, reset procedures, and factory credentials for 250+ router models.
+- [ISP Gateway Portals](https://routeriphub.com/isp/): Carrier-specific default gateways for Comcast Xfinity, AT&T Fiber, Verizon Fios, Spectrum, and CenturyLink.
+- [Hardware Brand Directories](https://routeriphub.com/brands/): Master index across 18 major networking hardware manufacturers including Netgear, TP-Link, ASUS, Linksys, and MikroTik.
+- [Private IP Gateway Hubs](https://routeriphub.com/ip/): Comprehensive diagnostic guides for RFC 1918 gateway subnets including 192.168.1.1, 192.168.0.1, 10.0.0.1, and 192.168.1.254.
+- [Interactive Networking Utilities](https://routeriphub.com/tools/): Browser-based networking tools including Subnet Calculator, Wi-Fi QR Code Generator, IP Address Checker, and DNS Propagation Tester.
+- [Gateway IP Discovery Guide](https://routeriphub.com/find-router-ip.html): Platform-specific terminal commands (Windows, macOS, Linux, iOS, Android) to determine local gateway addresses.
+- [Router Setup & Reset Guides](https://routeriphub.com/howto.html): Step-by-step instructions for initial router setup, 30-30-30 hard resets, and factory restoration.
 
-## Standard Default Gateways by Brand
-- Netgear: 192.168.1.1 (routerlogin.net), admin / password
-- TP-Link: 192.168.0.1 (tplinkwifi.net), admin / admin
-- ASUS: 192.168.1.1 (router.asus.com), admin / admin
-- Linksys: 192.168.1.1 (myrouter.local), admin / admin
-- Xfinity: 10.0.0.1, admin / password
-- AT&T Fiber: 192.168.1.254, printed Device Access Code
-- MikroTik: 192.168.88.1 (router.lan), admin / [empty]
-- AVM FRITZ!Box: 192.168.178.1 (fritz.box), admin / sticker password
-- TP-Link Deco: 192.168.68.1 (tplinkdeco.net), managed via Deco App
-- Amazon Eero: 192.168.4.1, managed via eero App
+## Machine-Readable Datasets & APIs
+- [Full LLM Knowledgebase Context](https://routeriphub.com/llms-full.txt): Complete uncompressed dataset containing full hardware models, credentials, subnets, and setup guides.
+- [Router Hardware Catalog JSON](https://routeriphub.com/data/routers.json): Programmatic REST API dataset of 250+ router specifications and credentials.
+- [Hardware Tabular CSV Export](https://routeriphub.com/data/routers.csv): Comma-delimited dataset for spreadsheet ingestion and offline auditing.
+- [ANSI SQL Database Dump](https://routeriphub.com/data/routers.sql): Relational database dump compatible with PostgreSQL, MySQL, and SQLite.
+- [Gateway Subnets Dataset](https://routeriphub.com/data/gateways.json): Subnet masks, broadcast addresses, and manufacturer allocations for private gateways.
+- [Global Search Index](https://routeriphub.com/data/search-index.json): Lightweight search index covering all indexed models, brands, and IPs.
+- [XML Sitemap Index](https://routeriphub.com/sitemap.xml): Comprehensive sitemap index covering all model, brand, IP, ISP, and tool URLs.
+
+## Gateway Quick Reference
+- [192.168.1.1 Setup Guide](https://routeriphub.com/ip/192-168-1-1/): Default gateway for Netgear, ASUS, Linksys, and Cisco. Factory default credentials: admin / password or admin / admin.
+- [192.168.0.1 Setup Guide](https://routeriphub.com/ip/192-168-0-1/): Default gateway for TP-Link and D-Link. Factory default credentials: admin / admin.
+- [10.0.0.1 Setup Guide](https://routeriphub.com/ip/10-0-0-1/): Default gateway for Comcast Xfinity xFi Gateways and Apple AirPort. Default credentials: admin / password.
+- [192.168.1.254 Setup Guide](https://routeriphub.com/ip/192-168-1-254/): Default gateway for AT&T Fiber BGW gateways and BT Smart Hub. Uses printed Device Access Code.
+- [192.168.2.1 Setup Guide](https://routeriphub.com/ip/192-168-2-1/): Default gateway for Belkin routers and Bell Canada Home Hub. Factory credentials: admin / [blank].
+- [192.168.88.1 Setup Guide](https://routeriphub.com/ip/192-168-88-1/): Default gateway for MikroTik RouterOS devices. Default login: admin / [blank].
+- [192.168.178.1 Setup Guide](https://routeriphub.com/ip/192-168-178-1/): Default gateway for AVM FRITZ!Box European routers. Login via printed device password.
+
+## Optional
+- [Developer API Reference](https://routeriphub.com/developers.html): Documentation for integrating RouterIPHub JSON/CSV data feeds into third-party network scanners.
 """
-    with open(os.path.join(PUBLIC_DIR, "llms.txt"), "w", encoding="utf-8") as f:
-        f.write(llms_txt)
+    # Write to both public/ and root directory
+    for target in [os.path.join(PUBLIC_DIR, "llms.txt"), os.path.join(ROOT_DIR, "llms.txt")]:
+        with open(target, "w", encoding="utf-8") as f:
+            f.write(llms_txt)
 
     llms_full_txt = f"""# RouterIPHub - Complete Programmatic Technical Knowledgebase
+> Uncompressed technical dataset of router default gateways, hardware models, factory credentials, and network configuration profiles.
+
 Date: {TODAY}
 Website: https://routeriphub.com
 
 ## 1. Gateway IP Directory
 """
     for ip_item in IP_GATEWAYS:
-        llms_full_txt += f"- IP: {ip_item['ip']}\n  Subnet: {ip_item['subnet_mask']}\n  Brands: {ip_item['brands']}\n  Default Credentials: {ip_item['default_creds']}\n  URL: https://routeriphub.com/ip/{ip_item['slug']}/\n\n"
+        llms_full_txt += f"- [{ip_item['ip']} Guide](https://routeriphub.com/ip/{ip_item['slug']}/): Subnet {ip_item['subnet_mask']}. Brands: {ip_item['brands']}. Default credentials: {ip_item['default_creds']}.\n"
 
-    llms_full_txt += "## 2. Hardware Models Database\n"
+    llms_full_txt += "\n## 2. Hardware Models Database\n"
     for m in ROUTER_MODELS:
-        llms_full_txt += f"- Model: {m['brand']} {m['model_name']}\n  IP: {m['default_ip']}\n  Domain: {m['web_domain']}\n  Credentials: {m['default_username']} / {m['default_password']}\n  Reset: {m['reset_instructions']}\n  URL: https://routeriphub.com/routers/{m['slug']}/\n\n"
+        llms_full_txt += f"- [{m['brand']} {m['model_name']}](https://routeriphub.com/routers/{m['slug']}/): Gateway {m['default_ip']} ({m['web_domain']}). Credentials: {m['default_username']} / {m['default_password']}. Reset: {m['reset_instructions']}\n"
 
-    with open(os.path.join(PUBLIC_DIR, "llms-full.txt"), "w", encoding="utf-8") as f:
-        f.write(llms_full_txt)
+    for target in [os.path.join(PUBLIC_DIR, "llms-full.txt"), os.path.join(ROOT_DIR, "llms-full.txt")]:
+        with open(target, "w", encoding="utf-8") as f:
+            f.write(llms_full_txt)
 
 # ==============================================================================
 # MAIN EXECUTION PIPELINE
