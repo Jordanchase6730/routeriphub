@@ -271,6 +271,7 @@ def get_footer():
         <h4 class="footer-heading">Open Data & Developers</h4>
         <ul class="footer-links">
           <li><a href="/developers.html">Developer API & Datasets</a></li>
+          <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
           <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
           <li><a href="/data/routers.csv" download>routers.csv (Tabular)</a></li>
           <li><a href="/data/routers.sql" download>routers.sql (ANSI Schema)</a></li>
@@ -4036,6 +4037,7 @@ RouterIPHub indexes 250+ specific router models, 18 major hardware brands, 10 ca
 - [Router Setup & Reset Guides](https://routeriphub.com/howto.html): Step-by-step instructions for initial router setup, 30-30-30 hard resets, and factory restoration.
 
 ## Machine-Readable Datasets & APIs
+- [Open-Source Router Dataset (GitHub)](https://github.com/routeriphub/default-router-ip-databas): Official public GitHub repository containing raw router IP mappings, default passwords, and schema dumps.
 - [Full LLM Knowledgebase Context](https://routeriphub.com/llms-full.txt): Complete uncompressed dataset containing full hardware models, credentials, subnets, and setup guides.
 - [Router Hardware Catalog JSON](https://routeriphub.com/data/routers.json): Programmatic REST API dataset of 250+ router specifications and credentials.
 - [Hardware Tabular CSV Export](https://routeriphub.com/data/routers.csv): Comma-delimited dataset for spreadsheet ingestion and offline auditing.
