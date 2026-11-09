@@ -221,17 +221,19 @@
       <!-- Desktop Navigation Links -->
       <nav aria-label="Main Navigation" class="desktop-nav">
         <ul class="nav-links">
-          <li><a href="/brands.html" class="active">Brands</a></li>
-          <li><a href="/tools.html">Tools</a></li>
-          <li><a href="/howto.html">How-To Guides</a></li>
-          <li><a href="/192-168-1-1.html">192.168.1.1</a></li>
-          <li><a href="/192-168-0-1.html">192.168.0.1</a></li>
-          <li><a href="/find-router-ip.html">Find My IP</a></li>
+          <li><a href="/routers/">Routers</a></li>
+          <li><a href="/isp/">ISP Gateways</a></li>
+          <li><a href="/brands/" class="active">Brands</a></li>
+          <li><a href="/ip/">IP Directory</a></li>
+          <li><a href="/extenders/">Extenders</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/howto.html">Guides</a></li>
         </ul>
       </nav>
 
-      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <!-- Header Actions -->
       <div class="header-actions">
+        <!-- Global Search Bar Button -->
         <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <circle cx="11" cy="11" r="8"></circle>
@@ -241,11 +243,13 @@
           <kbd class="search-trigger-kbd">Ctrl K</kbd>
         </button>
 
+        <!-- Theme Switcher Button -->
         <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
           <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
+        <!-- Mobile Menu Toggle Button -->
         <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
           <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -259,19 +263,18 @@
         <div style="margin-bottom: 0.75rem;">
           <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (60+ routers, tools, guides)...</span>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
           </button>
         </div>
 
         <ul class="mobile-nav-list">
-          <li><a href="/brands.html" class="active"><span>🏢 Brand Hubs (Netgear, TP-Link, ASUS, etc.)</span><span>&rarr;</span></a></li>
-          <li><a href="/tools.html"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
-          <li><a href="/howto.html"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-1-1.html"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
-          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-1-254.html"><span>⚡ 192.168.1.254 (AT&T Fiber, BT Hub)</span><span>&rarr;</span></a></li>
-          <li><a href="/find-router-ip.html"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/extenders/"><span>📶 Wi-Fi Extenders &amp; Repeaters</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
           <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
             <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
               <span>🌓 Switch Dark / Light Mode</span>
@@ -674,60 +677,70 @@
 
   <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Popular Gateway IPs</h4>
-          <ul>
-            <li><a href="/192-168-1-1.html">192.168.1.1 Admin</a></li>
-            <li><a href="/192-168-0-1.html">192.168.0.1 Admin</a></li>
-            <li><a href="/10-0-0-1.html">10.0.0.1 Admin</a></li>
-            <li><a href="/192-168-1-254.html">192.168.1.254 Admin</a></li>
-            <li><a href="/192-168-88-1.html">192.168.88.1 MikroTik</a></li>
-          </ul>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
         </div>
-        <div class="footer-col">
-          <h4>Hardware Brand Hubs</h4>
-          <ul>
-            <li><a href="/brand/tp-link.html">TP-Link Archer & Deco</a></li>
-            <li><a href="/brand/netgear.html">Netgear Nighthawk & Orbi</a></li>
-            <li><a href="/brand/asus.html">ASUS RT-AX & ROG</a></li>
-            <li><a href="/brand/linksys.html">Linksys WRT & Velop</a></li>
-            <li><a href="/brand/xfinity.html">Xfinity xFi Gateways</a></li>
-            <li><a href="/brand/mikrotik.html">MikroTik RouterBOARD</a></li>
-            <li><a href="/brands.html">View All 35+ Brands &rarr;</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Interactive Tools</h4>
-          <ul>
-            <li><a href="/tools.html#wifi-qr">Wi-Fi QR Code Generator</a></li>
-            <li><a href="/tools.html#subnet-calc">Subnet CIDR Calculator</a></li>
-            <li><a href="/tools.html#password-gen">WPA3 Password Generator</a></li>
-            <li><a href="/tools.html#gateway-probe">Gateway Reachability Probe</a></li>
-            <li><a href="/tools.html#port-dir">Port Forwarding Directory</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>How-To Guides & OS</h4>
-          <ul>
-            <li><a href="/howto.html#wifi-password">Change Wi-Fi Password</a></li>
-            <li><a href="/howto.html#hard-reset">30-30-30 Hard Reset</a></li>
-            <li><a href="/howto.html#connect-two-routers">Connect Two Routers (AP Mode)</a></li>
-            <li><a href="/howto.html#port-forwarding">Port Forwarding Setup</a></li>
-            <li><a href="/find-router-ip.html">Find Router IP on Any OS</a></li>
-          </ul>
-        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Directory (250+ Models)</a></li>
+          <li><a href="/extenders/">Wi-Fi Extenders &amp; Repeaters</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/isp/">ISP Gateway Portals</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <div>&copy; 2026 RouterIPHub. All rights reserved. Hardware-tested network engineering documentation.</div>
-        <div style="display: flex; gap: 1rem;">
-          <a href="/sitemap.xml">Sitemap</a>
-          <a href="/llms.txt">llms.txt</a>
-          <a href="/llms-full.txt">LLM Dataset</a>
-          <a href="/robots.txt">Robots</a>
-        </div>
+
+      <div class="footer-col">
+        <h4>Popular Gateway IPs</h4>
+        <ul class="footer-links">
+          <li><a href="/ip/192-168-1-1/">192.168.1.1 (Netgear/ASUS)</a></li>
+          <li><a href="/ip/192-168-0-1/">192.168.0.1 (TP-Link/D-Link)</a></li>
+          <li><a href="/ip/10-0-0-1/">10.0.0.1 (Xfinity/Comcast)</a></li>
+          <li><a href="/ip/192-168-1-254/">192.168.1.254 (AT&T/BT)</a></li>
+          <li><a href="/ip/192-168-2-1/">192.168.2.1 (Belkin/SMC)</a></li>
+          <li><a href="/ip/192-168-1-250/">192.168.1.250 (Netgear Extenders)</a></li>
+          <li><a href="/ip/">All Gateway IPs &rarr;</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4>Diagnostics &amp; Guides</h4>
+        <ul class="footer-links">
+          <li><a href="/find-router-ip.html">Find Router IP on Windows</a></li>
+          <li><a href="/find-router-ip.html#mac">Find Router IP on macOS</a></li>
+          <li><a href="/find-router-ip.html#ios">Find Router IP on Mobile</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+          <li><a href="/tools/subnet-calculator/">Subnet Calculator</a></li>
+          <li><a href="/tools/router-password-generator/">Password Generator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Data &amp; Developers</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
+          <li><a href="/developers.html">Developer API &amp; Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+          <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0.</div>
+      <div style="font-size: 0.8rem; color: var(--text-muted);">Independent technical reference. All trademarks belong to their respective owners.</div>
     </div>
   </footer>
 

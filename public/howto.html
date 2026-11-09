@@ -140,7 +140,7 @@
           <line x1="6" y1="18" x2="6.01" y2="18"></line>
         </svg>
         <span>RouterIPHub</span>
-        <span class="brand-badge">Guides</span>
+        <span class="brand-badge">2026</span>
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -156,7 +156,7 @@
         </ul>
       </nav>
 
-      <!-- Header Actions (Global Search, Theme Switcher & Mobile Menu) -->
+      <!-- Header Actions -->
       <div class="header-actions">
         <!-- Global Search Bar Button -->
         <button class="search-trigger-btn" aria-label="Search entire website" title="Search site (Press / or Ctrl+K)">
@@ -185,22 +185,21 @@
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
       <div class="container">
-        <!-- Quick Search Bar in Mobile Drawer -->
         <div style="margin-bottom: 0.75rem;">
           <button class="search-trigger-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: flex-start; padding: 0.75rem 1rem; min-height: 48px; background: var(--bg-card); gap: 0.75rem;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (60+ routers, tools, guides)...</span>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">Search entire site (150+ models, IPs, tools)...</span>
           </button>
         </div>
 
         <ul class="mobile-nav-list">
-          <li><a href="/tools.html"><span>🛠️ Networking Tools (QR, Subnet, Passwords)</span><span>&rarr;</span></a></li>
-          <li><a href="/howto.html" class="active"><span>📖 How-To Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-1-1.html"><span>⚡ 192.168.1.1 (Netgear, ASUS, Linksys)</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-0-1.html"><span>⚡ 192.168.0.1 (TP-Link, D-Link, Arris)</span><span>&rarr;</span></a></li>
-          <li><a href="/10-0-0-1.html"><span>⚡ 10.0.0.1 (Xfinity Comcast)</span><span>&rarr;</span></a></li>
-          <li><a href="/192-168-1-254.html"><span>⚡ 192.168.1.254 (AT&T Fiber, BT Hub)</span><span>&rarr;</span></a></li>
-          <li><a href="/find-router-ip.html"><span>🔍 Find My Router IP (Windows, Mac, Phone)</span><span>&rarr;</span></a></li>
+          <li><a href="/routers/"><span>📡 Router Models Directory</span><span>&rarr;</span></a></li>
+          <li><a href="/isp/"><span>🏢 ISP Gateway Portals (Xfinity, AT&T, Fios)</span><span>&rarr;</span></a></li>
+          <li><a href="/brands/"><span>🏷️ Brand Directories (Netgear, ASUS, TP-Link)</span><span>&rarr;</span></a></li>
+          <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
+          <li><a href="/extenders/"><span>📶 Wi-Fi Extenders &amp; Repeaters</span><span>&rarr;</span></a></li>
+          <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
+          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
           <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
             <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
               <span>🌓 Switch Dark / Light Mode</span>
@@ -613,50 +612,70 @@ ip -6 route show default               # Linux (Ubuntu/Debian)</code></pre>
 
   <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Networking Tools</h4>
-          <ul>
-            <li><a href="/tools.html#wifi-qr">Wi-Fi QR Code Generator</a></li>
-            <li><a href="/tools.html#subnet-calc">Subnet & CIDR Calculator</a></li>
-            <li><a href="/tools.html#pass-gen">WPA3 Password Generator</a></li>
-            <li><a href="/tools.html#port-dir">Port Forwarding Database</a></li>
-          </ul>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 0.75rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+          <span>RouterIPHub</span>
         </div>
-        <div class="footer-col">
-          <h4>How-To Guides</h4>
-          <ul>
-            <li><a href="/howto.html#change-wifi">Change Wi-Fi Password</a></li>
-            <li><a href="/howto.html#factory-reset">Router Factory Reset Guide</a></li>
-            <li><a href="/howto.html#access-point">Two Routers (AP Mode)</a></li>
-            <li><a href="/howto.html#change-dns">Change DNS (1.1.1.1)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Popular Gateway IPs</h4>
-          <ul>
-            <li><a href="/192-168-1-1.html">192.168.1.1 (Netgear/ASUS)</a></li>
-            <li><a href="/192-168-0-1.html">192.168.0.1 (TP-Link/D-Link)</a></li>
-            <li><a href="/10-0-0-1.html">10.0.0.1 (Xfinity)</a></li>
-            <li><a href="/192-168-1-254.html">192.168.1.254 (AT&T/BT)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Machine & LLM Manifests</h4>
-          <ul>
-            <li><a href="/llms.txt">llms.txt (AI Specification)</a></li>
-            <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
-            <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
-            <li><a href="/data/routers.json">routers.json (Raw API)</a></li>
-            <li><a href="/sitemap.xml">XML Sitemap</a></li>
-          </ul>
-        </div>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+          Open reference platform for router default gateway IPs, factory credentials, LED diagnostics, and networking utilities.
+        </p>
+        <ul class="footer-links">
+          <li><a href="/routers/">Router Directory (250+ Models)</a></li>
+          <li><a href="/extenders/">Wi-Fi Extenders &amp; Repeaters</a></li>
+          <li><a href="/brands/">Hardware Brands</a></li>
+          <li><a href="/isp/">ISP Gateway Portals</a></li>
+          <li><a href="/tools/">Interactive Tools</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <div>&copy; 2026 RouterIPHub. All rights reserved.</div>
-        <div style="font-size: 0.8rem;">Independent technical resource. All trademarks belong to their respective owners.</div>
+
+      <div class="footer-col">
+        <h4>Popular Gateway IPs</h4>
+        <ul class="footer-links">
+          <li><a href="/ip/192-168-1-1/">192.168.1.1 (Netgear/ASUS)</a></li>
+          <li><a href="/ip/192-168-0-1/">192.168.0.1 (TP-Link/D-Link)</a></li>
+          <li><a href="/ip/10-0-0-1/">10.0.0.1 (Xfinity/Comcast)</a></li>
+          <li><a href="/ip/192-168-1-254/">192.168.1.254 (AT&T/BT)</a></li>
+          <li><a href="/ip/192-168-2-1/">192.168.2.1 (Belkin/SMC)</a></li>
+          <li><a href="/ip/192-168-1-250/">192.168.1.250 (Netgear Extenders)</a></li>
+          <li><a href="/ip/">All Gateway IPs &rarr;</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4>Diagnostics &amp; Guides</h4>
+        <ul class="footer-links">
+          <li><a href="/find-router-ip.html">Find Router IP on Windows</a></li>
+          <li><a href="/find-router-ip.html#mac">Find Router IP on macOS</a></li>
+          <li><a href="/find-router-ip.html#ios">Find Router IP on Mobile</a></li>
+          <li><a href="/howto.html">How-To Setup Guides</a></li>
+          <li><a href="/tools/subnet-calculator/">Subnet Calculator</a></li>
+          <li><a href="/tools/router-password-generator/">Password Generator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Open Data &amp; Developers</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
+          <li><a href="/developers.html">Developer API &amp; Datasets</a></li>
+          <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
+          <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
+          <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
+          <li><a href="/sitemap.xml">XML Sitemap Index</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 RouterIPHub. All rights reserved. Open data licensed under CC BY 4.0.</div>
+      <div style="font-size: 0.8rem; color: var(--text-muted);">Independent technical reference. All trademarks belong to their respective owners.</div>
     </div>
   </footer>
 
