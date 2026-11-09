@@ -2546,7 +2546,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         NETGEAR uses <code>192.168.1.250</code> across most of its current consumer extender lineup, including Wi-Fi 5, Wi-Fi 6, and Wi-Fi 7 models.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -2920,8 +2920,8 @@ def generate_extender_pages():
           Connect directly to the extender, enter one of these addresses in the browser address bar, and follow the setup wizard.
         </p>
 
-        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
-          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+        <div class="table-container">
+          <table class="table">
             <thead>
               <tr>
                 <th style="min-width: 180px;">Access Method</th>
@@ -2971,7 +2971,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         <code>tplinkrepeater.net</code> applies to TP-Link’s RE-series Wi-Fi range extenders and several TL-WA models. It is <strong>not</strong> the login address for TP-Link routers, which commonly use <code>tplinkwifi.net</code> and <code>192.168.0.1</code>.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3016,7 +3016,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Network Role: Extender vs. Router
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3420,7 +3420,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         <code>extender.linksys.com</code> and the <code>192.168.1.1</code> fallback IP apply to Linksys’s Max-Stream and RE-series range extenders.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3453,7 +3453,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Network Role: Extender vs. Router
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3493,7 +3493,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Diagnostic: What Are You Trying to Do?
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3651,7 +3651,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Linksys Router vs. Extender Login
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3889,8 +3889,8 @@ def generate_extender_pages():
           Connect directly to the extender’s Wi-Fi network or Ethernet port, then enter one of these addresses in your browser:
         </p>
 
-        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
-          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+        <div class="table-container">
+          <table class="table">
             <thead>
               <tr>
                 <th style="min-width: 180px;">Access Method</th>
@@ -3939,7 +3939,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         D-Link uses <code>dlinkap.local</code> and <code>192.168.0.50</code> across its classic DAP-series extenders and newer AX/E-Series Wi-Fi 6 models.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -3972,7 +3972,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Network Role: Extender vs. Router
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4012,7 +4012,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Diagnostic: What Are You Trying to Do?
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4189,7 +4189,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         D-Link Router vs. Extender Login
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4434,8 +4434,8 @@ def generate_extender_pages():
           Connect your phone or computer directly to the repeater’s Wi-Fi network or Ethernet port, then enter one of these addresses in your browser:
         </p>
 
-        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
-          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+        <div class="table-container">
+          <table class="table">
             <thead>
               <tr>
                 <th style="min-width: 180px;">Access Method</th>
@@ -4488,7 +4488,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         <code>myrepeater.net</code> is commonly used by unbranded, generic, and older Wireless-N repeaters rather than one single manufacturer. These devices are often sold under different brand names but share similar internal setup interfaces.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4527,7 +4527,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Network Role: Repeater vs. Router
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4567,7 +4567,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Diagnostic: What Are You Trying to Do?
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4728,7 +4728,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Wireless-N Repeater vs. Router Login
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -4968,8 +4968,8 @@ def generate_extender_pages():
           Connect your phone or computer directly to the Wavlink extender’s Wi-Fi network or Ethernet port, then enter one of these addresses in your browser:
         </p>
 
-        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
-          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+        <div class="table-container">
+          <table class="table">
             <thead>
               <tr>
                 <th style="min-width: 180px;">Access Method</th>
@@ -5027,7 +5027,7 @@ def generate_extender_pages():
       <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
         <code>ap.setup</code> is commonly used by Wavlink wireless repeaters, range extenders, and outdoor access points. Some models may also use <code>wavlogin.link</code> or <code>waplogin.link</code>, but <code>ap.setup</code> remains one of the most common local setup addresses.
       </p>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -5066,7 +5066,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Network Role: Extender vs. Router
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -5106,7 +5106,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Diagnostic: What Are You Trying to Do?
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
@@ -5278,7 +5278,7 @@ def generate_extender_pages():
       <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
         Wavlink Extender vs. Router Login
       </h2>
-      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+      <div class="table-container">
         <table class="table">
           <thead>
             <tr>
