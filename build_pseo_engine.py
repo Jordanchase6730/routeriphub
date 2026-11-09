@@ -33,6 +33,53 @@ ROOT_DIR = r"C:\Users\acer\.gemini\antigravity\scratch\routeriphub"
 PUBLIC_DIR = os.path.join(ROOT_DIR, "public")
 TODAY = "2026-11-03"
 
+AUTHOR_VIKAS = {
+    "@type": "Person",
+    "name": "Vikas Behl",
+    "jobTitle": "Senior Network & Technical Support Engineer",
+    "url": "https://routeriphub.com/authors/vikas-behl/",
+    "sameAs": [
+        "https://routeriphub.com/authors/vikas-behl/"
+    ],
+    "description": "Senior Technical Support & Network Engineer with 12+ years of field experience configuring routers, Wi-Fi extenders, access points, network printers, gaming consoles, and multi-platform network stacks across Windows and macOS."
+}
+
+REVIEWER_LAB = {
+    "@type": "Organization",
+    "name": "RouterIPHub Technical Lab",
+    "url": "https://routeriphub.com/about/",
+    "logo": "https://routeriphub.com/favicon.svg"
+}
+
+def get_byline_html(updated_date="November 2026"):
+    return f"""
+      <div class="byline-meta-card">
+        <div class="byline-author-group">
+          <div class="byline-avatar">VB</div>
+          <div class="byline-text">
+            <div class="byline-line-1">
+              <span class="byline-role">Written &amp; Tested by</span>
+              <a href="/authors/vikas-behl/" class="byline-name">Vikas Behl</a>
+              <span class="byline-badge">12+ Yrs Exp</span>
+            </div>
+            <div class="byline-line-2">Senior Technical Support &amp; Network Engineer</div>
+          </div>
+        </div>
+        <div class="byline-divider"></div>
+        <div class="byline-review-group">
+          <span class="byline-role">Reviewed by</span>
+          <a href="/about/" class="byline-name">RouterIPHub Technical Lab</a>
+          <span class="byline-status">&#10003; Hardware Verified</span>
+        </div>
+        <div class="byline-divider"></div>
+        <div class="byline-date-group">
+          <span class="byline-role">Last Updated</span>
+          <time datetime="{TODAY}" class="byline-date">{escape(updated_date)}</time>
+        </div>
+      </div>
+"""
+
+
 def escape(s):
     return html.escape(str(s) if s is not None else "")
 
@@ -336,7 +383,8 @@ def generate_router_model_pages():
             "mainEntityOfPage": canonical,
             "datePublished": "2026-01-15T08:00:00+00:00",
             "dateModified": f"{TODAY}T02:00:00+00:00",
-            "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+            "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
             "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
         }
 
@@ -432,7 +480,7 @@ def generate_router_model_pages():
         Complete default configuration parameters, factory credentials, LED indicator cheat-sheet, and hardware reset procedure.
       </p>
 
-      <!-- Google AIO / Featured Snippet Answer Box -->
+      {get_byline_html()}\n\n      <!-- Google AIO / Featured Snippet Answer Box -->
       <div class="answer-box">
         <div class="answer-box-label">Quick Gateway Answer (RFC 1918 Verified)</div>
         <div class="answer-box-main">
@@ -671,7 +719,8 @@ def generate_isp_pages():
             "mainEntityOfPage": canonical,
             "datePublished": "2026-01-15T08:00:00+00:00",
             "dateModified": f"{TODAY}T02:00:00+00:00",
-            "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+            "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
             "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
         }
 
@@ -716,6 +765,8 @@ def generate_isp_pages():
       <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
         Default login credentials, IP passthrough, bridge mode instructions, and factory reset procedure for {escape(isp['gateway_name'])}.
       </p>
+
+      {get_byline_html()}
 
       <!-- Answer Box -->
       <div class="answer-box">
@@ -1470,7 +1521,8 @@ def generate_ip_pages():
             "mainEntityOfPage": canonical,
             "datePublished": "2026-01-15T08:00:00+00:00",
             "dateModified": f"{TODAY}T02:00:00+00:00",
-            "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+            "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
             "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
         }
 
@@ -1756,6 +1808,8 @@ def generate_ip_pages():
       
       <!-- Intent-Matching Intro -->
       {intro_html}
+
+        {get_byline_html()}
 
       <!-- Quick Answer Box with Bold Verdict -->
       {quick_answer_html}
@@ -2214,7 +2268,9 @@ def generate_extender_pages():
         If you are setting up or troubleshooting a Wi-Fi range extender, repeater, or booster, standard router gateway addresses like <code>192.168.1.1</code> will not open your extender's settings. Extenders utilize dedicated <strong>local setup domains</strong> (such as <code>mywifiext.net</code> or <code>tplinkrepeater.net</code>) and factory <strong>fallback IP addresses</strong> (such as <code>192.168.1.250</code> or <code>192.168.0.254</code>) before they are paired with your main router.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Immediate Extender Diagnostic Verdict</div>
         <p style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.6;">
           Extender addresses are temporary setup gateways, not permanent routers.
@@ -2426,7 +2482,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -2513,7 +2570,9 @@ def generate_extender_pages():
         If you searched <code>192.168.1.250</code> expecting your main router’s login page, you are probably trying to reach a <strong>NETGEAR Wi-Fi range extender</strong>. This address is NETGEAR’s factory-default management IP for its EX, EAX, and EXS extender families—not the usual address for your router or modem.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           192.168.1.250 is the default fallback IP address for most NETGEAR Wi-Fi range extenders before they are paired with your home router.
@@ -2810,7 +2869,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -2911,7 +2971,9 @@ def generate_extender_pages():
         If you searched <code>tplinkrepeater.net</code> because your TP-Link extender will not open, you are in the right place. This local setup address is used to configure TP-Link Wi-Fi range extenders, while <code>192.168.0.254</code> is the factory-default IP address you can use when the domain does not load.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>tplinkrepeater.net</code> is the local management address for TP-Link Wi-Fi range extenders, and <code>192.168.0.254</code> is its default fallback IP address.
@@ -3274,7 +3336,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -3381,7 +3444,9 @@ def generate_extender_pages():
         If you searched <code>extender.linksys.com</code> expecting to open your Linksys extender, you are in the right place—but the page may not load unless you are connected directly to the extender. <code>extender.linksys.com</code> is Linksys’s local setup address for its RE-series range extenders, while <code>192.168.1.1</code> is the fallback IP address used when the extender cannot detect a DHCP server.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>extender.linksys.com</code> is the local setup portal for Linksys Wi-Fi range extenders, and <code>192.168.1.1</code> is the default fallback IP address when no DHCP server is detected.
@@ -3773,7 +3838,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -3880,7 +3946,9 @@ def generate_extender_pages():
         If you searched <code>dlinkap.local</code> expecting to open your D-Link extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the D-Link extender. <code>dlinkap.local</code> is D-Link’s local setup address for its DAP-series and newer Wi-Fi extender models, while <code>192.168.0.50</code> is the default fallback IP address.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>dlinkap.local</code> is the local management URL for D-Link Wi-Fi range extenders, and <code>192.168.0.50</code> is the default IP address used when the extender is unconfigured or cannot detect a DHCP server.
@@ -4318,7 +4386,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -4425,7 +4494,9 @@ def generate_extender_pages():
         If you searched <code>myrepeater.net</code> expecting to open your Wireless-N repeater, you are in the right place—but the page will only load when your phone or computer is connected directly to the repeater. <code>myrepeater.net</code> is a local setup address used by many generic Wireless-N repeaters, while <code>192.168.1.254</code> is the default management IP address for these devices.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>myrepeater.net</code> is the local setup portal for many Wireless-N Wi-Fi repeaters, and <code>192.168.1.254</code> is the default IP address used to access the repeater’s admin page.
@@ -4852,7 +4923,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -4959,7 +5031,9 @@ def generate_extender_pages():
         If you searched <code>ap.setup</code> expecting to open your Wavlink extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the Wavlink device. <code>ap.setup</code> is Wavlink’s local setup address for its Wi-Fi repeaters and outdoor access points, while <code>192.168.10.1</code> is the default management IP address.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>ap.setup</code> is the local setup portal for Wavlink Wi-Fi repeaters and outdoor access points, and <code>192.168.10.1</code> is the default IP address used to access the device’s admin page.
@@ -5404,7 +5478,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -5511,7 +5586,9 @@ def generate_extender_pages():
         If you searched <code>192.168.188.1</code> expecting to open your Topvision WiFi extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the extender. <code>192.168.188.1</code> is the default management IP address used by many Topvision WiFi repeaters and range extenders.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>192.168.188.1</code> is the default admin IP address for many Topvision WiFi extenders.
@@ -5926,7 +6003,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -6033,7 +6111,9 @@ def generate_extender_pages():
         If you searched <code>192.168.188.1</code> expecting to open your SEWOT SW-01 WiFi extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the extender. <code>192.168.188.1</code> is the default management IP address used by the SEWOT SW-01 WiFi repeater and similar Wireless-N extender models.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>192.168.188.1</code> is the default admin IP address for the SEWOT SW-01 WiFi extender.
@@ -6431,7 +6511,8 @@ def generate_extender_pages():
                 "mainEntityOfPage": canonical,
                 "datePublished": "2026-01-15T08:00:00+00:00",
                 "dateModified": f"{TODAY}T02:00:00+00:00",
-                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "author": AUTHOR_VIKAS,
+            "reviewedBy": REVIEWER_LAB,
                 "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
             }
 
@@ -6538,7 +6619,9 @@ def generate_extender_pages():
         If you searched <code>192.168.188.1</code> expecting to open your RANGEXTD WiFi range extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the extender. <code>192.168.188.1</code> is the default management IP address used by many RANGEXTD WiFi repeaters and Wireless-N range extender models.
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           <code>192.168.188.1</code> is the default admin IP address for many RANGEXTD WiFi range extenders.
@@ -6967,7 +7050,9 @@ def generate_extender_pages():
         {escape(ext['meta_desc'])}
       </p>
 
-      <div class="verdict-box" style="margin-bottom: 2rem;">
+            {get_byline_html()}
+
+<div class="verdict-box" style="margin-bottom: 2rem;">
         <div class="verdict-tag">⚡ Quick Answer</div>
         <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
           {escape(ext['domain'])} is the local web management portal for {escape(ext['brand'])} range extenders.
@@ -7021,6 +7106,284 @@ def generate_extender_pages():
             full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[faq_schema]) + generic_content + get_footer()
             with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(full_html)
+
+
+# ==============================================================================
+# 7b. GENERATE AUTHOR & ABOUT E-E-A-T PAGES (/authors/vikas-behl/, /about/)
+# ==============================================================================
+def generate_author_and_about_pages():
+    print("Generating Author Profile & About E-E-A-T Pages...")
+    
+    # A. Vikas Behl Author Profile (/authors/vikas-behl/index.html)
+    author_dir = os.path.join(PUBLIC_DIR, "authors", "vikas-behl")
+    make_dirs(author_dir)
+    author_canonical = "https://routeriphub.com/authors/vikas-behl/"
+    author_title = "Vikas Behl — Senior Network & Technical Support Engineer | RouterIPHub"
+    author_desc = "Meet Vikas Behl, Senior Technical Support & Network Engineer with 12+ years of experience in router setup, Wi-Fi extenders, printers, consoles, and network troubleshooting."
+    author_bc = [("Home", "/"), ("Authors", "/authors/"), ("Vikas Behl", "/authors/vikas-behl/")]
+    
+    author_person_schema = {
+        "@type": "ProfilePage",
+        "dateCreated": "2026-01-15T08:00:00+00:00",
+        "dateModified": f"{TODAY}T02:00:00+00:00",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Vikas Behl",
+            "jobTitle": "Senior Network & Technical Support Engineer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "RouterIPHub",
+                "url": "https://routeriphub.com/"
+            },
+            "description": "Networking and technical support specialist with 12+ years of enterprise and consumer experience configuring routers, Wi-Fi extenders, access points, gaming consoles, network printers, and cross-platform operating systems across Windows and macOS.",
+            "knowsAbout": [
+                "Computer Networking",
+                "Wi-Fi Range Extenders",
+                "Wireless Routers",
+                "Access Points",
+                "Port Forwarding & NAT Configuration",
+                "DHCP Subnetting",
+                "Network Printers & Print Servers",
+                "Gaming Console Networking (PS5, Xbox Series X, Nintendo Switch)",
+                "Windows 11/10 Network Troubleshooting",
+                "macOS Network Diagnostics",
+                "Router Firmware & Hardware Recovery"
+            ],
+            "url": author_canonical
+        }
+    }
+    
+    author_content = """
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-tool" style="margin-bottom: 1rem;">&#128104;&#8205;&#128187; Editorial Contributor Profile</div>
+
+      <!-- Author Bio Header Card -->
+      <div class="card" style="display: flex; gap: 1.5rem; align-items: flex-start; padding: 2rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--bg-card); margin-bottom: 2.5rem; flex-wrap: wrap;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #38bdf8); color: #ffffff; font-weight: 800; font-size: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-md);">
+          VB
+        </div>
+        <div style="flex: 1; min-width: 260px;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
+            <h1 style="font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 0;">Vikas Behl</h1>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.8rem;">&#10003; Verified Contributor</span>
+            <span class="badge" style="background: rgba(2, 132, 199, 0.12); color: var(--text-accent); font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.8rem;">12+ Years Field Experience</span>
+          </div>
+          <div style="font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Senior Network &amp; Technical Support Engineer &bull; Lead Hardware Contributor
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.65; margin: 0; font-size: 0.975rem;">
+            Technical support engineer with over a decade of direct, hands-on experience diagnosing, provisioning, and troubleshooting local area networks (LAN), wireless mesh configurations, and connected hardware ecosystems. Specializes in solving default IP conflicts, client isolation issues, and complex device pairing for consumers and small businesses.
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience & Background -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;">
+        About Vikas Behl &amp; Professional Background
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        Over the past 12 years as a professional Technical Support and Network Engineer, Vikas has resolved thousands of complex connectivity and hardware configuration challenges. His technical background spans traditional wired Ethernet infrastructure to modern Wi-Fi 6/6E/7 dual- and tri-band installations across residential homes, multi-office facilities, and hybrid remote work setups.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        At RouterIPHub, Vikas leads our hands-on diagnostic testing, verifying factory default credentials, emergency pinhole reset sequences, and DHCP subnet behaviors on physical hardware before publication.
+      </p>
+
+      <!-- Core Areas of Technical Expertise -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">
+        Areas of Technical Expertise
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128225;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Routers &amp; ISP Gateways</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            Setup, firmware updates, DMZ, port forwarding, and DHCP scopes on Netgear, ASUS, TP-Link, Linksys, Cisco, Arris, Xfinity xFi, AT&amp;T BGW, Spectrum, and Verizon FiOS gateways.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128246;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Wi-Fi Extenders &amp; Repeaters</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            Resolving fallback IP dead-ends, AP vs. Repeater bridge pairing, static client configuration, and factory resets across NETGEAR, TP-Link, Wavlink, Topvision, SEWOT, and RANGEXTD.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128424;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Network Printers &amp; Peripherals</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            Fixed IP address reservation, TCP/IP standard port printing, WSD/SNMP discovery, and wireless configuration for HP, Epson, Canon, and Brother printers.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#127918;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Gaming Consoles &amp; Smart Devices</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            NAT Type optimization (Strict to Open/Moderate), UPnP validation, QoS latency prioritization, and port forwarding for PlayStation 5, Xbox Series X/S, and Nintendo Switch.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128187;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Windows &amp; macOS Network Stacks</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            Command-line network diagnostics, Winsock and TCP/IP stack resets, ARP cache inspection, DNS flushing, routing table troubleshooting, and static IP allocation.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128736;&#65039;</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Hardware Recovery &amp; Factory Resets</h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            Physical 30-30-30 emergency hard resets, unbricking NVRAM corruptions, default recovery mode fallback triggers, and TFTP firmware restoration.
+          </p>
+        </div>
+      </div>
+
+      <!-- Verification Standards -->
+      <div class="verdict-box" style="margin-bottom: 2.5rem;">
+        <div class="verdict-tag">&#9889; Editorial &amp; Testing Standards</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+          How Vikas Verifies Every Guide
+        </h3>
+        <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+          Every setup portal URL, default IP address, and factory credential published across RouterIPHub is cross-checked through a strict three-phase verification pipeline:
+        </p>
+        <ol style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.8;">
+          <li><strong>OEM Technical Documentation:</strong> Sourced directly from official manufacturer hardware manuals and FCC equipment authorization filings.</li>
+          <li><strong>Physical Bench Verification:</strong> Hands-on testing of default gateway responses, DHCP lease allocations, and fallback IP behavior.</li>
+          <li><strong>Cross-Platform Validation:</strong> Step-by-step confirmation across Windows 11, macOS, iPhone (iOS), Android, and Ubuntu Linux.</li>
+        </ol>
+      </div>
+
+      <!-- Popular Guides Authored & Maintained -->
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+        Popular Guides Authored &amp; Maintained by Vikas Behl
+      </h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+        <a href="/ip/192-168-1-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.1 Gateway Guide &rarr;</a>
+        <a href="/ip/192-168-0-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.0.1 Gateway Guide &rarr;</a>
+        <a href="/ip/10-0-0-1/" class="btn btn-secondary" style="font-size: 0.85rem;">10.0.0.1 Gateway Guide &rarr;</a>
+        <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+        <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">TP-Link tplinkrepeater.net Guide &rarr;</a>
+        <a href="/extenders/topvision-extender/" class="btn btn-secondary" style="font-size: 0.85rem;">Topvision WiFi Extender &rarr;</a>
+        <a href="/extenders/sewot-sw-01/" class="btn btn-secondary" style="font-size: 0.85rem;">SEWOT SW-01 Extender &rarr;</a>
+        <a href="/extenders/rangextd-extender/" class="btn btn-secondary" style="font-size: 0.85rem;">RANGEXTD Extender &rarr;</a>
+        <a href="/howto/" class="btn btn-secondary" style="font-size: 0.85rem;">Router Setup &amp; Reset Guides &rarr;</a>
+        <a href="/find-router-ip/" class="btn btn-secondary" style="font-size: 0.85rem;">Find Router IP on Any OS &rarr;</a>
+      </div>
+    </div>
+  </main>
+"""
+    full_author_html = get_header(author_title, author_desc, author_canonical, breadcrumbs=author_bc, schemas_json_ld=[author_person_schema]) + author_content + get_footer()
+    with open(os.path.join(author_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(full_author_html)
+    print("  -> Generated /authors/vikas-behl/index.html")
+
+    # B. About Us Page (/about/index.html)
+    about_dir = os.path.join(PUBLIC_DIR, "about")
+    make_dirs(about_dir)
+    about_canonical = "https://routeriphub.com/about/"
+    about_title = "About RouterIPHub — Mission, Hardware Lab & Editorial Standards"
+    about_desc = "Learn about RouterIPHub, our independent hardware testing methodology, editorial team led by Vikas Behl, and open-source networking dataset initiative."
+    about_bc = [("Home", "/"), ("About Us", "/about/")]
+
+    about_schema = {
+        "@type": "AboutPage",
+        "headline": about_title,
+        "description": about_desc,
+        "mainEntityOfPage": about_canonical,
+        "publisher": {
+            "@type": "Organization",
+            "name": "RouterIPHub",
+            "url": "https://routeriphub.com/",
+            "logo": "https://routeriphub.com/favicon.svg"
+        }
+    }
+
+    about_content = """
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip" style="margin-bottom: 1rem;">&#127970; About RouterIPHub</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        About RouterIPHub: Independent Hardware Reference &amp; Diagnostics
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        RouterIPHub is an open, independent technical reference platform dedicated to providing verified default router gateway IP addresses, factory login credentials, LED hardware diagnostic codes, and step-by-step recovery walkthroughs for consumer and enterprise networking equipment.
+      </p>
+
+      <div class="card" style="padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--bg-card); margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">Our Mission: Eradicate Network Setup Frustration</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Every day, millions of users get locked out of their home networks, type incorrect IP addresses into search engines, or struggle to connect extenders, printers, and gaming consoles. Our mission is to cut through advertising clutter and unverified forum advice by offering clean, instant, tested technical data with zero paywalls.
+        </p>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;">
+        Our Hardware Testing Methodology
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        Unlike generic tech blogs that aggregate unverified forum posts, RouterIPHub operates a hands-on physical test bench. Every procedure published on our site is evaluated under controlled networking conditions:
+      </p>
+      <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        <li><strong>Direct Ethernet &amp; Wi-Fi Verification:</strong> Testing access to local web management servers (e.g. <code>192.168.1.1</code>, <code>192.168.188.1</code>, <code>10.0.0.1</code>) on isolated subnets with packet sniffers to observe DHCP lease behavior.</li>
+        <li><strong>Factory Default Credentials:</strong> Checking factory stickers, serial-derived PIN logic, and blank-password fallback behaviors across legacy and Wi-Fi 6/7 hardware.</li>
+        <li><strong>Cross-Platform Walkthroughs:</strong> Validating commands and GUI navigation across Windows 11/10, macOS Sonoma/Sequoia, Linux terminal, iOS, and Android.</li>
+      </ul>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">
+        Lead Technical Contributor
+      </h2>
+      <div class="card" style="display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--bg-card); margin-bottom: 2.5rem; flex-wrap: wrap;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #38bdf8); color: #ffffff; font-weight: 800; font-size: 1.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow);">
+          VB
+        </div>
+        <div style="flex: 1; min-width: 260px;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 0.25rem 0;">
+            <a href="/authors/vikas-behl/" style="color: var(--text-primary); text-decoration: none;">Vikas Behl</a>
+          </h3>
+          <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-accent); margin-bottom: 0.75rem;">
+            Senior Network &amp; Technical Support Engineer (12+ Years Experience)
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem;">
+            Vikas has spent over 12 years in technical support engineering, resolving thousands of home and enterprise networking challenges across routers, access points, extenders, gaming consoles, network printers, and multi-OS operating systems.
+          </p>
+          <a href="/authors/vikas-behl/" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.85rem;">View Full Author Bio &amp; Credentials &rarr;</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem;">
+        Open-Source Hardware Database
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        We believe in open networking standards. In addition to our web interface, we maintain a free, open-source repository of router credentials and gateway subnets on GitHub, formatted for programmatic consumption:
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem;">
+        <a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.85rem;">GitHub Open-Source Dataset &rarr;</a>
+        <a href="/developers/" class="btn btn-secondary" style="font-size: 0.85rem;">Developer API Documentation &rarr;</a>
+        <a href="/data/routers.json" download class="btn btn-secondary" style="font-size: 0.85rem;">Download routers.json &rarr;</a>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          &#128227; Editorial Independence Notice
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin: 0;">
+          RouterIPHub is completely independent. We do not accept sponsored hardware rankings, nor are we affiliated with any router manufacturer or Internet Service Provider. All brand names and trademarks belong to their respective registered owners.
+        </p>
+      </div>
+    </div>
+  </main>
+"""
+    full_about_html = get_header(about_title, about_desc, about_canonical, breadcrumbs=about_bc, schemas_json_ld=[about_schema]) + about_content + get_footer()
+    with open(os.path.join(about_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(full_about_html)
+    print("  -> Generated /about/index.html")
 
 def generate_tool_pages():
     print(f"Generating {len(TOOL_PAGES)} dedicated tool pages...")
@@ -7844,6 +8207,8 @@ def generate_sitemaps():
     guide_urls = [
         ("https://routeriphub.com/", "1.0", "daily"),
         ("https://routeriphub.com/howto/", "0.9", "weekly"),
+        ("https://routeriphub.com/about/", "0.9", "monthly"),
+        ("https://routeriphub.com/authors/vikas-behl/", "0.9", "monthly"),
         ("https://routeriphub.com/find-router-ip/", "0.8", "monthly"),
         ("https://routeriphub.com/developers/", "0.8", "monthly")
     ]
@@ -8112,6 +8477,8 @@ def update_vercel_config():
         {"source": "/howto.html", "destination": "/howto/", "permanent": True},
         {"source": "/find-router-ip.html", "destination": "/find-router-ip/", "permanent": True},
         {"source": "/developers.html", "destination": "/developers/", "permanent": True},
+        {"source": "/author/vikas-behl", "destination": "/authors/vikas-behl/", "permanent": True},
+        {"source": "/authors", "destination": "/about/", "permanent": True},
         {"source": "/tools.html", "destination": "/tools/", "permanent": True},
         {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True}
     ]
@@ -8252,6 +8619,7 @@ def main():
     generate_brand_pages()
     generate_ip_pages()
     generate_extender_pages()
+    generate_author_and_about_pages()
     generate_tool_pages()
     generate_sitemaps()
     export_datasets()

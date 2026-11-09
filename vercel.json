@@ -205,6 +205,16 @@
       "permanent": true
     },
     {
+      "source": "/author/vikas-behl",
+      "destination": "/authors/vikas-behl/",
+      "permanent": true
+    },
+    {
+      "source": "/authors",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
       "source": "/tools.html",
       "destination": "/tools/",
       "permanent": true
