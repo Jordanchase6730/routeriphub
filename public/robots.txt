@@ -2,6 +2,13 @@ User-agent: *
 Allow: /
 Disallow: /api/private/
 
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
 # AI Crawlers & LLM Engines (Explicitly Welcomed for Citation & GEO)
 User-agent: GPTBot
 Allow: /
