@@ -57,9 +57,9 @@ def collect_all_urls():
         "https://routeriphub.com/ip/10-0-0-1/",
         "https://routeriphub.com/ip/192-168-1-254/",
         "https://routeriphub.com/tools/",
-        "https://routeriphub.com/howto.html",
-        "https://routeriphub.com/find-router-ip.html",
-        "https://routeriphub.com/developers.html"
+        "https://routeriphub.com/howto/",
+        "https://routeriphub.com/find-router-ip/",
+        "https://routeriphub.com/developers/"
     ]
     for pu in priority_urls:
         if pu not in urls:

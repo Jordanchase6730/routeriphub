@@ -166,7 +166,7 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
           <li><a href="/ip/" class="{'active' if active_nav == 'ip' else ''}">IP Directory</a></li>
           <li><a href="/extenders/" class="{'active' if active_nav == 'extenders' else ''}">Extenders</a></li>
           <li><a href="/tools/" class="{'active' if active_nav == 'tools' else ''}">Tools</a></li>
-          <li><a href="/howto.html" class="{'active' if active_nav == 'howto' else ''}">Guides</a></li>
+          <li><a href="/howto/" class="{'active' if active_nav == 'howto' else ''}">Guides</a></li>
         </ul>
       </nav>
 
@@ -213,7 +213,7 @@ def get_header(title, description, canonical_url, active_nav="", breadcrumbs=Non
           <li><a href="/ip/"><span>⚡ Gateway IP Directory (192.168.1.1, 10.0.0.1)</span><span>&rarr;</span></a></li>
           <li><a href="/extenders/"><span>📶 Wi-Fi Extenders &amp; Repeaters</span><span>&rarr;</span></a></li>
           <li><a href="/tools/"><span>🛠️ Interactive Networking Tools</span><span>&rarr;</span></a></li>
-          <li><a href="/howto.html"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
+          <li><a href="/howto/"><span>📖 Setup & Troubleshooting Guides</span><span>&rarr;</span></a></li>
           <li style="margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">
             <button class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.15rem; background: var(--bg-card); height: auto; min-height: 48px;">
               <span>🌓 Switch Dark / Light Mode</span>
@@ -278,10 +278,10 @@ def get_footer():
       <div class="footer-col">
         <h4>Diagnostics &amp; Guides</h4>
         <ul class="footer-links">
-          <li><a href="/find-router-ip.html">Find Router IP on Windows</a></li>
-          <li><a href="/find-router-ip.html#mac">Find Router IP on macOS</a></li>
-          <li><a href="/find-router-ip.html#ios">Find Router IP on Mobile</a></li>
-          <li><a href="/howto.html">How-To Setup Guides</a></li>
+          <li><a href="/find-router-ip/">Find Router IP on Windows</a></li>
+          <li><a href="/find-router-ip/#mac">Find Router IP on macOS</a></li>
+          <li><a href="/find-router-ip/#ios">Find Router IP on Mobile</a></li>
+          <li><a href="/howto/">How-To Setup Guides</a></li>
           <li><a href="/tools/subnet-calculator/">Subnet Calculator</a></li>
           <li><a href="/tools/router-password-generator/">Password Generator</a></li>
         </ul>
@@ -291,7 +291,7 @@ def get_footer():
         <h4>Open Data &amp; Developers</h4>
         <ul class="footer-links">
           <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
-          <li><a href="/developers.html">Developer API &amp; Datasets</a></li>
+          <li><a href="/developers/">Developer API &amp; Datasets</a></li>
           <li><a href="/data/routers.json" download>routers.json (REST API)</a></li>
           <li><a href="/llms.txt">llms.txt (AI Directory)</a></li>
           <li><a href="/llms-full.txt">llms-full.txt (Direct Dataset)</a></li>
@@ -7843,9 +7843,9 @@ def generate_sitemaps():
     # 6. guides.xml
     guide_urls = [
         ("https://routeriphub.com/", "1.0", "daily"),
-        ("https://routeriphub.com/howto.html", "0.9", "weekly"),
-        ("https://routeriphub.com/find-router-ip.html", "0.8", "monthly"),
-        ("https://routeriphub.com/developers.html", "0.8", "monthly")
+        ("https://routeriphub.com/howto/", "0.9", "weekly"),
+        ("https://routeriphub.com/find-router-ip/", "0.8", "monthly"),
+        ("https://routeriphub.com/developers/", "0.8", "monthly")
     ]
     write_sub_sitemap("guides.xml", guide_urls)
 
@@ -8109,6 +8109,9 @@ def update_vercel_config():
         {"source": "/rangextd", "destination": "/extenders/rangextd-extender/", "permanent": True},
         {"source": "/rangextd-extender", "destination": "/extenders/rangextd-extender/", "permanent": True},
         {"source": "/brands.html", "destination": "/brands/", "permanent": True},
+        {"source": "/howto.html", "destination": "/howto/", "permanent": True},
+        {"source": "/find-router-ip.html", "destination": "/find-router-ip/", "permanent": True},
+        {"source": "/developers.html", "destination": "/developers/", "permanent": True},
         {"source": "/tools.html", "destination": "/tools/", "permanent": True},
         {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True}
     ]

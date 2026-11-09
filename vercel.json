@@ -190,6 +190,21 @@
       "permanent": true
     },
     {
+      "source": "/howto.html",
+      "destination": "/howto/",
+      "permanent": true
+    },
+    {
+      "source": "/find-router-ip.html",
+      "destination": "/find-router-ip/",
+      "permanent": true
+    },
+    {
+      "source": "/developers.html",
+      "destination": "/developers/",
+      "permanent": true
+    },
+    {
       "source": "/tools.html",
       "destination": "/tools/",
       "permanent": true
