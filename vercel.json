@@ -105,6 +105,56 @@
       "permanent": true
     },
     {
+      "source": "/extender.linksys.com",
+      "destination": "/extenders/extender-linksys-com/",
+      "permanent": true
+    },
+    {
+      "source": "/extender-linksys",
+      "destination": "/extenders/extender-linksys-com/",
+      "permanent": true
+    },
+    {
+      "source": "/dlinkap.local",
+      "destination": "/extenders/dlinkap-local/",
+      "permanent": true
+    },
+    {
+      "source": "/dlinkap",
+      "destination": "/extenders/dlinkap-local/",
+      "permanent": true
+    },
+    {
+      "source": "/myrepeater.net",
+      "destination": "/extenders/myrepeater-net/",
+      "permanent": true
+    },
+    {
+      "source": "/myrepeater",
+      "destination": "/extenders/myrepeater-net/",
+      "permanent": true
+    },
+    {
+      "source": "/ap.setup",
+      "destination": "/extenders/ap-setup/",
+      "permanent": true
+    },
+    {
+      "source": "/ap-setup",
+      "destination": "/extenders/ap-setup/",
+      "permanent": true
+    },
+    {
+      "source": "/topvision",
+      "destination": "/extenders/topvision-extender/",
+      "permanent": true
+    },
+    {
+      "source": "/topvision-extender",
+      "destination": "/extenders/topvision-extender/",
+      "permanent": true
+    },
+    {
       "source": "/brands.html",
       "destination": "/brands/",
       "permanent": true
