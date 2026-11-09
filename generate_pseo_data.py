@@ -628,15 +628,15 @@ EXTENDER_PROFILES = [
         "slug": "dlinkap-local",
         "domain": "dlinkap.local",
         "brand": "D-Link",
-        "title": "dlinkap.local: D-Link Extender Setup & Login (2026)",
-        "meta_desc": "Access D-Link Wi-Fi extender setup at dlinkap.local or 192.168.0.50. Default credentials, DAP series models, SmartConnect, and troubleshooting guide.",
+        "title": "dlinkap.local — D-Link Extender Setup & 192.168.0.50 Login",
+        "meta_desc": "Can’t open dlinkap.local? Learn how to set up a D-Link extender, log in using 192.168.0.50, find default credentials, fix access issues, and reset your device.",
         "fallback_ip": "192.168.0.50",
         "local_domain_win": "http://dlinkap.local",
         "local_domain_mac": "http://dlinkap.local",
-        "default_user": "admin",
-        "default_pass": "[Leave Blank] or printed PIN",
-        "series": "D-Link DAP Series",
-        "models": ["DAP-1530", "DAP-1610", "DAP-1620", "DAP-1755", "DAP-X1860", "DAP-1955"]
+        "default_user": "Admin",
+        "default_pass": "Leave blank (older) or label-printed (Wi-Fi 6)",
+        "series": "Classic DAP Series & Wi-Fi 6 AX / Eagle Pro Series",
+        "models": ["DAP-1120", "DAP-1320", "DAP-1325", "DAP-1330", "DAP-1520", "DAP-1530", "DAP-1610", "DAP-1620", "DAP-1720", "DAP-1755", "DAP-1820", "DAP-1860", "DAP-1955", "DAP-X1860", "E15", "E30"]
     }
 ]
 

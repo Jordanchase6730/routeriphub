@@ -3764,6 +3764,551 @@ def generate_extender_pages():
             with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(full_html)
 
+        elif slug == "dlinkap-local":
+            # Exact content specified by user for D-Link Extender
+            tech_schema = {
+                "@type": "TechArticle",
+                "headline": title,
+                "description": desc,
+                "mainEntityOfPage": canonical,
+                "datePublished": "2026-01-15T08:00:00+00:00",
+                "dateModified": f"{TODAY}T02:00:00+00:00",
+                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
+            }
+
+            howto_schema = {
+                "@type": "HowTo",
+                "name": "How to Set Up a D-Link Wi-Fi Range Extender",
+                "description": "Step-by-step setup walkthrough to configure D-Link DAP and Eagle Pro range extenders via dlinkap.local and 192.168.0.50.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Plug in the extender",
+                        "text": "Place the D-Link extender near your main router during first-time setup. Wait for it to power on completely before connecting to it."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Connect to the extender",
+                        "text": "On your phone or computer, open the Wi-Fi list and connect to the D-Link extender's default Wi-Fi network (SSID printed on label or Quick Installation Card)."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Open the setup page",
+                        "text": "In your browser address bar, enter http://dlinkap.local or http://192.168.0.50 directly."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Log in with default credentials",
+                        "text": "For older DAP models, enter Username 'Admin' and leave Password blank. For newer models, use the label-printed password or setup wizard."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "Choose your home Wi-Fi network",
+                        "text": "Select your main router's network from the scan list, enter its Wi-Fi password, and follow the prompts to complete setup."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 6,
+                        "name": "Move the extender to its final location",
+                        "text": "Unplug the extender and place it halfway between your router and the weak Wi-Fi coverage area."
+                    }
+                ]
+            }
+
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is dlinkap.local a real website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. It is a local setup address used by D-Link Wi-Fi extenders. It only works when your phone or computer is connected directly to the extender's Wi-Fi network or Ethernet port."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the default password for a D-Link extender?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "For older DAP-series extenders, the username is Admin and the password is blank. For newer D-Link Wi-Fi 6 models, the password may be printed on the device label, created during setup, or match the host mesh router's admin password."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does dlinkap.local not work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The most common reason is that you are connected to your main router instead of the D-Link extender. Other causes include mobile data, VPN interference, browser search behavior, or the extender already receiving a new DHCP-assigned IP address."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I find my D-Link extender after setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Log into your main router and open the connected-devices or DHCP client list. Find the D-Link extender, copy its assigned IP address, and enter that address in your browser."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use the D-Link app instead of dlinkap.local?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, depending on the model. Older DAP models may use QRS Mobile, while newer models may use D-Link Wi-Fi, Eagle Pro AI, or AQUILA PRO AI. However, dlinkap.local remains the primary local browser-based setup address for many D-Link extenders."
+                        }
+                    }
+                ]
+            }
+
+            dlink_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Guide</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        dlinkap.local — D-Link Extender Setup &amp; 192.168.0.50 Login
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you searched <code>dlinkap.local</code> expecting to open your D-Link extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the D-Link extender. <code>dlinkap.local</code> is D-Link’s local setup address for its DAP-series and newer Wi-Fi extender models, while <code>192.168.0.50</code> is the default fallback IP address.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          <code>dlinkap.local</code> is the local management URL for D-Link Wi-Fi range extenders, and <code>192.168.0.50</code> is the default IP address used when the extender is unconfigured or cannot detect a DHCP server.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          Connect directly to the extender’s Wi-Fi network or Ethernet port, then enter one of these addresses in your browser:
+        </p>
+
+        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+            <thead>
+              <tr>
+                <th style="min-width: 180px;">Access Method</th>
+                <th style="min-width: 200px;">Address</th>
+                <th style="min-width: 280px;">When to Use It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>D-Link setup domain</strong></td>
+                <td><code>http://dlinkap.local</code></td>
+                <td>First choice for most D-Link DAP and Eagle Pro extenders</td>
+              </tr>
+              <tr>
+                <td><strong>Factory default fallback IP</strong></td>
+                <td><code>http://192.168.0.50</code></td>
+                <td>Use when the domain does not load or no DHCP server is detected</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
+            <li><strong>For older D-Link DAP models:</strong> Username: <code>Admin</code> &bull; Password: <em>Leave blank</em></li>
+            <li><strong>For newer Wi-Fi 6 models:</strong> Printed on device label or created during the initial setup wizard.</li>
+          </ul>
+        </div>
+
+        <div class="action-btn-group">
+          <a href="http://dlinkap.local" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open http://dlinkap.local &rarr;
+          </a>
+          <a href="http://192.168.0.50" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Open http://192.168.0.50
+          </a>
+          <button class="btn btn-secondary copy-btn" data-copy="192.168.0.50">Copy Fallback IP (192.168.0.50)</button>
+          <a href="/extenders/" class="btn btn-secondary">All Wi-Fi Extenders</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Which D-Link Extenders Use dlinkap.local?
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        D-Link uses <code>dlinkap.local</code> and <code>192.168.0.50</code> across its classic DAP-series extenders and newer AX/E-Series Wi-Fi 6 models.
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">D-Link Extender Family</th>
+              <th style="min-width: 320px;">Example Models</th>
+              <th style="min-width: 150px;">Default IP</th>
+              <th style="min-width: 220px;">Setup URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Classic DAP series</strong></td>
+              <td>DAP-1120, DAP-1320, DAP-1325, DAP-1330, DAP-1520, DAP-1530, DAP-1610, DAP-1620, DAP-1720, DAP-1755, DAP-1820, DAP-1860, DAP-1955, DCH-M225</td>
+              <td><code>192.168.0.50</code></td>
+              <td><a href="http://dlinkap.local" target="_blank" rel="noopener">http://dlinkap.local</a></td>
+            </tr>
+            <tr>
+              <td><strong>Wi-Fi 6 AX / Eagle Pro series</strong></td>
+              <td>DAP-X1860, E15, E30</td>
+              <td><code>192.168.0.50</code></td>
+              <td><a href="http://dlinkap.local" target="_blank" rel="noopener">http://dlinkap.local</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        The default address is mainly a <strong>fallback IP</strong>. After the extender connects to your router in Repeater or Access Point mode, your router assigns it a new dynamic LAN IP through DHCP.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Extender vs. Router
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Device</th>
+              <th style="min-width: 180px;">Typical Address</th>
+              <th style="min-width: 320px;">What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main router / gateway</strong></td>
+              <td>Often <code>192.168.0.1</code> or <code>192.168.1.1</code></td>
+              <td>Internet connection, DHCP, firewall, primary Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><strong>D-Link extender before setup</strong></td>
+              <td><code>192.168.0.50</code></td>
+              <td>Extender setup, Wi-Fi extension, local settings</td>
+            </tr>
+            <tr>
+              <td><strong>D-Link extender after pairing</strong></td>
+              <td>New DHCP-assigned IP</td>
+              <td>Extended Wi-Fi coverage and connected devices</td>
+            </tr>
+            <tr>
+              <td><strong>Phone, laptop, or smart TV</strong></td>
+              <td>Assigned by router</td>
+              <td>Ordinary client device on your network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        So, if <code>192.168.0.50</code> does not open your main router’s admin page, that is expected. This address is intended to reach the <strong>D-Link extender</strong>, not the router itself.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic: What Are You Trying to Do?
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Your Situation</th>
+              <th style="min-width: 220px;">What You Actually Need</th>
+              <th style="min-width: 300px;">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>You want to set up a new D-Link extender</strong></td>
+              <td>D-Link setup wizard</td>
+              <td>Connect to the extender and open <code>http://dlinkap.local</code> or <code>http://192.168.0.50</code></td>
+            </tr>
+            <tr>
+              <td><strong>You want to change extender settings</strong></td>
+              <td>D-Link extender admin page</td>
+              <td>Connect directly to the extender and log in using the correct credentials</td>
+            </tr>
+            <tr>
+              <td><strong>You want to log into your main router</strong></td>
+              <td>Router gateway address</td>
+              <td>Use <a href="/ip/192-168-0-1/">192.168.0.1</a>, <a href="/ip/192-168-1-1/">192.168.1.1</a>, or the address printed on your router</td>
+            </tr>
+            <tr>
+              <td><strong>dlinkap.local will not load</strong></td>
+              <td>Direct extender connection</td>
+              <td>Connect to the extender’s Wi-Fi or Ethernet port, then retry</td>
+            </tr>
+            <tr>
+              <td><strong>The extender is already paired</strong></td>
+              <td>Its new DHCP-assigned IP</td>
+              <td>Check the main router’s Attached Devices or DHCP client list</td>
+            </tr>
+            <tr>
+              <td><strong>You forgot the extender password</strong></td>
+              <td>Factory reset</td>
+              <td>Hold the Reset button until the LED changes, then set it up again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why dlinkap.local May Not Load
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        <code>dlinkap.local</code> is not a public website. It is a local address that works only when your device is connected directly to the D-Link extender.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        If you are connected to your main router’s Wi-Fi instead of the extender, the browser cannot resolve <code>dlinkap.local</code>. Connect to the extender’s setup Wi-Fi network or use an Ethernet cable, then try again.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step: Set Up a D-Link Extender
+      </h2>
+      <div class="instruction-timeline" style="margin-top: 1.25rem; margin-bottom: 2.5rem;">
+        <div class="step-card">
+          <div class="step-badge">Step 1</div>
+          <h3 class="step-title">Plug in the extender</h3>
+          <p class="step-text">Place the D-Link extender near your main router during the first-time setup. Wait for it to power on completely before connecting to it.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 2</div>
+          <h3 class="step-title">Connect to the extender</h3>
+          <p class="step-text">
+            On your phone or computer, open the Wi-Fi list and connect to the D-Link extender’s default Wi-Fi network. The network name and password may be printed on the extender label, Quick Installation Card, or side panel. For newer models such as the DAP-X1860 and E30, use the SSID and password printed on the device label.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 3</div>
+          <h3 class="step-title">Open the setup page</h3>
+          <p class="step-text">
+            In your browser address bar, enter one of the following:<br>
+            &bull; <code>http://dlinkap.local</code><br>
+            &bull; <code>http://192.168.0.50</code><br>
+            Do not type the address into a Google or Bing search box. Enter it directly into the browser address bar.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 4</div>
+          <h3 class="step-title">Log in</h3>
+          <p class="step-text">
+            For older D-Link DAP models, use:<br>
+            &bull; <strong>Username:</strong> <code>Admin</code><br>
+            &bull; <strong>Password:</strong> Leave blank<br>
+            For newer D-Link Wi-Fi 6 models, the password may be printed on the label, match the host mesh router’s admin password, or need to be created during the setup wizard.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 5</div>
+          <h3 class="step-title">Choose your home Wi-Fi network</h3>
+          <p class="step-text">The setup wizard will scan for nearby Wi-Fi networks. Select your main router’s network, enter its Wi-Fi password, and follow the prompts to complete the extender setup.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 6</div>
+          <h3 class="step-title">Move the extender to its final location</h3>
+          <p class="step-text">After setup, unplug the extender and place it halfway between your router and the area with weak Wi-Fi. Do not place it too far from the router, because a weak incoming signal will also create a weak extended signal.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        If dlinkap.local Will Not Load
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the D-Link extender’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://dlinkap.local</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.0.50</code> in the browser. This address works when the D-Link extender is in factory condition and cannot detect a DHCP server.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
+            If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.0.x</code> range, such as <code>192.168.0.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.0.50</code>. After setup, switch your device back to automatic DHCP.
+          </p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the extender’s new IP</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the D-Link extender, copy its assigned IP address, and enter that IP into your browser.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Factory Reset a D-Link Extender
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        Reset the extender only if you cannot log in, are moving it to a new router, or the setup page will not load after troubleshooting.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+        <div class="step-card" style="margin: 0;">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Classic DAP Models</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">DAP-1320, DAP-1330, DAP-1620, DAP-1860, DCH-M225, etc.</p>
+          <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7; font-size: 0.925rem;">
+            <li>Keep the extender powered on.</li>
+            <li>Find the recessed Reset pinhole (usually on the bottom; side for DAP-1520/1720; top for DAP-1325/1530/1610).</li>
+            <li>Press and hold with a paperclip for <strong>10–12 seconds</strong>.</li>
+            <li>Release when the LED turns red.</li>
+            <li>Wait for the extender to reboot.</li>
+          </ol>
+        </div>
+
+        <div class="step-card" style="margin: 0;">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Newer Wi-Fi 6 Models</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">DAP-X1860, E15, E30, etc.</p>
+          <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7; font-size: 0.925rem;">
+            <li>Keep the extender powered on.</li>
+            <li>Find the Reset button on the side panel.</li>
+            <li>Press and hold with a paperclip for <strong>1–2 seconds</strong>.</li>
+            <li>Release when the Status LED turns red.</li>
+            <li>Wait for the extender to reboot.</li>
+          </ol>
+        </div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        You can also reset some D-Link extenders through the web interface by going to <strong>Management &gt; System &gt; Restore Factory Defaults</strong>.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        D-Link Router vs. Extender Login
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Login Type</th>
+              <th style="min-width: 240px;">Address</th>
+              <th style="min-width: 280px;">Default Credentials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>D-Link DAP-series extender</strong></td>
+              <td><code>http://dlinkap.local</code> or <code>192.168.0.50</code></td>
+              <td>Username <code>Admin</code>, blank password on older models</td>
+            </tr>
+            <tr>
+              <td><strong>D-Link Wi-Fi 6 extender</strong></td>
+              <td><code>http://dlinkap.local</code> or <code>192.168.0.50</code></td>
+              <td>Label-printed password, setup wizard password, or host-router password</td>
+            </tr>
+            <tr>
+              <td><strong>D-Link router</strong></td>
+              <td>Usually <code>192.168.0.1</code></td>
+              <td>Router-specific credentials or password created during setup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        Do not confuse the D-Link extender login with the D-Link router login. D-Link routers commonly use <a href="/ip/192-168-0-1/" style="color: var(--text-accent); text-decoration: underline;">192.168.0.1</a>, while D-Link extenders use <code>192.168.0.50</code> as their factory fallback address.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Mistakes
+      </h2>
+      <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        <li><strong>Trying <code>dlinkap.local</code> while connected to the main router.</strong> Connect directly to the extender’s Wi-Fi network or Ethernet port first.</li>
+        <li><strong>Assuming <code>192.168.0.50</code> opens the main router.</strong> It is the D-Link extender’s factory fallback address, not a typical router gateway address.</li>
+        <li><strong>Using the wrong credentials.</strong> Older DAP models use <code>Admin</code> with a blank password, while newer Wi-Fi 6 models may use a label-printed or setup-created password.</li>
+        <li><strong>Using mobile data during setup.</strong> Turn off mobile data, VPNs, and proxies before opening the local setup page.</li>
+        <li><strong>Resetting before checking the DHCP list.</strong> If the extender is already paired, its new IP may be listed in your router’s client list.</li>
+      </ul>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Typos to Watch Out For
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Misspelling the D-Link extender domain or IP address is the most common reason the setup portal fails to load:
+      </p>
+      <div class="typo-tag-list" style="margin-bottom: 2rem;">
+        <div class="typo-chip"><span class="typo-wrong">dlinkaplocal</span> &rarr; <span class="typo-correct">http://dlinkap.local</span></div>
+        <div class="typo-chip"><span class="typo-wrong">dlink.ap.local</span> &rarr; <span class="typo-correct">http://dlinkap.local</span></div>
+        <div class="typo-chip"><span class="typo-wrong">dlinkap.local.com</span> &rarr; <span class="typo-correct">http://dlinkap.local</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.50</span> &rarr; <span class="typo-correct">http://192.168.0.50</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.0.50.com</span> &rarr; <span class="typo-correct">http://192.168.0.50</span></div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">Is dlinkap.local a real website?</div>
+          <p class="faq-answer">
+            No. It is a local setup address used by D-Link Wi-Fi extenders. It only works when your phone or computer is connected directly to the extender’s Wi-Fi network or Ethernet port.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the default password for a D-Link extender?</div>
+          <p class="faq-answer">
+            For older DAP-series extenders, the username is <code>Admin</code> and the password is blank. For newer D-Link Wi-Fi 6 models, the password may be printed on the device label, created during setup, or match the host mesh router’s admin password.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why does dlinkap.local not work?</div>
+          <p class="faq-answer">
+            The most common reason is that you are connected to your main router instead of the D-Link extender. Other causes include mobile data, VPN interference, browser search behavior, or the extender already receiving a new DHCP-assigned IP address.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I find my D-Link extender after setup?</div>
+          <p class="faq-answer">
+            Log into your main router and open the connected-devices or DHCP client list. Find the D-Link extender, copy its assigned IP address, and enter that address in your browser.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I use the D-Link app instead of dlinkap.local?</div>
+          <p class="faq-answer">
+            Yes, depending on the model. Older DAP models may use QRS Mobile, while newer models may use D-Link Wi-Fi, Eagle Pro AI, or AQUILA PRO AI. However, <code>dlinkap.local</code> remains the primary local browser-based setup address for many D-Link extenders.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          <strong>dlinkap.local almost always means you are trying to reach a D-Link Wi-Fi extender, not your main router.</strong> Connect directly to the extender, enter <code>http://dlinkap.local</code> or <code>http://192.168.0.50</code> in the browser address bar, and use the correct credentials for your model. If the page will not load, check the extender’s new DHCP-assigned IP in your router’s client list.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateway IPs &amp; Extender Hubs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">TP-Link tplinkrepeater.net Guide &rarr;</a>
+          <a href="/extenders/extender-linksys-com/" class="btn btn-secondary" style="font-size: 0.85rem;">Linksys extender.linksys.com Guide &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders &rarr;</a>
+          <a href="/brands/d-link/" class="btn btn-secondary" style="font-size: 0.85rem;">D-Link Brand Hub &rarr;</a>
+          <a href="/ip/192-168-0-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.0.1 Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + dlink_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+
         else:
             # Generic Extender guide for TP-Link, Linksys, D-Link
             faq_schema = {
