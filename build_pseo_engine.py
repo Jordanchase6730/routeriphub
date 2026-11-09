@@ -2790,6 +2790,470 @@ def generate_extender_pages():
             full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + guide_content + get_footer()
             with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(full_html)
+        elif slug == "tplinkrepeater-net":
+            # Exact content specified by user for TP-Link Extender
+            tech_schema = {
+                "@type": "TechArticle",
+                "headline": title,
+                "description": desc,
+                "mainEntityOfPage": canonical,
+                "datePublished": "2026-01-15T08:00:00+00:00",
+                "dateModified": f"{TODAY}T02:00:00+00:00",
+                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
+            }
+
+            howto_schema = {
+                "@type": "HowTo",
+                "name": "How to Set Up a TP-Link Wi-Fi Range Extender",
+                "description": "Step-by-step technical guide to connect and configure TP-Link Wi-Fi range extenders via tplinkrepeater.net and 192.168.0.254.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Plug in the extender",
+                        "text": "Place the TP-Link extender near your router during initial setup. Wait until its Power LED is solid (one to two minutes)."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Connect to the extender",
+                        "text": "Connect your phone or computer to the extender's default Wi-Fi network, or connect via Ethernet cable."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Open the setup page",
+                        "text": "Type http://tplinkrepeater.net, http://192.168.0.254, or https://tplinkrepeater.net into your browser address bar."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Create or enter the admin password",
+                        "text": "On newer TP-Link extenders, create a new administrator password during first-time setup. On older models, use 'admin' / 'admin'."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "Connect the extender to your home Wi-Fi",
+                        "text": "Select your main router's Wi-Fi network, enter its password, and place the extender halfway between your router and dead zone."
+                    }
+                ]
+            }
+
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is tplinkrepeater.net my router login page?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. It is the local setup and management address for TP-Link Wi-Fi range extenders. To access a TP-Link router, use tplinkwifi.net or 192.168.0.1."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the default password for tplinkrepeater.net?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Most newer TP-Link extenders do not have a default password. You create one during the first login. Older models may use admin for both the username and password."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does tplinkrepeater.net not work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The most common reasons are that you are connected to the main router instead of the extender, mobile data or a VPN is active, the browser is treating the address as a search, or the extender has already received a new DHCP-assigned IP address."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use 192.168.0.254 instead of tplinkrepeater.net?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. 192.168.0.254 is the factory-default IP address for many TP-Link range extenders and can be used when the local domain does not load."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I find my TP-Link extender after setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Log into your main router and open the connected-devices or DHCP client list. Find the TP-Link extender, copy its assigned IP address, and enter that address in your browser."
+                        }
+                    }
+                ]
+            }
+
+            tplink_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Guide</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        tplinkrepeater.net — TP-Link Extender Setup &amp; 192.168.0.254 Login
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you searched <code>tplinkrepeater.net</code> because your TP-Link extender will not open, you are in the right place. This local setup address is used to configure TP-Link Wi-Fi range extenders, while <code>192.168.0.254</code> is the factory-default IP address you can use when the domain does not load.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          <code>tplinkrepeater.net</code> is the local management address for TP-Link Wi-Fi range extenders, and <code>192.168.0.254</code> is its default fallback IP address.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          Connect directly to the extender, enter one of these addresses in the browser address bar, and follow the setup wizard.
+        </p>
+
+        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+            <thead>
+              <tr>
+                <th style="min-width: 180px;">Access Method</th>
+                <th style="min-width: 200px;">Address</th>
+                <th style="min-width: 280px;">When to Use It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>TP-Link setup domain</strong></td>
+                <td><code>http://tplinkrepeater.net</code></td>
+                <td>First choice for most TP-Link RE-series extenders</td>
+              </tr>
+              <tr>
+                <td><strong>Factory default IP</strong></td>
+                <td><code>http://192.168.0.254</code></td>
+                <td>Use when the domain does not load</td>
+              </tr>
+              <tr>
+                <td><strong>Secure local address</strong></td>
+                <td><code>https://tplinkrepeater.net</code></td>
+                <td>Use if the browser redirects to HTTPS or shows a certificate warning</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+          For newer TP-Link extenders, there is usually <strong>no default password</strong>. The first login screen asks you to create an administrator password. Older models, including early AC750 and RE450 revisions, may use <code>admin</code> for both the username and password.
+        </p>
+
+        <div class="action-btn-group">
+          <a href="http://tplinkrepeater.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open http://tplinkrepeater.net &rarr;
+          </a>
+          <a href="http://192.168.0.254" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Open http://192.168.0.254
+          </a>
+          <button class="btn btn-secondary copy-btn" data-copy="192.168.0.254">Copy Fallback IP (192.168.0.254)</button>
+          <a href="/extenders/" class="btn btn-secondary">All Wi-Fi Extenders</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Which TP-Link Extenders Use tplinkrepeater.net?
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        <code>tplinkrepeater.net</code> applies to TP-Link’s RE-series Wi-Fi range extenders and several TL-WA models. It is <strong>not</strong> the login address for TP-Link routers, which commonly use <code>tplinkwifi.net</code> and <code>192.168.0.1</code>.
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">TP-Link Device Family</th>
+              <th style="min-width: 280px;">Example Models</th>
+              <th style="min-width: 140px;">Default IP</th>
+              <th style="min-width: 200px;">Management Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>RE-series Wi-Fi extenders</strong></td>
+              <td>RE215, RE220, RE305, RE450, RE455, RE500X, RE505X, RE705X, RE715X</td>
+              <td><code>192.168.0.254</code></td>
+              <td><a href="http://tplinkrepeater.net" target="_blank" rel="noopener">http://tplinkrepeater.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>TL-WA range extenders</strong></td>
+              <td>TL-WA850RE</td>
+              <td><code>192.168.0.254</code></td>
+              <td><a href="http://tplinkrepeater.net" target="_blank" rel="noopener">http://tplinkrepeater.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>TP-Link powerline Wi-Fi extenders</strong></td>
+              <td>TL-WPA4220</td>
+              <td><code>192.168.0.254</code></td>
+              <td><a href="http://tplinkplc.net" target="_blank" rel="noopener">http://tplinkplc.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>TP-Link routers</strong></td>
+              <td>Most home routers (Archer series)</td>
+              <td><code>192.168.0.1</code></td>
+              <td><a href="/brands/tp-link/">http://tplinkwifi.net</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        If you are trying to access your main TP-Link router, use <a href="/brands/tp-link/" style="color: var(--text-accent); text-decoration: underline;">tplinkwifi.net</a> or <a href="/ip/192-168-0-1/" style="color: var(--text-accent); text-decoration: underline;">192.168.0.1</a> instead. The address <code>tplinkrepeater.net</code> is specifically for configuring a range extender.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Extender vs. Router
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Device</th>
+              <th style="min-width: 200px;">Default Address</th>
+              <th style="min-width: 280px;">What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TP-Link extender</strong></td>
+              <td><code>192.168.0.254</code> before pairing</td>
+              <td>Extender setup, repeater mode, Wi-Fi name, admin password</td>
+            </tr>
+            <tr>
+              <td><strong>TP-Link router</strong></td>
+              <td><code>192.168.0.1</code></td>
+              <td>Internet connection, DHCP, firewall, primary Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><strong>Phone, laptop, or smart TV</strong></td>
+              <td>Assigned by the router</td>
+              <td>Ordinary device connected to your network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+        A TP-Link extender is not a second router. It receives your existing Wi-Fi signal and rebroadcasts it to improve coverage in weak-signal areas.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic: What Are You Trying to Do?
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Your Situation</th>
+              <th style="min-width: 200px;">What You Actually Need</th>
+              <th style="min-width: 280px;">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Setting up a new TP-Link extender</strong></td>
+              <td>Setup wizard</td>
+              <td>Connect to the extender, then open <code>tplinkrepeater.net</code> or <code>192.168.0.254</code></td>
+            </tr>
+            <tr>
+              <td><strong>Changing extender settings</strong></td>
+              <td>Extender admin page</td>
+              <td>Log in with the password created during first-time setup</td>
+            </tr>
+            <tr>
+              <td><strong>Accessing your TP-Link router</strong></td>
+              <td>Router login page</td>
+              <td>Use <a href="/brands/tp-link/">tplinkwifi.net</a> or <a href="/ip/192-168-0-1/">192.168.0.1</a></td>
+            </tr>
+            <tr>
+              <td><strong>The setup page will not load</strong></td>
+              <td>Connection or browser fix</td>
+              <td>Connect directly to the extender and disable mobile data/VPN</td>
+            </tr>
+            <tr>
+              <td><strong>You forgot the extender password</strong></td>
+              <td>Factory reset</td>
+              <td>Hold Reset until the Power LED blinks, then set it up again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why tplinkrepeater.net Stops Working After Setup
+      </h2>
+      <div style="background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 1.25rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">
+        <p style="margin-bottom: 1rem;">
+          The most common reason <code>tplinkrepeater.net</code> stops working is that the extender is no longer in its factory state. Once it connects to your main router in Repeater or Access Point mode, the router assigns it a new dynamic LAN IP address through DHCP.
+        </p>
+        <p style="margin: 0;">
+          That means the extender may no longer respond at <code>192.168.0.254</code>. To find it again, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> section. Locate the TP-Link extender and enter its assigned IP address directly into your browser.
+        </p>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step: Set Up a TP-Link Extender
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Plug in the extender:</strong> Place the TP-Link extender near your router during initial setup. Wait until its Power LED is solid, which usually takes one to two minutes.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Connect to the extender:</strong> On your phone or computer, connect to the extender’s default Wi-Fi network. You can also connect a computer to the extender using an Ethernet cable if the model has a LAN port.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Open the setup page:</strong> Type one of these into the browser <strong>address bar</strong>, not a search engine:
+          <ul style="margin-top: 0.25rem;">
+            <li><code>http://tplinkrepeater.net</code></li>
+            <li><code>http://192.168.0.254</code></li>
+            <li><code>https://tplinkrepeater.net</code></li>
+          </ul>
+          If your browser shows a privacy or certificate warning, select <strong>Advanced</strong>, then choose <strong>Proceed to tplinkrepeater.net (unsafe)</strong> or the equivalent option. This warning can appear because the extender uses a local self-signed certificate.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Create or enter the admin password:</strong> On newer TP-Link extenders, create a new administrator password during first-time setup. Keep it somewhere safe, because you will need it to access the extender later. On older models, try username <code>admin</code> and password <code>admin</code>. If previously configured via the TP-Link Tether app, use that password.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Connect the extender to your home Wi-Fi:</strong> Select your main router’s Wi-Fi network, enter its password, and wait for the extender to connect. Once connected, place the extender halfway between your router and the Wi-Fi dead zone—not so far away that it loses a strong signal from the router.
+        </li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        If tplinkrepeater.net Will Not Load
+      </h2>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Connect directly to the extender:</strong> Make sure your phone or computer is connected to the TP-Link extender’s Wi-Fi network, not only to your main router. The local domain works because the extender intercepts the request locally; it will not resolve properly if you are connected to the router’s Wi-Fi.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Turn off mobile data and VPN:</strong> Disable mobile data, VPNs, and proxy settings before opening the setup page. When the extender’s Wi-Fi has no internet access, phones may route browser traffic through cellular data instead, causing <code>tplinkrepeater.net</code> or <code>192.168.0.254</code> to fail.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Use the address bar:</strong> Enter the full address manually: <code>http://tplinkrepeater.net</code> or <code>http://192.168.0.254</code>. Do not type the address into Google, Bing, or another search box.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Try a private browser window:</strong> Open an Incognito or InPrivate window and try again. This clears cached DNS results and reduces interference from extensions or saved browser settings.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Check the extender’s new IP address:</strong> If the extender is already paired with your router, its factory IP may no longer work. Log into your main router and find the extender in the DHCP client list, then enter its assigned IP address in the browser.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+          <strong>Set a temporary static IP if needed:</strong> If the extender does not assign an IP address to your computer, manually set your computer’s IPv4 settings to:
+          <ul style="margin-top: 0.25rem;">
+            <li><strong>IP address:</strong> <code>192.168.0.10</code></li>
+            <li><strong>Subnet mask:</strong> <code>255.255.255.0</code></li>
+            <li><strong>Default gateway:</strong> <code>192.168.0.254</code></li>
+          </ul>
+          Then open <code>http://192.168.0.254</code>. After setup, change your computer back to <strong>Obtain an IP address automatically</strong>.
+        </li>
+      </ol>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Factory Reset a TP-Link Extender
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+        Reset the extender only if you are locked out, moving it to a new network, or the setup page will not load after trying the steps above:
+      </p>
+      <ol style="margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.75;">
+        <li>Keep the extender plugged in and powered on.</li>
+        <li>Find the small <strong>Reset</strong> pinhole on the extender.</li>
+        <li>Use a paperclip or pin to press and hold Reset.</li>
+        <li>For most modern RE-series models, hold it for <strong>1–2 seconds</strong> until the Power LED blinks or all LEDs blink once.</li>
+        <li>For TP-Link powerline extenders such as the TL-WPA4220, hold Reset for about <strong>10 seconds</strong>.</li>
+        <li>Wait for the extender to reboot, then reconnect and open <code>tplinkrepeater.net</code> or <code>192.168.0.254</code>.</li>
+      </ol>
+      <div class="warning-box" style="margin-bottom: 2rem;">
+        <strong>Warning:</strong> A factory reset removes the extender’s saved Wi-Fi settings and admin password. You will need to set it up again from the beginning.
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Mistakes
+      </h2>
+      <ul style="margin-left: 1.25rem; margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">
+        <li><strong>Using <code>tplinkrepeater.net</code> for a TP-Link router:</strong> TP-Link routers normally use <a href="/brands/tp-link/">tplinkwifi.net</a> and <a href="/ip/192-168-0-1/">192.168.0.1</a>.</li>
+        <li><strong>Trying the setup page while connected to the main router:</strong> Connect directly to the extender’s Wi-Fi or Ethernet port first.</li>
+        <li><strong>Assuming the default IP remains active after setup:</strong> The router assigns a new DHCP address once the extender is connected.</li>
+        <li><strong>Using the wrong password:</strong> Newer models require a password created during first-time setup; older models may use <code>admin</code> / <code>admin</code>.</li>
+        <li><strong>Ignoring the certificate warning:</strong> A privacy warning does not always mean the page is unavailable; it may be a local self-signed certificate warning.</li>
+        <li><strong>Resetting before checking the connection:</strong> Try direct connection, mobile-data disablement, and the fallback IP before resetting.</li>
+      </ul>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Typos
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Typing domain names and IP addresses on touchscreens often introduces subtle typos:
+      </p>
+      <div class="typo-tag-list" style="margin-bottom: 2rem;">
+        <div class="typo-chip"><span class="typo-wrong">tplinkrepeater.nett</span> &rarr; <span class="typo-correct">http://tplinkrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">tplinkrepeater .net</span> &rarr; <span class="typo-correct">http://tplinkrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">tplinkrepeater.net.</span> &rarr; <span class="typo-correct">http://tplinkrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">tplinkrepeater.net/login</span> &rarr; <span class="typo-correct">http://tplinkrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.o.254</span> &rarr; <span class="typo-correct">http://192.168.0.254</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.0.254.com</span> &rarr; <span class="typo-correct">http://192.168.0.254</span></div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">Is tplinkrepeater.net my router login page?</div>
+          <p class="faq-answer">
+            No. It is the local setup and management address for TP-Link Wi-Fi range extenders. To access a TP-Link router, use <code>tplinkwifi.net</code> or <code>192.168.0.1</code>.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the default password for tplinkrepeater.net?</div>
+          <p class="faq-answer">
+            Most newer TP-Link extenders do not have a default password. You create one during the first login. Older models may use <code>admin</code> for both the username and password.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why does tplinkrepeater.net not work?</div>
+          <p class="faq-answer">
+            The most common reasons are that you are connected to the main router instead of the extender, mobile data or a VPN is active, the browser is treating the address as a search, or the extender has already received a new DHCP-assigned IP address.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I use 192.168.0.254 instead of tplinkrepeater.net?</div>
+          <p class="faq-answer">
+            Yes. <code>192.168.0.254</code> is the factory-default IP address for many TP-Link range extenders and can be used when the local domain does not load.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I find my TP-Link extender after setup?</div>
+          <p class="faq-answer">
+            Log into your main router and open the connected-devices or DHCP client list. Find the TP-Link extender, copy its assigned IP address, and enter that address in your browser.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          <strong>tplinkrepeater.net almost always means you are setting up or managing a TP-Link Wi-Fi range extender.</strong> Connect directly to the extender, enter <code>http://tplinkrepeater.net</code> or <code>http://192.168.0.254</code> in the browser address bar, and create or enter the admin password. If the page no longer loads, check your router’s DHCP client list for the extender’s new assigned IP address.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateway IPs &amp; Extender Hubs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders &rarr;</a>
+          <a href="/brands/tp-link/" class="btn btn-secondary" style="font-size: 0.85rem;">TP-Link Brand Hub &rarr;</a>
+          <a href="/ip/192-168-0-1/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.0.1 Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + tplink_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+
         else:
             # Generic Extender guide for TP-Link, Linksys, D-Link
             faq_schema = {

@@ -600,15 +600,15 @@ EXTENDER_PROFILES = [
         "slug": "tplinkrepeater-net",
         "domain": "tplinkrepeater.net",
         "brand": "TP-Link",
-        "title": "tplinkrepeater.net: TP-Link Extender Setup (2026)",
-        "meta_desc": "Log in to TP-Link range extenders at tplinkrepeater.net or 192.168.0.254. Default admin setup, RE series models, DHCP IP change fix, and reset steps.",
+        "title": "tplinkrepeater.net — TP-Link Extender Setup & 192.168.0.254 Login",
+        "meta_desc": "Learn how to set up your TP-Link Wi-Fi extender using tplinkrepeater.net or 192.168.0.254. Find the default login, fix access issues, and reset your extender.",
         "fallback_ip": "192.168.0.254",
         "local_domain_win": "http://tplinkrepeater.net",
         "local_domain_mac": "http://tplinkrepeater.net",
         "default_user": "admin (or user-created)",
         "default_pass": "admin (or user-created)",
-        "series": "RE Series (Wi-Fi 5 & Wi-Fi 6)",
-        "models": ["RE220", "RE315", "RE450", "RE505X", "RE605X", "RE650", "RE700X", "RE705X", "RE815X"]
+        "series": "RE Series (Wi-Fi 5 & Wi-Fi 6), TL-WA, and Powerline",
+        "models": ["RE215", "RE220", "RE305", "RE450", "RE455", "RE500X", "RE505X", "RE705X", "RE715X", "TL-WA850RE", "TL-WPA4220"]
     },
     {
         "slug": "extender-linksys-com",
