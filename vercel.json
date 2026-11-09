@@ -155,6 +155,26 @@
       "permanent": true
     },
     {
+      "source": "/sewot",
+      "destination": "/extenders/sewot-sw-01/",
+      "permanent": true
+    },
+    {
+      "source": "/sewot-sw-01",
+      "destination": "/extenders/sewot-sw-01/",
+      "permanent": true
+    },
+    {
+      "source": "/sewot-sw01",
+      "destination": "/extenders/sewot-sw-01/",
+      "permanent": true
+    },
+    {
+      "source": "/sewot-extender",
+      "destination": "/extenders/sewot-sw-01/",
+      "permanent": true
+    },
+    {
       "source": "/brands.html",
       "destination": "/brands/",
       "permanent": true

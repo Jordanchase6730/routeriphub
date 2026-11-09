@@ -679,6 +679,20 @@ EXTENDER_PROFILES = [
         "default_pass": "admin",
         "series": "Topvision 300Mbps Wireless-N & WiFi Booster Models",
         "models": ["Topvision 300Mbps Wireless-N Repeater", "Topvision WiFi Booster", "Topvision WiFi Repeater"]
+    },
+    {
+        "slug": "sewot-sw-01",
+        "domain": "192.168.188.1",
+        "brand": "SEWOT",
+        "title": "SEWOT SW-01 WiFi Extender — 192.168.188.1 Login & Setup Guide",
+        "meta_desc": "Can’t open 192.168.188.1? Learn how to set up the SEWOT SW-01 WiFi extender, log in to its admin page, fix access issues, find default credentials, and reset the device.",
+        "fallback_ip": "192.168.188.1",
+        "local_domain_win": "http://192.168.188.1",
+        "local_domain_mac": "http://192.168.188.1",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "series": "SEWOT SW-01 300Mbps Wireless-N Extender",
+        "models": ["SEWOT SW-01", "SW-01 WiFi Repeater", "SW-01 Range Extender"]
     }
 ]
 

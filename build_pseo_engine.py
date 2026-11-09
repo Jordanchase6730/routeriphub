@@ -2126,7 +2126,7 @@ def generate_extender_pages():
     # --------------------------------------------------------------------------
     master_canonical = "https://routeriphub.com/extenders/"
     master_title = "Wi-Fi Extender Setup: Default IPs & Logins (2026)" # 50 chars <= 60
-    master_desc = "Directory of Wi-Fi extender setup domains & IPs: mywifiext.net, tplinkrepeater.net, extender.linksys.com, dlinkap.local, myrepeater.net, ap.setup, and Topvision." # 152 chars
+    master_desc = "Directory of Wi-Fi extender setup domains & IPs: mywifiext.net, tplinkrepeater.net, extender.linksys.com, dlinkap.local, myrepeater.net, ap.setup, Topvision, SEWOT SW-01." # 152 chars
 
     master_breadcrumbs = [
         ("Home", "/"),
@@ -5917,6 +5917,511 @@ def generate_extender_pages():
             with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(full_html)
 
+        elif slug == "sewot-sw-01":
+            # Exact content specified by user for SEWOT SW-01 WiFi Extender (192.168.188.1)
+            tech_schema = {
+                "@type": "TechArticle",
+                "headline": title,
+                "description": desc,
+                "mainEntityOfPage": canonical,
+                "datePublished": "2026-01-15T08:00:00+00:00",
+                "dateModified": f"{TODAY}T02:00:00+00:00",
+                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
+            }
+
+            howto_schema = {
+                "@type": "HowTo",
+                "name": "How to Set Up the SEWOT SW-01 WiFi Extender",
+                "description": "Step-by-step setup walkthrough to connect and configure the SEWOT SW-01 WiFi extender via 192.168.188.1.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Plug in the extender",
+                        "text": "Place the SEWOT SW-01 near your main router during first-time setup. Wait for it to power on completely before connecting to it."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Connect to the extender",
+                        "text": "On your phone or computer, open the Wi-Fi list and connect to the SEWOT SW-01 default network (often 'Wireless-N', 'WiFi-Repeater', or 'SEWOT') or use an Ethernet cable."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Open the setup page",
+                        "text": "In your browser address bar, enter http://192.168.188.1 directly."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Log in with default credentials",
+                        "text": "Enter 'admin' for Username and 'admin' for Password. If that fails, try a blank password, 'password', or label credentials."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "Choose your home Wi-Fi network",
+                        "text": "Select your main router's Wi-Fi network from the scan list, enter its password, and complete setup."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 6,
+                        "name": "Move the extender to its final location",
+                        "text": "Unplug the extender and place it halfway between your router and the weak Wi-Fi area."
+                    }
+                ]
+            }
+
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is 192.168.188.1 a real website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. It is a private local IP address used by the SEWOT SW-01 WiFi extender. It only works when your phone or computer is connected directly to the extender's Wi-Fi network or Ethernet port."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the default password for the SEWOT SW-01?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Many SEWOT SW-01 units use admin as both the username and password. Some models use a blank password, password, or credentials printed on the device label."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does 192.168.188.1 not work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The most common reason is that you are connected to your main router instead of the SEWOT SW-01. Other causes include mobile data, VPN interference, browser search behavior, or the extender already receiving a new DHCP-assigned IP address."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I find my SEWOT SW-01 after setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Log into your main router and open the connected-devices or DHCP client list. Find the SEWOT SW-01, copy its assigned IP address, and enter that address in your browser."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use 192.168.188.1 on a phone?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Connect your phone to the SEWOT SW-01's Wi-Fi network, turn off mobile data and VPN, then enter http://192.168.188.1 in the browser address bar."
+                        }
+                    }
+                ]
+            }
+
+            sewot_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Guide</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        SEWOT SW-01 WiFi Extender — 192.168.188.1 Login &amp; Setup Guide
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you searched <code>192.168.188.1</code> expecting to open your SEWOT SW-01 WiFi extender, you are in the right place—but the page will only load when your phone or computer is connected directly to the extender. <code>192.168.188.1</code> is the default management IP address used by the SEWOT SW-01 WiFi repeater and similar Wireless-N extender models.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          <code>192.168.188.1</code> is the default admin IP address for the SEWOT SW-01 WiFi extender.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          Connect your phone or computer directly to the extender’s Wi-Fi network or Ethernet port, then enter <code>http://192.168.188.1</code> in your browser’s address bar.
+        </p>
+
+        <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
+            <li><strong>Username:</strong> <code>admin</code></li>
+            <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some units)</li>
+          </ul>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+          Some units may use a blank password, <code>password</code>, or credentials printed on the extender label. If the extender was configured before, use the admin password you created during setup.
+        </p>
+
+        <div class="action-btn-group">
+          <a href="http://192.168.188.1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open http://192.168.188.1 &rarr;
+          </a>
+          <button class="btn btn-secondary copy-btn" data-copy="192.168.188.1">Copy IP (192.168.188.1)</button>
+          <a href="/extenders/" class="btn btn-secondary">All Wi-Fi Extenders</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        SEWOT SW-01 Login Details
+      </h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Setting</th>
+              <th style="min-width: 320px;">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Default IP address</strong></td>
+              <td><code>192.168.188.1</code></td>
+            </tr>
+            <tr>
+              <td><strong>Setup URL</strong></td>
+              <td><a href="http://192.168.188.1" target="_blank" rel="noopener">http://192.168.188.1</a></td>
+            </tr>
+            <tr>
+              <td><strong>Default username</strong></td>
+              <td><code>admin</code></td>
+            </tr>
+            <tr>
+              <td><strong>Default password</strong></td>
+              <td><code>admin</code></td>
+            </tr>
+            <tr>
+              <td><strong>Default Wi-Fi network</strong></td>
+              <td>Often <code>Wireless-N</code>, <code>WiFi-Repeater</code>, <code>SEWOT</code>, or a name printed on the label</td>
+            </tr>
+            <tr>
+              <td><strong>Reset method</strong></td>
+              <td>Hold Reset/RST button for about 8–10 seconds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        The default IP is mainly a <strong>fallback address</strong>. After the SEWOT SW-01 connects to your router in Repeater or Access Point mode, your router may assign it a new dynamic LAN IP through DHCP.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Extender vs. Router
+      </h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Device</th>
+              <th style="min-width: 180px;">Typical Address</th>
+              <th style="min-width: 320px;">What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main router / gateway</strong></td>
+              <td>Often <code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>Internet connection, DHCP, firewall, primary Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><strong>SEWOT SW-01 before setup</strong></td>
+              <td><code>192.168.188.1</code></td>
+              <td>Extender setup, Wi-Fi extension, local settings</td>
+            </tr>
+            <tr>
+              <td><strong>SEWOT SW-01 after pairing</strong></td>
+              <td>New DHCP-assigned IP</td>
+              <td>Extended Wi-Fi coverage and connected devices</td>
+            </tr>
+            <tr>
+              <td><strong>Phone, laptop, or smart TV</strong></td>
+              <td>Assigned by router</td>
+              <td>Ordinary client device on your network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        So, if <code>192.168.188.1</code> does not open your main router’s admin page, that is expected. This address is intended to reach the <strong>SEWOT SW-01 WiFi extender</strong>, not the router itself.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic: What Are You Trying to Do?
+      </h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Your Situation</th>
+              <th style="min-width: 220px;">What You Actually Need</th>
+              <th style="min-width: 300px;">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>You want to set up a new SEWOT SW-01</strong></td>
+              <td>SEWOT setup wizard</td>
+              <td>Connect to the extender and open <code>http://192.168.188.1</code></td>
+            </tr>
+            <tr>
+              <td><strong>You want to change extender settings</strong></td>
+              <td>SEWOT SW-01 admin page</td>
+              <td>Connect directly to the extender and log in using the correct credentials</td>
+            </tr>
+            <tr>
+              <td><strong>You want to log into your main router</strong></td>
+              <td>Router gateway address</td>
+              <td>Use <a href="/ip/192-168-1-1/">192.168.1.1</a>, <a href="/ip/192-168-0-1/">192.168.0.1</a>, or the address printed on your router</td>
+            </tr>
+            <tr>
+              <td><strong>192.168.188.1 will not load</strong></td>
+              <td>Direct extender connection</td>
+              <td>Connect to the extender’s Wi-Fi or Ethernet port, then retry</td>
+            </tr>
+            <tr>
+              <td><strong>The extender is already paired</strong></td>
+              <td>Its new DHCP-assigned IP</td>
+              <td>Check the main router’s Attached Devices or DHCP client list</td>
+            </tr>
+            <tr>
+              <td><strong>You forgot the extender password</strong></td>
+              <td>Factory reset</td>
+              <td>Hold the Reset button until the LED changes, then set it up again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why 192.168.188.1 May Not Load
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        <code>192.168.188.1</code> is a private local IP address, not a public website. It works only when your device is connected directly to the SEWOT SW-01 extender.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        If you are connected to your main router’s Wi-Fi instead of the extender, the browser cannot reach <code>192.168.188.1</code>. Connect to the extender’s setup Wi-Fi network or use an Ethernet cable, then try again.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step: Set Up the SEWOT SW-01
+      </h2>
+      <div class="instruction-timeline" style="margin-top: 1.25rem; margin-bottom: 2.5rem;">
+        <div class="step-card">
+          <div class="step-badge">Step 1</div>
+          <h3 class="step-title">Plug in the extender</h3>
+          <p class="step-text">Place the SEWOT SW-01 near your main router during the first-time setup. Wait for it to power on completely before connecting to it.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 2</div>
+          <h3 class="step-title">Connect to the extender</h3>
+          <p class="step-text">
+            On your phone or computer, open the Wi-Fi list and connect to the SEWOT SW-01’s default Wi-Fi network. The network name may look like <strong>Wireless-N</strong>, <strong>WiFi-Repeater</strong>, <strong>SEWOT</strong>, or another name printed on the device label. If the extender has an Ethernet port, you can also connect a computer directly using an Ethernet cable.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 3</div>
+          <h3 class="step-title">Open the setup page</h3>
+          <p class="step-text">
+            In your browser address bar, enter:<br>
+            &bull; <code>http://192.168.188.1</code><br>
+            Do not type the address into a Google or Bing search box. Enter it directly into the browser address bar.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 4</div>
+          <h3 class="step-title">Log in</h3>
+          <p class="step-text">
+            For the SEWOT SW-01, use:<br>
+            &bull; <strong>Username:</strong> <code>admin</code><br>
+            &bull; <strong>Password:</strong> <code>admin</code><br>
+            If that does not work, try a blank password, <code>password</code>, or the credentials printed on the extender label. If the extender was configured before, use the admin password created during original setup.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 5</div>
+          <h3 class="step-title">Choose your home Wi-Fi network</h3>
+          <p class="step-text">The setup wizard will scan for nearby Wi-Fi networks. Select your main router’s network, enter its Wi-Fi password, and follow the prompts to complete the extender setup.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 6</div>
+          <h3 class="step-title">Move the extender to its final location</h3>
+          <p class="step-text">After setup, unplug the extender and place it halfway between your router and the area with weak Wi-Fi. Do not place it too far from the router, because a weak incoming signal will also create a weak extended signal.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        If 192.168.188.1 Will Not Load
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the SEWOT SW-01’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://192.168.188.1</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
+            If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.188.x</code> range, such as <code>192.168.188.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.188.1</code>. After setup, switch your device back to automatic DHCP.
+          </p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the SEWOT SW-01, copy its assigned IP address, and enter that IP into your browser.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Factory Reset the SEWOT SW-01
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        Reset the extender only if you cannot log in, are moving it to a new router, or the setup page will not load after troubleshooting.
+      </p>
+      <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 2rem;">
+        <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.8;">
+          <li>Keep the SEWOT SW-01 powered on.</li>
+          <li>Find the small <strong>Reset</strong> or <strong>RST</strong> button or pinhole on the side, bottom, or back panel.</li>
+          <li>Press and hold it with a paperclip for about <strong>8–10 seconds</strong>.</li>
+          <li>Release when the indicator lights blink or the extender restarts.</li>
+          <li>Wait for the extender to reboot completely.</li>
+          <li>Reconnect to the extender’s Wi-Fi network and open <code>http://192.168.188.1</code>.</li>
+        </ol>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        Reset times can vary by model. If 8–10 seconds does not work, try holding the button for up to 15 seconds while watching the LED behavior.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        SEWOT SW-01 vs. Router Login
+      </h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Login Type</th>
+              <th style="min-width: 240px;">Address</th>
+              <th style="min-width: 280px;">Default Credentials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>SEWOT SW-01 WiFi extender</strong></td>
+              <td><code>192.168.188.1</code></td>
+              <td>Often <code>admin</code> / <code>admin</code>; some units use a blank password</td>
+            </tr>
+            <tr>
+              <td><strong>Main router</strong></td>
+              <td>Usually <code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>Router-specific credentials or password created during setup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        Do not confuse the SEWOT SW-01 login with the main router login. The SEWOT SW-01 extends your existing Wi-Fi signal; it does not replace your router or manage your internet connection.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Mistakes
+      </h2>
+      <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        <li><strong>Trying <code>192.168.188.1</code> while connected to the main router.</strong> Connect directly to the SEWOT SW-01’s Wi-Fi network or Ethernet port first.</li>
+        <li><strong>Assuming <code>192.168.188.1</code> opens the main router.</strong> It is the SEWOT SW-01’s factory management address, not a typical router gateway address.</li>
+        <li><strong>Using the wrong credentials.</strong> Many SEWOT SW-01 units use <code>admin</code> / <code>admin</code>, but some use a blank password, <code>password</code>, or label-printed credentials.</li>
+        <li><strong>Using mobile data during setup.</strong> Turn off mobile data, VPNs, and proxies before opening the local setup page.</li>
+        <li><strong>Resetting before checking the DHCP list.</strong> If the extender is already paired, its new IP may be listed in your router’s client list.</li>
+      </ul>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Typos to Watch Out For
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Misspelling the IP address is the most common reason the setup portal fails to load:
+      </p>
+      <div class="typo-tag-list" style="margin-bottom: 2rem;">
+        <div class="typo-chip"><span class="typo-wrong">192.168.l88.1</span> &rarr; <span class="typo-correct">http://192.168.188.1</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.188.l</span> &rarr; <span class="typo-correct">http://192.168.188.1</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.188.1.com</span> &rarr; <span class="typo-correct">http://192.168.188.1</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.188.1 login</span> &rarr; <span class="typo-correct">http://192.168.188.1</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.18.1</span> &rarr; <span class="typo-correct">http://192.168.188.1</span></div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">Is 192.168.188.1 a real website?</div>
+          <p class="faq-answer">
+            No. It is a private local IP address used by the SEWOT SW-01 WiFi extender. It only works when your phone or computer is connected directly to the extender’s Wi-Fi network or Ethernet port.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the default password for the SEWOT SW-01?</div>
+          <p class="faq-answer">
+            Many SEWOT SW-01 units use <code>admin</code> as both the username and password. Some models use a blank password, <code>password</code>, or credentials printed on the device label.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why does 192.168.188.1 not work?</div>
+          <p class="faq-answer">
+            The most common reason is that you are connected to your main router instead of the SEWOT SW-01. Other causes include mobile data, VPN interference, browser search behavior, or the extender already receiving a new DHCP-assigned IP address.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I find my SEWOT SW-01 after setup?</div>
+          <p class="faq-answer">
+            Log into your main router and open the connected-devices or DHCP client list. Find the SEWOT SW-01, copy its assigned IP address, and enter that address in your browser.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I use 192.168.188.1 on a phone?</div>
+          <p class="faq-answer">
+            Yes. Connect your phone to the SEWOT SW-01’s Wi-Fi network, turn off mobile data and VPN, then enter <code>http://192.168.188.1</code> in the browser address bar.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          <strong>192.168.188.1 almost always means you are trying to reach the SEWOT SW-01 WiFi extender, not your main router.</strong> Connect directly to the extender, enter <code>http://192.168.188.1</code> in the browser address bar, and use the correct credentials for your model. If the page will not load, check the extender’s new DHCP-assigned IP in your router’s client list.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateway IPs &amp; Extender Hubs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">TP-Link tplinkrepeater.net Guide &rarr;</a>
+          <a href="/extenders/extender-linksys-com/" class="btn btn-secondary" style="font-size: 0.85rem;">Linksys extender.linksys.com Guide &rarr;</a>
+          <a href="/extenders/dlinkap-local/" class="btn btn-secondary" style="font-size: 0.85rem;">D-Link dlinkap.local Guide &rarr;</a>
+          <a href="/extenders/myrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">Wireless-N myrepeater.net Guide &rarr;</a>
+          <a href="/extenders/ap-setup/" class="btn btn-secondary" style="font-size: 0.85rem;">Wavlink ap.setup Guide &rarr;</a>
+          <a href="/extenders/topvision-extender/" class="btn btn-secondary" style="font-size: 0.85rem;">Topvision Guide &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + sewot_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+
         else:
             # Generic Extender guide for TP-Link, Linksys, D-Link
             faq_schema = {
@@ -7091,6 +7596,10 @@ def update_vercel_config():
         {"source": "/ap-setup", "destination": "/extenders/ap-setup/", "permanent": True},
         {"source": "/topvision", "destination": "/extenders/topvision-extender/", "permanent": True},
         {"source": "/topvision-extender", "destination": "/extenders/topvision-extender/", "permanent": True},
+        {"source": "/sewot", "destination": "/extenders/sewot-sw-01/", "permanent": True},
+        {"source": "/sewot-sw-01", "destination": "/extenders/sewot-sw-01/", "permanent": True},
+        {"source": "/sewot-sw01", "destination": "/extenders/sewot-sw-01/", "permanent": True},
+        {"source": "/sewot-extender", "destination": "/extenders/sewot-sw-01/", "permanent": True},
         {"source": "/brands.html", "destination": "/brands/", "permanent": True},
         {"source": "/tools.html", "destination": "/tools/", "permanent": True},
         {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True}
