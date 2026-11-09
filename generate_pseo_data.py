@@ -614,15 +614,15 @@ EXTENDER_PROFILES = [
         "slug": "extender-linksys-com",
         "domain": "extender.linksys.com",
         "brand": "Linksys",
-        "title": "extender.linksys.com: Linksys Extender Setup (2026)",
-        "meta_desc": "Set up Linksys Wi-Fi range extenders via extender.linksys.com or 192.168.1.1. Default admin password, RE series models, Spot Finder, and reset guide.",
+        "title": "extender.linksys.com — Linksys Extender Setup & 192.168.1.1 Login",
+        "meta_desc": "Can’t open extender.linksys.com? Learn how to set up a Linksys extender, log in using 192.168.1.1, fix setup errors, find the default password, and reset your device.",
         "fallback_ip": "192.168.1.1",
         "local_domain_win": "http://extender.linksys.com",
         "local_domain_mac": "http://extender.linksys.com",
-        "default_user": "[Leave Blank] or admin",
+        "default_user": "Leave blank",
         "default_pass": "admin",
-        "series": "Linksys RE Series",
-        "models": ["RE6300", "RE6400", "RE6700", "RE7000", "RE9000"]
+        "series": "Linksys Max-Stream AC & AX (Wi-Fi 6) RE Series",
+        "models": ["RE6350", "RE6500", "RE6700", "RE7000", "RE7310", "RE7350"]
     },
     {
         "slug": "dlinkap-local",
