@@ -2126,7 +2126,7 @@ def generate_extender_pages():
     # --------------------------------------------------------------------------
     master_canonical = "https://routeriphub.com/extenders/"
     master_title = "Wi-Fi Extender Setup: Default IPs & Logins (2026)" # 50 chars <= 60
-    master_desc = "Master directory of Wi-Fi range extender setup domains and fallback IPs: mywifiext.net, tplinkrepeater.net, extender.linksys.com, and dlinkap.local." # 152 chars
+    master_desc = "Master directory of Wi-Fi extender setup domains and fallback IPs: mywifiext.net, tplinkrepeater.net, extender.linksys.com, dlinkap.local, and myrepeater.net." # 152 chars
 
     master_breadcrumbs = [
         ("Home", "/"),
@@ -4306,6 +4306,540 @@ def generate_extender_pages():
   </main>
 """
             full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + dlink_content + get_footer()
+            with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(full_html)
+
+        elif slug == "myrepeater-net":
+            # Exact content specified by user for Wireless-N myrepeater.net
+            tech_schema = {
+                "@type": "TechArticle",
+                "headline": title,
+                "description": desc,
+                "mainEntityOfPage": canonical,
+                "datePublished": "2026-01-15T08:00:00+00:00",
+                "dateModified": f"{TODAY}T02:00:00+00:00",
+                "author": {"@type": "Organization", "name": "RouterIPHub Editorial Team"},
+                "publisher": {"@type": "Organization", "name": "RouterIPHub", "url": "https://routeriphub.com/"}
+            }
+
+            howto_schema = {
+                "@type": "HowTo",
+                "name": "How to Set Up a Wireless-N Wi-Fi Range Repeater",
+                "description": "Step-by-step setup guide to connect and configure Wireless-N repeaters via myrepeater.net and 192.168.1.254.",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Plug in the repeater",
+                        "text": "Place the Wireless-N repeater near your main router during first-time setup. Wait for it to power on completely before connecting to it."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Connect to the repeater",
+                        "text": "On your phone or computer, open the Wi-Fi list and connect to the default network (often 'Wireless-N', 'Repeater', or 'WiFi-Repeater') or use an Ethernet cable."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Open the setup page",
+                        "text": "In your browser address bar, enter http://myrepeater.net or http://192.168.1.254 directly."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Log in with default credentials",
+                        "text": "Enter 'admin' for Username and 'admin' for Password. If that fails, try a blank password, 'password', or label credentials."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "Choose your home Wi-Fi network",
+                        "text": "Select your main router's Wi-Fi network from the scan list, enter its password, and complete setup."
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 6,
+                        "name": "Move the repeater to its final location",
+                        "text": "Unplug the repeater and place it halfway between your router and the weak Wi-Fi area."
+                    }
+                ]
+            }
+
+            faq_schema = {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is myrepeater.net a real website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. It is a local setup address used by many Wireless-N repeaters. It only works when your phone or computer is connected directly to the repeater's Wi-Fi network or Ethernet port."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the default password for a Wireless-N repeater?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Many Wireless-N repeaters use admin as both the username and password. Some models use a blank password, password, or credentials printed on the device label."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does myrepeater.net not work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The most common reason is that you are connected to your main router instead of the Wireless-N repeater. Other causes include mobile data, VPN interference, browser search behavior, or the repeater already receiving a new DHCP-assigned IP address."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I find my Wireless-N repeater after setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Log into your main router and open the connected-devices or DHCP client list. Find the Wireless-N repeater, copy its assigned IP address, and enter that address in your browser."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use myrepeater.net on a phone?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Connect your phone to the repeater's Wi-Fi network, turn off mobile data and VPN, then enter http://myrepeater.net or http://192.168.1.254 in the browser address bar."
+                        }
+                    }
+                ]
+            }
+
+            myrepeater_content = f"""
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 4rem;">
+    <div class="content-container">
+      <div class="silo-badge silo-badge-ip">⚡ Intent-First Technical SEO Guide</div>
+
+      <h1 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;">
+        myrepeater.net — Wireless-N Repeater Setup &amp; 192.168.1.254 Login
+      </h1>
+
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        If you searched <code>myrepeater.net</code> expecting to open your Wireless-N repeater, you are in the right place—but the page will only load when your phone or computer is connected directly to the repeater. <code>myrepeater.net</code> is a local setup address used by many generic Wireless-N repeaters, while <code>192.168.1.254</code> is the default management IP address for these devices.
+      </p>
+
+      <div class="verdict-box" style="margin-bottom: 2rem;">
+        <div class="verdict-tag">⚡ Quick Answer</div>
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.6;">
+          <code>myrepeater.net</code> is the local setup portal for many Wireless-N Wi-Fi repeaters, and <code>192.168.1.254</code> is the default IP address used to access the repeater’s admin page.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+          Connect your phone or computer directly to the repeater’s Wi-Fi network or Ethernet port, then enter one of these addresses in your browser:
+        </p>
+
+        <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+          <table class="table" style="background: var(--bg-card); border-radius: var(--radius-sm);">
+            <thead>
+              <tr>
+                <th style="min-width: 180px;">Access Method</th>
+                <th style="min-width: 200px;">Address</th>
+                <th style="min-width: 280px;">When to Use It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Repeater setup domain</strong></td>
+                <td><code>http://myrepeater.net</code></td>
+                <td>First choice for most Wireless-N 300Mbps repeaters</td>
+              </tr>
+              <tr>
+                <td><strong>Default fallback IP</strong></td>
+                <td><code>http://192.168.1.254</code></td>
+                <td>Use when the domain does not load or no DHCP server is detected</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
+          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
+            <li><strong>Username:</strong> <code>admin</code></li>
+            <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some generic revisions)</li>
+          </ul>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+          Some models may use a blank password, <code>password</code>, or credentials printed on the repeater label. If the repeater was configured before, use the admin password you created during setup.
+        </p>
+
+        <div class="action-btn-group">
+          <a href="http://myrepeater.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Open http://myrepeater.net &rarr;
+          </a>
+          <a href="http://192.168.1.254" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Open http://192.168.1.254
+          </a>
+          <button class="btn btn-secondary copy-btn" data-copy="192.168.1.254">Copy Fallback IP (192.168.1.254)</button>
+          <a href="/extenders/" class="btn btn-secondary">All Wi-Fi Extenders</a>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Which Repeaters Use myrepeater.net?
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        <code>myrepeater.net</code> is commonly used by unbranded, generic, and older Wireless-N repeaters rather than one single manufacturer. These devices are often sold under different brand names but share similar internal setup interfaces.
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Repeater Type</th>
+              <th style="min-width: 320px;">Common Models / Labels</th>
+              <th style="min-width: 150px;">Default IP</th>
+              <th style="min-width: 220px;">Setup URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Generic Wireless-N repeater</strong></td>
+              <td>300Mbps Wireless-N Repeater, Wi-Fi Range Extender</td>
+              <td><code>192.168.1.254</code></td>
+              <td><a href="http://myrepeater.net" target="_blank" rel="noopener">http://myrepeater.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>Wall-plug Wi-Fi extender</strong></td>
+              <td>WN518N2-style repeaters, generic 300Mbps extenders</td>
+              <td><code>192.168.1.254</code></td>
+              <td><a href="http://myrepeater.net" target="_blank" rel="noopener">http://myrepeater.net</a></td>
+            </tr>
+            <tr>
+              <td><strong>Rebranded Wireless-N repeater</strong></td>
+              <td>Sold under multiple local or online-store brands</td>
+              <td><code>192.168.1.254</code></td>
+              <td><a href="http://myrepeater.net" target="_blank" rel="noopener">http://myrepeater.net</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        The default IP is mainly a <strong>fallback address</strong>. After the repeater connects to your router in Repeater or Access Point mode, your router may assign it a new dynamic LAN IP through DHCP.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Network Role: Repeater vs. Router
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Device</th>
+              <th style="min-width: 180px;">Typical Address</th>
+              <th style="min-width: 320px;">What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main router / gateway</strong></td>
+              <td>Often <code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>Internet connection, DHCP, firewall, primary Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><strong>Wireless-N repeater before setup</strong></td>
+              <td><code>192.168.1.254</code></td>
+              <td>Repeater setup, Wi-Fi extension, local settings</td>
+            </tr>
+            <tr>
+              <td><strong>Wireless-N repeater after pairing</strong></td>
+              <td>New DHCP-assigned IP</td>
+              <td>Extended Wi-Fi coverage and connected devices</td>
+            </tr>
+            <tr>
+              <td><strong>Phone, laptop, or smart TV</strong></td>
+              <td>Assigned by router</td>
+              <td>Ordinary client device on your network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        So, if <code>192.168.1.254</code> does not open your main router’s admin page, that is expected. This address is intended to reach the <strong>Wireless-N repeater</strong>, not the router itself.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Diagnostic: What Are You Trying to Do?
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 200px;">Your Situation</th>
+              <th style="min-width: 220px;">What You Actually Need</th>
+              <th style="min-width: 300px;">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>You want to set up a new Wireless-N repeater</strong></td>
+              <td>Repeater setup wizard</td>
+              <td>Connect to the repeater and open <code>http://myrepeater.net</code> or <code>http://192.168.1.254</code></td>
+            </tr>
+            <tr>
+              <td><strong>You want to change repeater settings</strong></td>
+              <td>Wireless-N repeater admin page</td>
+              <td>Connect directly to the repeater and log in using the correct credentials</td>
+            </tr>
+            <tr>
+              <td><strong>You want to log into your main router</strong></td>
+              <td>Router gateway address</td>
+              <td>Use <a href="/ip/192-168-1-1/">192.168.1.1</a>, <a href="/ip/192-168-0-1/">192.168.0.1</a>, or the address printed on your router</td>
+            </tr>
+            <tr>
+              <td><strong>myrepeater.net will not load</strong></td>
+              <td>Direct repeater connection</td>
+              <td>Connect to the repeater’s Wi-Fi or Ethernet port, then retry</td>
+            </tr>
+            <tr>
+              <td><strong>The repeater is already paired</strong></td>
+              <td>Its new DHCP-assigned IP</td>
+              <td>Check the main router’s Attached Devices or DHCP client list</td>
+            </tr>
+            <tr>
+              <td><strong>You forgot the repeater password</strong></td>
+              <td>Factory reset</td>
+              <td>Hold the Reset button until the LED changes, then set it up again</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Why myrepeater.net May Not Load
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        <code>myrepeater.net</code> is not a public website. It is a local address that works only when your device is connected directly to the Wireless-N repeater.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+        If you are connected to your main router’s Wi-Fi instead of the repeater, the browser cannot resolve <code>myrepeater.net</code>. Connect to the repeater’s setup Wi-Fi network or use an Ethernet cable, then try again.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Step-by-Step: Set Up a Wireless-N Repeater
+      </h2>
+      <div class="instruction-timeline" style="margin-top: 1.25rem; margin-bottom: 2.5rem;">
+        <div class="step-card">
+          <div class="step-badge">Step 1</div>
+          <h3 class="step-title">Plug in the repeater</h3>
+          <p class="step-text">Place the Wireless-N repeater near your main router during the first-time setup. Wait for it to power on completely before connecting to it.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 2</div>
+          <h3 class="step-title">Connect to the repeater</h3>
+          <p class="step-text">
+            On your phone or computer, open the Wi-Fi list and connect to the repeater’s default Wi-Fi network. The network name may look like <strong>Wireless-N</strong>, <strong>Repeater</strong>, <strong>WiFi-Repeater</strong>, or another name printed on the device label. If the repeater has an Ethernet port, you can also connect directly using an Ethernet cable.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 3</div>
+          <h3 class="step-title">Open the setup page</h3>
+          <p class="step-text">
+            In your browser address bar, enter one of the following:<br>
+            &bull; <code>http://myrepeater.net</code><br>
+            &bull; <code>http://192.168.1.254</code><br>
+            Do not type the address into a Google or Bing search box. Enter it directly into the browser address bar.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 4</div>
+          <h3 class="step-title">Log in</h3>
+          <p class="step-text">
+            For many Wireless-N repeaters, use:<br>
+            &bull; <strong>Username:</strong> <code>admin</code><br>
+            &bull; <strong>Password:</strong> <code>admin</code><br>
+            If that does not work, try a blank password, <code>password</code>, or credentials printed on the repeater label.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 5</div>
+          <h3 class="step-title">Choose your home Wi-Fi network</h3>
+          <p class="step-text">The setup wizard will scan for nearby Wi-Fi networks. Select your main router’s network, enter its Wi-Fi password, and follow the prompts to complete the repeater setup.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-badge">Step 6</div>
+          <h3 class="step-title">Move the repeater to its final location</h3>
+          <p class="step-text">After setup, unplug the repeater and place it halfway between your router and the area with weak Wi-Fi. Do not place it too far from the router, because a weak incoming signal will also create a weak extended signal.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        If myrepeater.net Will Not Load
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the repeater</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the Wireless-N repeater’s Wi-Fi network. Alternatively, connect a computer to the repeater using an Ethernet cable and disable Wi-Fi on that computer.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The repeater’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://myrepeater.net</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.1.254</code> in the browser. This address works when the Wireless-N repeater is in factory condition or cannot detect a DHCP server.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
+            If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the repeater may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.1.x</code> range, such as <code>192.168.1.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.1.254</code>. After setup, switch your device back to automatic DHCP.
+          </p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
+        </div>
+        <div class="step-card">
+          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the repeater’s new IP</h4>
+          <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the repeater is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Wireless-N repeater, copy its assigned IP address, and enter that IP into your browser.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Factory Reset a Wireless-N Repeater
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+        Reset the repeater only if you cannot log in, are moving it to a new router, or the setup page will not load after troubleshooting.
+      </p>
+      <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 2rem;">
+        <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.8;">
+          <li>Keep the Wireless-N repeater powered on.</li>
+          <li>Find the small <strong>Reset</strong> or <strong>RST</strong> button or pinhole on the side, bottom, or back panel.</li>
+          <li>Press and hold it with a paperclip for about <strong>8–10 seconds</strong>.</li>
+          <li>Release when the indicator lights blink or the repeater restarts.</li>
+          <li>Wait for the repeater to reboot completely.</li>
+          <li>Reconnect to the repeater’s Wi-Fi network and open <code>http://myrepeater.net</code> or <code>http://192.168.1.254</code>.</li>
+        </ol>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        Reset times can vary by model. If 8–10 seconds does not work, try holding the button for up to 15 seconds while watching the LED behavior.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Wireless-N Repeater vs. Router Login
+      </h2>
+      <div style="overflow-x: auto; margin-bottom: 1.25rem;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="min-width: 220px;">Login Type</th>
+              <th style="min-width: 240px;">Address</th>
+              <th style="min-width: 280px;">Default Credentials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Wireless-N repeater</strong></td>
+              <td><code>http://myrepeater.net</code> or <code>192.168.1.254</code></td>
+              <td>Often <code>admin</code> / <code>admin</code>; some models use a blank password</td>
+            </tr>
+            <tr>
+              <td><strong>Main router</strong></td>
+              <td>Usually <code>192.168.1.1</code> or <code>192.168.0.1</code></td>
+              <td>Router-specific credentials or password created during setup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+        Do not confuse the Wireless-N repeater login with the main router login. A repeater extends your existing Wi-Fi signal; it does not replace your router or manage your internet connection.
+      </p>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Mistakes
+      </h2>
+      <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+        <li><strong>Trying <code>myrepeater.net</code> while connected to the main router.</strong> Connect directly to the repeater’s Wi-Fi network or Ethernet port first.</li>
+        <li><strong>Assuming <code>192.168.1.254</code> opens the main router.</strong> It is the Wireless-N repeater’s factory management address, not a typical router gateway address.</li>
+        <li><strong>Using the wrong credentials.</strong> Many repeaters use <code>admin</code> / <code>admin</code>, but some use a blank password, <code>password</code>, or label-printed credentials.</li>
+        <li><strong>Using mobile data during setup.</strong> Turn off mobile data, VPNs, and proxies before opening the local setup page.</li>
+        <li><strong>Resetting before checking the DHCP list.</strong> If the repeater is already paired, its new IP may be listed in your router’s client list.</li>
+      </ul>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Common Typos to Watch Out For
+      </h2>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Misspelling the repeater domain or IP address is the most common reason the setup portal fails to load:
+      </p>
+      <div class="typo-tag-list" style="margin-bottom: 2rem;">
+        <div class="typo-chip"><span class="typo-wrong">myrepeater.net.com</span> &rarr; <span class="typo-correct">http://myrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">myrepeater.net login</span> &rarr; <span class="typo-correct">http://myrepeater.net</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.l.254</span> &rarr; <span class="typo-correct">http://192.168.1.254</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.1.25O</span> &rarr; <span class="typo-correct">http://192.168.1.254</span></div>
+        <div class="typo-chip"><span class="typo-wrong">192.168.1.25</span> &rarr; <span class="typo-correct">http://192.168.1.254</span></div>
+      </div>
+
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.75rem;">
+        Frequently Asked Questions
+      </h2>
+      <div class="faq-list" style="margin-top: 1rem;">
+        <div class="faq-item">
+          <div class="faq-question">Is myrepeater.net a real website?</div>
+          <p class="faq-answer">
+            No. It is a local setup address used by many Wireless-N repeaters. It only works when your phone or computer is connected directly to the repeater’s Wi-Fi network or Ethernet port.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the default password for a Wireless-N repeater?</div>
+          <p class="faq-answer">
+            Many Wireless-N repeaters use <code>admin</code> as both the username and password. Some models use a blank password, <code>password</code>, or credentials printed on the device label.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Why does myrepeater.net not work?</div>
+          <p class="faq-answer">
+            The most common reason is that you are connected to your main router instead of the Wireless-N repeater. Other causes include mobile data, VPN interference, browser search behavior, or the repeater already receiving a new DHCP-assigned IP address.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I find my Wireless-N repeater after setup?</div>
+          <p class="faq-answer">
+            Log into your main router and open the connected-devices or DHCP client list. Find the Wireless-N repeater, copy its assigned IP address, and enter that address in your browser.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I use myrepeater.net on a phone?</div>
+          <p class="faq-answer">
+            Yes. Connect your phone to the repeater’s Wi-Fi network, turn off mobile data and VPN, then enter <code>http://myrepeater.net</code> or <code>http://192.168.1.254</code> in the browser address bar.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-line-callout" style="margin-top: 2.5rem;">
+        <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+          🎯 The Bottom Line
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">
+          <strong>myrepeater.net almost always means you are trying to reach a Wireless-N Wi-Fi repeater, not your main router.</strong> Connect directly to the repeater, enter <code>http://myrepeater.net</code> or <code>http://192.168.1.254</code> in the browser address bar, and use the correct credentials for your model. If the page will not load, check the repeater’s new DHCP-assigned IP in your router’s client list.
+        </p>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Related Gateway IPs &amp; Extender Hubs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <a href="/extenders/mywifiext-net/" class="btn btn-secondary" style="font-size: 0.85rem;">NETGEAR mywifiext.net Guide &rarr;</a>
+          <a href="/extenders/tplinkrepeater-net/" class="btn btn-secondary" style="font-size: 0.85rem;">TP-Link tplinkrepeater.net Guide &rarr;</a>
+          <a href="/extenders/extender-linksys-com/" class="btn btn-secondary" style="font-size: 0.85rem;">Linksys extender.linksys.com Guide &rarr;</a>
+          <a href="/extenders/dlinkap-local/" class="btn btn-secondary" style="font-size: 0.85rem;">D-Link dlinkap.local Guide &rarr;</a>
+          <a href="/extenders/" class="btn btn-secondary" style="font-size: 0.85rem;">All Wi-Fi Extenders &rarr;</a>
+          <a href="/ip/192-168-1-254/" class="btn btn-secondary" style="font-size: 0.85rem;">192.168.1.254 Gateway &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+"""
+            full_html = get_header(title, desc, canonical, active_nav="extenders", breadcrumbs=breadcrumbs, schemas_json_ld=[tech_schema, howto_schema, faq_schema]) + myrepeater_content + get_footer()
             with open(os.path.join(ext_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(full_html)
 

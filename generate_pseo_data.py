@@ -637,6 +637,20 @@ EXTENDER_PROFILES = [
         "default_pass": "Leave blank (older) or label-printed (Wi-Fi 6)",
         "series": "Classic DAP Series & Wi-Fi 6 AX / Eagle Pro Series",
         "models": ["DAP-1120", "DAP-1320", "DAP-1325", "DAP-1330", "DAP-1520", "DAP-1530", "DAP-1610", "DAP-1620", "DAP-1720", "DAP-1755", "DAP-1820", "DAP-1860", "DAP-1955", "DAP-X1860", "E15", "E30"]
+    },
+    {
+        "slug": "myrepeater-net",
+        "domain": "myrepeater.net",
+        "brand": "Wireless-N",
+        "title": "myrepeater.net — Wireless-N Repeater Setup & 192.168.1.254 Login",
+        "meta_desc": "Can’t open myrepeater.net? Learn how to set up a Wireless-N repeater, log in using 192.168.1.254, fix access issues, find default credentials, and reset your device.",
+        "fallback_ip": "192.168.1.254",
+        "local_domain_win": "http://myrepeater.net",
+        "local_domain_mac": "http://myrepeater.net",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "series": "Generic 300Mbps Wireless-N & Wall-Plug Repeaters",
+        "models": ["300Mbps Wireless-N Repeater", "WN518N2", "Wi-Fi Range Extender", "Generic Wall-Plug Repeater"]
     }
 ]
 
