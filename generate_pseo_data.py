@@ -651,6 +651,20 @@ EXTENDER_PROFILES = [
         "default_pass": "admin",
         "series": "Generic 300Mbps Wireless-N & Wall-Plug Repeaters",
         "models": ["300Mbps Wireless-N Repeater", "WN518N2", "Wi-Fi Range Extender", "Generic Wall-Plug Repeater"]
+    },
+    {
+        "slug": "ap-setup",
+        "domain": "ap.setup",
+        "brand": "Wavlink",
+        "title": "ap.setup — Wavlink Extender Setup & 192.168.10.1 Login",
+        "meta_desc": "Can’t open ap.setup? Learn how to set up a Wavlink Wi-Fi extender, log in using 192.168.10.1, fix access issues, find default credentials, and reset your device.",
+        "fallback_ip": "192.168.10.1",
+        "local_domain_win": "http://ap.setup",
+        "local_domain_mac": "http://ap.setup",
+        "default_user": "admin (or leave blank)",
+        "default_pass": "admin",
+        "series": "Wavlink Wireless Repeaters & Outdoor Access Points",
+        "models": ["WL-WN527A2", "WAVLINK-N", "WAVLINK-AC", "WL-WN570HA1", "WL-WN572HG4"]
     }
 ]
 
