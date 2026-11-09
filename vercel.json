@@ -175,6 +175,16 @@
       "permanent": true
     },
     {
+      "source": "/rangextd",
+      "destination": "/extenders/rangextd-extender/",
+      "permanent": true
+    },
+    {
+      "source": "/rangextd-extender",
+      "destination": "/extenders/rangextd-extender/",
+      "permanent": true
+    },
+    {
       "source": "/brands.html",
       "destination": "/brands/",
       "permanent": true

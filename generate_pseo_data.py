@@ -693,6 +693,20 @@ EXTENDER_PROFILES = [
         "default_pass": "admin",
         "series": "SEWOT SW-01 300Mbps Wireless-N Extender",
         "models": ["SEWOT SW-01", "SW-01 WiFi Repeater", "SW-01 Range Extender"]
+    },
+    {
+        "slug": "rangextd-extender",
+        "domain": "192.168.188.1",
+        "brand": "RANGEXTD",
+        "title": "RANGEXTD WiFi Range Extender — 192.168.188.1 Login & Setup Guide",
+        "meta_desc": "Can’t open 192.168.188.1? Learn how to set up the RANGEXTD WiFi range extender, log in to its admin page, fix access issues, find default credentials, and reset the device.",
+        "fallback_ip": "192.168.188.1",
+        "local_domain_win": "http://192.168.188.1",
+        "local_domain_mac": "http://192.168.188.1",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "series": "RANGEXTD WiFi Range Extender & Booster Series",
+        "models": ["RANGEXTD WiFi Range Extender", "RANGEXTD Wireless-N Repeater", "RANGEXTD WiFi Booster"]
     }
 ]
 

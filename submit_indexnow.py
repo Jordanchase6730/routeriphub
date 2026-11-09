@@ -50,6 +50,7 @@ def collect_all_urls():
         "https://routeriphub.com/extenders/ap-setup/",
         "https://routeriphub.com/extenders/topvision-extender/",
         "https://routeriphub.com/extenders/sewot-sw-01/",
+        "https://routeriphub.com/extenders/rangextd-extender/",
         "https://routeriphub.com/ip/192-168-1-250/",
         "https://routeriphub.com/ip/192-168-1-1/",
         "https://routeriphub.com/ip/192-168-0-1/",
