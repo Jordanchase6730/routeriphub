@@ -1345,6 +1345,97 @@ IP_INTENT_METADATA = {
         "device_types": "Wi-Fi 5 EX Extenders, Wi-Fi 6 Nighthawk EAX Mesh, Wi-Fi 7 EXS Extenders",
         "common_devices": "EX2800, EX3700, EX6120, EX6150, EX7000, EAX15, EAX20, EAX80, EXS25",
         "typos": ["192.168.l.250", "192.168.1.25", "192.168.1.254", "http//192.168.1.250", "https://192.168.1.250"]
+    },
+    "192.168.50.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "ASUS ROG & TUF Gaming",
+        "primary_cause": "browser auto-forcing HTTPS on router.asus.com or entering incorrect login credentials set during initial AsusWRT setup",
+        "target_audience": "ASUS ROG Rapture, ASUS RT-AX, and TUF Gaming series",
+        "verdict": "192.168.50.1 is the dedicated default IP address for ASUS ROG and TUF gaming routers running AsusWRT. If it fails to load, ensure you are connected to the ASUS gaming Wi-Fi or visit http://router.asus.com over plain HTTP without an active VPN tunnel.",
+        "default_user": "admin",
+        "default_pass": "admin (or password chosen during AsusWRT wizard)",
+        "web_alias": "router.asus.com / asusrouter.com",
+        "device_types": "ROG Rapture GT-AXE16000, GT-AX11000 Pro, RT-AX88U, TUF Gaming AX6000",
+        "common_devices": "Gaming PCs, PS5, Xbox Series X, Nintendo Switch, smartphones, gaming laptops",
+        "typos": ["192.168.50.l", "192.168.50.1.", "http//192.168.50.1", "router.asus.com"]
+    },
+    "192.168.4.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Amazon eero Mesh Wi-Fi",
+        "primary_cause": "eero devices do not run an HTTP web management portal on port 80; network management requires the eero mobile app",
+        "target_audience": "Amazon eero, eero 6, eero Pro 6E, and eero Max 7 mesh systems",
+        "verdict": "Amazon eero routers use 192.168.4.1 as their default gateway and DHCP pool base (192.168.4.0/22). However, eero does NOT host a local web browser GUI. Attempting to browse to http://192.168.4.1 will time out. You MUST manage your network through the official eero App on iOS or Android.",
+        "default_user": "eero Account Email",
+        "default_pass": "Managed via eero App (Passwordless phone/email verification)",
+        "web_alias": "Amazon eero App (iOS / Android)",
+        "device_types": "eero 6, eero 6+, eero Pro 6E, eero Max 7, eero Beacon",
+        "common_devices": "iPhones, iPads, Android phones, Alexa Echo devices, Fire TVs, smart plugs",
+        "typos": ["192.168.4.l", "192.168.4.1.", "http//192.168.4.1"]
+    },
+    "192.168.86.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Google Nest Wifi & Google Wifi",
+        "primary_cause": "Google Nest Wifi routers do not run a traditional web admin GUI; all network settings are managed inside the Google Home mobile app",
+        "target_audience": "Google Nest Wifi Pro (Wi-Fi 6E), Google Nest Wifi, and original Google Wifi mesh points",
+        "verdict": "192.168.86.1 is the default gateway for Google Nest Wifi and Google Wifi networks. Like other cloud-managed mesh systems, it does not host a browser configuration dashboard. Navigating to http://192.168.86.1 shows a basic OnHub diagnostic page or times out. Use the Google Home app on your phone.",
+        "default_user": "Google Account",
+        "default_pass": "Managed via Google Home App",
+        "web_alias": "Google Home App (iOS / Android)",
+        "device_types": "Nest Wifi Pro (6E), Nest Wifi Router, Google Wifi Point",
+        "common_devices": "Pixel phones, iPhones, Chromecast with Google TV, Nest Hub, smart speakers",
+        "typos": ["192.168.86.l", "192.168.86.1.", "http//192.168.86.1"]
+    },
+    "192.168.3.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Huawei Wi-Fi Routers & 4G/5G Gateways",
+        "primary_cause": "entering incorrect login password configured during Huawei HiLink setup or browser auto-upgrading to HTTPS",
+        "target_audience": "Huawei WiFi AX3 Pro, AX2, WiFi Mesh 7, and 4G/5G CPE Gateways",
+        "verdict": "192.168.3.1 is the factory default IP address for Huawei consumer Wi-Fi routers and mobile broadband modems. Enter http://192.168.3.1 in plain HTTP or use the Huawei AI Life app to access router administration.",
+        "default_user": "admin",
+        "default_pass": "admin (or password created during initial HiLink wizard)",
+        "web_alias": "http://192.168.3.1 / Huawei AI Life App",
+        "device_types": "Huawei WiFi AX3, AX3 Pro, AX2, WiFi Mesh 3/7, 5G CPE Pro",
+        "common_devices": "Smartphones, laptops, tablets, smart home appliances, smart displays",
+        "typos": ["192.168.3.l", "192.168.3.1.", "http//192.168.3.1"]
+    },
+    "192.168.112.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Ubiquiti AmpliFi Mesh Systems",
+        "primary_cause": "browser trying to reach a web GUI on unconfigured AmpliFi mesh or using mobile data instead of Wi-Fi",
+        "target_audience": "Ubiquiti AmpliFi Alien (Wi-Fi 6), AmpliFi HD, and AmpliFi Instant",
+        "verdict": "192.168.112.1 is the unique factory default subnet assigned to Ubiquiti AmpliFi mesh routers. Access the web dashboard at http://amplifi.lan or http://192.168.112.1, or configure using the AmpliFi mobile app.",
+        "default_user": "admin",
+        "default_pass": "admin (or set during AmpliFi setup wizard)",
+        "web_alias": "http://amplifi.lan / AmpliFi App",
+        "device_types": "AmpliFi Alien Router & Mesh Point, AmpliFi HD, AmpliFi Instant",
+        "common_devices": "Gaming consoles, Apple TVs, MacBooks, PC workstations, iPhones",
+        "typos": ["192.168.112.l", "192.168.112.1.", "http//192.168.112.1", "amplifi.lan"]
+    },
+    "192.168.128.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Cisco Meraki Go",
+        "primary_cause": "Cisco Meraki Go hardware is managed via the Meraki Go Cloud; the local 192.168.128.1 IP only hosts a local diagnostic page (my.meraki.com)",
+        "target_audience": "Cisco Meraki Go Router Firewall Plus (GX20, GX50) and indoor/outdoor APs",
+        "verdict": "192.168.128.1 is the default LAN subnet for Cisco Meraki Go cloud-managed security gateways. The local web interface at http://192.168.128.1 or http://my.meraki.com provides basic uplink troubleshooting; full configuration is handled in the Meraki Go mobile app or web portal.",
+        "default_user": "Meraki Go Account Email",
+        "default_pass": "Meraki Go Cloud Password",
+        "web_alias": "http://my.meraki.com / Meraki Go Portal",
+        "device_types": "Meraki Go GX20, GX50 Security Gateway, GR12 Access Point",
+        "common_devices": "Point-of-sale terminals, office laptops, VoIP phones, guest Wi-Fi clients",
+        "typos": ["192.168.128.l", "192.168.128.1.", "http//192.168.128.1", "my.meraki.com"]
+    },
+    "192.168.212.1": {
+        "variant": "troubleshooting",
+        "primary_brand": "Zyxel Multy Mesh Systems",
+        "primary_cause": "typing HTTPS instead of HTTP or attempting login before the Multy satellite nodes complete pairing",
+        "target_audience": "Zyxel Multy M1 (WSQ20), Multy X (WSQ50), and Multy Plus whole-home mesh",
+        "verdict": "192.168.212.1 is the default gateway IP address assigned to Zyxel Multy mesh Wi-Fi systems. Access the setup page at http://192.168.212.1 or manage via the Zyxel Multy mobile app.",
+        "default_user": "admin",
+        "default_pass": "1234 (or printed on Multy base sticker)",
+        "web_alias": "http://zyxel.local / Zyxel Multy App",
+        "device_types": "Zyxel Multy M1 (AX1800), Multy X AC3000 Tri-Band, Multy Plus",
+        "common_devices": "Smart TVs, streaming devices, laptops, mobile phones, security cameras",
+        "typos": ["192.168.212.l", "192.168.212.1.", "http//192.168.212.1"]
     }
 }
 
@@ -1401,12 +1492,12 @@ IP_HARDWARE_CATALOG = {
         {"model": "Buffalo WSR-2533DHP2 High-Spec Wi-Fi Router", "user": "admin", "pass": "password", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/ip/192-168-11-1/", "link_text": "Setup Guide &rarr;"}
     ],
     "192.168.12.1": [
-        {"model": "T-Mobile 5G Gateway (Arcadyan KVD21)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
-        {"model": "T-Mobile 5G Gateway (Sagemcom Fast 5688W)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
-        {"model": "T-Mobile 5G Gateway (Sercomm G4SE)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
-        {"model": "T-Mobile 5G Gateway (Nokia 5G21 'Silver Trashcan')", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
-        {"model": "T-Mobile Home Internet G4AR External Antenna Gateway", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"},
-        {"model": "Inseego Wavemaker 5G Indoor Router (FX2000)", "user": "admin", "pass": "Printed Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-5g/", "link_text": "T-Mobile Hub &rarr;"}
+        {"model": "T-Mobile 5G Gateway (Arcadyan KVD21)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Sagemcom Fast 5688W)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Sercomm G4SE)", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile 5G Gateway (Nokia 5G21 'Silver Trashcan')", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "T-Mobile Home Internet G4AR External Antenna Gateway", "user": "admin", "pass": "Printed Sticker PIN", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"},
+        {"model": "Inseego Wavemaker 5G Indoor Router (FX2000)", "user": "admin", "pass": "Printed Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/isp/t-mobile-kvd21/", "link_text": "T-Mobile Hub &rarr;"}
     ],
     "192.168.31.1": [
         {"model": "Xiaomi Mi Router AX9000 Tri-Band Gaming Router", "user": "admin", "pass": "Set on First Boot", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/xiaomi/", "link_text": "Xiaomi Hub &rarr;"},
@@ -1471,6 +1562,24 @@ IP_HARDWARE_CATALOG = {
         {"model": "Hikvision DS-2CD2143G2-I (4MP IP Security Camera)", "user": "admin", "pass": "Initial Activation Pass", "wifi": "PoE Security Camera", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"},
         {"model": "Dahua 4K NVR Network Video Recorder (NVR4108HS)", "user": "admin", "pass": "admin / Custom Pattern", "wifi": "Gigabit Ethernet NVR", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"},
         {"model": "Synology DiskStation DS220+ 2-Bay NAS (LAN Port 1)", "user": "admin", "pass": "DSM Account Password", "wifi": "Gigabit Ethernet Storage", "link": "/ip/192-168-1-2/", "link_text": "Device Guide &rarr;"}
+    ],
+    "192.168.112.1": [
+        {"model": "Ubiquiti AmpliFi Alien Wi-Fi 6 Router (AFi-ALN)", "user": "admin", "pass": "admin (or AmpliFi App)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/routers/ubiquiti-amplifi-alien/", "link_text": "Model Guide &rarr;"},
+        {"model": "Ubiquiti AmpliFi HD Home Wi-Fi Router (AFi-R)", "user": "admin", "pass": "admin (or AmpliFi App)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/routers/ubiquiti-amplifi-hd/", "link_text": "Model Guide &rarr;"},
+        {"model": "Ubiquiti AmpliFi Instant Mesh Router (AFi-INS)", "user": "admin", "pass": "admin (or AmpliFi App)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/ubiquiti/", "link_text": "Ubiquiti Hub &rarr;"},
+        {"model": "Ubiquiti AmpliFi Gamer's Edition (AFi-G)", "user": "admin", "pass": "admin (or AmpliFi App)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/ubiquiti/", "link_text": "Ubiquiti Hub &rarr;"}
+    ],
+    "192.168.128.1": [
+        {"model": "Cisco Meraki Go Router Firewall Plus (GX20)", "user": "Meraki Go Email", "pass": "Cloud Password", "wifi": "Gigabit Ethernet Firewall", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"},
+        {"model": "Cisco Meraki Go Security Gateway (GX50)", "user": "Meraki Go Email", "pass": "Cloud Password", "wifi": "Gigabit Ethernet Firewall", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"},
+        {"model": "Cisco Meraki Go Indoor Access Point (GR12)", "user": "Meraki Go Email", "pass": "Cloud Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"},
+        {"model": "Cisco Meraki Go Outdoor Access Point (GR62)", "user": "Meraki Go Email", "pass": "Cloud Password", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/brands/cisco/", "link_text": "Cisco Hub &rarr;"}
+    ],
+    "192.168.212.1": [
+        {"model": "Zyxel Multy M1 Whole Home Mesh WiFi System (WSQ20)", "user": "admin", "pass": "1234 (Sticker)", "wifi": "Wi-Fi 6 (802.11ax)", "link": "/routers/zyxel-multy-m1/", "link_text": "Model Guide &rarr;"},
+        {"model": "Zyxel Multy X AC3000 Tri-Band Mesh System (WSQ50)", "user": "admin", "pass": "1234 (Sticker)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/routers/zyxel-multy-x/", "link_text": "Model Guide &rarr;"},
+        {"model": "Zyxel Multy Plus AC3000 Business Mesh (WSQ60)", "user": "admin", "pass": "1234 (Sticker)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/zyxel/", "link_text": "Zyxel Hub &rarr;"},
+        {"model": "Zyxel Multy Mini AC1750 Mesh Add-on", "user": "admin", "pass": "1234 (Sticker)", "wifi": "Wi-Fi 5 (802.11ac)", "link": "/brands/zyxel/", "link_text": "Zyxel Hub &rarr;"}
     ]
 }
 
@@ -8480,7 +8589,16 @@ def update_vercel_config():
         {"source": "/author/vikas-behl", "destination": "/authors/vikas-behl/", "permanent": True},
         {"source": "/authors", "destination": "/about/", "permanent": True},
         {"source": "/tools.html", "destination": "/tools/", "permanent": True},
-        {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True}
+        {"source": "/brand/:brand", "destination": "/brands/:brand/", "permanent": True},
+        {"source": "/isp/t-mobile-5g", "destination": "/isp/t-mobile-kvd21/", "permanent": True},
+        {"source": "/isp/t-mobile-5g/", "destination": "/isp/t-mobile-kvd21/", "permanent": True},
+        {"source": "/192-168-50-1.html", "destination": "/ip/192-168-50-1/", "permanent": True},
+        {"source": "/192-168-4-1.html", "destination": "/ip/192-168-4-1/", "permanent": True},
+        {"source": "/192-168-86-1.html", "destination": "/ip/192-168-86-1/", "permanent": True},
+        {"source": "/192-168-3-1.html", "destination": "/ip/192-168-3-1/", "permanent": True},
+        {"source": "/192-168-112-1.html", "destination": "/ip/192-168-112-1/", "permanent": True},
+        {"source": "/192-168-128-1.html", "destination": "/ip/192-168-128-1/", "permanent": True},
+        {"source": "/192-168-212-1.html", "destination": "/ip/192-168-212-1/", "permanent": True}
     ]
 
     vconfig = {

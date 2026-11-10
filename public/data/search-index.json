@@ -2256,6 +2256,14 @@
     "keywords": "google nest google-nest brand passwords 192.168.86.1"
   },
   {
+    "title": "Zyxel Brand Directory & Model Matrix",
+    "category": "Brand Directory",
+    "badge": "Brand",
+    "url": "/brands/zyxel/",
+    "snippet": "Standard gateways: 192.168.1.1, 192.168.212.1, credentials: admin / 1234 (or printed on label).",
+    "keywords": "zyxel zyxel brand passwords 192.168.1.1 192.168.212.1"
+  },
+  {
     "title": "192.168.1.1 Default Gateway Hub",
     "category": "Gateway IP",
     "badge": "192.168.1.1",
@@ -2398,6 +2406,62 @@
     "url": "/ip/192-168-1-250/",
     "snippet": "Class C Private (192.168.0.0/16) - Used on NETGEAR Wi-Fi Range Extenders (EX, EAX, EXS Series).",
     "keywords": "192.168.1.250 192-168-1-250 login admin gateway netgear wi-fi range extenders (ex, eax, exs series)"
+  },
+  {
+    "title": "192.168.50.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.50.1",
+    "url": "/ip/192-168-50-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on ASUS, ASUS ROG, TUF Gaming.",
+    "keywords": "192.168.50.1 192-168-50-1 login admin gateway asus, asus rog, tuf gaming"
+  },
+  {
+    "title": "192.168.4.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.4.1",
+    "url": "/ip/192-168-4-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Amazon eero Mesh Wi-Fi (eero 6, Pro 6E, Max 7).",
+    "keywords": "192.168.4.1 192-168-4-1 login admin gateway amazon eero mesh wi-fi (eero 6, pro 6e, max 7)"
+  },
+  {
+    "title": "192.168.86.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.86.1",
+    "url": "/ip/192-168-86-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Google Nest Wifi, Google Wifi.",
+    "keywords": "192.168.86.1 192-168-86-1 login admin gateway google nest wifi, google wifi"
+  },
+  {
+    "title": "192.168.3.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.3.1",
+    "url": "/ip/192-168-3-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Huawei (WiFi AX2, AX3, AX3 Pro, WiFi Mesh).",
+    "keywords": "192.168.3.1 192-168-3-1 login admin gateway huawei (wifi ax2, ax3, ax3 pro, wifi mesh)"
+  },
+  {
+    "title": "192.168.112.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.112.1",
+    "url": "/ip/192-168-112-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Ubiquiti AmpliFi (AmpliFi Alien, HD, Instant).",
+    "keywords": "192.168.112.1 192-168-112-1 login admin gateway ubiquiti amplifi (amplifi alien, hd, instant)"
+  },
+  {
+    "title": "192.168.128.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.128.1",
+    "url": "/ip/192-168-128-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Cisco Meraki Go (GX20, GX50).",
+    "keywords": "192.168.128.1 192-168-128-1 login admin gateway cisco meraki go (gx20, gx50)"
+  },
+  {
+    "title": "192.168.212.1 Default Gateway Hub",
+    "category": "Gateway IP",
+    "badge": "192.168.212.1",
+    "url": "/ip/192-168-212-1/",
+    "snippet": "Class C Private (192.168.0.0/16) - Used on Zyxel Multy (Multy M1, Multy X, Multy Plus).",
+    "keywords": "192.168.212.1 192-168-212-1 login admin gateway zyxel multy (multy m1, multy x, multy plus)"
   },
   {
     "title": "IPv4 CIDR Subnet Calculator",

@@ -395,6 +395,19 @@ BRAND_PROFILES = [
         "support_domain": "https://support.google.com/googlenest",
         "models_count": 5,
         "description": "Google's smart mesh system integrated with Google Home, Matter smart devices, and automated 192.168.86.1 subnet allocation."
+    },
+    {
+        "slug": "zyxel",
+        "name": "Zyxel",
+        "hq": "Hsinchu, Taiwan",
+        "default_ips": ["192.168.1.1", "192.168.212.1"],
+        "default_creds": "admin / 1234 (or printed on label)",
+        "web_domains": ["zyxel.local", "192.168.1.1"],
+        "app_name": "Zyxel Multy / Nebula App",
+        "app_url": "https://apps.apple.com/app/zyxel-multy/id1257121287",
+        "support_domain": "https://www.zyxel.com/support/",
+        "models_count": 10,
+        "description": "Enterprise networking and cybersecurity manufacturer known for USG FLEX security firewalls, Nebula cloud gateways, and Multy / Armor Wi-Fi systems."
     }
 ]
 
@@ -578,6 +591,76 @@ IP_GATEWAYS = [
         "subnet_mask": "255.255.255.0 (/24)",
         "usable_range": "192.168.1.1 - 192.168.1.254",
         "summary": "192.168.1.250 is the default fallback IP address for NETGEAR Wi-Fi range extenders (EX, EAX, and EXS families) before pairing with a router."
+    },
+    {
+        "ip": "192.168.50.1",
+        "slug": "192-168-50-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "ASUS, ASUS ROG, TUF Gaming",
+        "default_creds": "admin / admin (or set in AsusWRT)",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.50.2 - 192.168.50.254",
+        "summary": "192.168.50.1 is the dedicated default gateway IP address for ASUS ROG and TUF Gaming routers, hosting the AsusWRT / ROG Gaming Center web dashboard."
+    },
+    {
+        "ip": "192.168.4.1",
+        "slug": "192-168-4-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Amazon eero Mesh Wi-Fi (eero 6, Pro 6E, Max 7)",
+        "default_creds": "Managed via Amazon eero Mobile App",
+        "subnet_mask": "255.255.252.0 (/22 default eero DHCP pool)",
+        "usable_range": "192.168.4.2 - 192.168.7.254",
+        "summary": "192.168.4.1 is the default gateway IP for Amazon eero mesh Wi-Fi systems. Eero networks do not host a traditional web admin GUI on port 80 and are managed exclusively via the eero mobile app."
+    },
+    {
+        "ip": "192.168.86.1",
+        "slug": "192-168-86-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Google Nest Wifi, Google Wifi",
+        "default_creds": "Managed via Google Home App",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.86.2 - 192.168.86.254",
+        "summary": "192.168.86.1 is the default LAN gateway address for Google Nest Wifi and Google Wifi mesh systems, managed through the Google Home mobile app."
+    },
+    {
+        "ip": "192.168.3.1",
+        "slug": "192-168-3-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Huawei (WiFi AX2, AX3, AX3 Pro, WiFi Mesh)",
+        "default_creds": "admin / (configured during Huawei HiLink setup)",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.3.2 - 192.168.3.254",
+        "summary": "192.168.3.1 is the standard default gateway IP for Huawei Wi-Fi routers and mobile broadband hotspots, hosting the Huawei AI Life / HiLink web portal."
+    },
+    {
+        "ip": "192.168.112.1",
+        "slug": "192-168-112-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Ubiquiti AmpliFi (AmpliFi Alien, HD, Instant)",
+        "default_creds": "admin / (set during AmpliFi App setup)",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.112.2 - 192.168.112.254",
+        "summary": "192.168.112.1 is the factory default gateway address for Ubiquiti AmpliFi mesh Wi-Fi consumer systems, managed via the AmpliFi app or local web interface."
+    },
+    {
+        "ip": "192.168.128.1",
+        "slug": "192-168-128-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Cisco Meraki Go (GX20, GX50)",
+        "default_creds": "Managed via Cisco Meraki Go Cloud App",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.128.2 - 192.168.128.254",
+        "summary": "192.168.128.1 is the default LAN subnet for Cisco Meraki Go cloud-managed security gateways and small business firewalls."
+    },
+    {
+        "ip": "192.168.212.1",
+        "slug": "192-168-212-1",
+        "class_type": "Class C Private (192.168.0.0/16)",
+        "brands": "Zyxel Multy (Multy M1, Multy X, Multy Plus)",
+        "default_creds": "admin / 1234 (or printed on label)",
+        "subnet_mask": "255.255.255.0 (/24)",
+        "usable_range": "192.168.212.2 - 192.168.212.254",
+        "summary": "192.168.212.1 is the default gateway IP for Zyxel Multy whole-home mesh Wi-Fi series, accessible via web browser or the Zyxel Multy mobile app."
     }
 ]
 

@@ -223,6 +223,51 @@
       "source": "/brand/:brand",
       "destination": "/brands/:brand/",
       "permanent": true
+    },
+    {
+      "source": "/isp/t-mobile-5g",
+      "destination": "/isp/t-mobile-kvd21/",
+      "permanent": true
+    },
+    {
+      "source": "/isp/t-mobile-5g/",
+      "destination": "/isp/t-mobile-kvd21/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-50-1.html",
+      "destination": "/ip/192-168-50-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-4-1.html",
+      "destination": "/ip/192-168-4-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-86-1.html",
+      "destination": "/ip/192-168-86-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-3-1.html",
+      "destination": "/ip/192-168-3-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-112-1.html",
+      "destination": "/ip/192-168-112-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-128-1.html",
+      "destination": "/ip/192-168-128-1/",
+      "permanent": true
+    },
+    {
+      "source": "/192-168-212-1.html",
+      "destination": "/ip/192-168-212-1/",
+      "permanent": true
     }
   ],
   "headers": [
