@@ -310,7 +310,7 @@ def get_footer():
       </div>
 
       <div class="footer-col">
-        <h4>Popular Gateway IPs</h4>
+        <p class="footer-col-title">Popular Gateway IPs</p>
         <ul class="footer-links">
           <li><a href="/ip/192-168-1-1/">192.168.1.1 (Netgear/ASUS)</a></li>
           <li><a href="/ip/192-168-0-1/">192.168.0.1 (TP-Link/D-Link)</a></li>
@@ -323,7 +323,7 @@ def get_footer():
       </div>
 
       <div class="footer-col">
-        <h4>Diagnostics &amp; Guides</h4>
+        <p class="footer-col-title">Diagnostics &amp; Guides</p>
         <ul class="footer-links">
           <li><a href="/find-router-ip/">Find Router IP on Windows</a></li>
           <li><a href="/find-router-ip/#mac">Find Router IP on macOS</a></li>
@@ -335,7 +335,7 @@ def get_footer():
       </div>
 
       <div class="footer-col">
-        <h4>Open Data &amp; Developers</h4>
+        <p class="footer-col-title">Open Data &amp; Developers</p>
         <ul class="footer-links">
           <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
           <li><a href="/developers/">Developer API &amp; Datasets</a></li>
@@ -662,9 +662,9 @@ def generate_router_index_page():
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(m['brand'])}</span>
               <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">{escape(m['hardware_type'].split()[0])}</span>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+            <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
               <a href="/routers/{escape(m['slug'])}/">{escape(m['model_name'])}</a>
-            </h3>
+            </h2>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
               Default Gateway: <a href="/ip/{m['default_ip'].replace('.', '-')}/"><strong>{escape(m['default_ip'])}</strong></a> &bull; Pass: <code>{escape(m['default_password'])}</code>
             </p>
@@ -886,9 +886,9 @@ def generate_isp_pages():
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(isp['isp_name'])}</span>
               <span style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700;">{escape(isp['default_ip'])}</span>
             </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
+            <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">
               <a href="/isp/{escape(isp['slug'])}/">{escape(isp['gateway_name'])}</a>
-            </h3>
+            </h2>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
               Default Password: <code>{escape(isp['default_password'])}</code>
             </p>
@@ -1064,9 +1064,9 @@ def generate_brand_pages():
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(b['hq'])}</span>
             </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem;">
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem;">
               <a href="/brands/{escape(b['slug'])}/">{escape(b['name'])}</a>
-            </h3>
+            </h2>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
               Default Gateway: <strong>{escape(', '.join(b['default_ips']))}</strong>
             </p>
@@ -2160,7 +2160,7 @@ def generate_ip_pages():
         ip_addr = ip_item["ip"]
         meta_item = IP_INTENT_METADATA.get(ip_addr, {})
         is_corr = meta_item.get("variant") == "correction"
-        tag_badge = '<span class="badge" style="background: rgba(234, 88, 12, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.3);">Client / Extender IP</span>' if is_corr else f'<span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(ip_item["subnet_mask"])}</span>'
+        tag_badge = '<span class="badge" style="background: #ffedd5; color: #9a3412; border: 1px solid #fdba74;">Client / Extender IP</span>' if is_corr else f'<span class="badge" style="background: var(--info-bg); color: var(--text-accent);">{escape(ip_item["subnet_mask"])}</span>'
 
         ip_cards += f"""
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
@@ -2247,7 +2247,7 @@ def generate_ip_pages():
               <td><a href="/ip/192-168-1-2/"><strong>192.168.1.2</strong></a></td>
               <td>Client Laptops, Phones, Printers, Extenders</td>
               <td><code>Varies by Device</code></td>
-              <td><span style="color: #ea580c; font-weight: 700;">Client Device (Not Router)</span></td>
+              <td><span style="color: #9a3412; font-weight: 700;">Client Device (Not Router)</span></td>
             </tr>
             <tr>
               <td><a href="/ip/192-168-100-1/"><strong>192.168.100.1</strong></a></td>
@@ -3565,7 +3565,7 @@ def generate_extender_pages():
         </p>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <em>Leave blank</em></li>
             <li><strong>Password:</strong> <code>admin</code></li>
@@ -3773,31 +3773,31 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to <code>Linksys Extender Setup - xxx</code>. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, turn off mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://extender.linksys.com</code> directly into the address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.1.1</code> in the browser. This fallback address works when the Linksys extender is in factory condition and cannot detect a DHCP server.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try the model-specific URL</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try the model-specific URL</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">For a Linksys RE7350, try <code>http://RE7350-xxx</code>, replacing <code>xxx</code> with the last three characters of the extender’s MAC address.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Check for a security warning</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Check for a security warning</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If your browser shows a privacy, certificate, or “Your connection is not private” warning, choose <strong>Advanced</strong> and then <strong>Proceed to extender.linksys.com (unsafe)</strong>. This is common with local extender pages that use self-signed certificates.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Linksys extender, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -4091,7 +4091,7 @@ def generate_extender_pages():
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>For older D-Link DAP models:</strong> Username: <code>Admin</code> &bull; Password: <em>Leave blank</em></li>
             <li><strong>For newer Wi-Fi 6 models:</strong> Printed on device label or created during the initial setup wizard.</li>
@@ -4296,33 +4296,33 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the D-Link extender’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://dlinkap.local</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.0.50</code> in the browser. This address works when the D-Link extender is in factory condition and cannot detect a DHCP server.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.0.x</code> range, such as <code>192.168.0.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.0.50</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the D-Link extender, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -4336,7 +4336,7 @@ def generate_extender_pages():
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
         <div class="step-card" style="margin: 0;">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Classic DAP Models</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Classic DAP Models</h3>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">DAP-1320, DAP-1330, DAP-1620, DAP-1860, DCH-M225, etc.</p>
           <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7; font-size: 0.925rem;">
             <li>Keep the extender powered on.</li>
@@ -4348,7 +4348,7 @@ def generate_extender_pages():
         </div>
 
         <div class="step-card" style="margin: 0;">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Newer Wi-Fi 6 Models</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Newer Wi-Fi 6 Models</h3>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">DAP-X1860, E15, E30, etc.</p>
           <ol style="margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7; font-size: 0.925rem;">
             <li>Keep the extender powered on.</li>
@@ -4639,7 +4639,7 @@ def generate_extender_pages():
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code></li>
             <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some generic revisions)</li>
@@ -4854,33 +4854,33 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the repeater</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the repeater</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the Wireless-N repeater’s Wi-Fi network. Alternatively, connect a computer to the repeater using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The repeater’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://myrepeater.net</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.1.254</code> in the browser. This address works when the Wireless-N repeater is in factory condition or cannot detect a DHCP server.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the repeater may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.1.x</code> range, such as <code>192.168.1.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.1.254</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the repeater’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the repeater’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the repeater is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Wireless-N repeater, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -5181,7 +5181,7 @@ def generate_extender_pages():
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code> (or leave blank)</li>
             <li><strong>Password:</strong> <code>admin</code></li>
@@ -5398,23 +5398,23 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the Wavlink extender’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://ap.setup</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.10.1</code> in the browser. This address works when the Wavlink extender is in factory condition or cannot detect a DHCP server.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try the alternate Wavlink URLs</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try the alternate Wavlink URLs</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If <code>ap.setup</code> does not load, try:<br>
             &bull; <code>http://wavlogin.link</code><br>
@@ -5423,17 +5423,17 @@ def generate_extender_pages():
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.10.x</code> range, such as <code>192.168.10.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.10.1</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">8. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">8. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Wavlink extender, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -5726,7 +5726,7 @@ def generate_extender_pages():
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code></li>
             <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some models)</li>
@@ -5937,29 +5937,29 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the Topvision extender’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://192.168.188.1</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.188.x</code> range, such as <code>192.168.188.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.188.1</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Topvision extender, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -6232,7 +6232,7 @@ def generate_extender_pages():
         </p>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code></li>
             <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some units)</li>
@@ -6444,29 +6444,29 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the SEWOT SW-01’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://192.168.188.1</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.188.x</code> range, such as <code>192.168.188.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.188.1</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the SEWOT SW-01, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -6740,7 +6740,7 @@ def generate_extender_pages():
         </p>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code></li>
             <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some models)</li>
@@ -6952,29 +6952,29 @@ def generate_extender_pages():
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the extender</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the RANGEXTD extender’s Wi-Fi network. Alternatively, connect a computer to the extender using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The extender’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://192.168.188.1</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the extender may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.188.x</code> range, such as <code>192.168.188.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.188.1</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Find the extender’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the extender is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the RANGEXTD extender, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>

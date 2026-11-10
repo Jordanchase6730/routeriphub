@@ -375,7 +375,7 @@
         </div>
 
         <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--text-accent); margin-bottom: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</h4>
+          <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Default Login Credentials:</div>
           <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: var(--text-secondary); line-height: 1.8;">
             <li><strong>Username:</strong> <code>admin</code></li>
             <li><strong>Password:</strong> <code>admin</code> (or leave blank / <code>password</code> on some generic revisions)</li>
@@ -590,33 +590,33 @@
       </h2>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the repeater</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Connect directly to the repeater</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Disconnect from your main router’s Wi-Fi and connect to the Wireless-N repeater’s Wi-Fi network. Alternatively, connect a computer to the repeater using an Ethernet cable and disable Wi-Fi on that computer.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Turn off mobile data and VPN</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">On a phone, disable mobile data, VPNs, and proxy settings. The repeater’s setup network may not have internet access, and your phone may try to route the request through cellular data instead.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Use the browser address bar</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Type <code>http://myrepeater.net</code> directly into the browser address bar. Do not search for it in Google, Bing, or another search engine.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Try the fallback IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Enter <code>http://192.168.1.254</code> in the browser. This address works when the Wireless-N repeater is in factory condition or cannot detect a DHCP server.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">5. Check your device IP address (Set Temporary Static IP)</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">
             If your device shows an IP address starting with <code>169.x.x.x</code> or <code>0.0.0.0</code>, the repeater may not have assigned a valid DHCP address. Set a temporary static IP in the <code>192.168.1.x</code> range, such as <code>192.168.1.100</code>, with subnet mask <code>255.255.255.0</code> and gateway <code>192.168.1.254</code>. After setup, switch your device back to automatic DHCP.
           </p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">6. Try another browser or private window</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">Open an Incognito or InPrivate window, disable browser extensions, and try Chrome, Edge, Firefox, or Safari. This helps rule out cached DNS results, extensions, or browser-security warnings.</p>
         </div>
         <div class="step-card">
-          <h4 style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the repeater’s new IP</h4>
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">7. Find the repeater’s new IP</h3>
           <p style="margin: 0; color: var(--text-secondary); line-height: 1.6;">If the repeater is already paired, log into your main router and open the <strong>Attached Devices</strong>, <strong>Connected Devices</strong>, or <strong>DHCP Client List</strong> page. Find the Wireless-N repeater, copy its assigned IP address, and enter that IP into your browser.</p>
         </div>
       </div>
@@ -781,7 +781,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Popular Gateway IPs</h4>
+        <p class="footer-col-title">Popular Gateway IPs</p>
         <ul class="footer-links">
           <li><a href="/ip/192-168-1-1/">192.168.1.1 (Netgear/ASUS)</a></li>
           <li><a href="/ip/192-168-0-1/">192.168.0.1 (TP-Link/D-Link)</a></li>
@@ -794,7 +794,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Diagnostics &amp; Guides</h4>
+        <p class="footer-col-title">Diagnostics &amp; Guides</p>
         <ul class="footer-links">
           <li><a href="/find-router-ip/">Find Router IP on Windows</a></li>
           <li><a href="/find-router-ip/#mac">Find Router IP on macOS</a></li>
@@ -806,7 +806,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Open Data &amp; Developers</h4>
+        <p class="footer-col-title">Open Data &amp; Developers</p>
         <ul class="footer-links">
           <li><a href="https://github.com/routeriphub/default-router-ip-databas" target="_blank" rel="noopener">📂 Open-Source Router Dataset (GitHub)</a></li>
           <li><a href="/developers/">Developer API &amp; Datasets</a></li>
